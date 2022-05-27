@@ -19,17 +19,17 @@
         "Start-Process -filepath \"$dir\\CloudMusic_v2.x_Patch_20191129.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/silent\" -Wait | Out-Null"
     ],
     "post_install": "@('$PLUGINSDIR', '[NSIS].nsi') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue }",
-    "bin": "cloudmusic.exe",
     "shortcuts": [
         [
-            "cloudmusic.exe",
-            "Netease Cloud Music"
+            "redist_packages\\cloudmusic.exe",
+            "Netease\\Netease Cloud Music"
         ]
     ],
     "persist": "Netease",
     "checkver": {
-        "url": "https://baoku.360.cn/soft/show/appid/103466312",
-        "regex": "(?sm)版本.*?([\\d.]+)"
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/header.json",
+        "jsonpath": "$[?(@.name == 'cloudmusic')].redirect",
+        "regex": "cloudmusicsetup([\\d.]+)\\.exe"
     },
     "autoupdate": {
         "url": "https://d1.music.126.net/dmusic/cloudmusicsetup$version.exe#/dl.7z"
