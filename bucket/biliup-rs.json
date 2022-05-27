@@ -1,0 +1,20 @@
+{
+    "version": "0.1.7",
+    "description": "Bilibili command line casting tool",
+    "homepage": "https://github.com/ForgQi/biliup-rs",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/ForgQi/biliup-rs/blob/master/LICENSE"
+    },
+    "url": "https://github.com/ForgQi/biliup-rs/releases/download/v0.1.7/biliupR-v0.1.7-x86_64-windows.zip",
+    "hash": "cd3c3c7cda6ef82d5b389a6eec79a9cfd832811d7bf199e2732ac703f130c30a",
+    "extract_dir": "biliupR-v0.1.7-x86_64-windows",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\cookies.json\")) { New-Item \"$dir\\cookies.json\" -ItemType \"file\" -Value \"{}\" | Out-Null }",
+    "bin": "biliup.exe",
+    "persist": "cookies.json",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/ForgQi/biliup-rs/releases/download/v$version/biliupR-v$version-x86_64-windows.zip",
+        "extract_dir": "biliupR-v$version-x86_64-windows"
+    }
+}

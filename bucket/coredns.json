@@ -1,0 +1,26 @@
+{
+    "version": "1.9.2",
+    "description": "A DNS server/forwarder, that chains plugins.",
+    "homepage": "https://coredns.io",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/coredns/coredns/releases/download/v1.9.2/coredns_1.9.2_windows_amd64.tgz",
+            "hash": "ebf6f9431ee44e3a303e63dfc6f9882920988c7071ee2d7fba8467e92b395891"
+        }
+    },
+    "bin": "coredns.exe",
+    "checkver": {
+        "github": "https://github.com/coredns/coredns"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/coredns/coredns/releases/download/v$version/coredns_$version_windows_amd64.tgz"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

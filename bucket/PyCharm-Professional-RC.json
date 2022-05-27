@@ -1,0 +1,43 @@
+{
+    "version": "2022.1.1-221.5591.37",
+    "description": "PyCharm Professional Release Candidate. Cross-Platform Python IDE for professional developers by JetBrains.",
+    "homepage": "https://www.jetbrains.com/pycharm/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.jetbrains.com/store/license.html"
+    },
+    "url": "https://download.jetbrains.com/python/pycharm-professional-221.5591.37.exe#/cosi.7z",
+    "hash": "2d82d3ec3c90b20d8f89c2c362c239b1f2a1d05d44954748109d3bdefd5f7cd2",
+    "extract_to": "IDE",
+    "pre_install": "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse",
+    "architecture": {
+        "64bit": {
+            "shortcuts": [
+                [
+                    "IDE\\bin\\pycharm64.exe",
+                    "JetBrains\\PyCharm Professional (Release Candidate)"
+                ]
+            ]
+        },
+        "32bit": {
+            "shortcuts": [
+                [
+                    "IDE\\bin\\pycharm.exe",
+                    "JetBrains\\PyCharm Professional (Release Candidate)"
+                ]
+            ]
+        }
+    },
+    "persist": "IDE\\bin\\idea.properties",
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&platform=zip&type=rc",
+        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+        "replace": "${ver}-${build}"
+    },
+    "autoupdate": {
+        "url": "https://download.jetbrains.com/python/pycharm-professional-$preReleaseVersion.exe#/cosi.7z",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

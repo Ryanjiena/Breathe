@@ -1,0 +1,19 @@
+{
+    "version": "4.11.0",
+    "description": "Database schema change manager (Community Edition)",
+    "homepage": "https://www.liquibase.org/",
+    "license": "Apache-2.0",
+    "suggest": {
+        "JRE": "java/openjdk"
+    },
+    "url": "https://github.com/liquibase/liquibase/releases/download/v4.11.0/liquibase-4.11.0.zip",
+    "hash": "9cec62f9c2f4fa7465b0afec797960d14fee783860698eaca95d6a115105f944",
+    "bin": "liquibase.bat",
+    "persist": "lib-other",
+    "checkver": {
+        "github": "https://github.com/liquibase/liquibase"
+    },
+    "autoupdate": {
+        "url": "https://github.com/liquibase/liquibase/releases/download/v$version/liquibase-$version.zip"
+    }
+}

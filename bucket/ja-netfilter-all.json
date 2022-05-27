@@ -1,0 +1,27 @@
+{
+    "version": "20220521",
+    "description": "ja-netfilter all in one",
+    "homepage": "https://jetbra.in/s",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/ja-netfilter/ja-netfilter/blob/master/LICENSE"
+    },
+    "notes": "Configure as described in \"$dir\\readme.txt\"! For testing purposes only, not for commercial use!",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/ja-netfilter-all-20220521-0047102be5badbf068c99ce0b1b95ed86060eb69.zip",
+    "hash": "c67c0b2977f6b335d989022dc9c8699dbbc10a7e9c30dfe1baca3e49dcc601ba",
+    "extract_dir": "ja-netfilter-all",
+    "bin": [
+        "scripts\\install-current-user.vbs",
+        "scripts\\install-all-users.vbs",
+        "scripts\\uninstall-current-user.vbs",
+        "scripts\\uninstall-all-users.vbs"
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>ja-netfilter-all-([\\d]{8})-(?<Sha>[a-fA-F0-9]{40})\\.(?:zip|7z))",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/$matchFilename"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "version": "4.0.0",
+    "description": "Language Server Protocol for LaTeX",
+    "homepage": "https://texlab.netlify.com",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/latex-lsp/texlab/releases/download/v4.0.0/texlab-x86_64-windows.zip",
+            "hash": "a5f4a3c2edf5809fbb5b8e2cf2237a3994212a88fa285280a0944940ce9f8b34"
+        }
+    },
+    "bin": "texlab.exe",
+    "checkver": {
+        "github": "https://github.com/latex-lsp/texlab"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/latex-lsp/texlab/releases/download/v$version/texlab-x86_64-windows.zip"
+            }
+        }
+    }
+}
