@@ -23,18 +23,17 @@ jobs:
           BRANCH: "master"
           USER_EMAIL: "78083448+JaimeZeng@users.noreply.github.com"
           USER: "JaimeZeng[bot]"
-          GITHUB_REPOSITORY: "Ryanjiena/Meta"
         run: |
           $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
           $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
           $env:SCOOP_GLOBAL = Join-Path $env:SystemDrive 'SCOOP'
           $env:SCOOP_DEBUG = 1
-          $REPOSITORY = $env:GITHUB_REPOSITORY
+          $REPOSITORY = "Ryanjiena/Meta"
           $BUCKET_ROOT = $env:GITHUB_WORKSPACE
           $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
           $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
           $_BRANCH = $env:BRANCH
-          $rem = "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/$env:GITHUB_REPOSITORY.git"
+          $rem = "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/Ryanjiena/Meta.git"
 
           Write-Host "Config git" -f darkgreen
           git config --global user.name $env:USER
