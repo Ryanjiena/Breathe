@@ -1,0 +1,31 @@
+{
+    "version": "2.15.0.818",
+    "description": "Text-To-Speech software based on SAPI",
+    "homepage": "http://balabolka.site/balabolka.htm",
+    "license": "Freeware",
+    "url": "http://balabolka.site/balabolka_portable.zip",
+    "hash": "c9b758604febc525a2b113e35bde6597ed3de67f35d412bf87d49d4ae206b5cb",
+    "extract_dir": "Balabolka",
+    "post_install": "Get-ChildItem \"$persist_dir\\*\" -Include 'balabolka.dat', 'balabolka.pcfg', 'balabolka.echo' -Force | Copy-Item -Destination \"$dir\" -ErrorAction SilentlyContinue",
+    "uninstaller": {
+        "script": "Get-ChildItem \"$dir\\*\" -Include 'balabolka.dat', 'balabolka.pcfg', 'balabolka.echo' -Force | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+    },
+    "shortcuts": [
+        [
+            "balabolka.exe",
+            "Balabolka"
+        ]
+    ],
+    "persist": [
+        "dictionaries",
+        "hunspell",
+        "skins"
+    ],
+    "checkver": {
+        "url": "http://balabolka.site/changelog.txt",
+        "regex": "[\\d-]+\\s+v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://balabolka.site/balabolka_portable.zip"
+    }
+}

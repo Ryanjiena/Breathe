@@ -1,0 +1,23 @@
+{
+    "version": "2022.03.17",
+    "description": "Microsoft common runtime library collection - based on roustar31's original script Dreamcast takeover update, 32+64 bit collection, WinXP~Win11 auto-determination.",
+    "homepage": "http://dreamcast2.ys168.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
+    },
+    "notes": "You can now remove this installer with 'scoop uninstall vcredist-dreamcast'",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/vcredist_dreamcast_2022.03.17.exe#/vcredist.exe",
+    "hash": "8e177f526f3706b418a9377fc63ee465a1226c3d6b719910671c74697de8f77c",
+    "installer": {
+        "script": "Start-Process -FilePath \"$dir\\vcredist.exe\" -WorkingDirectory \"$dir\" -ArgumentList '/silent' -Wait"
+    },
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>vcredist_dreamcast_(?<version>([\\d.]+))\\.(?:exe|7z))",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFilename#/vcredist.exe"
+    }
+}

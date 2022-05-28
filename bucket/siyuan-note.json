@@ -1,0 +1,46 @@
+{
+    "version": "2.0.13",
+    "description": "SiYuan is a Markdown Block-Reference and Bidirectional-Link note-taking application",
+    "homepage": "https://b3log.org/siyuan",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://b3log.org/siyuan/eula.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/siyuan-note/siyuan/releases/download/v2.0.13/siyuan-2.0.13-win.exe#/dl.7z",
+            "hash": "110f63cd6e8cddad0306a48ecc5c88142600a93eb0b68b8a4c25b28ee3d30f66",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/siyuan-note/siyuan/releases/download/v2.0.13/siyuan-2.0.13-win32.exe#/dl.7z",
+            "hash": "e200da3115a80b9612a2e7d2d4272264808607bead007a7b20f30d43eebdb2e4",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "siyuan.exe",
+            "SiYuan Note"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/siyuan-note/siyuan"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/siyuan-note/siyuan/releases/download/v$version/siyuan-$version-win.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/siyuan-note/siyuan/releases/download/v$version/siyuan-$version-win32.exe#/dl.7z"
+            }
+        }
+    }
+}

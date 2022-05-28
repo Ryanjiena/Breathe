@@ -1,0 +1,53 @@
+{
+    "version": "9.6.0.28707",
+    "description": "Tencent QQ third-party modified version, maintained by Dreamcast(With NtrQQ Edition).",
+    "homepage": "https://im.qq.com/pcqq",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://ti.qq.com/agreement/index.html"
+    },
+    "notes": [
+        "All modifications have the risk of being locked, whether to use their own discretion, I do not assume any responsibility!",
+        "Use 'scoop install vcredist-aio' 或 'scoop install vcredist-dreamcast' install the runtime library",
+        "Please read the instructions in the installation directory carefully before use."
+    ],
+    "depends": "sudo",
+    "suggest": {
+        "vcredist": [
+            "meta/vcredist-aio",
+            "meta/vcredist-dreamcast"
+        ]
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/QQ_9.6.0_(28707)_Installer_With_NtrQQ_7.1.2.rar",
+    "hash": "eed77a6d70323bce97fc43aa0c569ac6e1d631a23174634077863f024199d1b1",
+    "installer": {
+        "script": [
+            "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
+            "Rename-Item \"$dir\\*.exe\" 'installer.exe'",
+            "Start-Process -filepath \"$dir\\installer.exe\" -ArgumentList /DIR=\"$dir\",/SILENT -WorkingDirectory \"$dir\" -Wait"
+        ]
+    },
+    "post_install": "@('installer.exe') | ForEach-Object { Remove-Item \"$dir\\$_\" -Force -ErrorAction SilentlyContinue }",
+    "uninstaller": {
+        "script": [
+            "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
+            "Start-Process -filepath \"$dir\\unins000.exe\" -ArgumentList /VERYSILENT -WorkingDirectory \"$dir\" -Wait",
+            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Bin\\QQScLauncher.exe",
+            "Tencent\\QQ"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>QQ_(?<ver>([\\d.]+))_[(](?<build>([\\d]+))[)]_Installer_With_NtrQQ_.*?\\.rar)",
+        "replace": "${ver}.${build}",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/$matchFilename"
+    }
+}

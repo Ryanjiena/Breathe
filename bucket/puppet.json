@@ -1,0 +1,37 @@
+{
+    "version": "7.16.0",
+    "description": "An open-core software configuration management tool.",
+    "homepage": "https://puppetlabs.com",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.puppetlabs.com/windows/puppet/puppet-agent-7.16.0-x64.msi",
+            "hash": "5dd58160342e9c56f33160573a95871e621b5a94f6417508886d22a7405b7701"
+        },
+        "32bit": {
+            "url": "https://downloads.puppetlabs.com/windows/puppet/puppet-agent-7.16.0-x86.msi",
+            "hash": "8fa4f1e7c3f59fee762a9fa53448bf1b0245afc5ced44606c2ee58a69635210e"
+        }
+    },
+    "bin": [
+        "Puppet Labs\\Puppet\\bin\\facter.bat",
+        "Puppet Labs\\Puppet\\bin\\facter_interactive.bat",
+        "Puppet Labs\\Puppet\\bin\\hiera.bat",
+        "Puppet Labs\\Puppet\\bin\\puppet.bat",
+        "Puppet Labs\\Puppet\\bin\\puppet_interactive.bat"
+    ],
+    "checkver": {
+        "url": "https://downloads.puppetlabs.com/windows/puppet/index_by_lastModified_reverse.html",
+        "regex": "puppet-agent-([\\d.]+)-x64\\.msi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.puppetlabs.com/windows/puppet/puppet-agent-$version-x64.msi"
+            },
+            "32bit": {
+                "url": "https://downloads.puppetlabs.com/windows/puppet/puppet-agent-$version-x86.msi"
+            }
+        }
+    }
+}

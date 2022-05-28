@@ -1,0 +1,31 @@
+{
+    "version": "1.5.16",
+    "description": "Git tooling of the future",
+    "homepage": "https://github.com/Milo123459/glitter",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Milo123459/glitter/releases/download/v1.5.16/glitter-x86_64-pc-windows-msvc.zip",
+            "hash": "1da9ce5b45c60700234506371bdd06305afc846e6eaa2bed26035e1a5892f9ab"
+        },
+        "32bit": {
+            "url": "https://github.com/Milo123459/glitter/releases/download/v1.5.16/glitter-i686-pc-windows-msvc.zip",
+            "hash": "1c20ecd1d1cc04eac90dde6690a1f0a041178772f689c59d19cf360b5c609b69"
+        }
+    },
+    "bin": "glitter.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Milo123459/glitter/releases/download/v$version/glitter-x86_64-pc-windows-msvc.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/Milo123459/glitter/releases/download/v$version/glitter-i686-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

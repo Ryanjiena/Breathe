@@ -1,0 +1,31 @@
+{
+    "version": "1.7.14",
+    "description": "Quickly clone an entire org/users repositories into one directory - Supports GitHub, GitLab, Bitbucket, and more",
+    "homepage": "https://github.com/gabrie30/ghorg",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gabrie30/ghorg/releases/download/v1.7.14/ghorg_1.7.14_Windows_x86_64.tar.gz",
+            "hash": "7336543bb429c8c4b7bf01f66be20f6fbd9a5730f1d5953fbc9c2d8c17b04804"
+        },
+        "32bit": {
+            "url": "https://github.com/gabrie30/ghorg/releases/download/v1.7.14/ghorg_1.7.14_Windows_i386.tar.gz",
+            "hash": "f6ebf8cb57f7e496129f04ecec36261b20a83d9d7f77e46b0a70b2a7526c7b75"
+        }
+    },
+    "bin": "ghorg.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gabrie30/ghorg/releases/download/v$version/ghorg_$version_Windows_x86_64.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/gabrie30/ghorg/releases/download/v$version/ghorg_$version_Windows_i386.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

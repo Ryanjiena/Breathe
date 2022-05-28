@@ -1,0 +1,48 @@
+{
+    "version": "22.04.2022",
+    "description": "Alternative to standard Windows Update.",
+    "homepage": "https://forum.ru-board.com/topic.cgi?forum=5&amp;topic=48142",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/wumt_v22.04.2022.zip",
+    "hash": "1bd6fbd5e65d9e88f47cb43f60e0e694b702513fde26afb18a0d1396bcb7307d",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "wumt_x86.exe",
+                    "wumt"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "wumt_x86.exe",
+                    "Windows Update MiniTool"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "wumt_x64.exe",
+                    "wumt"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "wumt_x86.exe",
+                    "Windows Update MiniTool"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?<filename>wumt_v([\\d.]+).*?\\.zip)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
+    }
+}
