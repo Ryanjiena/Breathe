@@ -1,5 +1,5 @@
 {
-    "version": "9.6.0.28707",
+    "version": "9.5.9.28625",
     "description": "Tencent QQ third-party modified version, maintained by Dreamcast(Portable, With NtrQQ Edition).",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -18,8 +18,8 @@
             "meta/vcredist-dreamcast"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/QQ_9.6.0_(28707)_Portable_With_NtrQQ_7.1.2.7z",
-    "hash": "09ee72e1cd0c386f7dfe928e6cd99a80fbc5fdea2dd7f15a290e358343d06442",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/QQ_9.5.9_(28625)_Portable_With_NtrQQ_7.1.2.7z",
+    "hash": "fa757ce3184314ad835b98cf7509781621833f082d981816c4412b6fe1b47548",
     "extract_dir": "QQ",
     "installer": {
         "script": [
