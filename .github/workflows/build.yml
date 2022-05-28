@@ -43,6 +43,7 @@ jobs:
           branchArr=("master" "master" "master" "master" "master" "master" "main")
           dirArr=("meta" "extras" "main" "versions" "nerd-fonts" "nirsoft" "JetBrains")
 
+          rm -f ${BUCKET_DIR}/*.json
           rm -rf "${WORK_DIR}" && mkdir -p "${WORK_DIR}"
           for ((i = 0; i < ${#repoArr[@]}; i++)); do
 
