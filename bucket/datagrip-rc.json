@@ -1,28 +1,17 @@
 {
     "version": "2022.1-221.5080.126",
-    "description": "Cross-Platform IDE for Databases & SQL by JetBrains. (Release Candidate)",
+    "description": "DataGrip Release Candidate. Cross-Platform IDE for Databases & SQL by JetBrains.",
     "homepage": "https://www.jetbrains.com/datagrip/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "url": "https://download.jetbrains.com/datagrip/datagrip-221.5080.126.exe#/dl.7z",
+    "url": "https://download.jetbrains.com/datagrip/datagrip-221.5080.126.exe#/cosi.7z",
     "hash": "1ec7f1311449d6652db5f9c70918694363905425d0c5ce5ac8c79071526973e8",
     "extract_to": "IDE",
-    "installer": {
-        "script": [
-            "& \"$bucketsdir\\tian\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
-            "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
-        ]
-    },
+    "pre_install": "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse",
     "architecture": {
         "64bit": {
-            "bin": [
-                [
-                    "IDE\\bin\\datagrip64.exe",
-                    "datagrip"
-                ]
-            ],
             "shortcuts": [
                 [
                     "IDE\\bin\\datagrip64.exe",
@@ -31,7 +20,6 @@
             ]
         },
         "32bit": {
-            "bin": "IDE\\bin\\datagrip.exe",
             "shortcuts": [
                 [
                     "IDE\\bin\\datagrip.exe",
@@ -40,17 +28,14 @@
             ]
         }
     },
-    "persist": [
-        "IDE\\bin\\idea.properties",
-        "profile"
-    ],
+    "persist": "IDE\\bin\\idea.properties",
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&platform=zip&type=rc",
         "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
         "replace": "${ver}-${build}"
     },
     "autoupdate": {
-        "url": "https://download.jetbrains.com/datagrip/datagrip-$preReleaseVersion.exe#/dl.7z",
+        "url": "https://download.jetbrains.com/datagrip/datagrip-$preReleaseVersion.exe#/cosi.7z",
         "hash": {
             "url": "$url.sha256"
         }
