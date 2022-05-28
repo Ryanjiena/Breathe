@@ -27,7 +27,7 @@ jobs:
         env:
           github_token: ${{ secrets.GH_TOKEN }}
         run: |
-          # set -euxo pipefail
+          set -euxo pipefail
 
           CURRENT_DIR=$(pwd)
           DATE=$(TZ=UTC-8 date '+%Y-%m-%d %H:%M:%S')
@@ -49,7 +49,7 @@ jobs:
               if [[ "$i" == "0" ]]; then
                   git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
               else
-                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://${github_token}@github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
+                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://Ryanjiena:${github_token}@github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
               fi
 
               cd "${WORK_DIR}/${dirArr[i]}/bucket"
