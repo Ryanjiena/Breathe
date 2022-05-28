@@ -1,0 +1,62 @@
+name: Excavator
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */4 * * *"
+
+jobs:
+  excavate:
+    name: Excavate
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: "Ryanjiena/Meta"
+          ref: "master"
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Excavate
+        env:
+          SKIP_UPDATED: "1"
+          THROW_ERROR: "0"
+          SCOOP_GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          BRANCH: "master"
+          USER_EMAIL: "78083448+JaimeZeng@users.noreply.github.com"
+          USER: "JaimeZeng[bot]"
+          GITHUB_REPOSITORY: "Ryanjiena/Meta"
+        run: |
+          $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
+          $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
+          $env:SCOOP_GLOBAL = Join-Path $env:SystemDrive 'SCOOP'
+          $env:SCOOP_DEBUG = 1
+          $REPOSITORY = $env:GITHUB_REPOSITORY
+          $BUCKET_ROOT = $env:GITHUB_WORKSPACE
+          $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
+          $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
+          $_BRANCH = $env:BRANCH
+          $rem = "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/$env:GITHUB_REPOSITORY.git"
+
+          Write-Host "Config git" -f darkgreen
+          git config --global user.name $env:USER
+          git config --global user.email $env:USER_EMAIL
+          git remote 'set-url' --push origin $rem
+
+          Write-Host 'Installing scoop' -f darkgreen
+          $f = Join-Path $env:USERPROFILE 'install.ps1'
+          Invoke-WebRequest 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' -UseBasicParsing -OutFile $f
+          & $f -RunAsAdmin
+
+          Write-Host 'Importing all modules' -f darkgreen
+          # Load all scoop's modules.
+          # Dot sourcing needs to be done on highest scope possible to propagate into lower scopes
+          Get-ChildItem (Join-Path $env:SCOOP_HOME 'lib') '*.ps1' | ForEach-Object { . $_.FullName }
+
+          $params = @{
+              'Dir'          = $MANIFESTS_LOCATION
+              'Upstream'     = "${REPOSITORY}:${_BRANCH}"
+              'OriginBranch' = $_BRANCH
+              'Push'         = $true
+              'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
+          }
+          & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
+          Write-Host 'Scheduled finished' -f darkgreen

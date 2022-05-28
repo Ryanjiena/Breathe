@@ -3,8 +3,11 @@ name: Build
 on:
   # push:
   #   branches: [ main ]
-  schedule:
-    - cron: "0 */4 * * *"
+  # schedule:
+  #   - cron: "0 */4 * * *"
+  workflow_run:
+    workflows: ["Excavator"]
+    types: [completed]
   workflow_dispatch:
 
 jobs:
