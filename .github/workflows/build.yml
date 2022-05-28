@@ -4,7 +4,7 @@ on:
   # push:
   #   branches: [ main ]
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */4 * * *"
   workflow_dispatch:
 
 jobs:
@@ -24,6 +24,8 @@ jobs:
           git config --local user.email "43134606+Ryanjiena@users.noreply.github.com"
           git config --local user.name "Ryanjiena"
       - name: "Build"
+        env:
+          github_token: ${{ secrets.GH_TOKEN }}
         run: |
           # set -euxo pipefail
 
@@ -43,7 +45,13 @@ jobs:
 
           rm -rf "${WORK_DIR}" && mkdir -p "${WORK_DIR}"
           for ((i = 0; i < ${#repoArr[@]}; i++)); do
-              git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
+
+              if [[ "$i" == "0" ]]; then
+                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
+              else
+                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://${github_token}@github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
+              fi
+
               cd "${WORK_DIR}/${dirArr[i]}/bucket"
               # https://unix.stackexchange.com/a/56812
               # date; for filename in *.json; do mv "${filename}" "${filename%.json}_${dirArr[i]}.json"; done; date
