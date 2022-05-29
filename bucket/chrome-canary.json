@@ -1,5 +1,5 @@
 {
-    "version": "104.0.5088.0",
+    "version": "104.0.5089.0",
     "description": "Fast, secure, and free web browser, built for the modern web(Canary, Portable Edition).",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/admhon2yj2ktdunucwtvzht3yr5q_104.0.5088.0/104.0.5088.0_chrome_installer.exe#/dl.7z",
-            "hash": "305caa26f8ae91251632f00c0b27bf032ddc5d4fd4b112d588e262afc45836d1"
+            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/pnpgjohd3y2ezj5hizatqy5yma_104.0.5089.0/104.0.5089.0_chrome_installer.exe#/dl.7z",
+            "hash": "72bd517065fac201a47bbc391f0a42028ebb946a2882b7fde82e711b43b75cbb"
         },
         "32bit": {
-            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/btd25qgi4nkj2vsl5it3sldhf4_104.0.5088.0/104.0.5088.0_chrome_installer.exe#/dl.7z",
-            "hash": "497d1175078bdf0e9393496c8161bb993052815ce7a4cb45c6a2369b44ce7072"
+            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/kdmmbe2f5jn4vfkpydikrnm6ue_104.0.5089.0/104.0.5089.0_chrome_installer.exe#/dl.7z",
+            "hash": "9d5e6e43e7c13fe55f90dc903f55e52305c082dbd115090f8632d846a9761f8e"
         }
     },
     "installer": {
