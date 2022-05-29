@@ -1,5 +1,5 @@
 {
-    "version": "9.5.9.28625",
+    "version": "9.6.0.28707",
     "description": "Tencent QQ third-party modified version, maintained by Dreamcast(Portable Edition).",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -19,8 +19,8 @@
             "meta/vcredist-dreamcast"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/QQ_9.5.9_(28625)_Portable.7z",
-    "hash": "05697746f03710e58c92be808677fa162ad71f5bd110c1ac851ef23cc4baf5ba",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/腾讯QQ_9.6.0.28707_绿色版.7z",
+    "hash": "b460d0c26e8fd033cd4abf56636429c3e3c755408515176d5d9b412d1a1df3a0",
     "extract_dir": "QQ",
     "installer": {
         "script": [
@@ -43,8 +43,7 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>QQ_(?<ver>([\\d.]+))_[(](?<build>([\\d]+))[)]_Portable\\.(?:7z|zip|rar))",
-        "replace": "${ver}.${build}",
+        "regex": "(?s)(?<filename>腾讯QQ_([\\d.]+)_绿色版\\.7z)",
         "reverse": true
     },
     "autoupdate": {

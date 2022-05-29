@@ -1,5 +1,5 @@
 {
-    "version": "9.5.9.28625",
+    "version": "9.6.0.28707",
     "description": "Tencent QQ third-party modified version, maintained by Dreamcast.",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -18,8 +18,8 @@
             "meta/vcredist-dreamcast"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/QQ_9.5.9_(28625)_Installer.rar",
-    "hash": "157a02cfbf8c3fc73abb616b857057574cb19e0859b714c65ad489010cb775fc",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/腾讯QQ_9.6.0.28707_安装版.rar",
+    "hash": "9459f332373289390160cd8144d4eb28f13e8433b858c2e145df0badce8a9379",
     "installer": {
         "script": [
             "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
@@ -43,8 +43,7 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>QQ_(?<ver>([\\d.]+))_[(](?<build>([\\d]+))[)]_Installer\\.rar)",
-        "replace": "${ver}.${build}",
+        "regex": "(?s)(?<filename>腾讯QQ_([\\d.]+)_安装版\\.rar)",
         "reverse": true
     },
     "autoupdate": {
