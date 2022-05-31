@@ -1,5 +1,5 @@
 {
-    "version": "21.0.1100.0",
+    "version": "21.0.1110.0",
     "description": "360 Extreme Browser X, Chromium95 kernel.",
     "homepage": "https://browser.360.cn/eex/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://down.360safe.com/cse/360csex_21.0.1100.0.exe#/dl.7z",
-            "hash": "ec2e20157e8c31e25a69c004be4580ac4a61436e02524594d87cbfb3afbed8d2"
+            "url": "https://down.360safe.com/cse/360csex_21.0.1110.0.exe#/dl.7z",
+            "hash": "9e28d52693d9017bc0ea8f63fa0f6eeb01399e2ac6cad74b54ddbfc20cc598a5"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
