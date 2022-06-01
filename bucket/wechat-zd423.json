@@ -1,5 +1,5 @@
 {
-    "version": "3.7.0.27",
+    "version": "3.7.0.29",
     "description": "WeChat third-party modified version, maintained by 423down.com.",
     "homepage": "https://weixin.qq.com/",
     "license": {
@@ -12,7 +12,7 @@
         "https://pan.jiemi.workers.dev/?file=/scoop/patch/WeChat_v3.x_Patch.7z#dl.7z_"
     ],
     "hash": [
-        "ebfa17cc46060995e3e86467bfc823a69db1c168dd0fc77fcefe4050f0a46d34",
+        "cf0384d18deae4a88a6324560c91e6a65bb187b8a6406a681f0fb54ec2812a9c",
         "02f5c4a6ae6a7e410cd4f828f1862a8887ed3032ac350a8cb67f4a79d4ba249b"
     ],
     "pre_install": [
