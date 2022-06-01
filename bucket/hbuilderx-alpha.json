@@ -1,5 +1,5 @@
 {
-    "version": "3.4.12.20220523-alpha",
+    "version": "3.4.13.20220601-alpha",
     "description": "Lightweight but powerful source code editor(Standard, Alpha Edition).",
     "homepage": "https://www.dcloud.io/hbuilderx.html",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://hx.dcloud.net.cn/license"
     },
     "notes": "If you encounter a situation where HBuilderX does not start, please check <http://ask.dcloud.net.cn/article/35583>",
-    "url": "https://download1.dcloud.net.cn/download/HBuilderX.3.4.12.20220523-alpha.zip",
-    "hash": "666878b2c0b153867cbe2117c4bc7464ad1c193278357e451b92db6114bf4f2d",
+    "url": "https://download1.dcloud.net.cn/download/HBuilderX.3.4.13.20220601-alpha.zip",
+    "hash": "0dd3f9b7b029cb582c87cb9f0f5be918a86855f3a5d8880bfdb336e563263f9c",
     "extract_dir": "HBuilderX",
     "pre_install": [
         "if (Test-Path \"$env:AppData\\HBuilder X\") {",

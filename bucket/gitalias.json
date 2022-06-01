@@ -1,5 +1,5 @@
 {
-    "version": "0.2022.05.31",
+    "version": "0.2022.06.01",
     "description": "Git alias commands for faster easier version control.",
     "homepage": "https://github.com/GitAlias/gitalias",
     "license": {
@@ -9,9 +9,9 @@
         "Use gitalias by running: 'git config --global include.path $dir\\.gitalias'",
         "custom usage: <https://github.com/GitAlias/gitalias/blob/main/doc/install/index.md#install-with-custom-usage>"
     ],
-    "url": "https://github.com/GitAlias/gitalias/archive/3bb75d8af7b84025988abd5fe63292282029f525.zip",
-    "hash": "92074437e0e49a13c55b3630dbb1565169391e0a2f646a17d088688841976010",
-    "extract_dir": "gitalias-3bb75d8af7b84025988abd5fe63292282029f525",
+    "url": "https://github.com/GitAlias/gitalias/archive/2d9754dc621d4be5b70b3129e4437b5bd8d47bc5.zip",
+    "hash": "c849ffadf3e2897e8bb034298ff17e9b091ab9ab7979150462423d8a619cf0af",
+    "extract_dir": "gitalias-2d9754dc621d4be5b70b3129e4437b5bd8d47bc5",
     "pre_install": "Rename-Item -Path \"$dir\\gitalias.txt\" -NewName \".gitalias\" -Force | Out-Null",
     "checkver": {
         "url": "https://github.com/GitAlias/gitalias/commits/main.atom",
