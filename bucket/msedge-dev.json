@@ -1,5 +1,5 @@
 {
-    "version": "103.0.1264.2",
+    "version": "103.0.1264.11",
     "description": "Microsoft Edge is the fast and secure browser that helps you protect your data and save time and money(Dev Channel, Portable Edition).",
     "homepage": "https://www.microsoft.com/en-us/edge",
     "license": {
@@ -15,11 +15,11 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-apps.vercel.app/msedge-dev-win-X64#/dl.7z",
-            "hash": "f21a9d5587f5743cb2e4bb608fcbd2291a19cd5d39b4c4e0c16dee63b35c82d2"
+            "hash": "8be2fffcffe69fa66bcc8527dd40f1eef84f7a0cad9e435db67bb4563fbd0b02"
         },
         "32bit": {
             "url": "https://scoop-apps.vercel.app/msedge-dev-win-X86#/dl.7z",
-            "hash": "636850172235936b5441535fcb230ead2a54a1e5f02a4b81f353339758992db7"
+            "hash": "b17f42e0417653999e17c2cc169016d0386e945e60f3e7076fa284569963cff3"
         }
     },
     "installer": {
