@@ -1,5 +1,5 @@
 {
-    "version": "6.40.11",
+    "version": "6.41.2",
     "description": "IDM is a tool to increase download speeds by up to 5 times, resume and schedule downloads.",
     "homepage": "http://internetdownloadmanager.com/index.html",
     "license": {
@@ -7,8 +7,8 @@
         "url": "http://internetdownloadmanager.com/support/terms-and-conditions.html"
     },
     "depends": "sudo",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/internet_download_manager_6.40.11.zip",
-    "hash": "60002f734711f57b05ef6ba1402149e59dcbd1e94fca999f1fbaab474986998b",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/internet_download_manager_6.41.2.zip",
+    "hash": "0e8640db4fbdb5049f85e69d64a96b39b154a1b85bdfaafbf83c15ca14616340",
     "pre_install": [
         "Get-Process IDM*,IEMon* | Stop-Process -Force -ErrorAction Ignore | Out-Null",
         "Rename-Item \"$dir\\Internet Download Manager*.exe\" 'Installer.exe'",
