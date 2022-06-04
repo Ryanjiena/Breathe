@@ -1,13 +1,13 @@
 {
-    "version": "3.11.2",
+    "version": "3.11.3",
     "description": "Monitorian is a Windows desktop tool to adjust the brightness of multiple monitors with ease.",
     "homepage": "https://github.com/emoacht/Monitorian",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/emoacht/Monitorian/blob/master/LICENSE.txt"
     },
-    "url": "https://github.com/emoacht/Monitorian/releases/download/3.11.2-Installer/MonitorianInstaller3112.zip",
-    "hash": "881f03521c9f059839cdf27e1e8632e07d151261644cfacad91f75dd447015d1",
+    "url": "https://github.com/emoacht/Monitorian/releases/download/3.11.3-Installer/MonitorianInstaller3113.zip",
+    "hash": "fc9e050368ea7153d90e4a9bd9f48895e5b68088f6f94169731acee743d5703e",
     "pre_install": "Expand-MsiArchive \"$dir\\Monitorian.Installer.msi\" \"$dir\" -ExtractDir 'Monitorian' -Removal",
     "bin": "Monitorian.exe",
     "shortcuts": [
