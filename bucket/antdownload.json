@@ -7,7 +7,6 @@
     },
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/gh/antdownload_3.0.5.zip",
     "hash": "7096739e6b751eeeaa9b42b5835d21fb04f7fe58dd1c35f24aa8a6fe31c01e96",
-    "extract_dir": "antdownload 3.0.5",
     "shortcuts": [
         [
             "antdownload.exe",
@@ -20,7 +19,7 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "antdownload_([\\d.]+)\\.zip",
+        "regex": "Antdownload_v([\\d.]+)\\.zip",
         "reverse": true
     },
     "autoupdate": {
