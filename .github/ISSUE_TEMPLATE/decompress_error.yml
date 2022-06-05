@@ -1,0 +1,42 @@
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+name: Decompress failed
+description: Installation failed due to Decompress.
+title: "%%manifest%%@%%version%%: Decompress error"
+labels: ["decompress-error"]
+assignees:
+  - JaimeZeng
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to submit you issue using the following template!
+  - type: input
+    id: name
+    attributes:
+      label: Package Name
+      description: "name of package which has bug(s)."
+      placeholder: ex. git
+    validations:
+      required: true
+  - type: textarea
+    id: terminal-output
+    attributes:
+      label: Terminal Output
+      description: "Copy terminal output and paste it."
+      placeholder: |
+        ...
+        ...
+      render: powershell
+    validations:
+      required: true
+  - type: textarea
+    id: log-file
+    attributes:
+      label: Log File
+      description: "Copy log file and paste it."
+      placeholder: |
+        ...
+        ...
+      render: powershell
+    validations:
+      required: false
