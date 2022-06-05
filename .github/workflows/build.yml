@@ -42,13 +42,13 @@ jobs:
           BUCKET_DIR="${CURRENT_DIR}/bucket"
           SCRIPTS_DIR="${CURRENT_DIR}/scripts"
 
-          repoArr=("Ryanjiena/Meta" "ScoopInstaller/Extras" "ScoopInstaller/Main" "ScoopInstaller/Versions" "matthewjberger/scoop-nerd-fonts" "kodybrown/scoop-nirsoft" "Ash258/Scoop-JetBrains")
-          branchArr=("master" "master" "master" "master" "master" "master" "main")
-          dirArr=("meta" "extras" "main" "versions" "nerd-fonts" "nirsoft" "JetBrains")
+          repoArr=("Ryanjiena/Meta" "ScoopInstaller/Extras" "ScoopInstaller/Main" "ScoopInstaller/Versions" "matthewjberger/scoop-nerd-fonts" "jonz94/scoop-sarasa-nerd-fonts" "kodybrown/scoop-nirsoft" "Ash258/Scoop-JetBrains" "ScoopInstaller/Java")
+          branchArr=("master" "master" "master" "master" "master" "master" "master" "main" "master")
+          dirArr=("meta" "extras" "main" "versions" "nerd-fonts" "sarasa-nerd-fonts" "nirsoft" "JetBrains" "java")
 
           rm -f ${BUCKET_DIR}/*.json
           rm -rf "${WORK_DIR}" && mkdir -p "${WORK_DIR}"
-          for ((i = 0; i < ${#repoArr[@]}; i++)); do
+          for ((i = 2; i < ${#repoArr[@]}; i++)); do
 
               if [[ "$i" != "0" ]]; then
                   git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
