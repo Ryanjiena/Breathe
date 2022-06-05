@@ -1,6 +1,6 @@
 param(
     # overwrite upstream param
-    [String]$upstream = "lukesampson/scoop-extras:master"
+    [String]$upstream = "ScoopInstaller/Main:master"
 )
 
 if(!$env:SCOOP_HOME) { $env:SCOOP_HOME = Resolve-Path (scoop prefix scoop) }
