@@ -31,3 +31,14 @@ body:
       render: powershell
     validations:
       required: true
+  - type: textarea
+    id: log-file
+    attributes:
+      label: Log File
+      description: "Copy log file and paste it."
+      placeholder: |
+        ...
+        ...
+      render: powershell
+    validations:
+      required: false
