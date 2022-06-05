@@ -1,0 +1,33 @@
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+name: Bug Report
+description: I am facing some problems.
+title: "[Bug] %%Package Name%%"
+labels: ["bug"]
+assignees:
+  - JaimeZeng
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to submit you issue using the following template!
+        By opening this issue you confirm that you have searched for similar issues/PRs here already.
+        Failing to do so will most likely result in closing of this issue without any explanation.
+        Incomplete form details below might also result in closing of the issue.
+  - type: input
+    id: name
+    attributes:
+      label: Package Name
+      description: "name of package which has bug(s)."
+      placeholder: ex. git
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Terminal output
+      description: "Paste terminal output here."
+      placeholder: |
+        paste terminal output here...
+      render: powershell
+    validations:
+      required: true
