@@ -70,7 +70,7 @@ jobs:
               fi
           done
 
-          cp ${WORK_DIR}/extras/bin/* ${BIN_DIR}/ -f
+          cp ${WORK_DIR}/main/bin/* ${BIN_DIR}/ -f
 
           cd ${CURRENT_DIR}/
           git add . && git commit -m "Updated by: ${USER}, at: ${DATE}"
