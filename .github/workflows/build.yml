@@ -48,7 +48,7 @@ jobs:
 
           rm -f ${BUCKET_DIR}/*.json
           rm -rf "${WORK_DIR}" && mkdir -p "${WORK_DIR}"
-          for ((i = 2; i < ${#repoArr[@]}; i++)); do
+          for ((i = 1; i < ${#repoArr[@]}; i++)); do
 
               if [[ "$i" != "0" ]]; then
                   git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
