@@ -1,0 +1,21 @@
+{
+    "version": "0.25.0",
+    "description": "Efficient duplicate file finder",
+    "homepage": "https://github.com/pkolaczk/fclones",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/pkolaczk/fclones/releases/download/v0.25.0/fclones-0.25.0-windows.x86_64.zip",
+            "hash": "ddc7a2bf1aa7ab109f7a877135926841aa81dce4facd7f740dd331b6a4223572"
+        }
+    },
+    "bin": "fclones.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/pkolaczk/fclones/releases/download/v$version/fclones-$version-windows.x86_64.zip"
+            }
+        }
+    }
+}

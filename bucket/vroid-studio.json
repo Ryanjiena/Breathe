@@ -1,0 +1,32 @@
+{
+    "version": "1.7.0",
+    "description": "3D character maker",
+    "homepage": "https://vroid.com/en/studio",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://policies.pixiv.net/en.html#vroidstudio"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.vroid.com/dist/8bQaMVAPNV/VRoidStudio-v1.7.0-win.exe",
+            "hash": "17b6286dd8b56281d1c20c98e8895529bcb21cd2054464d143ea7e093867ca8c"
+        }
+    },
+    "innosetup": true,
+    "pre_install": "if (!(Test-Path \"$dir\\uWintab.log\")) {New-Item \"$dir\\uWintab.log\" | Out-Null}",
+    "shortcuts": [
+        [
+            "VRoidStudio.exe",
+            "VRoid Studio"
+        ]
+    ],
+    "persist": "uWintab.log",
+    "checkver": "https://download.vroid.com/dist/(?<distId>[\\w]+)/VRoidStudio-v(?<version>[\\d.]+)-win\\.exe",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.vroid.com/dist/$matchDistid/VRoidStudio-v$version-win.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "version": "1.5.5",
+    "description": "A faster, better and more stable Redis desktop manager",
+    "homepage": "https://github.com/qishibo/AnotherRedisDesktopManager",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.5/Another-Redis-Desktop-Manager.1.5.5.exe#/dl.7z",
+            "hash": "sha512:d0d78940d79ed6e63005cdc4c07a6840c1996648144d74d64c08b8123c91ae32000e5c4a85c7f9c317b5229b15d978146dbdd6d8591e7d2ec403db562de8d362"
+        }
+    },
+    "pre_install": [
+        "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+        "'$PLUGINSDIR', 'Uninstall*.exe' | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse -Force }"
+    ],
+    "shortcuts": [
+        [
+            "Another Redis Desktop Manager.exe",
+            "Another Redis Desktop Manager"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v$version/Another-Redis-Desktop-Manager.$version.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}
