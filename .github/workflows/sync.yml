@@ -1,0 +1,32 @@
+name: Sync
+
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: Sync
+    runs-on: ubuntu-latest
+    if: ${{ success() }}
+    needs: build
+    steps:
+      - name: Import ssh private key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" | sed 's/\\n/\n/g' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+      - name: Git config
+        run: |
+          git config --global user.name "Ryanjie"
+          git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
+          git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
+          # https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository/13364116#13364116
+          # ssh-keygen -R jihulab.com
+          ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
+      - name: Sync
+        run: bash <(curl -sSfL https://github.com/Ryanjiena/Tian/raw/main/.github/workflows/sync.sh)
+      - name: Remove ssh private key
+        run: rm -f ~/.ssh/id_rsa

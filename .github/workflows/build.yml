@@ -1,13 +1,11 @@
 name: Build
 
 on:
-  # push:
-  #   branches: [ main ]
-  # schedule:
-  #   - cron: "0 */4 * * *"
-  workflow_run:
-    workflows: ["Excavator"]
-    types: [completed]
+  schedule:
+    - cron: "0 * * * *"
+  # workflow_run:
+  #   workflows: ["Excavator"]
+  #   types: [completed]
   workflow_dispatch:
 
 jobs:
@@ -16,107 +14,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: "main"
-          fetch-depth: "1"
       - name: Install Dependence
         run: sudo apt-get install -y rename
       - name: Git config
         run: |
-          git config --local user.email "43134606+Ryanjiena@users.noreply.github.com"
-          git config --local user.name "Ryanjiena"
+          git config --global user.email "43134606+Ryanjiena@users.noreply.github.com"
+          git config --global user.name "Ryanjiena"
       - name: "Build"
         env:
           github_token: ${{ secrets.GH_TOKEN }}
-        run: |
-          set -euxo pipefail
-
-          CURRENT_DIR=$(pwd)
-          DATE=$(TZ=UTC-8 date '+%Y-%m-%d %H:%M:%S')
-          USER=$(whoami)
-          WORK_DIR="/tmp/tian"
-          TMP_DIR="${TMP_DIR:-$(mktemp -d /tmp/tian.XXXX)}"
-          LOG_FILE="${LOG_FILE:-${TMP_DIR}/build.log}"
-          BIN_DIR="${CURRENT_DIR}/bin"
-          BUCKET_DIR="${CURRENT_DIR}/bucket"
-          SCRIPTS_DIR="${CURRENT_DIR}/scripts"
-
-          repoArr=("Ryanjiena/Meta" "ScoopInstaller/Extras" "ScoopInstaller/Main" "ScoopInstaller/Versions" "matthewjberger/scoop-nerd-fonts" "kodybrown/scoop-nirsoft" "Ash258/Scoop-JetBrains")
-          branchArr=("master" "master" "master" "master" "master" "master" "main")
-          dirArr=("meta" "extras" "main" "versions" "nerd-fonts" "nirsoft" "JetBrains")
-
-          rm -f ${BUCKET_DIR}/*.json
-          rm -rf "${WORK_DIR}" && mkdir -p "${WORK_DIR}"
-          for ((i = 0; i < ${#repoArr[@]}; i++)); do
-
-              if [[ "$i" != "0" ]]; then
-                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
-              else
-                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://Ryanjiena:${github_token}@github.com/${repoArr[i]}.git" "${WORK_DIR}/${dirArr[i]}"
-              fi
-
-              cd "${WORK_DIR}/${dirArr[i]}/bucket"
-              # https://unix.stackexchange.com/a/56812
-              # date; for filename in *.json; do mv "${filename}" "${filename%.json}_${dirArr[i]}.json"; done; date
-              # rename "s/\.json$/_${dirArr[i]}.json/" *json
-              rename 'y/A-Z/a-z/' *json
-              sed -i "s|bucketsdir\\\\\\\\${dirArr[i]}\\\\\\\\scripts|bucketsdir\\\\\\\\tian\\\\\\\\scripts|g" *json
-              cd "${WORK_DIR}/${dirArr[i]}"
-              # override, remove duplicate manifests
-              cp bucket/*.json ${BUCKET_DIR}/ -f
-              if [ -e "scripts" ]; then
-                  cp scripts/* ${SCRIPTS_DIR}/ -r -f
-              fi
-          done
-
-          cp ${WORK_DIR}/extras/bin/* ${BIN_DIR}/ -f
-
-          cd ${CURRENT_DIR}/
-          git add . && git commit -m "Updated by: ${USER}, at: ${DATE}"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-
-  sync:
-    name: Sync
-    runs-on: ubuntu-latest
-    if: ${{ success() }}
-    needs: build
-    steps:
-      - name: Import ssh private key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" | sed 's/\\n/\n/g' > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-      - name: Git config
-        run: |
-          git config --global user.name "Ryanjie"
-          git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
-          git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
-          # https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository/13364116#13364116
-          # ssh-keygen -R jihulab.com
-          ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
-      - name: Clone bucket
-        run: |
-          CURRENT_DIR=$(pwd)
-          DATE=$(TZ=UTC-8 date '+%Y-%m-%d %H:%M:%S')
-          USER=$(whoami)
-
-          git clone -q --depth=1 git@jihulab.com:Ryanjie/Tian.git ${CURRENT_DIR}/tian-cn
-          git clone -q --depth=1 https://github.com/Ryanjiena/Tian.git ${CURRENT_DIR}/tian
-
-          cd ${CURRENT_DIR}/tian/bucket/
-          sed -i 's|\(https://github.com/.*/releases/download\)|https://ghproxy.com/\1|g;s|\(https://github.com/.*/archive\)|https://ghproxy.com/\1|g;s|\(https://raw.githubusercontent.com/\)|https://ghproxy.com/\1|g' *json
-
-          cp ${CURRENT_DIR}/tian/bin/* ${CURRENT_DIR}/tian-cn/bin/ -f
-          cp ${CURRENT_DIR}/tian/bucket/* ${CURRENT_DIR}/tian-cn/bucket/ -f
-          cp ${CURRENT_DIR}/tian/scripts/* ${CURRENT_DIR}/tian-cn/scripts/ -r -f
-          cp ${CURRENT_DIR}/tian/README.md ${CURRENT_DIR}/tian-cn/README.md -f
-
-          cd ${CURRENT_DIR}/tian-cn/
-          git add . && git commit -m "Sync by: ${USER}, at: ${DATE}"
-          git push -u origin main
-      - name: Remove ssh private key
-        run: rm -f ~/.ssh/id_rsa
+        run: bash <(curl -sSfL https://github.com/Ryanjiena/Tian/raw/main/.github/workflows/build.sh)

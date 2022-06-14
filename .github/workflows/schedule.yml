@@ -34,7 +34,7 @@ jobs:
           $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
           $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
           $_BRANCH = $env:BRANCH
-          $rem = "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/$env:GITHUB_REPOSITORY.git"
+          $rem = "https://JaimeZeng:$env:GITHUB_TOKEN@github.com/$env:GITHUB_REPOSITORY.git"
 
           Write-Host "Config git" -f darkgreen
           git config --global user.name $env:USER
