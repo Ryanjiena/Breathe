@@ -21,20 +21,20 @@ git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.
 # init tian
 cd "${TMP_DIR}/tian"
 if [ -d "bucket" ]; then
-    rm -rf bin bucket scripts README.md
+    rm -rf bin/* bucket/* scripts/* README.md
 fi
 
 # init fantastic-bucket
 cd "${TMP_DIR}/fantastic"
 if [ -d "bucket" ]; then
-    rm -rf bin bucket scripts README.md
+    rm -rf bin/* bucket/* scripts/* README.md
 fi
 
 # build
 manifest_badge="| Bucket | Manifest |\n| :--- | :--- |\n"
-for ((i = 2; i < ${#repoArr[@]}; i++)); do
+for ((i = 0; i < ${#repoArr[@]}; i++)); do
 
-    if [[ "$i" != "0" ]]; then
+    if [[ "$i" != "8" ]]; then
         git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${TMP_DIR}/${dirArr[i]}"
     else
         git clone -q --depth=1 --branch="${branchArr[i]}" "https://Ryanjiena:${github_token}@github.com/${repoArr[i]}.git" "${TMP_DIR}/${dirArr[i]}"
@@ -79,5 +79,5 @@ cd "${TMP_DIR}/tian/bucket"
 grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
 
 # push
-cd "${TMP_DIR}/tian" && git add . && git commit -m "Update ${DATE} by ${USER}" && git push origin main
-cd "${TMP_DIR}/fantastic" && git add . && git commit -m "Update ${DATE} by ${USER}" && git push origin main
+cd "${TMP_DIR}/tian" && git add . && git commit -m "by: ${USER}, at: ${DATE}" && git push origin main
+cd "${TMP_DIR}/fantastic" && git add . && git commit -m "by: ${USER}, at: ${DATE}" && git push origin main
