@@ -1,0 +1,42 @@
+{
+    "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK)",
+    "homepage": "https://aws.amazon.com/corretto/",
+    "version": "8.332.08.1",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://corretto.aws/downloads/resources/8.332.08.1/amazon-corretto-8.332.08.1-windows-x64-jre.zip",
+            "hash": "md5:37c64920b1ea8dcb8aff259c45b64d32"
+        },
+        "32bit": {
+            "url": "https://corretto.aws/downloads/resources/8.332.08.1/amazon-corretto-8.332.08.1-windows-x86-jre.zip",
+            "hash": "md5:baf2850c7e6ad117308b19f0657b6859"
+        }
+    },
+    "extract_dir": "jre8",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/corretto/corretto-8"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x64-jre.zip",
+                "hash": {
+                    "url": "https://github.com/corretto/corretto-8/releases/tag/$version",
+                    "regex": "(?smi)amazon-corretto-$version-windows-x64-jre.zip(?:.*?)<code>([a-fA-F0-9]+)</code>"
+                }
+            },
+            "32bit": {
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x86-jre.zip",
+                "hash": {
+                    "url": "https://github.com/corretto/corretto-8/releases/tag/$version",
+                    "regex": "(?smi)amazon-corretto-$version-windows-x86-jre.zip(?:.*?)<code>([a-fA-F0-9]+)</code>"
+                }
+            }
+        }
+    }
+}

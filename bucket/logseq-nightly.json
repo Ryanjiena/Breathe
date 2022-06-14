@@ -1,0 +1,38 @@
+{
+    "version": "0.7.3-20220613",
+    "description": "A privacy-first platform for knowledge sharing and management",
+    "homepage": "https://logseq.com",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/logseq/logseq/releases/download/nightly/Logseq-win-x64-0.7.3+nightly.20220613.exe#/dl.7z",
+            "hash": "2ba09273d1c9ac4f2cd3cb11b71c8bdd6b5fa5fec258eff993c101eebce866fd"
+        }
+    },
+    "pre_install": [
+        "Expand-7ZipArchive \"$dir\\Logseq-*-full.nupkg\" -ExtractDir 'lib\\net45' -Removal",
+        "Remove-Item \"$dir\\lib\", \"$dir\\Update*\", \"$dir\\*.gif\", \"$dir\\*.ico\", \"$dir\\RELEASES*\" -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "Logseq.exe",
+            "Logseq"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/logseq/logseq/releases/tag/nightly",
+        "regex": "Logseq-win-x64-(?<main>[\\d.]+)\\+nightly\\.(?<date>\\d{8})",
+        "replace": "${main}-${date}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/logseq/logseq/releases/download/nightly/Logseq-win-x64-$matchMain+nightly.$matchDate.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/SHA256SUMS.txt",
+                    "regex": "$sha256\\s{2}Logseq-win-x64"
+                }
+            }
+        }
+    }
+}

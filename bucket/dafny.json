@@ -1,0 +1,28 @@
+{
+    "version": "3.6.0",
+    "description": "A programming language with a program verifier",
+    "homepage": "https://dafny-lang.github.io/dafny/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dafny-lang/dafny/releases/download/v3.6.0/dafny-3.6.0-x64-win.zip",
+            "hash": "8f385d3a5fe4503b15c1268981cfea45bba6787325bd9956542a3758fc55e8d9",
+            "extract_dir": "dafny"
+        }
+    },
+    "bin": [
+        "Dafny.exe",
+        "DafnyLanguageServer.exe",
+        "DafnyServer.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/dafny-lang/dafny"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dafny-lang/dafny/releases/download/v$version/dafny-$version-x64-win.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "version": "2.6.7",
+    "description": "A cross-platform build utility based on Lua",
+    "homepage": "https://xmake.io",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xmake-io/xmake/releases/download/v2.6.7/xmake-v2.6.7.win64.zip",
+            "hash": "47c6bda129738ff48181cbb42b5629cf101630cfac9dc4aae569c826aecd7895"
+        },
+        "32bit": {
+            "url": "https://github.com/xmake-io/xmake/releases/download/v2.6.7/xmake-v2.6.7.win32.zip",
+            "hash": "97fddd5e4b207fcdb153d76f6cb7b591f28c8b071452c0a2711da56125dff601"
+        }
+    },
+    "extract_dir": "xmake",
+    "bin": [
+        "xmake.exe",
+        "xrepo.bat"
+    ],
+    "checkver": {
+        "github": "https://github.com/xmake-io/xmake"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xmake-io/xmake/releases/download/v$version/xmake-v$version.win64.zip",
+                "hash": {
+                    "url": "$baseurl/xmake-v$version.win64.sha256",
+                    "regex": "$sha256.*?zip"
+                }
+            },
+            "32bit": {
+                "url": "https://github.com/xmake-io/xmake/releases/download/v$version/xmake-v$version.win32.zip",
+                "hash": {
+                    "url": "$baseurl/xmake-v$version.win32.sha256",
+                    "regex": "$sha256.*?zip"
+                }
+            }
+        }
+    }
+}
