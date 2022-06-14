@@ -10,8 +10,6 @@ jobs:
   sync:
     name: Sync
     runs-on: ubuntu-latest
-    if: ${{ success() }}
-    needs: build
     steps:
       - name: Import ssh private key
         run: |
