@@ -57,7 +57,7 @@ jobs:
 
           # build
           manifest_badge="| Bucket | Manifest |\n| :--- | :--- |\n"
-          for ((i = 0; i < ${#repoArr[@]-1}; i++)); do
+          for ((i = 0; i < ${#repoArr[@]}-1; i++)); do
 
               if [[ "$i" != "8" ]]; then
                   git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${TMP_DIR}/${dirArr[i]}"
