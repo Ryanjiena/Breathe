@@ -1,0 +1,33 @@
+{
+    "version": "8.1.0",
+    "description": "A free and open source interactive HTTPS proxy",
+    "homepage": "https://mitmproxy.org/",
+    "license": "MIT",
+    "url": "https://snapshots.mitmproxy.org/8.1.0/mitmproxy-8.1.0-windows.zip",
+    "hash": "5fb026ea45b1f69c732d191722aaa3b51a09d1e321e1b8e3b9f2a7d7f1554f20",
+    "bin": [
+        "mitmproxy.exe",
+        "mitmweb.exe",
+        "mitmdump.exe"
+    ],
+    "shortcuts": [
+        [
+            "mitmproxy.exe",
+            "mitmproxy"
+        ],
+        [
+            "mitmweb.exe",
+            "mitmweb"
+        ],
+        [
+            "mitmdump.exe",
+            "mitmdump"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/mitmproxy/mitmproxy"
+    },
+    "autoupdate": {
+        "url": "https://snapshots.mitmproxy.org/$version/mitmproxy-$version-windows.zip"
+    }
+}

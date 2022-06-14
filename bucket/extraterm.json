@@ -1,0 +1,32 @@
+{
+    "version": "0.62.0",
+    "description": "The swiss army chainsaw of terminal emulators",
+    "homepage": "https://extraterm.org",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sedwards2009/extraterm/releases/download/v0.62.0/extratermqt-0.62.0-win32-x64.zip",
+            "hash": "c3a59cd38320e3937cb50ebac027500ddb2a0c38ec2fc567a878c483930b68f8",
+            "extract_dir": "extratermqt-0.62.0-win32-x64"
+        }
+    },
+    "bin": "extratermqt.exe",
+    "shortcuts": [
+        [
+            "extratermqt.exe",
+            "Extraterm"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/sedwards2009/extraterm/releases/",
+        "regex": "Extraterm\\s+v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sedwards2009/extraterm/releases/download/v$version/extratermqt-$version-win32-x64.zip",
+                "extract_dir": "extratermqt-$version-win32-x64"
+            }
+        }
+    }
+}

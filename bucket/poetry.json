@@ -1,0 +1,22 @@
+{
+    "version": "1.1.13",
+    "description": "Dependency Management for Python",
+    "homepage": "https://python-poetry.org/",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://install.python-poetry.org#/install-poetry.py",
+    "hash": "761cdefb65de97882482d5edf29de6d90e42917447aabfde63a693206c4550c6",
+    "installer": {
+        "script": [
+            "$env:POETRY_HOME=\"$dir\"",
+            "python3 \"$dir\\$fname\" --version $version"
+        ]
+    },
+    "bin": "venv\\Scripts\\poetry.exe",
+    "checkver": {
+        "github": "https://github.com/python-poetry/poetry/"
+    },
+    "autoupdate": {
+        "url": "https://install.python-poetry.org#/install-poetry.py"
+    }
+}
