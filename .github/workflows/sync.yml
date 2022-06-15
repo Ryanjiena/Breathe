@@ -22,6 +22,8 @@ jobs:
           # ssh-keygen -R jihulab.com
           ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
       - name: Sync
+        env:
+          github_token: ${{ secrets.GH_TOKEN }}
         run: |
           # set -euxo pipefail
 
