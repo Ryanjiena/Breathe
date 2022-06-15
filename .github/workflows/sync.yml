@@ -45,8 +45,9 @@ jobs:
 
           cd ${CURRENT_DIR}/tian-cn/
           if [ -d "bucket" ]; then
-              rm -rf bin bucket scripts README.md
+              rm -rf bin bucket scripts 
           fi
+          mkdir bin bucket scripts 
 
           cp ${CURRENT_DIR}/fantastic/bin/* ${CURRENT_DIR}/tian-cn/bin/ -f
           cp ${CURRENT_DIR}/fantastic/bucket/* ${CURRENT_DIR}/tian-cn/bucket/ -f
