@@ -18,9 +18,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
       - name: Git config
         run: |
-          git config --global user.name "Ryanjie"
-          git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
-          git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
           # https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository/13364116#13364116
           # ssh-keygen -R jihulab.com
           ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
@@ -32,8 +29,14 @@ jobs:
           DATE="$(echo $(TZ=UTC date '+%Y-%m-%d %H:%M:%S'))"
           USER=$(whoami)
 
-          git clone -q --depth=1 git@jihulab.com:Ryanjie/Tian.git "${CURRENT_DIR}/tian-cn"
+          git config --global user.email "43134606+Ryanjiena@users.noreply.github.com"
+          git config --global user.name "Ryanjiena"
           git clone -q --depth=1 https://Ryanjiena:${github_token}@github.com/Ryanjiena/fantastic-bucket.git "${CURRENT_DIR}/fantastic"
+
+          git config --global user.name "Ryanjie"
+          git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
+          git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
+          git clone -q --depth=1 git@jihulab.com:Ryanjie/Tian.git "${CURRENT_DIR}/tian-cn"
 
           cd ${CURRENT_DIR}/fantastic/bucket/
           # sed -i 's|\(https://github.com/.*/releases/download\)|https://ghproxy.com/\1|g;s|\(https://github.com/.*/archive\)|https://ghproxy.com/\1|g;s|\(https://raw.githubusercontent.com/\)|https://ghproxy.com/\1|g' *json
