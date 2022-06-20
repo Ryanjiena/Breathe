@@ -1,0 +1,26 @@
+{
+    "homepage": "https://cloud.189.cn/",
+    "description": "The official client for Tianyi cloud dirve service",
+    "version": "6.4.1",
+    "license": "Proprietary",
+    "url": "https://dorado-api.deno.dev/tianyi-ecloud?dl#/tianyi-ecloud-6.4.1.7z",
+    "hash": "6224a48f90910df119a59dda83e2a7659dbf49649d43524d324178cd191706a6",
+    "shortcuts": [
+        [
+            "eCloud.exe",
+            "天翼云盘"
+        ]
+    ],
+    "post_install": [
+        "@('$PLUGINSDIR', '$TEMP', 'uninst.exe', 'UninstSetup.exe') | ForEach-Object {",
+        "    Remove-Item \"$dir\\$_\" -Recurse -Force",
+        "}"
+    ],
+    "checkver": {
+        "url": "https://dorado-api.deno.dev/tianyi-ecloud",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://dorado-api.deno.dev/tianyi-ecloud?dl#/tianyi-ecloud-$version.7z"
+    }
+}

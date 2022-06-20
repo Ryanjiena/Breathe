@@ -13,6 +13,9 @@
  | [ScoopInstaller/Java](https://github.com/ScoopInstaller/Java.git) | [![ScoopInstaller/Java badge](https://img.shields.io/static/v1?label=ScoopInstaller/Java&message=222&color=green)](https://github.com/ScoopInstaller/Java.git) |
  | [ScoopInstaller/Main](https://github.com/ScoopInstaller/Main.git) | [![ScoopInstaller/Main badge](https://img.shields.io/static/v1?label=ScoopInstaller/Main&message=1047&color=green)](https://github.com/ScoopInstaller/Main.git) |
  | [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions.git) | [![ScoopInstaller/Versions badge](https://img.shields.io/static/v1?label=ScoopInstaller/Versions&message=336&color=green)](https://github.com/ScoopInstaller/Versions.git) |
+ | [ScoopInstaller/Extras](https://github.com/ScoopInstaller/Extras.git) | [![ScoopInstaller/Extras badge](https://img.shields.io/static/v1?label=ScoopInstaller/Extras&message=1553&color=green)](https://github.com/ScoopInstaller/Extras.git) |
+ | [chawyehsu/dorado](https://github.com/chawyehsu/dorado.git) | [![chawyehsu/dorado badge](https://img.shields.io/static/v1?label=chawyehsu/dorado&message=216&color=green)](https://github.com/chawyehsu/dorado.git) |
+ | [Ryanjiena/Meta](https://github.com/Ryanjiena/Meta.git) | [![Ryanjiena/Meta badge](https://img.shields.io/static/v1?label=Ryanjiena/Meta&message=651&color=green)](https://github.com/Ryanjiena/Meta.git) |
 
 <!--te-->
 

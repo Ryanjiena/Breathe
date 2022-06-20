@@ -1,0 +1,23 @@
+{
+    "version": "1.4.1",
+    "description": "A language for humans and computers.",
+    "homepage": "https://crystal-lang.org/",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/crystal-lang/crystal/blob/master/LICENSE"
+    },
+    "depends": "vswhere",
+    "url": "https://github.com/crystal-lang/crystal/releases/download/1.4.1/crystal-1.4.1-windows-x86_64-msvc-unsupported.zip",
+    "hash": "f4d357c145b0bf4e50f410919e91f6168b7dac892d9da8bde70d7f4205e88350",
+    "post_install": "If (Test-Path $env:LOCALAPPDATA\\crystal\\cache) { Remove-Item $env:LOCALAPPDATA\\crystal\\cache -ErrorAction SilentlyContinue -Recurse -Force }",
+    "bin": [
+        "crystal.exe",
+        "shards.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/crystal-lang/crystal"
+    },
+    "autoupdate": {
+        "url": "https://github.com/crystal-lang/crystal/releases/download/$version/crystal-$version-windows-x86_64-msvc-unsupported.zip"
+    }
+}

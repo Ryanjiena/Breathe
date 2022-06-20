@@ -1,0 +1,58 @@
+{
+    "version": "20220504.023630",
+    "description": "Goolgle Chrome Enhancement Software, maintained by shuax.",
+    "homepage": "https://github.com/shuax/chrome_plus",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/shuax/chrome_plus/blob/main/LICENSE"
+    },
+    "suggest": {
+        "chrome": [
+            "meta/chrome-beta",
+            "meta/chrome-canary",
+            "meta/chrome-dev",
+            "meta/chrome-stable"
+        ]
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/shuax/chrome_plus/actions/runs/2267434457/windows_x64.zip",
+            "hash": "dbae01a60aab46d594d6358c5b9d7475c9bb6f81aac82eee6622e6241dfc04e8"
+        },
+        "32bit": {
+            "url": "https://nightly.link/shuax/chrome_plus/actions/runs/2267434457/windows_x86.zip",
+            "hash": "cce625a13f5b4064bf3e8f437616cc9c20a9618b45fd04f52a438b160031232f"
+        }
+    },
+    "installer": {
+        "script": [
+            "if (Test-Path \"$(appdir chrome-stable-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir chrome-stable-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}",
+            "if (Test-Path \"$(appdir chrome-beta-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir chrome-beta-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}",
+            "if (Test-Path \"$(appdir chrome-dev-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir chrome-dev-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}",
+            "if (Test-Path \"$(appdir chrome-canary-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir chrome-canary-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://scoop-apps.vercel.app/shuax/chrome_plus",
+        "regex": "(?sm)/shuax/chrome_plus/actions/runs/(?<runid>\\d+).*?datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).(?<hour>\\d+).(?<minute>\\d+).(?<second>\\d+)",
+        "replace": "${year}${month}${day}.${hour}${minute}${second}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/shuax/chrome_plus/actions/runs/$matchRunid/windows_x64.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/shuax/chrome_plus/actions/runs/$matchRunid/windows_x86.zip"
+            }
+        }
+    }
+}

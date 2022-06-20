@@ -1,0 +1,23 @@
+{
+    "version": "11.3.0.0",
+    "description": "A Win10/Win11 comes with a Microsoft Five Strokes code list and phrase replacement and management tools (you can replace the system Five Strokes with Zheng code, Xiaohe phonetic form, table code, etc. with one click).",
+    "homepage": "https://wubi.aardio.com/",
+    "license": {
+        "identifier": "MIT"
+    },
+    "url": "https://wubi.aardio.com/update/WubiLex.7z",
+    "hash": "9e758edf02e1560cfcdc580efa8d47ab43a32d8080202f6c143b1d12701dfd80",
+    "shortcuts": [
+        [
+            "wubiLex.exe",
+            "WubiLex"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/aardio/wubi-lex/raw/master/default.aproj",
+        "regex": "ProductVersion=\"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://wubi.aardio.com/update/WubiLex.7z"
+    }
+}

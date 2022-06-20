@@ -1,0 +1,49 @@
+{
+    "version": "16.0.14332.20255",
+    "description": "Offline installation package contains Office Tool Plus.",
+    "homepage": "https://download.coolhub.top",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/Office_Tool_Plus_16.0.14332.20255_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
+            "hash": "f6de6d39c4097bab2a898f4e29a520f0f29bee54a7a4033687f3d8d559f11921"
+        },
+        "32bit": {
+            "url": "https://download.coolhub.top/Office_ISO/en-US/Current/Office_Tool_Plus_16.0.14332.20255_x86_en-us.iso#/Office_Tool_Plus_en-us.iso",
+            "hash": "4dab29d332a303e7486e3c6d5cd0d8604ffbb1eaf172c9b204bfeefe14df27e1"
+        }
+    },
+    "shortcuts": [
+        [
+            "Office Tool Plus.exe",
+            "Office Tool Plus VL"
+        ]
+    ],
+    "persist": "Office",
+    "checkver": {
+        "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/",
+        "regex": "Office_Tool_Plus_([\\d.]+)_x64_en-us.iso"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/Office_Tool_Plus_$version_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
+                "hash": {
+                    "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
+                    "mode": "extract",
+                    "regex": "(?s)$basename.*?$sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/Office_Tool_Plus_$version_x86_en-us.iso#/Office_Tool_Plus_en-us.iso",
+                "hash": {
+                    "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
+                    "mode": "extract",
+                    "regex": "(?s)$basename.*?$sha256"
+                }
+            }
+        }
+    }
+}

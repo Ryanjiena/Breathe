@@ -1,0 +1,27 @@
+{
+    "version": "20220613.f1300bf",
+    "description": "Fast Spotify client with native GUI, without Electron, built in Rust.",
+    "homepage": "https://github.com/jpochyla/psst",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/jpochyla/psst/blob/master/LICENSE.md"
+    },
+    "notes": "Spotify Premium account is required.",
+    "url": "https://nightly.link/jpochyla/psst/actions/runs/2489366305/Psst.exe.zip",
+    "hash": "2cd8efab426f8ed407149e7c3711e5dd0d931495ea712254581aa4a59c0a9a12",
+    "bin": "psst-gui.exe",
+    "shortcuts": [
+        [
+            "psst-gui.exe",
+            "psst-gui"
+        ]
+    ],
+    "checkver": {
+        "url": "https://scoop-apps.vercel.app/jpochyla/psst",
+        "regex": "(?sm)jpochyla/psst/actions/runs/(?<runid>\\d+).+datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).*?commit/(?<sha>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}.${sha}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/jpochyla/psst/actions/runs/$matchRunid/Psst.exe.zip"
+    }
+}

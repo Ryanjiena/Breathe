@@ -1,0 +1,26 @@
+{
+    "version": "1.9.6",
+    "description": "Password Manager based on Flutter for all platforms. Keepass 2.x (kdbx 3.x) compatible.",
+    "homepage": "https://authpass.app",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/authpass/authpass/blob/master/LICENSE"
+    },
+    "notes": "wiki: <https://github.com/authpass/authpass/wiki>",
+    "url": "https://github.com/authpass/authpass/releases/download/v1.9.6/AuthPass-setup-1.9.6_1904.exe",
+    "hash": "f7a098607aa0b64b72debff5a00963cd7dfcfb6ace253c871555251c37b2daa3",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "authpass.exe",
+            "AuthPass"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/authpass/authpass/releases",
+        "regex": "releases/download/v([\\d.]+)/AuthPass-setup-(?<tag>[\\d._]+).exe"
+    },
+    "autoupdate": {
+        "url": "https://github.com/authpass/authpass/releases/download/v$version/AuthPass-setup-$matchTag.exe"
+    }
+}
