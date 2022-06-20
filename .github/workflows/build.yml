@@ -11,10 +11,18 @@ jobs:
     steps:
       - name: Install Dependence
         run: sudo apt-get install -y rename
+      - name: Import ssh private key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" | sed 's/\\n/\n/g' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
       - name: Git config
         run: |
           git config --global user.email "43134606+Ryanjiena@users.noreply.github.com"
           git config --global user.name "Ryanjiena"
+          # https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository/13364116#13364116
+          # ssh-keygen -R jihulab.com
+          ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
       - name: "Build"
         env:
           github_token: ${{ secrets.GH_TOKEN }}
@@ -27,77 +35,114 @@ jobs:
           LOG_FILE="${LOG_FILE:-${TMP_DIR}/build.log}"
           head_start="<\!--ts-->"
           head_end="<\!--te-->"
+          repoArr=("Ash258/Scoop-JetBrains@jetbrains@main"
+              "jonz94/scoop-sarasa-nerd-fonts@sarasa-nerd-fonts@master"
+              "kodybrown/scoop-nirsoft@nirsoft@master"
+              "matthewjberger/scoop-nerd-fonts@nerd-fonts@master"
+              "ScoopInstaller/Java@java@master"
+              "ScoopInstaller/Main@main@master"
+              "ScoopInstaller/Versions@versions@master"
+              "ScoopInstaller/Extras@extras@master"
+              "chawyehsu/dorado@dorado@master"
+              "Ryanjiena/Meta@meta@master")
 
-          repoArr=("Ash258/Scoop-JetBrains" "ScoopInstaller/Java" "ScoopInstaller/Extras" "ScoopInstaller/Main" "ScoopInstaller/Versions" "matthewjberger/scoop-nerd-fonts" "jonz94/scoop-sarasa-nerd-fonts" "kodybrown/scoop-nirsoft" "Ryanjiena/Meta")
-          branchArr=("main" "master" "master" "master" "master" "master" "master" "master" "master")
-          dirArr=("jetbrains" "java" "extras" "main" "versions" "nerd-fonts" "sarasa-nerd-fonts" "nirsoft" "meta")
-
-          # clone tian and fantastic-bucket repo
-          git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/tian.git "${TMP_DIR}/tian"
-          git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/fantastic-bucket.git "${TMP_DIR}/fantastic"
-
-          # init tian
-          cd "${TMP_DIR}/tian/"
-          if [ -d "bucket" ]; then
-              rm -rf bin bucket scripts
-          fi
-          mkdir bin bucket scripts
-
-          # init fantastic-bucket
-          cd "${TMP_DIR}/fantastic/"
-          if [ -d "bucket" ]; then
-              rm -rf bin bucket scripts
-          fi
-          mkdir bin bucket scripts
+          # init
+          function init() {
+              git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/tian.git "${TMP_DIR}/tian"
+              git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/fantastic-bucket.git "${TMP_DIR}/fantastic"
+              bucket_arr=("tian" "fantastic")
+              for bucket in "${bucket_arr[@]}"; do
+                  cd "${TMP_DIR}/${bucket}/"
+                  if [ -d "bucket" ]; then
+                      rm -rf bin bucket scripts
+                  fi
+                  mkdir bin bucket scripts
+              done
+          }
 
           # build
-          manifest_badge="| Bucket | Manifest |\n| :--- | :--- |\n"
-          for ((i = 0; i < ${#repoArr[@]}-1; i++)); do
+          function build() {
+              manifest_badge="| Bucket | Manifest |\n| :--- | :--- |\n"
+              for ((i = 0; i < ${#repoArr[@]} - 3; i++)); do
+                  local repo=$(echo "${repoArr[i]}" | awk -F'@' '{print $1}')
+                  local repo_name=$(echo "${repoArr[i]}" | awk -F'@' '{print $2}')
+                  local repo_branch=$(echo "${repoArr[i]}" | awk -F'@' '{print $3}')
+                  if [[ "repo_name" != "meta" ]]; then
+                      git clone -q --depth=1 --branch="${repo_branch}" "https://github.com/${repo}.git" "${TMP_DIR}/${repo_name}"
+                  else
+                      git clone -q --depth=1 --branch="${repo_branch}" "https://Ryanjiena:${github_token}@github.com/${repo}.git" "${TMP_DIR}/${repo_name}"
+                  fi
+                  cd "${TMP_DIR}/${repo_name}/bucket"
+                  manifest_num="$(ls *.json | wc -l)"
+                  manifest_badge="${manifest_badge} | [${repo}](https://github.com/${repo}.git) | [![${repo} badge](https://img.shields.io/static/v1?label=${repo}&message=${manifest_num}&color=green)](https://github.com/${repo}.git) |\n"
+                  # rename manifest
+                  # https://unix.stackexchange.com/a/56812
+                  # date; for filename in *.json; do mv "${filename}" "${filename%.json}_${repo_name}.json"; done; date
+                  # rename "s/\.json$/_${repo_name}.json/" *json
+                  rename 'y/A-Z/a-z/' *json
+                  sed -i "s|bucketsdir\\\\\\\\${repo_name}\\\\\\\\scripts|bucketsdir\\\\\\\\tian\\\\\\\\scripts|g" *json
 
-              if [[ "$i" != "8" ]]; then
-                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://github.com/${repoArr[i]}.git" "${TMP_DIR}/${dirArr[i]}"
-              else
-                  git clone -q --depth=1 --branch="${branchArr[i]}" "https://Ryanjiena:${github_token}@github.com/${repoArr[i]}.git" "${TMP_DIR}/${dirArr[i]}"
+                  # copy bucket/scripts folder
+                  cd "${TMP_DIR}/${repo_name}"
+                  cp bucket/*.json ${TMP_DIR}/tian/bucket/ -n
+                  if [ -e "scripts" ]; then
+                      cp scripts/* ${TMP_DIR}/tian/scripts/ -r -n
+                  fi
+              done
+              # copy bin folder to tian
+              cp ${TMP_DIR}/main/bin/* ${TMP_DIR}/tian/bin/ -f
+              # replace head
+              sed -i "/${head_start}/,/${head_end}/{//!d;}" "${TMP_DIR}/tian/README.md"
+              echo -e "${manifest_badge}" >"${TMP_DIR}/head.md"
+              sed -i "/${head_start}/r ${TMP_DIR}/head.md" "${TMP_DIR}/tian/README.md"
+          }
+
+          # commit and push
+          function commit() {
+              # Copy tian to fantastic-bucket
+              cp ${TMP_DIR}/tian/bucket/* ${TMP_DIR}/fantastic/bucket/
+              cp ${TMP_DIR}/tian/scripts/* ${TMP_DIR}/fantastic/scripts/ -r
+              cp ${TMP_DIR}/tian/bin/* ${TMP_DIR}/fantastic/bin/
+              cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/fantastic/README.md -f
+
+              # remove cracked
+              cd "${TMP_DIR}/tian/bucket"
+              grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
+
+              # push
+              cd "${TMP_DIR}/tian" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
+              cd "${TMP_DIR}/fantastic" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
+          }
+
+          # sync to jihulab
+          function sync() {
+              git config --global user.name "Ryanjie"
+              git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
+              git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
+              git clone -q --depth=1 git@jihulab.com:Ryanjie/Tian.git "${TMP_DIR}/tian-cn"
+
+              cd ${TMP_DIR}/fantastic/bucket/
+              # sed -i 's|\(https://github.com/.*/releases/download\)|https://ghproxy.com/\1|g;s|\(https://github.com/.*/archive\)|https://ghproxy.com/\1|g;s|\(https://raw.githubusercontent.com/\)|https://ghproxy.com/\1|g' *json
+
+              cd ${TMP_DIR}/tian-cn/
+              if [ -d "bucket" ]; then
+                  rm -rf bin bucket scripts
               fi
+              mkdir bin bucket scripts
 
-              cd "${TMP_DIR}/${dirArr[i]}/bucket"
-              manifest_num="$(ls *.json | wc -l)"
-              manifest_badge="${manifest_badge} | [${repoArr[i]}](https://github.com/${repoArr[i]}.git) | [![${repoArr[i]} badge](https://img.shields.io/static/v1?label=${repoArr[i]}&message=${manifest_num}&color=green)](https://github.com/${repoArr[i]}.git) |\n"
+              cp ${TMP_DIR}/fantastic/bin/* ${TMP_DIR}/tian-cn/bin/ -f
+              cp ${TMP_DIR}/fantastic/bucket/* ${TMP_DIR}/tian-cn/bucket/ -f
+              cp ${TMP_DIR}/fantastic/scripts/* ${TMP_DIR}/tian-cn/scripts/ -r -f
+              cp ${TMP_DIR}/fantastic/README.md ${TMP_DIR}/tian-cn/README.md -f
 
-              # rename manifest
-              # https://unix.stackexchange.com/a/56812
-              # date; for filename in *.json; do mv "${filename}" "${filename%.json}_${dirArr[i]}.json"; done; date
-              # rename "s/\.json$/_${dirArr[i]}.json/" *json
-              rename 'y/A-Z/a-z/' *json
-              sed -i "s|bucketsdir\\\\\\\\${dirArr[i]}\\\\\\\\scripts|bucketsdir\\\\\\\\tian\\\\\\\\scripts|g" *json
+              git add . && git commit -m "Sync by: ${USER}, at: ${DATE}"
+              git push -u origin main
+          }
 
-              # copy bucket/scripts folder
-              cd "${TMP_DIR}/${dirArr[i]}"
-              cp bucket/*.json ${TMP_DIR}/tian/bucket/ -n
-              if [ -e "scripts" ]; then
-                  cp scripts/* ${TMP_DIR}/tian/scripts/ -r -n
-              fi
+          init
+          build
+          commit
+          # sync
 
-          done
-
-          # copy bin folder to tian
-          cp ${TMP_DIR}/main/bin/* ${TMP_DIR}/tian/bin/ -f
-
-          # replace head
-          sed -i "/${head_start}/,/${head_end}/{//!d;}" "${TMP_DIR}/tian/README.md"
-          echo -e  "${manifest_badge}" > "${TMP_DIR}/head.md"
-          sed -i "/${head_start}/r ${TMP_DIR}/head.md" "${TMP_DIR}/tian/README.md"
-
-          # Copy tian to fantastic-bucket
-          cp ${TMP_DIR}/tian/bucket/* ${TMP_DIR}/fantastic/bucket/
-          cp ${TMP_DIR}/tian/scripts/* ${TMP_DIR}/fantastic/scripts/ -r
-          cp ${TMP_DIR}/tian/bin/* ${TMP_DIR}/fantastic/bin/
-          cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/fantastic/README.md -f
-
-          # remove cracked
-          cd "${TMP_DIR}/tian/bucket"
-          grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
-
-          # push
-          cd "${TMP_DIR}/tian" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
-          cd "${TMP_DIR}/fantastic" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
+      - name: Remove ssh private key
+        run: rm -f ~/.ssh/id_rsa
