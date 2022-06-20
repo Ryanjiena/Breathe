@@ -1,0 +1,28 @@
+{
+    "version": "0.2022.05.29.a015eb7",
+    "description": "A powerful but simple, easy to use toolbox for Windows 10 / 11.",
+    "homepage": "https://github.com/WinTweakers/WindowsToolbox",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/WinTweakers/WindowsToolbox/blob/main/LICENSE"
+    },
+    "notes": "Usage: <https://github.com/WinTweakers/WindowsToolbox#installation>",
+    "url": "https://github.com/WinTweakers/WindowsToolbox/archive/a015eb796b747c535f534e97fe1cee18bbc9bb47.zip",
+    "hash": "b9b09bd042b08af8ef1cfaa0a1a8eebf224f3964515c8cf72985f823f42e7ff7",
+    "extract_dir": "WindowsToolbox-a015eb796b747c535f534e97fe1cee18bbc9bb47",
+    "bin": [
+        [
+            "WindowsToolbox.cmd",
+            "windowstoolbox"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/WinTweakers/WindowsToolbox/commits/main.atom",
+        "regex": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>(?<short>[0-9a-f]{7})[0-9a-f]{33})",
+        "replace": "0.${1}.${2}.${3}.${short}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/WinTweakers/WindowsToolbox/archive/$matchSha.zip",
+        "extract_dir": "WindowsToolbox-$matchSha"
+    }
+}

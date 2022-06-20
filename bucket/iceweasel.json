@@ -1,0 +1,46 @@
+{
+    "version": "101.0.1",
+    "description": "Portable Runtime For Firefox. Feature (32bit and 64bit).",
+    "homepage": "https://sourceforge.net/projects/libportable",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://sourceforge.net/projects/libportable/files/Iceweasel/Stable/101.x/x86_64/Iceweasel-v101.0.1.en_US_win64_clang_pgo.7z",
+            "hash": "sha1:0fb4cc82162a0854f2cbeeb5872c54dd6ced5fd8",
+            "extract_dir": "Iceweasel_x64"
+        },
+        "32bit": {
+            "url": "https://sourceforge.net/projects/libportable/files/Iceweasel/Stable/101.x/i686/Iceweasel-v101.0.1.en_US_win32_clang_pgo.7z",
+            "hash": "sha1:d28445c692d71e21ef3aa670267c9077eea145d9",
+            "extract_dir": "Iceweasel_x86"
+        }
+    },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\App\\portable.ini\")) { Copy-Item \"$dir\\App\\portable(example).ini\" \"$dir\\App\\portable.ini\" }",
+    "shortcuts": [
+        [
+            "App\\Iceweasel.exe",
+            "Iceweasel"
+        ]
+    ],
+    "persist": [
+        "App\\portable.ini",
+        "Profiles",
+        "Plugins"
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/libportable/rss?path=/Iceweasel/Stable/",
+        "regex": "x86_64/Iceweasel-v([\\d.]+).en_US_win64_clang_pgo\\.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://sourceforge.net/projects/libportable/files/Iceweasel/Stable/$majorVersion.x/x86_64/Iceweasel-v$version.en_US_win64_clang_pgo.7z"
+            },
+            "32bit": {
+                "url": "https://sourceforge.net/projects/libportable/files/Iceweasel/Stable/$majorVersion.x/i686/Iceweasel-v$version.en_US_win32_clang_pgo.7z"
+            }
+        }
+    }
+}

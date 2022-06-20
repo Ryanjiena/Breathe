@@ -1,0 +1,38 @@
+{
+    "version": "2.7.0",
+    "description": "Bittorrent streaming software for cats. Stream anime torrents, real-time with no waiting for downloads.",
+    "homepage": "https://github.com/ThaUnknown/miru",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/ThaUnknown/miru/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ThaUnknown/miru/releases/download/v2.7.0/win-Miru-2.7.0.exe#/dl.7z",
+            "hash": "sha512:35886209e7b278deab36acf4342b54fb32b492ad005ecc2e413939b4329e433d8c79459cf3d44db95f2734ade5943c636f9997a2a54d3df7562fb2a0ed1fca97",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal"
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Recurse -Force",
+    "shortcuts": [
+        [
+            "Miru.exe",
+            "Miru",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ThaUnknown/miru/releases/download/v$version/win-Miru-$version.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "mode": "extract",
+                    "regex": "sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "version": "5.12.5",
+    "description": "WindowTop SW (FREE for Windows 10/11) enables you to manage your windows practically and efficiently with several awesome features.",
+    "homepage": "https://windowtop.info/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/BiGilSoft/WindowTop/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gileli121/WindowTop/releases/download/v5.12.5/WindowTop.v5.12.5.Portable.zip",
+            "hash": "19ec65c67da03a2845f1c3adf8465b5c521343023bec7cbd6f447c129f17cbcd"
+        }
+    },
+    "shortcuts": [
+        [
+            "WindowTop.exe",
+            "WindowTop"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/BiGilSoft/WindowTop/releases",
+        "regex": "releases/download/v(?<tag>[\\d.]+)/(?<file>WindowTop.v([\\d.]+).Portable.zip)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gileli121/WindowTop/releases/download/v$matchTag/$matchFile"
+            }
+        }
+    }
+}

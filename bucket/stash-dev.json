@@ -1,0 +1,31 @@
+{
+    "version": "0.15.0-22-g733ca2aa",
+    "description": "Stash is a self-hosted webapp written in Go which organizes and serves your porn.",
+    "homepage": "https://stashapp.cc",
+    "license": {
+        "identifier": "AGPL-3.0-only",
+        "url": "https://github.com/stashapp/stash/blob/develop/LICENSE"
+    },
+    "suggest": {
+        "FFmpeg": [
+            "ffmpeg",
+            "ffmpeg-nightly"
+        ]
+    },
+    "url": "https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe#/stash-dev.exe",
+    "hash": "sha1:3ec718612ae0ae78144fa3b23fc694e756c73dce",
+    "bin": "stash-dev.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/stashapp/stash/releases/tags/latest_develop",
+        "jsonpath": "$.name",
+        "regex": "v([\\w-.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe#/stash-dev.exe",
+        "hash": {
+            "url": "$baseurl/CHECKSUMS_SHA1",
+            "mode": "extract",
+            "regex": "$sha1\\s+$basename"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "4.9.1",
+    "description": "Docker is an open platform for developing, shipping, and running applications.",
+    "homepage": "https://www.docker.com/products/docker-desktop",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.docker.com/legal/docker-subscription-service-agreement"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://desktop.docker.com/win/main/amd64/81317/Docker%20Desktop%20Installer.exe",
+            "hash": "6fc3c2df9be1faa0ea434143cdff2b1e85b5203fefd0bcb3ee0cfa906a78a97d"
+        }
+    },
+    "installer": {
+        "script": "Start-Process \"$dir\\$fname\" -ArgumentList 'install --quiet' -Wait"
+    },
+    "checkver": {
+        "url": "https://desktop.docker.com/win/main/amd64/appcast.xml",
+        "xpath": "/rss/channel/item[last()]/title",
+        "regex": "([\\d.]+)\\s\\((?<path>\\d+)\\)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://desktop.docker.com/win/main/amd64/$matchPath/Docker%20Desktop%20Installer.exe"
+            }
+        }
+    }
+}

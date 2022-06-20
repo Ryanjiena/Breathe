@@ -1,0 +1,16 @@
+{
+    "homepage": "https://developer.android.com/studio/command-line/aapt2",
+    "description": "Android Asset Packaging Tool 2.",
+    "license": "Apache-2.0",
+    "version": "7.4.0-alpha02-8531850",
+    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/7.4.0-alpha02-8531850/aapt2-7.4.0-alpha02-8531850-windows.jar#/dl.7z",
+    "hash": "87bd433b52f1d1e1d4294a6b6f73a6667cfcca208ee289b28b390a9287750a27",
+    "bin": "aapt2.exe",
+    "checkver": {
+        "url": "https://mvnrepository.com/artifact/com.android.tools.build/aapt2",
+        "regex": "(?sm)align=\"center\">Version.*?<a href=\"aapt2/(([\\d.]+)(-[\\d\\w]+)?-([\\d]+))\""
+    },
+    "autoupdate": {
+        "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/$version/aapt2-$version-windows.jar#/dl.7z"
+    }
+}

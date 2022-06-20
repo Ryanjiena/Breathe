@@ -1,0 +1,25 @@
+{
+    "version": "2.7.2",
+    "description": "Steam++ is a toolbox with lots of Steam tools",
+    "homepage": "https://steampp.net/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/2.7.2/Steam++_win_x64_v2.7.2.7z",
+    "hash": "636cdbb82a3f9c4cce061e44a3d94d3d184a59211a135e82500072393df5526c",
+    "shortcuts": [
+        [
+            "Steam++.exe",
+            "Steam++"
+        ]
+    ],
+    "persist": "AppData",
+    "checkver": {
+        "github": "https://github.com/SteamTools-Team/SteamTools"
+    },
+    "autoupdate": {
+        "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/$version/Steam++_win_x64_v$version.7z",
+        "hash": {
+            "url": "https://api.github.com/repos/SteamTools-Team/SteamTools/releases",
+            "regex": "(?sm)win_x64_v$version.7z.*?$sha256"
+        }
+    }
+}

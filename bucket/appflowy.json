@@ -1,0 +1,25 @@
+{
+    "version": "0.0.4_beta.3",
+    "description": "AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.",
+    "homepage": "https://www.appflowy.io",
+    "license": {
+        "identifier": "AGPL-3.0-only",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/LICENSE"
+    },
+    "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.0.4_beta.3/AppFlowy-windows-x86.zip",
+    "hash": "3917a33c0070074eafba3650662d86c1fab8c2eb4072f8bcda8b57453f7077e3",
+    "extract_dir": "AppFlowy",
+    "shortcuts": [
+        [
+            "app_flowy.exe",
+            "AppFlowy"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/AppFlowy-IO/AppFlowy/releases",
+        "regex": "releases/download/([\\w._]+)/AppFlowy-windows-x86.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.0.4_beta.3/AppFlowy-windows-x86.zip"
+    }
+}

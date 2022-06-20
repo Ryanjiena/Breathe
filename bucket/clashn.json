@@ -1,0 +1,61 @@
+{
+    "version": "1.13",
+    "description": "A clash client for Windows, support clash core and Clash.Meta core",
+    "homepage": "https://github.com/2dust/clashN",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/2dust/clashN/blob/main/LICENSE"
+    },
+    "depends": [
+        "sudo",
+        "meta/clash",
+        "meta/clash-premium",
+        "meta/clash-meta"
+    ],
+    "suggest": {
+        "windowsdesktop-runtime-6": [
+            "windowsdesktop-runtime-6-np",
+            "windowsdesktop-runtime-6"
+        ]
+    },
+    "url": "https://github.com/2dust/clashN/releases/download/1.13/clashN.zip",
+    "hash": "c460d5cbbcc3c3682bad89fe0c3b987b720707de772857dd1d1d99a2af2fbb4a",
+    "extract_dir": "clashN-Core",
+    "pre_install": [
+        "Copy-Item \"$(appdir clash $global)\\current\\Clash.exe\" \"$dir\" -Force | Out-Null",
+        "Copy-Item \"$(appdir clash-premium $global)\\current\\Clash.Premium.exe\" \"$dir\" -Force | Out-Null",
+        "Copy-Item \"$(appdir clash-meta $global)\\current\\Clash.Meta.exe\" \"$dir\" -Force | Out-Null",
+        "'config.yaml', 'guiNConfig.json' | ForEach-Object {",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -Force | Out-Null }",
+        "}",
+        "(Get-Content \"$bucketsdir\\tian\\scripts\\clashn\\start-clashn.ps1\") -replace 'clashn-core', 'clashn' | Set-Content \"$dir\\start-clashn.ps1\" -Encoding ASCII"
+    ],
+    "uninstaller": {
+        "script": [
+            "'config.yaml', 'guiNConfig.json' | ForEach-Object {",
+            "    ensure \"$persist_dir\" | Out-Null",
+            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -Force | Out-Null }",
+            "}"
+        ]
+    },
+    "bin": "start-clashn.ps1",
+    "shortcuts": [
+        [
+            "clashN.exe",
+            "clashN"
+        ]
+    ],
+    "persist": [
+        "guiBackups",
+        "guiConfigs",
+        "guiLogs",
+        "data"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/2dust/clashN/releases?per_page=1",
+        "jsonpath": "$[0].tag_name"
+    },
+    "autoupdate": {
+        "url": "https://github.com/2dust/clashN/releases/download/$version/clashN.zip"
+    }
+}

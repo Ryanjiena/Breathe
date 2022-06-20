@@ -1,0 +1,32 @@
+{
+    "version": "34.3.8202.1",
+    "description": "Innovative, powerful and intuitive multiple database management tool",
+    "homepage": "https://fishcodelib.com/Database.htm",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://fishcodelib.com/EULA.htm"
+    },
+    "url": "https://fishcodelib.com/files/DatabaseNet4.zip",
+    "hash": "27db475457392a1469b3ff66f75ebbd958c9b0a0829b2f106876e4b7f86d579a",
+    "bin": [
+        "Database4.exe",
+        [
+            "Database4.exe",
+            "database.net"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Database4.exe",
+            "Database .NET"
+        ]
+    ],
+    "persist": "Database_Files",
+    "checkver": {
+        "url": "https://fishcodelib.com/version.xml",
+        "regex": "database4.*?ver=\"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://fishcodelib.com/files/DatabaseNet4.zip"
+    }
+}

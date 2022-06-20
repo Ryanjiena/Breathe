@@ -1,0 +1,41 @@
+{
+    "version": "1.5.1-beta.99",
+    "description": "A new cross-platform Apple Music experience based on Electron and Vue.js written from scratch with performance in mind.",
+    "homepage": "https://cider.sh",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/ciderapp/Cider/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ciderapp/cider-releases/releases/download/v1.5.1-beta.99/Cider-Setup-1.5.1-beta.99.exe#/dl.7z",
+            "hash": "sha512:af20ff8e2d6eb4c0f1002c74fb38afe9bfad6e86676b6cd2dbedf602a87a54563f16e73d61f426b38b57879fdaf01f8de14ece9d2f17b48bffe14cd9643b267a",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal"
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Recurse -Force",
+    "shortcuts": [
+        [
+            "Cider.exe",
+            "Cider",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "url": "https://api.github.com/repos/ciderapp/cider-releases/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v(.*)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ciderapp/cider-releases/releases/download/v$version/Cider-Setup-$version.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)$basename.*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}
