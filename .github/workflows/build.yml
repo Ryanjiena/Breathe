@@ -63,7 +63,7 @@ jobs:
           # build
           function build() {
               manifest_badge="| Bucket | Manifest |\n| :--- | :--- |\n"
-              for ((i = 0; i < ${#repoArr[@]} - 3; i++)); do
+              for ((i = 0; i < ${#repoArr[@]}; i++)); do
                   local repo=$(echo "${repoArr[i]}" | awk -F'@' '{print $1}')
                   local repo_name=$(echo "${repoArr[i]}" | awk -F'@' '{print $2}')
                   local repo_branch=$(echo "${repoArr[i]}" | awk -F'@' '{print $3}')
