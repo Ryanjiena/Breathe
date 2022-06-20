@@ -142,7 +142,7 @@ jobs:
           init
           build
           commit
-          # sync
+          sync
 
       - name: Remove ssh private key
         run: rm -f ~/.ssh/id_rsa
