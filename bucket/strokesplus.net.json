@@ -1,30 +1,32 @@
 {
     "version": "0.5.6.7",
-    "description": "StrokesPlus.net, the successor to StrokesPlus, is a completely free mouse gesture recognition utility for Windows which allows you to create powerful mouse gestures that save you time.",
-    "homepage": "https://www.strokesplus.net/",
+    "description": "Mouse gesture recognition utility for Windows which allows you to create powerful mouse gestures that save you time.",
+    "homepage": "https://www.strokesplus.net",
     "license": {
-        "identifier": "Freeware"
+        "identifier": "Freeware",
+        "url": "https://www.strokesplus.net/FAQ"
     },
-    "notes": "This will not be able to interact with elevated windows (e.g. Task Manager) unless you run as administrator. You can use the settingsfile=\"C:\\Path\\SettingsFile.ext\" command line parameter to specify a custom location for your settings (make sure to move your file there first, or you will get the default settings)",
-    "url": "https://www.strokesplus.net/files/StrokesPlus.net_Portable_0.5.6.7.zip",
+    "url": "https://cdn.strokesplus.net/files/StrokesPlus.net_Portable_0.5.6.7.zip",
     "hash": "35d5846f68da17d0e526516ccd35b6149ae914ab9602c0dd2ac545b5c450c7e9",
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\StrokesPlus.net.json\")) {",
-        "    Move-Item \"$dir\\Default_StrokesPlus.net.json\" \"$persist_dir\\StrokesPlus.net.json\"",
-        "}"
-    ],
+    "pre_install": "if (!(Test-Path \"$persist_dir\\strokesplussettings.json\")) { Copy-Item \"$dir\\Default_StrokesPlus.net.json\" \"$dir\\strokesplussettings.json\" | Out-Null }",
     "shortcuts": [
         [
             "StrokesPlus.net.exe",
-            "StrokesPlus.net"
+            "StrokesPlus.net",
+            "settingsfile=\"$dir\\strokesplussettings.json\""
         ]
     ],
-    "persist": "StrokesPlus.net.bin",
+    "persist": "strokesplussettings.json",
+    "pre_uninstall": [
+        "# The following must be done as StrokesPlus deletes the original file which was linked to the persist folder when it saves settings, rather than editing the file.",
+        "Copy-Item \"$dir\\strokesplussettings.json\" \"$persist_dir\\strokesplussettings.json\" | Out-Null"
+    ],
     "checkver": {
-        "url": "https://www.strokesplus.net/Downloads",
-        "regex": "<h4>Latest Release: <b>([\\d.]+)"
+        "url": "https://www.strokesplus.net/ChangeLog.txt",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.strokesplus.net/files/StrokesPlus.net_Portable_$version.zip"
+        "url": "https://cdn.strokesplus.net/files/StrokesPlus.net_Portable_$version.zip"
     }
 }
+
