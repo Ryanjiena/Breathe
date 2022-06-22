@@ -14,8 +14,8 @@ jobs:
           repository: "Ryanjiena/Meta"
           ref: "master"
           token: ${{ secrets.GH_TOKEN }}   
-    - name: IssueHandler
-      uses: ScoopInstaller/GithubActions@main
-      if: github.event.action == 'opened' || (github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'verify'))
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: IssueHandler
+        uses: ScoopInstaller/GithubActions@main
+        if: github.event.action == 'opened' || (github.event.action == 'labeled' && contains(github.event.issue.labels.*.name, 'verify'))
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
