@@ -44,6 +44,7 @@ jobs:
               "matthewjberger/scoop-nerd-fonts@nerd-fonts@master"
               "ScoopInstaller/Java@java@master"
               "ScoopInstaller/Main@main@master"
+              "ScoopInstaller/Nonportable@nonportable@master"
               "ScoopInstaller/Versions@versions@master"
               "ScoopInstaller/Extras@extras@master"
               "chawyehsu/dorado@dorado@master"
