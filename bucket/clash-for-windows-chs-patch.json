@@ -1,13 +1,13 @@
 {
-    "version": "0.19.20",
-    "description": "Clash for Windows Original Simplified Chinese Translation Patch",
-    "homepage": "https://github.com/BoyceLig/Clash_Chinese_Patch",
+    "version": "0.19.21",
+    "description": "Clash for Windows Original Simplified Chinese Translation Patch, maintained by ender-zhao.",
+    "homepage": "https://github.com/ender-zhao/Clash-for-Windows_Chinese",
     "license": {
         "identifier": "Freeware"
     },
-    "depends": "meta/clash-for-windows-portable",
-    "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.20/app.7z",
-    "hash": "c17881790a26f07ab6513e5bd0d66c214ecd8780874dd232dc8590f2249215c8",
+    "depends": "clash-for-windows-portable",
+    "url": "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z",
+    "hash": "f9e10e944ad515dd3d25bde6efb438bb0d8063e2eb768b73bd8bc9b4f6848098",
     "installer": {
         "script": [
             "Get-Process clash* | Stop-Process -Force",
@@ -27,8 +27,12 @@
             "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
         ]
     },
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/ender-zhao/Clash-for-Windows_Chinese/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "CFW-V([\\d.]+)_CN"
+    },
     "autoupdate": {
-        "url": "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/$version/app.7z"
+        "url": "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z"
     }
 }

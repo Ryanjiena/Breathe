@@ -1,6 +1,6 @@
 {
-    "version": "0.19.20",
-    "description": "Clash For Windows CN Portable",
+    "version": "0.19.21",
+    "description": "Clash For Windows Chs Portable.",
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "license": {
         "identifier": "Freeware"
@@ -12,22 +12,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.20/Clash.for.Windows-0.19.20-win.7z",
-                "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.20/app.7z"
+                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.21/Clash.for.Windows-0.19.21-win.7z",
+                "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z"
             ],
             "hash": [
-                "fc0c2ccc269e152717b7b2530aca6f706f94d4699d37be4ef64d51304db1d0f4",
-                "c17881790a26f07ab6513e5bd0d66c214ecd8780874dd232dc8590f2249215c8"
+                "85e22f8072dc98685f366a3db180e3d75557572a003f55a640449177300f4350",
+                "f9e10e944ad515dd3d25bde6efb438bb0d8063e2eb768b73bd8bc9b4f6848098"
             ]
         },
         "32bit": {
             "url": [
-                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.20/Clash.for.Windows-0.19.20-ia32-win.7z",
-                "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.20/app.7z"
+                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.21/Clash.for.Windows-0.19.21-ia32-win.7z",
+                "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z"
             ],
             "hash": [
-                "0c4b2224a8b8f22331a496c3a12e47fe067cd798834a56c985456c2768a3820b",
-                "c17881790a26f07ab6513e5bd0d66c214ecd8780874dd232dc8590f2249215c8"
+                "765af8eb43a5a5ba058024836ca0be7f285805f7ff8c5edb6b156b13fe3ff545",
+                "f9e10e944ad515dd3d25bde6efb438bb0d8063e2eb768b73bd8bc9b4f6848098"
             ]
         }
     },
@@ -40,20 +40,22 @@
     ],
     "persist": "data",
     "checkver": {
-        "github": "https://github.com/BoyceLig/Clash_Chinese_Patch"
+        "url": "https://api.github.com/repos/ender-zhao/Clash-for-Windows_Chinese/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "CFW-V([\\d.]+)_CN"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": [
                     "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/$version/Clash.for.Windows-$version-win.7z",
-                    "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/$version/app.7z"
+                    "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z"
                 ]
             },
             "32bit": {
                 "url": [
                     "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/$version/Clash.for.Windows-$version-ia32-win.7z",
-                    "https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/$version/app.7z"
+                    "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z"
                 ]
             }
         }
