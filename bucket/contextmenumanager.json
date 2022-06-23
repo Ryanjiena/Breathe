@@ -1,0 +1,28 @@
+{
+    "version": "3.3.3.1",
+    "description": "A program to manage the Windows right-click context menu.",
+    "homepage": "https://github.com/BluePointLilac/ContextMenuManager",
+    "license": {
+        "identifier": "MIT"
+    },
+    "notes": [
+        "- Some special menu items (Shell extensions, file encryption(&Y)) may not be displayed in the context menu, but will still show as enabled within the program; this is normal.",
+        "- Different context menu manager programs may use different methods for disabling menu options. Using multiple managers at the same time is not recommended. While other programs may use destructive methods, this program utilizes the registry keys provided by the system to hide menu items when possible.",
+        "- If you have used other context menu managers in the past, use that program to restore the menu items before using this one in order to avoid any potential issues.",
+        "- This program is not designed to perform clean uninstalls; however, it can help you find the registry and file locations of menu items so that they can be modified. If you are not familiar with such operations, it is recommended you use the enable/disable functions only."
+    ],
+    "url": "https://github.com/BluePointLilac/ContextMenuManager/releases/download/3.3.3.1/ContextMenuManager.zip",
+    "hash": "3faecb2ae6c9d025df54bdc72d4b0f850a4931dd41235f7f46b291824d3b5dbe",
+    "shortcuts": [
+        [
+            "ContextMenuManager.NET.4.0.exe",
+            "ContextMenuManager"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/BluePointLilac/ContextMenuManager"
+    },
+    "autoupdate": {
+        "url": "https://github.com/BluePointLilac/ContextMenuManager/releases/download/$version/ContextMenuManager.zip"
+    }
+}
