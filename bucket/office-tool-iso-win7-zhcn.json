@@ -1,5 +1,5 @@
 {
-    "version": "16.0.12527.22105",
+    "version": "16.0.12527.22162",
     "description": "Offline installation package contains Office Tool Plus(Simplified Chinese Edition).",
     "homepage": "https://download.coolhub.top/",
     "license": {
@@ -7,12 +7,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-CN/365_Windows_7/Office_Tool_Plus_16.0.12527.22105_x64_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
-            "hash": "891e3670983b884c2d7bbb1427169cc2dd9c05cd6770ba1dde6cbfc8c93a4945"
+            "url": "https://download.coolhub.top/Office_ISO/zh-CN/365_Windows_7/Office_Tool_Plus_16.0.12527.22162_x64_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
+            "hash": "1667e7c78c8e2efe16a7d8fe8544cc145566ba37a95dfea41084c15758b75cae"
         },
         "32bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-CN/365_Windows_7/Office_Tool_Plus_16.0.12527.22105_x86_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
-            "hash": "974f4e3ed4f5fddedd1183d55b45fb66c8e29e9eeec397c02b2abec59da61192"
+            "url": "https://download.coolhub.top/Office_ISO/zh-CN/365_Windows_7/Office_Tool_Plus_16.0.12527.22162_x86_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
+            "hash": "b624450c451bdc9e0265c406db115279f22927f4ce9c1b61ebed39e436139140"
         }
     },
     "shortcuts": [
