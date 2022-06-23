@@ -7,7 +7,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/Office_Tool_Plus_16.0.14332.20255_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
+            "url": "https://download.coolhub.top/Office_ISO/en-US/2021/Office_Tool_Plus_16.0.14332.20255_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
             "hash": "f6de6d39c4097bab2a898f4e29a520f0f29bee54a7a4033687f3d8d559f11921"
         },
         "32bit": {
@@ -23,13 +23,13 @@
     ],
     "persist": "Office",
     "checkver": {
-        "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/",
+        "url": "https://download.coolhub.top/Office_ISO/en-US/2021/",
         "regex": "Office_Tool_Plus_([\\d.]+)_x64_en-us.iso"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/Office_Tool_Plus_$version_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
+                "url": "https://download.coolhub.top/Office_ISO/en-US/2021/Office_Tool_Plus_$version_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
                 "hash": {
                     "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
                     "mode": "extract",
@@ -37,7 +37,7 @@
                 }
             },
             "32bit": {
-                "url": "https://download.coolhub.top/Office_ISO/en-US/PerpetualVL2021/Office_Tool_Plus_$version_x86_en-us.iso#/Office_Tool_Plus_en-us.iso",
+                "url": "https://download.coolhub.top/Office_ISO/en-US/2021/Office_Tool_Plus_$version_x86_en-us.iso#/Office_Tool_Plus_en-us.iso",
                 "hash": {
                     "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
                     "mode": "extract",

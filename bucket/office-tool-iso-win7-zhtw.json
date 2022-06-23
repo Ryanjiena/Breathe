@@ -7,11 +7,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-TW/Windows_7/Office_Tool_Plus_16.0.12527.22105_x64_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
+            "url": "https://download.coolhub.top/Office_ISO/zh-TW/365_Windows_7/Office_Tool_Plus_16.0.12527.22105_x64_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
             "hash": "a1cc8168960dad49ec6cc72f1a2bcb88e3f6c6d1230cd3c49f3610da337496b3"
         },
         "32bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-TW/Windows_7/Office_Tool_Plus_16.0.12527.22105_x86_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
+            "url": "https://download.coolhub.top/Office_ISO/zh-TW/365_Windows_7/Office_Tool_Plus_16.0.12527.22105_x86_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
             "hash": "c303dd013fd9934e650bfa91376f417801792f7abaa29aaa81bfa03cd1196d0c"
         }
     },
@@ -23,13 +23,13 @@
     ],
     "persist": "Office",
     "checkver": {
-        "url": "https://download.coolhub.top/Office_ISO/zh-TW/Windows_7/",
+        "url": "https://download.coolhub.top/Office_ISO/zh-TW/365_Windows_7/",
         "regex": "Office_Tool_Plus_([\\d.]+)_x64_zh-tw.iso"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.coolhub.top/Office_ISO/zh-TW/Windows_7/Office_Tool_Plus_$version_x64_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
+                "url": "https://download.coolhub.top/Office_ISO/zh-TW/365_Windows_7/Office_Tool_Plus_$version_x64_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
                 "hash": {
                     "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
                     "mode": "extract",
@@ -37,7 +37,7 @@
                 }
             },
             "32bit": {
-                "url": "https://download.coolhub.top/Office_ISO/zh-TW/Windows_7/Office_Tool_Plus_$version_x86_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
+                "url": "https://download.coolhub.top/Office_ISO/zh-TW/365_Windows_7/Office_Tool_Plus_$version_x86_zh-tw.iso#/Office_Tool_Plus_zh-tw.iso",
                 "hash": {
                     "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
                     "mode": "extract",

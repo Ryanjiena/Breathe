@@ -7,11 +7,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-CN/PerpetualVL2021/Office_Tool_Plus_16.0.14332.20255_x64_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
+            "url": "https://download.coolhub.top/Office_ISO/zh-CN/2021/Office_Tool_Plus_16.0.14332.20255_x64_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
             "hash": "ee0caa57f1be2b355115ea96cf681a8ebe79f5f84a00b7d7ee4c19c88ff76aeb"
         },
         "32bit": {
-            "url": "https://download.coolhub.top/Office_ISO/zh-CN/PerpetualVL2021/Office_Tool_Plus_16.0.14332.20255_x86_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
+            "url": "https://download.coolhub.top/Office_ISO/zh-CN/2021/Office_Tool_Plus_16.0.14332.20255_x86_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
             "hash": "40afa4a348247b97976159c3f9b27f29cf974324c5ca3f72e35dbd322403ae29"
         }
     },
@@ -23,13 +23,13 @@
     ],
     "persist": "Office",
     "checkver": {
-        "url": "https://download.coolhub.top/Office_ISO/zh-CN/PerpetualVL2021/",
+        "url": "https://download.coolhub.top/Office_ISO/zh-CN/2021/",
         "regex": "Office_Tool_Plus_([\\d.]+)_x64_zh-cn.iso"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.coolhub.top/Office_ISO/zh-CN/PerpetualVL2021/Office_Tool_Plus_$version_x64_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
+                "url": "https://download.coolhub.top/Office_ISO/zh-CN/2021/Office_Tool_Plus_$version_x64_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
                 "hash": {
                     "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
                     "mode": "extract",
@@ -37,7 +37,7 @@
                 }
             },
             "32bit": {
-                "url": "https://download.coolhub.top/Office_ISO/zh-CN/PerpetualVL2021/Office_Tool_Plus_$version_x86_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
+                "url": "https://download.coolhub.top/Office_ISO/zh-CN/2021/Office_Tool_Plus_$version_x86_zh-cn.iso#/Office_Tool_Plus_zh-cn.iso",
                 "hash": {
                     "url": "https://download.coolhub.top/Office_ISO/Hash.txt",
                     "mode": "extract",
