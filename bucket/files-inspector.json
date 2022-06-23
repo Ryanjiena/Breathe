@@ -1,12 +1,12 @@
 {
-    "version": "3.19",
+    "version": "3.20",
     "description": "Files Inspector. A free Utility for freeing up disk space manually.",
     "homepage": "https://www.chemtable.com/files-inspector.htm",
     "license": {
         "identifier": "Freeware"
     },
     "url": "https://www.chemtable.com/files/fi/files-inspector-setup.exe",
-    "hash": "306962e026345fdb09745687ef5788c3884f44eecda5b6e6a4c02d930c870cf5",
+    "hash": "b745c8f55fcc76518f516b1fc115603198c5efb5d9ac76ae165786190e748f39",
     "innosetup": true,
     "architecture": {
         "64bit": {
