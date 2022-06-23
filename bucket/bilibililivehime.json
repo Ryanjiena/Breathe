@@ -1,12 +1,12 @@
 {
-    "version": "4.22.0.3602",
+    "version": "4.23.3.3744",
     "description": "Bilibili live is the first interactive platform that focuses on ACG live streaming in China.",
     "homepage": "https://live.bilibili.com/liveHime",
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://dl-hdslb-com.oss-cn-shanghai.aliyuncs.com/bili/bililive/win/Livehime-Win-beta-4.22.0.3602.exe",
-    "hash": "md5:fec5dad897654e97a906af0478db3b59",
+    "url": "https://dl-hdslb-com.oss-cn-shanghai.aliyuncs.com/bili/bililive/win/Livehime-Win-beta-4.23.3.3744.exe",
+    "hash": "md5:f1ec81cd175f1ea0690a9136ab45ccc8",
     "innosetup": true,
     "bin": "livehime.exe",
     "shortcuts": [
