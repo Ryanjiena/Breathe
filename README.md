@@ -11,12 +11,12 @@
  | [kodybrown/scoop-nirsoft](https://github.com/kodybrown/scoop-nirsoft.git) | [![kodybrown/scoop-nirsoft badge](https://img.shields.io/static/v1?label=kodybrown/scoop-nirsoft&message=271&color=green)](https://github.com/kodybrown/scoop-nirsoft.git) |
  | [matthewjberger/scoop-nerd-fonts](https://github.com/matthewjberger/scoop-nerd-fonts.git) | [![matthewjberger/scoop-nerd-fonts badge](https://img.shields.io/static/v1?label=matthewjberger/scoop-nerd-fonts&message=198&color=green)](https://github.com/matthewjberger/scoop-nerd-fonts.git) |
  | [ScoopInstaller/Java](https://github.com/ScoopInstaller/Java.git) | [![ScoopInstaller/Java badge](https://img.shields.io/static/v1?label=ScoopInstaller/Java&message=224&color=green)](https://github.com/ScoopInstaller/Java.git) |
- | [ScoopInstaller/Main](https://github.com/ScoopInstaller/Main.git) | [![ScoopInstaller/Main badge](https://img.shields.io/static/v1?label=ScoopInstaller/Main&message=1049&color=green)](https://github.com/ScoopInstaller/Main.git) |
+ | [ScoopInstaller/Main](https://github.com/ScoopInstaller/Main.git) | [![ScoopInstaller/Main badge](https://img.shields.io/static/v1?label=ScoopInstaller/Main&message=1050&color=green)](https://github.com/ScoopInstaller/Main.git) |
  | [ScoopInstaller/Nonportable](https://github.com/ScoopInstaller/Nonportable.git) | [![ScoopInstaller/Nonportable badge](https://img.shields.io/static/v1?label=ScoopInstaller/Nonportable&message=89&color=green)](https://github.com/ScoopInstaller/Nonportable.git) |
  | [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions.git) | [![ScoopInstaller/Versions badge](https://img.shields.io/static/v1?label=ScoopInstaller/Versions&message=336&color=green)](https://github.com/ScoopInstaller/Versions.git) |
  | [ScoopInstaller/Extras](https://github.com/ScoopInstaller/Extras.git) | [![ScoopInstaller/Extras badge](https://img.shields.io/static/v1?label=ScoopInstaller/Extras&message=1556&color=green)](https://github.com/ScoopInstaller/Extras.git) |
  | [chawyehsu/dorado](https://github.com/chawyehsu/dorado.git) | [![chawyehsu/dorado badge](https://img.shields.io/static/v1?label=chawyehsu/dorado&message=216&color=green)](https://github.com/chawyehsu/dorado.git) |
- | [Ryanjiena/Meta](https://github.com/Ryanjiena/Meta.git) | [![Ryanjiena/Meta badge](https://img.shields.io/static/v1?label=Ryanjiena/Meta&message=675&color=green)](https://github.com/Ryanjiena/Meta.git) |
+ | [Ryanjiena/Meta](https://github.com/Ryanjiena/Meta.git) | [![Ryanjiena/Meta badge](https://img.shields.io/static/v1?label=Ryanjiena/Meta&message=677&color=green)](https://github.com/Ryanjiena/Meta.git) |
 
 <!--te-->
 
