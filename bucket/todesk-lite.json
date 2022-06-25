@@ -1,5 +1,5 @@
 {
-    "version": "4.3.1",
+    "version": "4.3.1.1",
     "description": "ToDesk is a stable and smooth remote control, remote office and remote assistance software. With end-to-end encryption, it makes every remote access safe and secure.",
     "homepage": "https://www.todesk.com/",
     "license": {
@@ -13,7 +13,7 @@
         },
         "32bit": {
             "url": "https://dl.todesk.com/windows/ToDesk_Lite.exe",
-            "hash": "d360ab6d988ed6c0e2db08c3cdc7bcf290ef02fb7624d7a86696763ae0d6ee70"
+            "hash": "b6600af182ec594ae2fe1db74df6d9681cbc4e514fdc7d274ad508ddcf1216f3"
         }
     },
     "shortcuts": [
