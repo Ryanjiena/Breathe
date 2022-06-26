@@ -46,9 +46,9 @@ jobs:
               "ScoopInstaller/Main@main@master"
               "ScoopInstaller/Nonportable@nonportable@master"
               "ScoopInstaller/Versions@versions@master"
-              "ScoopInstaller/Extras@extras@master"
-              "chawyehsu/dorado@dorado@master"
-              "Ryanjiena/Meta@meta@master")
+              "ScoopInstaller/Extras@extras@master""
+              "Ryanjiena/Meta@meta@master"
+              "chawyehsu/dorado@dorado@master)
 
           # init
           function init() {
