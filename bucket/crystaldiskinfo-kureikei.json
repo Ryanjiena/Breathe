@@ -1,12 +1,12 @@
 {
-    "version": "8.17.2",
+    "version": "8.17.3",
     "description": "A HDD/SSD utility software which supports a part of USB, Intel RAID and NVMe(Kurei Kei Edition).",
     "homepage": "https://osdn.net/projects/crystaldiskinfo/",
     "license": {
         "identifier": "MIT"
     },
-    "url": "https://free.nchc.org.tw/osdn//crystaldiskinfo/77469/CrystalDiskInfo8_17_2KureiKei.zip",
-    "hash": "39f98744767edcce4fdbbee356ff183990c262e4a1d593e59bbcce7741f0cec5",
+    "url": "https://free.nchc.org.tw/osdn//crystaldiskinfo/77497/CrystalDiskInfo8_17_3KureiKei.zip",
+    "hash": "60e8ed48cb2caa0a7afd854f9ce235239d5c24e3794098ed389b31ae40e2cfb4",
     "pre_install": "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
     "architecture": {
         "64bit": {
