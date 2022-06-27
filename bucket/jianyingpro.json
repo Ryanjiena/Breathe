@@ -21,7 +21,7 @@
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_pro_$underscoreVersion_jianyingpro_0.exe#/jianyingpro.7z",
+        "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_pro_$underscoreVersion_jianyingpro_0.exe#/dl.7z",
         "extract_dir": "JYPacket/$version"
     }
 }
