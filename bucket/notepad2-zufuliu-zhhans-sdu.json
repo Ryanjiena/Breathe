@@ -1,0 +1,48 @@
+{
+    "version": "4.22.05r4220",
+    "description": "Fork of Notepad2, a light-weight Scintilla-based text editor. Featuring syntax highlighting, code folding, auto-completion and API list for about 80 programming languages/documzh-Hansts.",
+    "homepage": "https://github.com/zufuliu/notepad2",
+    "license": {
+        "identifier": "BSD-3-Clause"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v4.22.05r4220/Notepad2_zh-Hans_x64_v4.22.05r4220.zip",
+            "hash": "7b73d77574cc04a3466751b34b1c6ff459300c73fb08b80844c99c0acfc30cae"
+        },
+        "32bit": {
+            "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v4.22.05r4220/Notepad2_zh-Hans_Win32_v4.22.05r4220.zip",
+            "hash": "e87ffef6008f3df0dffe498b8b5140f032ffbac261c90b94759b42a3755fc8b7"
+        }
+    },
+    "bin": "notepad2.exe",
+    "shortcuts": [
+        [
+            "Notepad2.exe",
+            "Notepad2"
+        ],
+        [
+            "metapath.exe",
+            "metapath"
+        ]
+    ],
+    "persist": [
+        "Notepad2.ini",
+        "metapath.ini"
+    ],
+    "checkver": {
+        "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2",
+        "regex": "v(\\d[\\w-.]+)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v$version/Notepad2_zh-Hans_x64_v$version.zip"
+            },
+            "32bit": {
+                "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v$version/Notepad2_zh-Hans_Win32_v$version.zip"
+            }
+        }
+    }
+}

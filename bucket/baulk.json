@@ -1,31 +1,37 @@
 {
+    "version": "4.0.9",
+    "description": "Baulk is a minimalist, portable package manager for Windows.",
     "homepage": "https://github.com/baulk/baulk",
-    "description": "Minimal Package Manager for Windows",
-    "version": "3.0.0",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/baulk/baulk/releases/download/3.0.0/Baulk-3.0.0-win-x64.zip",
-            "hash": "051c99def6dd0ae73c33fad1a3af89dd556063b2a739fa2ab1eae1660bb9a296",
-            "extract_dir": "Baulk-3.0.0-win-x64"
-        },
-        "32bit": {
-            "url": "https://github.com/baulk/baulk/releases/download/3.0.0/Baulk-3.0.0-win-x86.zip",
-            "hash": "d9cd5470194d3c6bcb0d65f6f2be4d1e1e2f89da1725ea21350af0b1f6273f93",
-            "extract_dir": "Baulk-3.0.0-win-x86"
+            "url": "https://github.com/baulk/baulk/releases/download/v4.0.9/Baulk-4.0.9-win-x64.zip",
+            "hash": "8f2ba555c1d451e2f29b2436cc7af0f51ffb32e6af4914e825a39974327455cf",
+            "extract_dir": "Baulk-4.0.9-win-x64"
         }
     },
-    "bin": "baulkterminal.exe",
-    "checkver": "github",
+    "bin": [
+        "baulk-terminal.exe",
+        "bin\\baulk.exe",
+        "bin\\baulk-exec.exe",
+        "bin\\baulk-dock.exe",
+        "bin\\baulk-lnk.exe",
+        "bin\\baulk-update.exe"
+    ],
+    "env_add_path": [
+        "bin\\links",
+        "bin"
+    ],
+    "persist": "config\\baulk.json",
+    "checkver": {
+        "url": "https://api.github.com/repos/baulk/baulk/releases",
+        "regex": "releases/download/(?<tag>[\\w.-]+)/Baulk-([\\d.]+)-win-x64.zip"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/baulk/baulk/releases/download/$version/Baulk-$version-win-x64.zip",
+                "url": "https://github.com/baulk/baulk/releases/download/$matchTag/Baulk-$version-win-x64.zip",
                 "extract_dir": "Baulk-$version-win-x64"
-            },
-            "32bit": {
-                "url": "https://github.com/baulk/baulk/releases/download/$version/Baulk-$version-win-x86.zip",
-                "extract_dir": "Baulk-$version-win-x86"
             }
         }
     }

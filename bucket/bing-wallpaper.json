@@ -1,0 +1,25 @@
+{
+    "version": "1.0.9.8",
+    "description": "Bing Wallpaper includes a collection of beautiful images from around the world that have been featured on the Bing homepage. Not only will you see a new image on your desktop each day, but you can also browse images and learn where they're from.",
+    "homepage": "https://www.microsoft.com/en-us/bing/bing-wallpaper",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.microsoft.com/servicesagreement"
+    },
+    "url": "https://download.microsoft.com/download/e/8/f/e8ff8991-04f4-4a97-9339-871b30e12eea/Installer/1.0.9.8/Bing/W011/BingWallpaper.exe",
+    "hash": "a81886247b9a6e60464572e343e001a271c4c68743fe1d5940d8ad92badb83c3",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
+        "Expand-MsiArchive \"$dir\\extracted\\BWCInstaller.msi\" \"$dir\" -ExtractDir 'Microsoft\\BingWallpaperApp' -Removal"
+    ],
+    "shortcuts": [
+        [
+            "BingWallpaperApp.exe",
+            "Bing Wallpaper"
+        ],
+        [
+            "BingVisualSearchLauncher.exe",
+            "Bing Visual Search"
+        ]
+    ]
+}

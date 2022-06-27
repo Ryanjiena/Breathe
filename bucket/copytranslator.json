@@ -1,20 +1,49 @@
 {
-    "homepage": "https://copytranslator.github.io/",
-    "description": "Foreign language assisted reading and translation solution",
-    "license": "GPL-2.0-only",
     "version": "10.0.1",
-    "url": "https://github.com/CopyTranslator/CopyTranslator/releases/download/v10.0.1/copytranslator-10.0.1-win.zip",
-    "hash": "865abf294969c45b4b1941b36016d1203adab3a9e751d825c74b2ac4c11e6144",
+    "description": "Foreign language reading and translation assistant based on copy and translate.",
+    "homepage": "https://copytranslator.gitee.io",
+    "license": {
+        "identifier": "GPL-2.0-or-later",
+        "url": "https://github.com/CopyTranslator/CopyTranslator/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CopyTranslator/CopyTranslator/releases/download/v10.0.1/copytranslator.Setup.10.0.1.exe#/dl.7z",
+            "hash": "sha512:6c4f3c4639de54728740eb1c7cdb35b00212aa78a1e86edf55a0001a46721ef757278f0972c40c0a3ca3111d18b5267ae8028e36a955776c44ae75c915cd691d",
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
+            }
+        }
+    },
+    "post_install": [
+        "@('$PLUGINSDIR', '[NSIS].nsi', 'Uninstall copytranslator.exe') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue }",
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:AppData\\copytranslator\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    ensure \"$dir\\User Data\" | Out-Null",
+        "    Copy-Item \"$env:AppData\\copytranslator\\*\" \"$dir\\User Data\" -Recurse",
+        "}"
+    ],
     "shortcuts": [
         [
             "copytranslator.exe",
-            "CopyTranslator"
+            "CopyTranslator",
+            "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
+    "persist": "User Data",
     "checkver": {
         "github": "https://github.com/CopyTranslator/CopyTranslator"
     },
     "autoupdate": {
-        "url": "https://github.com/CopyTranslator/CopyTranslator/releases/download/v$version/copytranslator-$version-win.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/CopyTranslator/CopyTranslator/releases/download/v$version/copytranslator.Setup.$version.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "mode": "extract",
+                    "regex": "sha512:\\s+$base64"
+                }
+            }
+        }
     }
 }

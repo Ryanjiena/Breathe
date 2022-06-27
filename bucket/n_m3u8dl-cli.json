@@ -1,15 +1,21 @@
 {
-    "homepage": "https://nilaoda.github.io/N_m3u8DL-CLI/",
-    "description": "m3u8 commandline downloader writtern in .NET",
     "version": "3.0.1",
-    "license": "MIT",
-    "url": "https://github.com/nilaoda/N_m3u8DL-CLI/releases/download/3.0.1/N_m3u8DL-CLI_v3.0.1.exe#/n_m3u8dl-cli.exe",
+    "description": "N_m3u8DL-CLI is a command line tool for downloading m3u8.",
+    "homepage": "https://github.com/nilaoda/N_m3u8DL-CLI",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/nilaoda/N_m3u8DL-CLI/blob/master/LICENSE"
+    },
+    "suggest": {
+        "ffmpeg": "ffmpeg"
+    },
+    "url": "https://github.com/nilaoda/N_m3u8DL-CLI/releases/download/3.0.1/N_m3u8DL-CLI_v3.0.1.exe#/N_m3u8DL-CLI.exe",
     "hash": "7fbdcde660528ee0dbfc4d4cd73166f26a0ab859e2b102aa673b178adbc04871",
-    "bin": "n_m3u8dl-cli.exe",
+    "bin": "N_m3u8DL-CLI.exe",
     "checkver": {
         "github": "https://github.com/nilaoda/N_m3u8DL-CLI"
     },
     "autoupdate": {
-        "url": "https://github.com/nilaoda/N_m3u8DL-CLI/releases/download/$version/N_m3u8DL-CLI_v$version.exe#/n_m3u8dl-cli.exe"
+        "url": "https://github.com/nilaoda/N_m3u8DL-CLI/releases/download/$version/N_m3u8DL-CLI_v$version.exe#/N_m3u8DL-CLI.exe"
     }
 }

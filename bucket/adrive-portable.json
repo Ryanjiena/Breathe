@@ -12,7 +12,7 @@
     "shortcuts": [
         [
             "aDrive.exe",
-            "Alibaba\\Aliyun Drive",
+            "Alibaba\\aDrive",
             "--user-data-dir=\"$dir\\User Data\""
         ]
     ],

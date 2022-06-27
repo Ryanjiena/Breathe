@@ -1,18 +1,24 @@
 {
-    "homepage": "https://github.com/JustArchiNET/ArchiSteamFarm",
-    "description": "Idling Steam cards from multiple accounts simultaneously.",
     "version": "5.2.6.3",
-    "license": "Apache-2.0",
+    "description": "ASF is a C# application with primary purpose of farming Steam cards from multiple accounts simultaneously.",
+    "homepage": "https://github.com/JustArchiNET/ArchiSteamFarm",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/JustArchiNET/ArchiSteamFarm/blob/master/LICENSE-2.0.txt"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.2.6.3/ASF-win-x64.zip",
             "hash": "53d1805a10c000dadf1129c07b09d2b84fa423b3c52b17010660034396221b41"
         }
     },
-    "suggest": {
-        ".NET Desktop Runtime": "dotnet-desktop-runtime",
-        "Visual C++ Redistributable": "extras/vcredist2019"
-    },
+    "bin": [
+        "ArchiSteamFarm.exe",
+        [
+            "ArchiSteamFarm.exe",
+            "ASF"
+        ]
+    ],
     "shortcuts": [
         [
             "ArchiSteamFarm.exe",

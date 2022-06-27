@@ -1,8 +1,10 @@
 {
-    "homepage": "https://github.com/BleuBleu/FamiStudio",
-    "description": "FamiStudio NES Music Editor.",
-    "license": "MIT",
     "version": "3.3.1",
+    "description": "FamiStudio NES Music Editor.",
+    "homepage": "https://famistudio.org",
+    "license": {
+        "identifier": "MIT"
+    },
     "url": "https://github.com/BleuBleu/FamiStudio/releases/download/3.3.1/FamiStudio331-WinPortableExe.zip",
     "hash": "7c8fe49bebee5d3f5608839da9f3af3bf9ac0474ec311d054dd5eb0ad4c8171f",
     "bin": "FamiStudio.exe",
@@ -12,7 +14,13 @@
             "FamiStudio"
         ]
     ],
-    "checkver": "github",
+    "persist": [
+        "FamiStudio.ini",
+        "AutoSaves"
+    ],
+    "checkver": {
+        "github": "https://github.com/BleuBleu/FamiStudio"
+    },
     "autoupdate": {
         "url": "https://github.com/BleuBleu/FamiStudio/releases/download/$version/FamiStudio$majorVersion$minorVersion$patchVersion-WinPortableExe.zip"
     }
