@@ -8,7 +8,7 @@
     },
     "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-3.6.0.exe#/dl.7z",
     "hash": "sha512:25d34b4bf5d03bf814d2a661ff2c3e988ae8a26537b0b7eb93a22da3770f5254e4ac0a7b8ba879eef99f8f02505270ddf2a595ff29e978b7706655892b073183",
-    "pre_install": "Remove-Item \"$dir\\$*\",\"$dir\\Uninst*\" -Recurse",
+    "pre_install": "Remove-Item \"$dir\\`$*\",\"$dir\\Uninst*\" -Recurse",
     "shortcuts": [
         [
             "aDrive.exe",
