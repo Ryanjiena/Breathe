@@ -1,0 +1,28 @@
+{
+    "version": "2.2.1",
+    "description": "Spotube is a Flutter based lightweight spotify client. It utilizes the power of Spotify & Youtube's public API & creates a hazardless, performant & resource friendly User Experience.",
+    "homepage": "https://github.com/KRTirtho/spotube",
+    "license": {
+        "identifier": "BSD-4-Clause",
+        "url": "https://github.com/KRTirtho/spotube/blob/master/LICENSE"
+    },
+    "notes": "wiki: <https://github.com/KRTirtho/spotube/wiki>",
+    "url": "https://github.com/KRTirtho/spotube/releases/download/v2.1.0/Spotube-windows-x86_64-setup.exe",
+    "hash": "7f93b3d5c60feef0717aa7a98db8425046e2ffba8efa33e25abbf2a4097c429a",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "spotube.exe",
+            "Spotube"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/KRTirtho/spotube/releases/download/v2.1.0/Spotube-windows-x86_64-setup.exe",
+        "hash": {
+            "url": "$baseurl/RELEASE.sha256sum",
+            "mode": "extract",
+            "regex": "$sha256\\s+$basename"
+        }
+    }
+}

@@ -1,5 +1,5 @@
 {
-    "version": "2.1.25",
+    "version": "2.1.24",
     "description": "Apifox = Postman + Swagger + Mock + JMeter",
     "homepage": "https://www.apifox.cn/",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "http://cdn.apifox.cn/download/2.1.25/Apifox-2.1.25.exe#/installer.exe",
-            "hash": "sha512:730b88fd52eb9db036d17e9c5158811b46506469f2266b4c86237e01cd623cb4f1d319ee232c1b4e91131cfc220323f4a7b6f1c06a4671307a540c8c7d641823",
+            "url": "http://cdn.apifox.cn/download/2.1.24/Apifox-2.1.24.exe#/installer.exe",
+            "hash": "sha512:85f304a5e2ebb42bdc199c986e9d5d4473b6bf8e3165810bd1a8c5b9876953f6a939510c40e52b1c4961b2035beebc7964dc00bd58f0bf81d7ff2e61c5d61288",
             "installer": {
                 "script": [
                     "ensure \"$persist_dir\" | Out-Null",

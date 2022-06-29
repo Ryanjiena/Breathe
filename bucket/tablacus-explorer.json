@@ -1,0 +1,41 @@
+{
+    "version": "22.6.11",
+    "description": "A tabbed file manager with Add-on support.",
+    "homepage": "https://tablacus.github.io/explorer_en.html",
+    "license": {
+        "identifier": "MIT"
+    },
+    "url": "https://github.com/tablacus/TablacusExplorer/releases/download/22.6.11/te220611.zip",
+    "hash": "75f39745bf435f74afc42505dcd37e7ce74a2aec26c57aa1ae5145279dfa36f6",
+    "architecture": {
+        "64bit": {
+            "bin": "TE64.exe",
+            "shortcuts": [
+                [
+                    "TE64.exe",
+                    "Tablacus Explorer"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": "TE32.exe",
+            "shortcuts": [
+                [
+                    "TE32.exe",
+                    "Tablacus Explorer"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "addons",
+        "config"
+    ],
+    "checkver": {
+        "url": "https://github.com/tablacus/TablacusExplorer/releases/latest",
+        "re": "<a href=\"/tablacus/TablacusExplorer/releases/download/(?<version>[\\d.]+)/te(?<file>[\\d]{6}).zip\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/tablacus/TablacusExplorer/releases/download/$matchVersion/te$matchFile.zip"
+    }
+}
