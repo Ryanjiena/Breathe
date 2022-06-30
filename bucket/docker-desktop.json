@@ -1,5 +1,5 @@
 {
-    "version": "4.9.1",
+    "version": "4.10.0",
     "description": "Docker is an open platform for developing, shipping, and running applications.",
     "homepage": "https://www.docker.com/products/docker-desktop",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://desktop.docker.com/win/main/amd64/81317/Docker%20Desktop%20Installer.exe",
-            "hash": "6fc3c2df9be1faa0ea434143cdff2b1e85b5203fefd0bcb3ee0cfa906a78a97d"
+            "url": "https://desktop.docker.com/win/main/amd64/82025/Docker%20Desktop%20Installer.exe",
+            "hash": "10615f4425e59eef7a22ce79ec13e41057df278547aa81c9fe4d623a848e80d8"
         }
     },
     "installer": {
