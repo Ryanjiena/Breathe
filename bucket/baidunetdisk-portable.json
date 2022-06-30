@@ -1,13 +1,13 @@
 {
-    "version": "7.17.0.12",
+    "version": "7.17.5.19",
     "description": "BaiduNetdisk Official Client.",
     "homepage": "https://pan.baidu.com",
     "license": {
         "identifier": "Proprietary",
         "url": "https://pan.baidu.com/disk/main#/protocol/duty_mobi"
     },
-    "url": "https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.17.0.12.exe#dl.7z",
-    "hash": "6628f156e0346b99bc03677cf3bc9872d4209334a12f763fe2f1465ed97439c8",
+    "url": "https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.17.5.19.exe#dl.7z",
+    "hash": "14964c8c3f6dc0d3fd1457d1497e8700942a0ed9ea9366512505a61af61ee2e2",
     "post_install": "Remove-Item \"$dir\\`$*\",\"$dir\\AutoUpdate\" -Recurse -Force -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
