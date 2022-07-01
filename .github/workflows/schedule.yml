@@ -25,5 +25,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           repository: "Ryanjiena/Meta"
-          branch: "master"
+          branch: "main"
           github_token: ${{ secrets.GH_TOKEN }}
