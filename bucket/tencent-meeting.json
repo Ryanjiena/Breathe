@@ -1,13 +1,13 @@
 {
-    "version": "3.9.3.415",
+    "version": "3.9.4.403",
     "description": "This package installs/upgrades the Tencent Meeting(腾讯会议). Tencent Meeting displays Simplified Chinese only. For other languages, please switch to VooV Meeting.",
     "homepage": "https://meeting.tencent.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://meeting.tencent.com/declare.html"
     },
-    "url": "https://updatecdn.meeting.qq.com/cos/2d7f173c6aac81d22aacca0022cecdec/TencentMeeting_0300000000_3.9.3.415.publish.exe#/dl.7z",
-    "hash": "md5:2d7f173c6aac81d22aacca0022cecdec",
+    "url": "https://updatecdn.meeting.qq.com/cos/792d4d48f1ada6bc002f842833d4a957/TencentMeeting_0300000000_3.9.4.403.publish.exe#/dl.7z",
+    "hash": "md5:792d4d48f1ada6bc002f842833d4a957",
     "pre_install": "Rename-Item -Path \"$dir\\`$_*\" -NewName \"$version\" -Force",
     "installer": {
         "script": [
