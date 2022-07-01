@@ -1,5 +1,5 @@
 {
-    "version": "0.19.22",
+    "version": "0.19.23",
     "description": "Clash for Windows Original Simplified Chinese Translation Patch, maintained by ender-zhao.",
     "homepage": "https://github.com/ender-zhao/Clash-for-Windows_Chinese",
     "license": {
@@ -7,7 +7,7 @@
     },
     "depends": "clash-for-windows-portable",
     "url": "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z",
-    "hash": "220124747506a3ce494bb343b5c70a7d19b7402ce74e938ef893b6088bf11af7",
+    "hash": "9a7af26c3fc5b1d7bd5a56a9c664d00ed400a55455744b498cf766d1317926a3",
     "installer": {
         "script": [
             "Get-Process clash* | Stop-Process -Force",
