@@ -13,63 +13,107 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: "Ryanjiena/Meta"
-          ref: "master"
-          token: ${{ secrets.GH_TOKEN }}    
-      - name: Excavator
-        uses: ScoopInstaller/Scoop-GithubActions@main
+          ref: "main"
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Excavate
         env:
-          USER_EMAIL: "78083448+JaimeZeng@users.noreply.github.com"
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          SKIP_UPDATED: '1'
-          THROW_ERROR: '0'
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          repository: "Ryanjiena/Meta"
-          branch: "master"
-          github_token: ${{ secrets.GH_TOKEN }}
-      # - name: Excavate
-      #   env:
-      #     SKIP_UPDATED: "1"
-      #     THROW_ERROR: "0"
-      #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      #     BRANCH: "master"
-      #     USER_EMAIL: "78083448+JaimeZeng@users.noreply.github.com"
-      #     USER: "JaimeZeng[bot]"
-      #   run: |
-      #     $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
-      #     $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
-      #     $env:SCOOP_GLOBAL = Join-Path $env:SystemDrive 'SCOOP'
-      #     $env:SCOOP_DEBUG = 1
-      #     $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
-      #     $REPOSITORY = "Ryanjiena/Meta"
-      #     $BUCKET_ROOT = $env:GITHUB_WORKSPACE
-      #     $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
-      #     $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
-      #     $_BRANCH = $env:BRANCH
-      #     $rem = "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/Ryanjiena/Meta.git"
+          SCOOP_GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          USER_EMAIL: "78083448+JaimeZeng@users.noreply.github.com"
+          USER: "JaimeZeng[bot]"
+        run: |
+          # Installing scoop
+          $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
+          $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
+          $env:SCOOP_GLOBAL = Join-Path $env:SystemDrive 'SCOOP'
+          $env:SCOOP_DEBUG = 1
+          $f = Join-Path $env:USERPROFILE 'install.ps1'
+          Invoke-WebRequest 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' -UseBasicParsing -OutFile $f
+          & $f -RunAsAdmin
 
-      #     Write-Host "Config git" -f darkgreen
-      #     git config --global user.name $env:USER
-      #     git config --global user.email $env:USER_EMAIL
-      #     git remote 'set-url' --push origin $rem
 
-      #     Write-Host 'Installing scoop' -f darkgreen
-      #     $f = Join-Path $env:USERPROFILE 'install.ps1'
-      #     Invoke-WebRequest 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' -UseBasicParsing -OutFile $f
-      #     & $f -RunAsAdmin
+          # Initialize
+          git config --global user.name $env:USER
+          git config --global user.email $env:USER_EMAIL
+          git remote 'set-url' --push origin "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/Ryanjiena/Meta.git"
+          scoop config '7ZIPEXTRACT_USE_EXTERNAL' $true
+          scoop install 'hub' -g
+          if (-not $env:HUB_VERBOSE) {
+              $env:HUB_VERBOSE = '1'
+              [System.Environment]::SetEnvironmentVariable('HUB_VERBOSE', $env:HUB_VERBOSE, 'Machine')
+          }
 
-      #     Write-Host 'Importing all modules' -f darkgreen
-      #     # Load all scoop's modules.
-      #     # Dot sourcing needs to be done on highest scope possible to propagate into lower scopes
-      #     Get-ChildItem (Join-Path $env:SCOOP_HOME 'lib') '*.ps1' | ForEach-Object { . $_.FullName }
 
-      #     $params = @{
-      #         'Dir'          = $MANIFESTS_LOCATION
-      #         'Upstream'     = "${REPOSITORY}:${_BRANCH}"
-      #         'OriginBranch' = $_BRANCH
-      #         'Push'         = $true
-      #         'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
-      #     }
-      #     & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
-      #     Write-Host 'Scheduled finished' -f darkgreen
+          # Load all scoop's modules.
+          # Dot sourcing needs to be done on highest scope possible to propagate into lower scopes
+          Get-ChildItem (Join-Path $env:SCOOP_HOME 'lib') '*.ps1' | ForEach-Object { & $_.FullName }
+          # run command and return output
+          function execute($cmd) {
+              Write-Host $cmd -ForegroundColor Green
+              $output = Invoke-Expression $cmd
+
+              if ($LASTEXITCODE -gt 0) {
+                  abort "^^^ Error! See above ^^^ (last command: $cmd)"
+              }
+
+              return $output
+          }
+          # parse manifest
+          function parse_json($path) {
+              if (!(Test-Path $path)) { return $null }
+              Get-Content $path -Raw -Encoding UTF8 | ConvertFrom-Json -ea stop
+          }
+
+
+          # Scheduled
+          $BUCKET_ROOT = $env:GITHUB_WORKSPACE
+          $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
+          $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
+          $App = '*'
+          $Dir = $MANIFESTS_LOCATION
+          $OriginBranch = 'main'
+          $SkipUpdated = $true
+
+          execute "hub pull origin $OriginBranch"
+          execute "hub checkout $OriginBranch"
+
+          & (Join-Path $BINARIES_FOLDER 'checkver.ps1') -App $App -Dir $Dir -Update -SkipUpdated:$SkipUpdated
+          if ($SpecialSnowflakes) {
+              Write-Host "Forcing update on our special snowflakes: $($SpecialSnowflakes -join ',')" -ForegroundColor DarkCyan
+              $SpecialSnowflakes -split ',' | ForEach-Object {
+                  & (Join-Path $BINARIES_FOLDER 'checkver.ps1') $_ -Dir $Dir -ForceUpdate
+              }
+          }
+
+          hub diff --name-only | ForEach-Object {
+              $manifest = $_
+              if (!$manifest.EndsWith('.json')) {
+                  return
+              }
+
+              $app = ([System.IO.Path]::GetFileNameWithoutExtension($manifest))
+              $json = parse_json $manifest
+              if (!$json.version) {
+                  error "Invalid manifest: $manifest ..."
+                  return
+              }
+              $version = $json.version
+
+              Write-Host "Creating update $app ($version) ..." -ForegroundColor DarkCyan
+              execute "hub add $manifest"
+
+              # detect if file was staged, because it's not when only LF or CRLF have changed
+              $status = execute 'hub status --porcelain -uno'
+              $status = $status | Where-Object { $_ -match "M\s{2}.*$app.json" }
+              if ($status -and $status.StartsWith('M  ') -and $status.EndsWith("$app.json")) {
+                  execute "hub commit -m '${app}: Update to version $version'"
+              }
+              else {
+                  Write-Host "Skipping $app because only LF/CRLF changes were detected ..." -ForegroundColor Yellow
+              }
+          }
+
+
+          # Pushing updates
+          execute "hub push origin $OriginBranch"
+          execute 'hub reset --hard'
