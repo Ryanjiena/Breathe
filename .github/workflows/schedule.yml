@@ -68,7 +68,7 @@ jobs:
           # Scheduled
           $BUCKET_ROOT = $env:GITHUB_WORKSPACE
           $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
-          $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
+          $BINARIES_FOLDER = Join-Path $BUCKET_ROOT 'bin'
           $App = '*'
           $Dir = $MANIFESTS_LOCATION
           $OriginBranch = 'main'
