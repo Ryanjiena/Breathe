@@ -1,31 +1,34 @@
 {
     "version": "0.15.0-33-g813495c7",
-    "description": "Stash is a self-hosted webapp written in Go which organizes and serves your porn.",
+    "description": "An organizer for your porn. (Dev release channel)",
     "homepage": "https://stashapp.cc",
-    "license": {
-        "identifier": "AGPL-3.0-only",
-        "url": "https://github.com/stashapp/stash/blob/develop/LICENSE"
-    },
+    "license": "AGPL-3.0-only",
     "suggest": {
         "FFmpeg": [
             "ffmpeg",
             "ffmpeg-nightly"
         ]
     },
-    "url": "https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe#/stash-dev.exe",
-    "hash": "sha1:1644b8e548aa32189996866e6f4f50fb51bf8b94",
-    "bin": "stash-dev.exe",
+    "url": "https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe",
+    "hash": "66e0e10740cfbcd0375923349cbd3742adfa2621401f208bd29d2a6e674b7681",
+    "bin": [
+        [
+            "stash-win.exe",
+            "stash-win",
+            "-c \"$dir\\config\\config.yml\""
+        ],
+        [
+            "stash-win.exe",
+            "stash",
+            "-c \"$dir\\config\\config.yml\""
+        ]
+    ],
+    "persist": "config",
     "checkver": {
-        "url": "https://api.github.com/repos/stashapp/stash/releases/tags/latest_develop",
-        "jsonpath": "$.name",
-        "regex": "v([\\w-.]+)"
+        "url": "https://github.com/stashapp/stash/releases/tag/latest_develop",
+        "regex": "Release v([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe#/stash-dev.exe",
-        "hash": {
-            "url": "$baseurl/CHECKSUMS_SHA1",
-            "mode": "extract",
-            "regex": "$sha1\\s+$basename"
-        }
+        "url": "https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe"
     }
 }
