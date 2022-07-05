@@ -18,10 +18,10 @@
     },
     "pre_install": [
         "# copy config from non-portable version",
-        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:Appdata\\Bitwarden\")) {",
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:APPDATA\\Bitwarden\")) {",
         "    if (!(Test-Path \"$dir\\User Data\")) { New-Item \"$dir\\User Data\" -ItemType Directory | Out-Null }",
         "    ensure \"$dir\\User Data\" | Out-Null",
-        "    Copy-Item \"$env:Appdata\\Bitwarden\\*\" \"$dir\\User Data\\\" -Recurse -Force",
+        "    Copy-Item \"$env:APPDATA\\Bitwarden\\*\" \"$dir\\User Data\\\" -Recurse -Force",
         "}"
     ],
     "bin": [

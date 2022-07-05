@@ -1,0 +1,34 @@
+{
+    "version": "1.7.1",
+    "description": "Aliyundrive WebDAV service is mainly used in cooperation with clients that support WebDAV protocol, such as Infuse and nPlayer, to watch cloud disk video content directly on TV and support file upload, but it does not support file upload in seconds due to WebDAV protocol.",
+    "homepage": "https://github.com/messense/aliyundrive-webdav",
+    "license": {
+        "identifier": "MIT"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/messense/aliyundrive-webdav/releases/download/v1.7.1/aliyundrive-webdav-v1.7.1.x86_64-pc-windows-msvc.zip",
+            "hash": "990bde2860513859c1c77c53a784b29a380a3c8608affd6ed8e9720df50471f3"
+        },
+        "32bit": {
+            "url": "https://github.com/messense/aliyundrive-webdav/releases/download/v1.7.1/aliyundrive-webdav-v1.7.1.i686-pc-windows-msvc.zip",
+            "hash": "b9d9e06f71f073dd6cd9dbb567280d357c469932c7be03bc5fac0f70e631a19b"
+        }
+    },
+    "bin": "aliyundrive-webdav.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/messense/aliyundrive-webdav/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/messense/aliyundrive-webdav/releases/download/v$version/aliyundrive-webdav-v$version.x86_64-pc-windows-msvc.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/messense/aliyundrive-webdav/releases/download/v$version/aliyundrive-webdav-v$version.i686-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

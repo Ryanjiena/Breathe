@@ -24,7 +24,7 @@
     "uninstaller": {
         "script": [
             "taskkill /F /IM NanaZip.exe /FI \"status eq running\" | Out-Null",
-            "if($PSVersionTable.PSVersion.Major -ge 6) {Import-Module Appx -UseWindowsPowershell | Out-Null}",
+            "if($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell | Out-Null }",
             "Get-AppxPackage '40174MouriNaruto.NanaZip' | Remove-AppxPackage"
         ]
     },
