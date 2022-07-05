@@ -1,13 +1,13 @@
 {
-    "version": "7.98.61",
+    "version": "7.98.63",
     "description": "A professional Apple brush assistant, Apple jailbreak assistant.",
     "homepage": "https://www.i4.cn/pro_pc.html",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.i4.cn/news_detail_1854.html"
     },
-    "url": "https://d-ali4tool.i4.cn/i4tools/V7/v7.98/61/i4Tools_v7.98.61_Setup.exe#/dl.7z",
-    "hash": "3e0cf9e56e8a4f9876712a5146fea7e2eb6d0863223d9a5b944bfa980e4edda8",
+    "url": "https://d-ali4tool.i4.cn/i4tools/V7/v7.98/63/i4Tools_v7.98.63_Setup.exe#/dl.7z",
+    "hash": "65cfa308ff41f5f0993513f18b2661b9fbbb2a478a1387685a89c9780845b24d",
     "pre_install": [
         "info '[Portable Mode]: Copying user data...'",
         "@('data.db', 'setting.cfg') | ForEach-Object {",
