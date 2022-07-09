@@ -1,24 +1,24 @@
 {
     "version": "5.2.7.7",
-    "description": "ASF is a C# application with primary purpose of farming Steam cards from multiple accounts simultaneously.",
+    "description": "C# Farming Steam cards from multiple accounts simultaneously.",
     "homepage": "https://github.com/JustArchiNET/ArchiSteamFarm",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/JustArchiNET/ArchiSteamFarm/blob/master/LICENSE-2.0.txt"
+    "license": "Apache-2.0",
+    "suggest": {
+        ".NET Desktop Runtime LTS": "extras/windowsdesktop-runtime-lts",
+        "Visual C++ Redistributable": "extras/vcredist2022"
     },
+    "notes": [
+        "ArchiSteamFarm has a built-in updater, So you should DISABLE it in configuration file,",
+        "Or run 'scoop hold archisteamfarm' to disable updates via Scoop.",
+        "ASF Config Generator:",
+        "https://justarchinet.github.io/ASF-WebConfigGenerator/"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.2.7.7/ASF-win-x64.zip",
             "hash": "b69924f22f51aae810e48b1435398fe07150d191afacc60a82b860b42ca837b8"
         }
     },
-    "bin": [
-        "ArchiSteamFarm.exe",
-        [
-            "ArchiSteamFarm.exe",
-            "ASF"
-        ]
-    ],
     "shortcuts": [
         [
             "ArchiSteamFarm.exe",
