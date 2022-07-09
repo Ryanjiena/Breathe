@@ -1,5 +1,5 @@
 {
-    "version": "0.0.3",
+    "version": "0.0.4_beta.3",
     "description": "AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.",
     "homepage": "https://www.appflowy.io",
     "license": {
