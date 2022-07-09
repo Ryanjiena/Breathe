@@ -1,13 +1,13 @@
 {
-    "version": "4.0.9",
+    "version": "4.1.0",
     "description": "Baulk is a minimalist, portable package manager for Windows.",
     "homepage": "https://github.com/baulk/baulk",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/baulk/baulk/releases/download/v4.0.9/Baulk-4.0.9-win-x64.zip",
-            "hash": "8f2ba555c1d451e2f29b2436cc7af0f51ffb32e6af4914e825a39974327455cf",
-            "extract_dir": "Baulk-4.0.9-win-x64"
+            "url": "https://github.com/baulk/baulk/releases/download/v4.1.0/Baulk-4.1.0-win-x64.zip",
+            "hash": "9a56cc3152f2c3e477ed5652915583cf28517535b76b31a9164e3eba33b247c5",
+            "extract_dir": "Baulk-4.1.0-win-x64"
         }
     },
     "bin": [
