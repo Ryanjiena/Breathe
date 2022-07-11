@@ -1,0 +1,32 @@
+{
+    "version": "1.1.3",
+    "description": "DropPoint holds the files you wish to drag, in one part of the screen so that you can drag content without having side-by-side windows.",
+    "homepage": "https://droppoint.netlify.app/",
+    "license": {
+        "identifier": "GPL-3.0-or-later"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GameGodS3/DropPoint/releases/download/v1.1.3/DropPoint-1.1.3-win.zip",
+            "hash": "367dfb9354b1824ffac4d6f71e3ad692580db9ee34b82c86c998c14769e1c449"
+        }
+    },
+    "shortcuts": [
+        [
+            "DropPoint.exe",
+            "DropPoint"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/GameGodS3/DropPoint/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GameGodS3/DropPoint/releases/download/v$version/DropPoint-$version-win.zip"
+            }
+        }
+    }
+}

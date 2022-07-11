@@ -1,22 +1,38 @@
 {
-    "homepage": "http://www.rejetto.com/hfs/",
-    "description": "HFS is a free, one single executable file Http File Server software.",
-    "license": "GPL-2.0-only",
-    "version": "2.3m",
-    "url": "https://downloads.sourceforge.net/project/hfs/HFS/2.3m/hfs2.3m.zip",
-    "hash": "sha1:adec3861661cba9d04c214223aaa078b4f4d35dd",
-    "bin": "hfs.exe",
+    "version": "0.24.1",
+    "description": "HFS is a web file server to run on your computer. Share folders or even a single file thanks to the virtual file system.",
+    "homepage": "https://telegram.dog/hfsusers",
+    "license": {
+        "identifier": "GPL-3.0-or-later"
+    },
+    "url": "https://github.com/rejetto/hfs/releases/download/v0.24.1/hfs-windows.zip",
+    "hash": "cb511ee1cec1588b18e57cd944aca2dfe7de9462dcb1df1b97d9fed895e5c77e",
+    "pre_install": [
+        "if (Test-Path \"$persist_dir\\config.yaml\") {",
+        "    Copy-Item \"$persist_dir\\config.yaml\" \"$dir\\\" | Out-Null",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\config.yaml\") {",
+            "    ensure \"$persist_dir\" | Out-Null",
+            "    Copy-Item \"$dir\\config.yaml\" \"$persist_dir\\\" | Out-Null",
+            "}"
+        ]
+    },
     "shortcuts": [
         [
             "hfs.exe",
             "HFS"
         ]
     ],
+    "persist": "logs",
     "checkver": {
-        "url": "http://www.rejetto.com/hfs/?f=dl",
-        "regex": "(?sm)Latest version: <b>([\\w\\d.]+)"
+        "url": "https://api.github.com/repos/rejetto/hfs/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "^v(.+)$"
     },
     "autoupdate": {
-        "url": "https://downloads.sourceforge.net/project/hfs/HFS/$version/hfs$version.zip"
+        "url": "https://github.com/rejetto/hfs/releases/download/v$version/hfs-windows.zip"
     }
 }
