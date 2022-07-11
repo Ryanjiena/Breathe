@@ -1,5 +1,5 @@
 {
-    "version": "2.2.1",
+    "version": "2.3.0",
     "description": "Spotube is a Flutter based lightweight spotify client. It utilizes the power of Spotify & Youtube's public API & creates a hazardless, performant & resource friendly User Experience.",
     "homepage": "https://github.com/KRTirtho/spotube",
     "license": {
