@@ -1,0 +1,42 @@
+{
+    "version": "2.9.9.199909",
+    "description": "Netease Cloud Music(music.163.com) Official Client.",
+    "homepage": "https://music.163.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://st.music.163.com/official-terms/service"
+    },
+    "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.9.9.199909.exe#/dl.7z",
+    "hash": "dfa07efeb984fe10dc2527461a4ea34121f3d8b42b5cda6ee61beabec12e9e2e",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -ErrorAction 'SilentlyContinue' -Force",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\redist_packages\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+    ],
+    "installer": {
+        "script": [
+            "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:LOCALAPPDATA\\Netease\\CloudMusic\")) {",
+            "    Copy-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" \"$persist_dir\\appdata\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+            "    Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+            "}",
+            "ensure \"$persist_dir\\appdata\" | Out-Null",
+            "New-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
+        ]
+    },
+    "uninstaller": {
+        "script": "Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+    },
+    "shortcuts": [
+        [
+            "cloudmusic.exe",
+            "Netease\\Netease Cloud Music"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/header.json",
+        "jsonpath": "$[?(@.name == 'cloudmusic')].redirect",
+        "regex": "NeteaseCloudMusic_Music_official_([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version.exe#/dl.7z"
+    }
+}

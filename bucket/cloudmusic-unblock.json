@@ -1,0 +1,52 @@
+{
+    "version": "2.9.9.199909",
+    "description": "Netease Cloud Music(music.163.com) Official Client + unblockneteasemusic.",
+    "homepage": "https://music.163.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://st.music.163.com/official-terms/service"
+    },
+    "notes": "Usage: <https://github.com/UnblockNeteaseMusic/server#%E6%96%B9%E6%B3%95-2-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86>",
+    "depends": "meta/unblockneteasemusic",
+    "architecture": {
+        "64bit": {
+            "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.9.9.199909.exe#/dl.7z",
+            "hash": "dfa07efeb984fe10dc2527461a4ea34121f3d8b42b5cda6ee61beabec12e9e2e",
+            "pre_install": [
+                "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -ErrorAction 'SilentlyContinue' -Force",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\redist_packages\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+                "Copy-Item \"$(scoop prefix unblockneteasemusic)\\unblockneteasemusic.exe\" \"$dir\" -Force | Out-Null",
+                "$cont = @(",
+                "    'Start-Process \"$(scoop prefix cloudmusic-unblock)\\unblockneteasemusic.exe\" -WorkingDirectory \"$(scoop prefix cloudmusic-unblock)\\\" -WindowStyle Hidden'",
+                "    'Start-Process \"$(scoop prefix cloudmusic-unblock)\\cloudmusic.exe\" -WorkingDirectory \"$(scoop prefix cloudmusic-unblock)\\\"'",
+                ")",
+                "Set-Content \"$dir\\cloudmusic-unblock.ps1\" -Value $cont -Encoding Ascii"
+            ],
+            "installer": {
+                "script": [
+                    "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:LOCALAPPDATA\\Netease\\CloudMusic\")) {",
+                    "    Copy-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" \"$persist_dir\\appdata\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+                    "    Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+                    "}",
+                    "ensure \"$persist_dir\\appdata\" | Out-Null",
+                    "New-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
+                ]
+            },
+            "uninstaller": {
+                "script": "Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+            }
+        }
+    },
+    "bin": "cloudmusic-unblock.ps1",
+    "checkver": {
+        "url": "https://baoku.360.cn/soft/show/appid/103466312",
+        "regex": "(?sm)版本.*?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version.exe#/dl.7z"
+            }
+        }
+    }
+}
