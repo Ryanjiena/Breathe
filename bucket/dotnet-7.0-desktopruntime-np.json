@@ -1,5 +1,5 @@
 {
-    "version": "7.0.0-preview.5.22302.5",
+    "version": "7.0.0-preview.6.22351.3",
     "description": "Microsoft .NET 7 Desktop Runtime.",
     "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
     "license": {
@@ -10,12 +10,12 @@
     "depends": "dark",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.5.22302.5/windowsdesktop-runtime-7.0.0-preview.5.22302.5-win-x64.exe",
-            "hash": "sha512:0c28eeeb7d69f492f00af393438944494af8c34aa095b9874bc6f1003626c27293e00d393b144c9c36532bb57a13a6a76b3ed540d65bb9884239d264783e69d8"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.6.22351.3/windowsdesktop-runtime-7.0.0-preview.6.22351.3-win-x64.exe",
+            "hash": "sha512:031de8a2654becf115402116f8a5751064acf4d74412ef81e82c11979e1f7ecc3f9b2f8e085ecb875fd14699952922d8078531c4c25683ecdde4954db62c787b"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.5.22302.5/windowsdesktop-runtime-7.0.0-preview.5.22302.5-win-x86.exe",
-            "hash": "sha512:a9ac398df168032fdf68027597bf419e641063a4dca030d33da6f80907ef0c4339f4ebb747ef2d35e0818740b3aabf9371dd16407ce8b36609f64d3333cb785f"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.6.22351.3/windowsdesktop-runtime-7.0.0-preview.6.22351.3-win-x86.exe",
+            "hash": "sha512:d738c4903c805e045a8f8227802fba0eff04cd053ae195bf8a1e57a8baccbcc71b4ecdc93abcf1a521aa88b64f1be6e5caf95243ef0411aecbaad597eab7d79d"
         }
     },
     "installer": {
