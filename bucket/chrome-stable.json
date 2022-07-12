@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/adtma6pi6kul22k4nxj3ds6hikgq_103.0.5060.114/103.0.5060.114_chrome_installer.exe#/dl.7z",
+            "url": "https://dl.google.com/release2/chrome/adtma6pi6kul22k4nxj3ds6hikgq_103.0.5060.114/103.0.5060.114_chrome_installer.exe#/dl.7z",
             "hash": "abcf19f45c6e3a4d0f7fb5a77dcdb23c62ca67dba15002b7bbfaae888a406183"
         },
         "32bit": {
-            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/adrjprynyktfpv2zft3lkspb6anq_103.0.5060.114/103.0.5060.114_chrome_installer.exe#/dl.7z",
+            "url": "https://dl.google.com/release2/chrome/adrjprynyktfpv2zft3lkspb6anq_103.0.5060.114/103.0.5060.114_chrome_installer.exe#/dl.7z",
             "hash": "5ff01003d8eef71d526cd745472965309a27effc658d85d16ab9e393522fe62b"
         }
     },
@@ -48,14 +48,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://redirector.gvt1.com/edgedl/release2/$match64#/dl.7z",
+                "url": "https://dl.google.com/release2/$match64#/dl.7z",
                 "hash": {
                     "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
                     "jsonpath": "$[?(@.Product == 'stable')].Release[?(@.Architecture == 'win-x64')].Hash"
                 }
             },
             "32bit": {
-                "url": "https://redirector.gvt1.com/edgedl/release2/$match86#/dl.7z",
+                "url": "https://dl.google.com/release2/$match86#/dl.7z",
                 "hash": {
                     "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
                     "jsonpath": "$[?(@.Product == 'stable')].Release[?(@.Architecture == 'win-x86')].Hash"
