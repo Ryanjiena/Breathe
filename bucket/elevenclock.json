@@ -1,12 +1,12 @@
 {
-    "version": "3.6.3",
+    "version": "3.6.4",
     "description": "The whole point of ElevenClock is to have a customizable clock on your Windows 11 taskbars. When Microsoft's engineers were creating Windows 11, they forgot to add a clock on the secondary screen taskbar. So I did that. ElevenClock was an app designed to return this functionality back, but it has evolved and it can now replace your system clock in order to let you customize it, adding seconds, moving it around, changing its color and much more, like in the good old days.",
     "homepage": "https://www.somepythonthings.tk/programs/elevenclock/",
     "license": {
         "identifier": "GPL-3.0-or-later"
     },
-    "url": "https://github.com/martinet101/ElevenClock/releases/download/3.6.3/ElevenClock.Installer.exe",
-    "hash": "8942149b83b7269692f7308d7e86962f7a6789fbaa5872c62867a5a173fe5e66",
+    "url": "https://github.com/martinet101/ElevenClock/releases/download/3.6.4/ElevenClock.Installer.exe",
+    "hash": "b672128ee7b3af3c38e3aa2e9f5b564254665bb53a6f3898976aede6060ed630",
     "innosetup": true,
     "shortcuts": [
         [
