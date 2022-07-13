@@ -1,5 +1,5 @@
 {
-    "version": "105.0.5176.0",
+    "version": "105.0.5178.0",
     "description": "Fast, secure, and free web browser, built for the modern web(Canary, Portable Edition).",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/eerlkj6uqbyeuzfzqevsnvqxqu_105.0.5176.0/105.0.5176.0_chrome_installer.exe#/dl.7z",
-            "hash": "42dfc961cfee1e92c5de0e7cb3da2dafc2455223223d892cf0653246e51d1319"
+            "url": "https://dl.google.com/release2/chrome/o7qt5mypovxojskmxkzki5pjm4_105.0.5178.0/105.0.5178.0_chrome_installer.exe#/dl.7z",
+            "hash": "6648b2931a1da0ac3d78111f0cecff345e200f7cef65a08309dd7c37385f033e"
         },
         "32bit": {
             "url": "https://dl.google.com/release2/chrome/jvjtk6xx57ruff6323yziqvxhq_105.0.5176.0/105.0.5176.0_chrome_installer.exe#/dl.7z",
