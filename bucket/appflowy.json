@@ -17,9 +17,9 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/AppFlowy-IO/AppFlowy/releases",
-        "regex": "releases/download/([\\w._]+)/AppFlowy-windows-x86.zip"
+        "regex": "releases/download/([\\w.-_]+)/AppFlowy-Windows-x86(?<x64>_64)?.zip"
     },
     "autoupdate": {
-        "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/download/0.0.4_beta.3/AppFlowy-windows-x86.zip"
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/download/$version/AppFlowy-windows-x86$matchX64.zip"
     }
 }
