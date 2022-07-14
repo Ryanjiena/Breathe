@@ -1,5 +1,5 @@
 {
-    "version": "6.9",
+    "version": "6.12",
     "description": "Bilibili video downloader",
     "homepage": "https://github.com/nICEnnnnnnnLee/BilibiliDown",
     "license": {
@@ -9,8 +9,8 @@
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://github.com/nICEnnnnnnnLee/BilibiliDown/releases/download/V6.9/BilibiliDown.v6.9.release.zip",
-    "hash": "5fe9db3b7a38c3c49023469e2051d8b69a1c054250c1d7f34b3ba873e9a69e45",
+    "url": "https://github.com/nICEnnnnnnnLee/BilibiliDown/releases/download/V6.12/BilibiliDown.v6.12.release.zip",
+    "hash": "416febf7613759716fe143a255eb9e6b429b165ec28ddf6129e7122ee09118a8",
     "bin": [
         [
             "run-UI.bat",
