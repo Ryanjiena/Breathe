@@ -1,5 +1,5 @@
 {
-    "version": "2.9.4",
+    "version": "2.9.5",
     "description": "Bittorrent streaming software for cats. Stream anime torrents, real-time with no waiting for downloads.",
     "homepage": "https://github.com/ThaUnknown/miru",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ThaUnknown/miru/releases/download/v2.9.4/win-Miru-2.9.4.exe#/dl.7z",
-            "hash": "sha512:f25fbfc305447159f12a1e1d3f801e34db53f8bca9713cfb1582515801ab8670bfb3a6dc5ed0ff41f44186e33dd7af94b50d0bb870eb35b1ddcf3cbf387a6e7c",
+            "url": "https://github.com/ThaUnknown/miru/releases/download/v2.9.5/win-Miru-2.9.5.exe#/dl.7z",
+            "hash": "sha512:f308f289a89f2d4c0009102458506209d39c872633f21281ef06a331fa9d27804f88c93d5a8505fdf4446a590fdd8141d7c6ff1000924eb3d6d38c1aab7f2de0",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal"
         }
     },

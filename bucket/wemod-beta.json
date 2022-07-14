@@ -1,13 +1,13 @@
 {
-    "version": "8.3.0-beta01",
+    "version": "8.3.0-beta02",
     "description": "Free cheats & trainers for your favorite PC games in one easy app(Beta Edition).",
     "homepage": "https://www.wemod.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.wemod.com/terms"
     },
-    "url": "https://storage-cdn.wemod.com/app/releases/beta/WeMod-8.3.0-beta01.exe#/dl.7z",
-    "hash": "8ddea9a7585159067314c731912e980ec602c8d411dfd63dbd327ca58df669e8",
+    "url": "https://storage-cdn.wemod.com/app/releases/beta/WeMod-8.3.0-beta02.exe#/dl.7z",
+    "hash": "d45c44b5f7e92fbe2e3e198996b3051177a33c5bdbf46c421458753dcf8364c7",
     "pre_install": [
         "$nupkg=(Get-ChildItem $dir\\*full.nupkg).Name",
         "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -ErrorAction 'SilentlyContinue' -Force -Recurse",
