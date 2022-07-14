@@ -1,13 +1,13 @@
 {
-    "version": "11.2.0",
+    "version": "11.3.0",
     "description": "Free online PDF tools to merge, compress, create, edit and convert PDFs. Quick and Easy. Without installation. Without registration.",
     "homepage": "https://tools.pdf24.org/en/creator/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.pdf24.org/en/terms-of-use"
     },
-    "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-11.2.0.msi#/setup.msi_",
-    "hash": "164202e47be1f4690d70491092693ee0ef2697218bb0584820a38b68854f68ea",
+    "url": "https://stx.pdf24.org/products/pdf-creator/download/pdf24-creator-11.3.0.msi#/setup.msi_",
+    "hash": "308a69f125492fb2e8ed7a0ed2ff4aabb529425cfd49d9ef584faac022c5e1db",
     "installer": {
         "script": [
             "# For error codes, see https://docs.microsoft.com/en-us/windows/win32/msi/error-codes",
