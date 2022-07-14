@@ -6,6 +6,10 @@
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/2dust/clashN/blob/main/LICENSE"
     },
+    "notes": [
+        "Create scheduled task by running: '$dir\\create-scheduled-task.ps1'",
+        "Delete scheduled task by running: '$dir\\delete-scheduled-task.ps1'"
+    ],
     "depends": "sudo",
     "url": "https://github.com/2dust/clashN/releases/download/1.15/clashN-Core.zip",
     "hash": "f9c7f69ddfb82e7a60b5df24adc56aa4f4e4bb4c7cd7a01c37940e944db1b465",
@@ -14,7 +18,9 @@
         "'config.yaml', 'guiNConfig.json' | ForEach-Object {",
         "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -Force | Out-Null }",
         "}",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\clashn\\start-clashn.ps1\" \"$dir\\start-clashn.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\clashn\\start-clashn.ps1\" \"$dir\\start-clashn.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\clashn\\create-scheduled-task.ps1\" \"$dir\\create-scheduled-task.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\clashn\\delete-scheduled-task.ps1\" \"$dir\\delete-scheduled-task.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
     ],
     "uninstaller": {
         "script": [
