@@ -1,0 +1,32 @@
+{
+    "version": "2.9.9.199909",
+    "description": "NetEase Cloud Music 3rd party modified version, maintained by 423down.com.",
+    "homepage": "https://music.163.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://st.music.163.com/official-terms/service"
+    },
+    "notes": "Features: <https://www.423down.com/2943.html>",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/CloudMusic_v2.9.9.199909.7z",
+    "hash": "145db97d5786bb5633ec7d7ec7d80f45db9c4b122419059f65dbbc973fd9ff25",
+    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\cloudmusic\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "extract_dir": "CloudMusic",
+    "uninstaller": {
+        "script": "Start-Process \"dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait"
+    },
+    "shortcuts": [
+        [
+            "Cloudmusic .exe",
+            "Netease\\Netease Cloud Music Mod"
+        ]
+    ],
+    "persist": "Netease",
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?<file>CloudMusic_v([\\d.]+)\\.7z)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFile"
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "version": "102.0.1",
+    "description": "tete009 private builds (Win32) of Mozilla Firefox.",
+    "homepage": "http://www1.plala.or.jp/tete009/en-US/software.html#FFDL#FIREFOX",
+    "license": {
+        "identifier": "MPL-2.0"
+    },
+    "notes": [
+        "Language packs:",
+        "- <http://releases.mozilla.org/pub/mozilla.org/firefox/releases/$version/win32/xpi/>",
+        "- <http://releases.mozilla.org/pub/mozilla.org/firefox/releases/$version/win64/xpi/>"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-102.0.1-2022070509.en-US.win32-tete009-x64-pgo.7z",
+            "hash": "3148b83e85964bad49b18ce78a13911c1d4a9b07bfd882a71f7841c3d5932bf2"
+        },
+        "32bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-102.0.1-2022070509.en-US.win32-tete009-sse2-pgo.7z",
+            "hash": "a23d5d568ea6e9a01d018122902495217f2575c050996dcc3699da550fa24937"
+        }
+    },
+    "pre_install": [
+        "$firefoxdir = (Get-ChildItem \"$dir\" | Select-Object -First 1).FullName",
+        "New-Item -Path \"$dir\" -Name \"App\" -ItemType \"directory\" | Out-Null",
+        "Move-Item \"$firefoxdir\\*\" \"$dir\\App\\\" -ErrorAction 'SilentlyContinue' -Force",
+        "if (!(Test-Path \"$persist_dir\\App\\tmemutil.ini\")) {",
+        "    Copy-Item \"$bucketsdir\\tian\\scripts\\tete009\\tmemutil.ini\" \"$dir\\App\\tmemutil.ini\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "}"
+    ],
+    "bin": "App\\firefox.exe",
+    "shortcuts": [
+        [
+            "App\\firefox.exe",
+            "Firefox"
+        ]
+    ],
+    "persist": [
+        "Profiles",
+        "App\\tmemutil.ini"
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "firefox-([\\d.]+)-(?<date>\\d+).en-US.win32-tete009-x64-pgo\\.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-$version-$matchDate.en-US.win32-tete009-x64-pgo.7z",
+                "hash": {
+                    "url": "http://www1.plala.or.jp/tete009/en-US/software.html#FFDL",
+                    "regex": "(?sm)x64.*?SHA256.*?$sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-$version-$matchDate.en-US.win32-tete009-sse2-pgo.7z",
+                "hash": {
+                    "url": "http://www1.plala.or.jp/tete009/en-US/software.html#FFDL",
+                    "regex": "(?sm)SSE2.*?SHA256.*?$sha256"
+                }
+            }
+        }
+    }
+}

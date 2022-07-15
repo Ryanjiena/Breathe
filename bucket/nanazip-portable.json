@@ -29,6 +29,6 @@
         "regex": "releases/download/(?<tag>[\\w-.]+)/40174MouriNaruto.NanaZip_([\\d.]+)_gnj4mf6z9tkrc.msixbundle"
     },
     "autoupdate": {
-        "url": "https://github.com/M2Team/NanaZipreleases/download/$matchTag/40174MouriNaruto.NanaZip_$version_gnj4mf6z9tkrc.msixbundle#/dl.7z"
+        "url": "https://github.com/M2Team/NanaZip/releases/download/$matchTag/40174MouriNaruto.NanaZip_$version_gnj4mf6z9tkrc.msixbundle#/dl.7z"
     }
 }

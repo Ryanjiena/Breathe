@@ -1,0 +1,59 @@
+{
+    "version": "7.1",
+    "description": "Total Commander Simplified Chinese Enhanced Edition, maintained by iyoung(飞扬时空).",
+    "homepage": "https://www.ghisler.com",
+    "license": {
+        "identifier": "Shareware"
+    },
+    "notes": "Features: <http://iyoung.ys168.com>",
+    "architecture": {
+        "64bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/iyoung/TCCEE_x64_v7.1(10.00).7z",
+            "hash": "3073cf0f4d82d340fabe2c6046cd231d16fa6ff1bb63dffc3b12a4ce7bf79b13",
+            "extract_dir": "TotalCMD64",
+            "shortcuts": [
+                [
+                    "TOTALCMD64.EXE",
+                    "Total Commander"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/iyoung/TCCEE_x86_v7.1(10.00).7z",
+            "hash": "6d9f7b791fe8334691fa9c8422f16c13e7e698c9ea5dccccb2586be79c666a01",
+            "extract_dir": "TotalCMD32",
+            "shortcuts": [
+                [
+                    "TOTALCMD.EXE",
+                    "Total Commander"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "plugins",
+        "Language\\Wcmd_chn.ini",
+        "Language\\Wcmd_chn.mnu",
+        "User\\TCIgnore.ini",
+        "User\\User.ini",
+        "Default.bar",
+        "Vertical.bar",
+        "WinCMD.ini",
+        "Wincmd.key"
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "TCCEE_x64_v([\\w.]+)(?<info>.*?)\\.7z",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/iyoung/TCCEE_x64_v$version$matchInfo.7z"
+            },
+            "32bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/iyoung/TCCEE_x86_v$version$matchInfo.7z"
+            }
+        }
+    }
+}

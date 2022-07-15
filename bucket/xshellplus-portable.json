@@ -1,0 +1,40 @@
+{
+    "version": "7.0.0018",
+    "description": "Xshell + Xftp(Portable Edition).",
+    "homepage": "https://www.netsarang.com/en/xshell",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.netsarang.com/docs/ver7_eula.pdf"
+    },
+    "notes": "Features: <https://www.423down.com/8196.html>",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/XshellPlus_v7.0.0018.7z",
+    "hash": "4ff72c46854795a697a920c968d83122b51bf87d31ad02351af494abe562db6d",
+    "extract_dir": "XshellPlus",
+    "installer": {
+        "script": "Start-Process \"$dir\\!)绿化处理.bat\" -WorkingDirectory \"$dir\" -Wait -Verb RunAs"
+    },
+    "uninstaller": {
+        "script": [
+            "Start-Process \"$dir\\!)卸载移除.bat\" -WorkingDirectory \"$dir\" -Wait -Verb RunAs",
+            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Xshell.exe",
+            "Xshell"
+        ],
+        [
+            "Xftp.exe",
+            "Xftp"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?<filename>XshellPlus_v(?<version>[\\d.]+)\\.(?:zip|7z))",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "version": "20220501",
+    "description": "PotPlayer skin",
+    "homepage": "https://www.deviantart.com/mr-web/art/Modern-W10-Skin-for-PotPlayer-ITA-ENG-678381013",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "suggest": {
+        "potplayer": [
+            "potplayer",
+            "meta/potplayer-noad-portable",
+            "meta/potplayer-dev-noad-portable"
+        ]
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/potplayer-skin-20220501.7z",
+    "hash": "6a0bf38ad3b552ee2463a60123b98b05ab112be03fa78652c4115cf7605ec46a",
+    "installer": {
+        "script": [
+            "function CopyFile([String] $potplayer_file_dest) {",
+            "   if (Test-Path \"$(appdir $potplayer_file_dest $global)\") {",
+            "       Get-ChildItem $dir -Exclude *install.json,*manifest.json | ForEach-Object {",
+            "           Copy-Item $_.FullName -destination \"$(scoop prefix $potplayer_file_dest)\\Skins\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "       }",
+            "   }",
+            "}",
+            "CopyFile \"potplayer\"",
+            "CopyFile \"potplayer-noad-portable\"",
+            "CopyFile \"potplayer-dev-noad-portable\""
+        ]
+    },
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>potplayer-skin-(?<version>[\\d]+)\\.(?:zip|7z))",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFilename"
+    }
+}

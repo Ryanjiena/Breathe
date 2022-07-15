@@ -1,0 +1,37 @@
+{
+    "version": "7.0.0109",
+    "description": "The Industry's Most Powerful SSH Client(Portable Edition).",
+    "homepage": "https://www.netsarang.com/en/xshell",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.netsarang.com/docs/ver7_eula.pdf"
+    },
+    "notes": "Features: <https://www.423down.com/8196.html>",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Xshell_v7.0.0109.7z",
+    "hash": "66f969fab851e0f212abd7e3828fa3201ef6d00453987a90aa08b08a47dec851",
+    "extract_dir": "Xshell",
+    "installer": {
+        "file": "!)绿化处理.bat",
+        "keep": true
+    },
+    "uninstaller": {
+        "script": [
+            "Start-Process \"$dir\\!)卸载移除.bat\" -WorkingDirectory \"$dir\" -Wait -Verb RunAs",
+            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Xshell.exe",
+            "Xshell"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?<filename>Xshell_v(?<version>[\\d.]+)\\.(?:zip|7z))",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
+    }
+}

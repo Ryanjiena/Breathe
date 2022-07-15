@@ -1,0 +1,34 @@
+{
+    "version": "11.8.2.11542",
+    "description": "WPS2019 lite version(without chromium embedded framework), maintaned by c2y. Streamlined from the official installation package, removing irrelevant web and pdf related components and keeping the traditional 3 major pieces(excel, word and ppt).",
+    "homepage": "http://bbs.wuyou.net/forum.php?mod=viewthread&tid=429396",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "notes": "If you want to use flash function, please install Flash Player ActiveX.",
+    "depends": "sudo",
+    "suggest": {
+        "adobe-flash-player-activex": [
+            "adobe-flash-player-activex-dreamcast",
+            "adobe-flash-player-cy"
+        ]
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/wps2019pro.11.8.2.11542lite-nocef.7z",
+    "hash": "e5d7fee3750bf4e0776beeac3c3dc5241a3a6e728119fa947a8e2c7899ac9790",
+    "extract_dir": "wps2019pro.11.8.2.11542lite-nocef",
+    "installer": {
+        "script": "sudo Start-Process -FilePath \"$dir\\绿化-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
+    },
+    "uninstaller": {
+        "script": "sudo Start-Process -FilePath \"$dir\\卸载-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
+    },
+    "checkver": {
+        "url": "https://raw.iqiq.io/Ryanjiena/MetaVersion/main/oneindex.txt",
+        "regex": "wps2019pro.([\\d.]+)lite-nocef.7z",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/wps2019pro.$versionlite-nocef.7z",
+        "extract_dir": "wps2019pro.$versionlite-nocef"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "version": "9.6.2.28755",
+    "description": "Tencent QQ third-party modified version, maintained by Dreamcast(Portable Edition).",
+    "homepage": "https://im.qq.com/pcqq",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://ti.qq.com/agreement/index.html"
+    },
+    "notes": [
+        "所有的修改版都有被冻结或封号的风险，是否使用自己斟酌，本人不承担任何责任!",
+        "NtrQQ 可能会被杀软误报和拦截，使用上遇到的问题请不要问我，有问题请到官方论坛 iya.app 反馈",
+        "All modifications have the risk of being locked, whether to use their own discretion, I do not assume any responsibility!",
+        "Use 'scoop install vcredist-aio' 或 'scoop install vcredist-dreamcast' install the runtime library",
+        "Use 'Start-Process \"$(scoop prefix qq-ntr-mod-np)\\current\\组件功能切换.bat\" -Wait' toggle components",
+        "Please read the instructions in the installation directory carefully before use."
+    ],
+    "depends": "sudo",
+    "suggest": {
+        "vcredist": [
+            "meta/vcredist-aio",
+            "meta/vcredist-dreamcast"
+        ]
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/腾讯QQ_9.6.2.28755_绿色版.7z",
+    "hash": "564f65a147e59593a5cf1f4b63c5f44145940b98b499aa8a891011f383c06b79",
+    "extract_dir": "QQ",
+    "installer": {
+        "script": [
+            "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
+            "Start-Process \"$dir\\绿化.bat\" -WorkingDirectory \"$dir\" -Wait"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
+            "Start-Process \"$dir\\卸载.bat\" -WorkingDirectory \"$dir\" -Wait",
+            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Bin\\QQScLauncher.exe",
+            "Tencent\\QQ"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>腾讯QQ_([\\d.]+)_绿色版\\.7z)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/$matchFilename"
+    }
+}

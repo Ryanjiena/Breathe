@@ -1,0 +1,58 @@
+{
+    "version": "20220504.024707",
+    "description": "Microsoft Edge Enhancement Software, maintained by shuax.",
+    "homepage": "https://github.com/shuax/edge_plus",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/shuax/edge_plus/blob/main/LICENSE"
+    },
+    "suggest": {
+        "msedge": [
+            "meta/msedge-beta",
+            "meta/msedge-canary",
+            "meta/msedge-dev",
+            "meta/msedge-stable"
+        ]
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x64-v20220504.024707.zip",
+            "hash": "17fbea367fd8dca6e6369e9a57c59edd973b8938d595b25c456431ab23948b20"
+        },
+        "32bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x86-v20220504.024707.zip",
+            "hash": "275dc3466e9410ab2794a615b6628080c896cd24b6802262169c76aac1003292"
+        }
+    },
+    "installer": {
+        "script": [
+            "if (Test-Path \"$(appdir msedge-stable-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-stable-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}",
+            "if (Test-Path \"$(appdir msedge-beta-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-beta-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}",
+            "if (Test-Path \"$(appdir msedge-dev-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-dev-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}",
+            "if (Test-Path \"$(appdir msedge-canary-shuax $global)\") {",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-canary-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "edge_plus-x64-v([\\d.]+)\\.zip",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x64-v$version.zip"
+            },
+            "32bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x86-v$version.zip"
+            }
+        }
+    }
+}

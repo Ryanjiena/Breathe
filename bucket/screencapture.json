@@ -1,0 +1,25 @@
+{
+    "version": "1.0.0.222",
+    "description": "SogouInput screenshot standalone version.",
+    "homepage": "https://pinyin.sogou.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/screencapture_v1.0.0.222.7z",
+    "hash": "eebe8f19bb8e41b3255dd74b1f53c1e7502b68383a3f187d87b510e12497ceab",
+    "shortcuts": [
+        [
+            "screencapture.exe",
+            "screencapture"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "screencapture_v([\\d.]+)\\.7z",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/screencapture_v$version.7z"
+    }
+}

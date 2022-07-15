@@ -1,0 +1,54 @@
+{
+    "version": "9.6.2.28755",
+    "description": "Tencent QQ third-party modified version, maintained by Dreamcast.",
+    "homepage": "https://im.qq.com/pcqq",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://ti.qq.com/agreement/index.html"
+    },
+    "notes": [
+        "所有的修改版都有被冻结或封号的风险，是否使用自己斟酌，本人不承担任何责任!",
+        "NtrQQ 可能会被杀软误报和拦截，使用上遇到的问题请不要问我，有问题请到官方论坛 iya.app 反馈",
+        "All modifications have the risk of being locked, whether to use their own discretion, I do not assume any responsibility!",
+        "Use 'scoop install vcredist-aio' 或 'scoop install vcredist-dreamcast' install the runtime library",
+        "Please read the instructions in the installation directory carefully before use."
+    ],
+    "depends": "sudo",
+    "suggest": {
+        "vcredist": [
+            "meta/vcredist-aio",
+            "meta/vcredist-dreamcast"
+        ]
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/腾讯QQ_9.6.2.28755_安装版.rar",
+    "hash": "b8902aa12f880a43911f3319adee54655b41f1c584a611262aafcae6590457f8",
+    "installer": {
+        "script": [
+            "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
+            "Rename-Item \"$dir\\*.exe\" 'installer.exe'",
+            "Start-Process \"$dir\\installer.exe\" -ArgumentList \"/DIR=$dir /SILENT /NORESTART\" -WorkingDirectory \"$dir\" -Wait"
+        ]
+    },
+    "post_install": "@('installer.exe') | ForEach-Object { Remove-Item \"$dir\\$_\" -Force -ErrorAction SilentlyContinue }",
+    "uninstaller": {
+        "script": [
+            "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
+            "Start-Process \"$dir\\unins000.exe\" -ArgumentList \"/VERYSILENT /NORESTART\" -WorkingDirectory \"$dir\" -Wait",
+            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Bin\\QQScLauncher.exe",
+            "Tencent\\QQ"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>腾讯QQ_([\\d.]+)_安装版\\.rar)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/$matchFilename"
+    }
+}
