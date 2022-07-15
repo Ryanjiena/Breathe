@@ -8,15 +8,16 @@
     },
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Thunder_X_v10.1.38.890__NoAD_SVIP_Green.7z",
     "hash": "d76c4c0ad99c03ff5d5069a4c895f5947a315b928eea4419ee7412752f348156",
+    "extract_dir": "Thunder",
     "installer": {
         "script": [
             "Copy-Item \"$bucketsdir\\tian\\scripts\\thunderx\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
             "Copy-Item \"$bucketsdir\\tian\\scripts\\thunderx\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-            "Start-Process \"$dir\\install.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+            "Start-Process \"$dir\\install.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' | Out-Null"
         ]
     },
     "uninstaller": {
-        "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' | Out-Null"
     },
     "shortcuts": [
         [

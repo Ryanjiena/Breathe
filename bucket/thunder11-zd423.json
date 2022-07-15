@@ -8,15 +8,16 @@
     },
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Thunder_11_v11.1.12.1692__NoAD_SVIP_Green.7z",
     "hash": "0e79ff37c9e1fc3ed1a766154d71dff55a1b63a4756545c27ef9c3a5b867db35",
+    "extract_dir": "Thunder",
     "installer": {
         "script": [
             "Copy-Item \"$bucketsdir\\tian\\scripts\\thunder11\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
             "Copy-Item \"$bucketsdir\\tian\\scripts\\thunder11\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-            "Start-Process \"$dir\\install.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+            "Start-Process \"$dir\\install.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' | Out-Null"
         ]
     },
     "uninstaller": {
-        "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' | Out-Null"
     },
     "shortcuts": [
         [
