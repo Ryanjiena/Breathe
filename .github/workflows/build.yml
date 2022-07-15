@@ -111,7 +111,7 @@ jobs:
 
               # remove cracked
               cd "${TMP_DIR}/tian/bucket"
-              grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
+              # grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
 
               # push
               cd "${TMP_DIR}/tian" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
