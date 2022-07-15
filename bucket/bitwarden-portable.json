@@ -1,5 +1,5 @@
 {
-    "version": "2022.5.1",
+    "version": "2022.6.2",
     "description": "Password management solutions for individuals, teams, and business organizations",
     "homepage": "https://bitwarden.com",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bitwarden/clients/releases/download/v2022.5.1/Bitwarden-2022.5.1-x64.nsis.7z",
-            "hash": "sha512:c1689650bca481c976d1692db0d986785e05b5f99de7232f7fbd2b1706fefd3a07653b3eb0531b9c7eb5acc543855caf4344b7467c7f17a2baf28a0a8d410ee9"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2022.6.2/Bitwarden-2022.6.2-x64.nsis.7z",
+            "hash": "sha512:df4979540332265e81ee778b2a405b88bd002de16dad0f120b5c2c2287a2cdd75ae2bfb82337e5209d611edd7759ff210dbdb73cb067e58fd41b7dabab4b0ca0"
         },
         "32bit": {
-            "url": "https://github.com/bitwarden/clients/releases/download/v2022.5.1/Bitwarden-2022.5.1-ia32.nsis.7z",
-            "hash": "sha512:ae7ae4eaf83cbd816032db53e74846a2d5ddd1cc253196d2a93bb76835fecd7e1c748adee97e6b2269c9b584a2d3366abf0088ebbeb7f4d08cee54a9b5958a21"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2022.6.2/Bitwarden-2022.6.2-ia32.nsis.7z",
+            "hash": "sha512:cdb6a68f7bb583d8c47fdeb53082882b1c4defd03f84d6732769404707a98226ff783a955e3e9c0430ef7a0758a1eaab84f104ed3b2d4edd785d1ebdcff74c0e"
         }
     },
     "pre_install": [
