@@ -1,0 +1,30 @@
+{
+    "version": "2.2.7.14",
+    "description": "YXFile is a file tag management software with a powerful built-in local file search engine to help you manage your computer files easily.",
+    "homepage": "https://www.youxiao.cn/yxfile",
+    "license": {
+        "identifier": "Proprietary"
+    },
+    "url": "https://static.youxiao.cn/yxfile/yxfile_v2.2.7.14.exe",
+    "hash": "ce2bee7a4553655a6b0ff294f9c89ab63393292a87a96e045fcfbd2e5481b32c",
+    "installer": {
+        "args": [
+            "/S",
+            "/D=\"$dir\""
+        ]
+    },
+    "uninstaller": {
+        "file": "uninst.exe",
+        "args": "/S"
+    },
+    "shortcuts": [
+        [
+            "YXCalendar.exe",
+            "YXCalendar"
+        ]
+    ],
+    "checkver": "最新版本:\\s+([\\d.]+)",
+    "autoupdate": {
+        "url": "https://static.youxiao.cn/yxfile/yxfile_v$version.exe"
+    }
+}

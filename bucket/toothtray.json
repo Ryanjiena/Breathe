@@ -1,0 +1,23 @@
+{
+    "version": "0.1",
+    "description": "A tray icon in Windows task bar to quickly connect or disconnect bluetooth audio devices. Right click the icon to see a list of paired bluetooth audio devices. Select a device to connect/disconnect them depending on their current connection state..",
+    "homepage": "https://github.com/m2jean/ToothTray",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "url": "https://github.com/m2jean/ToothTray/releases/download/0.1/ToothTray.exe",
+    "hash": "cfe25f5fbb4b6be62088fc8fb7ca60539ca4a6520f77a8472a2599b90e3c5dad",
+    "shortcuts": [
+        [
+            "ToothTray.exe",
+            "ToothTray"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/m2jean/ToothTray/releases?per_page=1",
+        "jsonpath": "$[0].tag_name"
+    },
+    "autoupdate": {
+        "url": "https://github.com/m2jean/ToothTray/releases/download/$version/ToothTray.exe"
+    }
+}

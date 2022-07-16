@@ -1,0 +1,52 @@
+{
+    "version": "1.14.5.13",
+    "description": "Synergy is a keyboard and mouse sharing tool for devices connected over a network.",
+    "homepage": "https://github.com/DEAKSoftware/Synergy-Binaries",
+    "license": {
+        "identifier": "MIT"
+    },
+    "notes": "This repository maintains Synergy binaries to download, including convenience tools and documentation for building the Synergy application.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/DEAKSoftware/Synergy-Binaries/releases/download/1.14.5.13-stable/synergy-1.14.5.13-stable-windows-10-amd64.msi#/cosi.msi",
+            "hash": "ee254ecf1035fc724d98f23f3cf705795b1db96680e1e957bc936c933ee7b8f6",
+            "extract_dir": "Synergy"
+        }
+    },
+    "bin": [
+        [
+            "synergyc.exe",
+            "synergyc"
+        ],
+        [
+            "synergyd.exe",
+            "synergyd"
+        ],
+        [
+            "synergys.exe",
+            "synergys"
+        ],
+        [
+            "syntool.exe",
+            "syntool"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "synergy.exe",
+            "Synergy"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/DEAKSoftware/Synergy-Binaries/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "(?<tag>([\\d.]+)-.*)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/DEAKSoftware/Synergy-Binaries/releases/download/$matchTag/synergy-$matchTag-windows-10-amd64.msi#/cosi.msi"
+            }
+        }
+    }
+}
