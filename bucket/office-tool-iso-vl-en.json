@@ -1,5 +1,5 @@
 {
-    "version": "16.0.14332.20324",
+    "version": "16.0.14332.20345",
     "description": "Offline installation package contains Office Tool Plus.",
     "homepage": "https://download.coolhub.top",
     "license": {
@@ -7,12 +7,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.coolhub.top/Office_ISO/en-US/2021/Office_Tool_Plus_16.0.14332.20324_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
-            "hash": "b7ec6abc5814609f6d6cf4e669958fcb414a5d3ebad549114d519862b8e3fbdd"
+            "url": "https://download.coolhub.top/Office_ISO/en-US/2021/Office_Tool_Plus_16.0.14332.20345_x64_en-us.iso#/Office_Tool_Plus_en-us.iso",
+            "hash": "72da3cf4d75b2f51c9fe11e8e9dff5b85133626939458bd16001e90d53976a6b"
         },
         "32bit": {
-            "url": "https://download.coolhub.top/Office_ISO/en-US/2021/Office_Tool_Plus_16.0.14332.20324_x86_en-us.iso#/Office_Tool_Plus_en-us.iso",
-            "hash": "c4d1e0559d2e3db343e83473292847372f49750484efe7cf31a2c49e771b045c"
+            "url": "https://download.coolhub.top/Office_ISO/en-US/2021/Office_Tool_Plus_16.0.14332.20345_x86_en-us.iso#/Office_Tool_Plus_en-us.iso",
+            "hash": "611e659cd812cbfb9df3e2f7187ba86eac524257caaf7a083b9d092985801ab5"
         }
     },
     "shortcuts": [
