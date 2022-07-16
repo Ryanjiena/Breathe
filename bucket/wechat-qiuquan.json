@@ -40,7 +40,7 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?<filename>WeChat_([\\d.]+)_QiuQuan.exe)",
+        "regex": "(?<filename>WeChat_([\\w.]+)_QiuQuan.exe)",
         "reverse": true
     },
     "autoupdate": {
