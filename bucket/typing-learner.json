@@ -1,5 +1,5 @@
 {
-    "version": "1.1.1",
+    "version": "1.3.0",
     "description": "Use MKV video to generate a thesaurus (word book) so that each word has a specific context. Then memorize words, sentences and subtitles through context.",
     "homepage": "https://github.com/tangshimin/typing-learner",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tangshimin/typing-learner/releases/download/v1.1.1/Typing-Learner-1.1.1.msi",
-            "hash": "79452b091fa0bfbe69cce6dbf619b570565d7ee92b4c057a613e844ab294ac1e"
+            "url": "https://github.com/tangshimin/typing-learner/releases/download/v1.3.0/Typing-Learner-1.3.0.msi",
+            "hash": "2917d88a686c2ba10cc4d5022d0bb817011e358c32027e30e80021d0a38b5c3b"
         }
     },
     "extract_dir": "Typing Learner",

@@ -1,5 +1,5 @@
 {
-    "version": "4.22.05r4220",
+    "version": "4.22.07r4278",
     "description": "Notepad2-zufuliu is a light-weight Scintilla-based text editor for Windows with syntax highlighting, code folding, auto-completion and API list for about 80 programming languages/documents, bundled with file browser plugin metapath.",
     "homepage": "https://github.com/zufuliu/notepad2",
     "license": {
@@ -9,12 +9,12 @@
     "notes": "If you find any bugs or have any suggestions feel free to write proposals/issues or provide patches/pull requests.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.22.05r4220/Notepad2_zh-Hant_x64_v4.22.05r4220.zip",
-            "hash": "ac9be5e5c4a494a6d3db192ac51123f7d2656023d2e466dd3be161afb6af1f4d"
+            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.22.07r4278/Notepad2_zh-Hant_x64_v4.22.07r4278.zip",
+            "hash": "f70b1e478c5b70b2da41c4fa41bc49e5be4524fa1077cb5361e93550ed12da87"
         },
         "32bit": {
-            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.22.05r4220/Notepad2_zh-Hant_Win32_v4.22.05r4220.zip",
-            "hash": "7dcac524a4a49ad85b0588737854889067dccfa53088f379c8fcbd84a199d677"
+            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.22.07r4278/Notepad2_zh-Hant_Win32_v4.22.07r4278.zip",
+            "hash": "11869fe5cb36449fed990eb05c441c1b5055c243f4d131cb380e4b9e3c78a9f4"
         }
     },
     "bin": "Notepad2.exe",
