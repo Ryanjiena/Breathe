@@ -1,5 +1,5 @@
 {
-    "version": "0.3.3",
+    "version": "0.3.4",
     "description": "Bilibili submission client, supports sub-p upload line selection, supports Windows, Linux, macOS.",
     "homepage": "https://github.com/ForgQi/biliup-app",
     "license": {
@@ -8,8 +8,8 @@
     "notes": "Document: <https://biliup.github.io/biliup-app>",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ForgQi/biliup-app/releases/download/app-v0.3.3/biliup-app_0.3.3_x64_en-US.msi",
-            "hash": "7acb6535d0f3d2f6b0b6a2c038d885cf54ff372c7d8dc6bb2338b45f3af5d314",
+            "url": "https://github.com/ForgQi/biliup-app/releases/download/app-v0.3.4/biliup-app_0.3.4_x64_en-US.msi",
+            "hash": "6ccb7b3d41d50fc4368af4c17753dcb699f09231dff68db61320a81e7b2f93c1",
             "extract_dir": "PFiles\\biliup-app"
         }
     },
