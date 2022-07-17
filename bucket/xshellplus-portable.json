@@ -1,5 +1,5 @@
 {
-    "version": "7.0.0018",
+    "version": "7.0.0019",
     "description": "Xshell + Xftp(Portable Edition).",
     "homepage": "https://www.netsarang.com/en/xshell",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.netsarang.com/docs/ver7_eula.pdf"
     },
     "notes": "Features: <https://www.423down.com/8196.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/XshellPlus_v7.0.0018.7z",
-    "hash": "4ff72c46854795a697a920c968d83122b51bf87d31ad02351af494abe562db6d",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/XshellPlus_v7.0.0019.7z",
+    "hash": "65441099f0ff490af2297418ee0b398fe70022c746fade370ee28cbc930ef3a7",
     "extract_dir": "XshellPlus",
     "installer": {
         "script": "Start-Process \"$dir\\!)绿化处理.bat\" -WorkingDirectory \"$dir\" -Wait -Verb RunAs"
