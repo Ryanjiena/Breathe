@@ -6,34 +6,31 @@
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/2dust/v2rayN/blob/master/LICENSE"
     },
-    "depends": "hysteria",
-    "url": [
-        "https://github.com/2dust/v2rayN/releases/download/5.29/v2rayN-Core.zip",
-        "https://raw.githubusercontent.com/emptysuns/daily/gh-pages/gfwlist/gfwlist.txt",
-        "https://raw.githubusercontent.com/emptysuns/daily/gh-pages/adlist/adlist.txt",
-        "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
+    "depends": [
+        "hysteria",
+        "geoip-country-mmdb",
+        "v2ray-rules-dat-git"
     ],
-    "hash": [
-        "652bb9eb69761040de3e6b068c48752f23e9af1a9045f024c1d67ec2508d3a68",
-        "735b7ed1fb3f3b8b17016cab1cea6367bfb8645106b14e1a08ddaa952962771f",
-        "b7ff388917bad3ba7f85bfa71a2134cddcfa00b524698dbf260441b51a9e6aa0",
-        "edf6aa579aa88305a8d9a68c45395afc2460a0558f6f4d985f7a089b7b9ea146"
-    ],
+    "url": "https://github.com/2dust/v2rayN/releases/download/5.29/v2rayN-Core.zip",
+    "hash": "652bb9eb69761040de3e6b068c48752f23e9af1a9045f024c1d67ec2508d3a68",
     "extract_dir": "v2rayN-Core",
     "pre_install": [
         "Copy-Item \"$(scoop prefix hysteria)\\hysteria.exe\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$(scoop prefix geoip-country-mmdb)\\Country.mmdb\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\reject-list.txt\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\gfw.txt\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
         "if (!(Test-Path \"$persist_dir\\user-wininet.json\")) {",
         "    New-Item -Path \"$dir\\user-wininet.json\" | Out-Null",
         "}",
         "if (Test-Path \"$persist_dir\\guiNConfig.json\") {",
         "    Copy-Item \"$persist_dir\\guiNConfig.json\" \"$dir\\\" | Out-Null",
         "}",
-        "Get-Content \"$dir\\adlist.txt\" | foreach { 'block domain-suffix ' + $_ } | Set-Content -Encoding UTF8 'hysteria_acl0.txt'",
-        "Get-Content \"$dir\\gfwlist.txt\" | foreach { 'proxy domain-suffix ' + $_ } | Set-Content -Encoding UTF8 'hysteria_acl1.txt'",
-        "Get-Content \"$dir\\hysteria_acl*.txt\" | Set-Content -Encoding UTF8 'routes.acl'",
+        "Get-Content \"$dir\\reject-list.txt\" | foreach { 'block domain-suffix ' + $_ } | Set-Content \"$dir\\hysteria_acl0.txt\" -Encoding UTF8",
+        "Get-Content \"$dir\\gfw.txt\" | foreach { 'proxy domain-suffix ' + $_ } | Set-Content \"$dir\\hysteria_acl1.txt\" -Encoding UTF8",
+        "Get-Content \"$dir\\hysteria_acl*.txt\" | Set-Content \"$dir\\routes.acl\" -Encoding UTF8",
         "New-Item -Path \"$dir\" -Name \"acl\" -ItemType \"directory\" | Out-Null",
         "Move-Item \"$dir\\routes.acl\", \"$dir\\Country.mmdb\" \"$dir\\acl\\\" -ErrorAction 'SilentlyContinue' -Force",
-        "Remove-Item \"$dir\\adlist.txt\", \"$dir\\gfwlist.txt\", \"$dir\\hysteria_acl*.txt\" -ErrorAction 'SilentlyContinue' -Force"
+        "Remove-Item \"$dir\\reject-list.txt\", \"$dir\\gfw.txt\", \"$dir\\hysteria_acl*.txt\" -ErrorAction 'SilentlyContinue' -Force"
     ],
     "uninstaller": {
         "script": [
@@ -59,11 +56,6 @@
         "jsonpath": "$[0].tag_name"
     },
     "autoupdate": {
-        "url": [
-            "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-Core.zip",
-            "https://raw.githubusercontent.com/emptysuns/daily/gh-pages/gfwlist/gfwlist.txt",
-            "https://raw.githubusercontent.com/emptysuns/daily/gh-pages/adlist/adlist.txt",
-            "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
-        ]
+        "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-Core.zip"
     }
 }

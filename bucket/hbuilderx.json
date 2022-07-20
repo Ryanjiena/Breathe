@@ -19,7 +19,7 @@
     "uninstaller": {
         "script": [
             "Push-Location \"$dir\"",
-            "sudo Start-Process -filepath \"$dir\\reset.bat\" -WorkingDirectory \"$dir\" -Wait",
+            "sudo Start-Process \"$dir\\reset.bat\" -WorkingDirectory \"$dir\" -Wait",
             "Pop-Location"
         ]
     },
