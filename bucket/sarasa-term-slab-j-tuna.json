@@ -70,6 +70,11 @@
         "regex": "sarasa-gothic-ttf-([\\d.]+).7z"
     },
     "autoupdate": {
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/be5invis/Sarasa-Gothic/LatestRelease/sarasa-gothic-ttf-$version.7z#/dl.7z_"
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/be5invis/Sarasa-Gothic/LatestRelease/sarasa-gothic-ttf-$version.7z#/dl.7z_",
+        "hash": {
+            "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/program.json",
+            "mode": "json",
+            "jsonpath": "$.sarasa.ttf"
+        }
     }
 }

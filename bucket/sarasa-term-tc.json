@@ -1,5 +1,5 @@
 {
-    "version": "0.36.7",
+    "version": "0.36.8",
     "description": "This is SARASA GOTHIC, a CJK programming font based on Iosevka and Source Han Sans.",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "license": {
@@ -7,8 +7,8 @@
     },
     "notes": "You may need to restart the system to use recently installed fonts.",
     "depends": "sudo",
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.36.7/sarasa-gothic-ttf-0.36.7.7z#/dl.7z_",
-    "hash": "ad7685331a41340e104f6c7fef0db40ed64bbb26db021146159ff35b15d75f03",
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.36.8/sarasa-gothic-ttf-0.36.8.7z#/dl.7z_",
+    "hash": "aa1ceecb06a5c87a6592b50e93a04b33565e8864ecfe05daa34a740bdc4474ca",
     "pre_install": [
         "Invoke-ExternalCommand 7z -ArgumentList('e', \"`\"$dir\\dl.7z_`\"\" ,\"`\"-o$dir`\"\", 'sarasa-term-tc*.ttf') | Out-Null",
         "Remove-Item \"$dir\\dl.7z_\""
@@ -67,6 +67,11 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z#/dl.7z_"
+        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z#/dl.7z_",
+        "hash": {
+            "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/program.json",
+            "mode": "json",
+            "jsonpath": "$.sarasa.ttf"
+        }
     }
 }
