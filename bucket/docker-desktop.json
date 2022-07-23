@@ -1,19 +1,41 @@
 {
     "version": "4.10.1",
-    "description": "Docker is an open platform for developing, shipping, and running applications.",
+    "description": "Docker Desktop. Open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.",
     "homepage": "https://www.docker.com/products/docker-desktop",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.docker.com/legal/docker-subscription-service-agreement"
     },
+    "notes": [
+        "All files will be installed into DEFAULT docker directory. (C:\\Program Files\\Docker)",
+        "I suggest to change the docker images location:",
+        "    https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file",
+        "",
+        "Updating is handled by docker itself.",
+        "    No updates will be done to this manifest.",
+        "",
+        "'scoop uninstall docker' will uninstall docker completely.",
+        "    Images, VM, settings, ..."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://desktop.docker.com/win/main/amd64/82475/Docker%20Desktop%20Installer.exe",
+            "url": "https://desktop.docker.com/win/main/amd64/82475/Docker%20Desktop%20Installer.exe#/DockerDesktopInstall.exe",
             "hash": "fe430d19d41cc56fd9a4cd2e22fc0e3522bed910c219208345918c77bbbd2a65"
         }
     },
     "installer": {
-        "script": "Start-Process \"$dir\\$fname\" -ArgumentList 'install --quiet' -Wait"
+        "args": [
+            "install",
+            "--quiet"
+        ],
+        "keep": true
+    },
+    "uninstaller": {
+        "file": "DockerDesktopInstall.exe",
+        "args": [
+            "uninstall",
+            "--quiet"
+        ]
     },
     "checkver": {
         "url": "https://desktop.docker.com/win/main/amd64/appcast.xml",
@@ -23,7 +45,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://desktop.docker.com/win/main/amd64/$matchPath/Docker%20Desktop%20Installer.exe"
+                "url": "https://desktop.docker.com/win/main/amd64/$matchPath/Docker%20Desktop%20Installer.exe#/DockerDesktopInstall.exe"
             }
         }
     }

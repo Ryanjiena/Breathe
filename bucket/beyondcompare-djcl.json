@@ -8,12 +8,6 @@
     },
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/djcl/BComparePortable_v4.4.1.26165_20211220.7z",
     "hash": "63e7a3ce816dd3c6ccf0455e9a3fef0ea061728e45e268bd25f0068ef514da8d",
-    "bin": [
-        [
-            "BComparePortable.exe",
-            "bcomp"
-        ]
-    ],
     "shortcuts": [
         [
             "BComparePortable.exe",

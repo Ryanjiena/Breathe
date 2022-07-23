@@ -11,7 +11,7 @@
     "url": "https://github.com/valinet/ExplorerPatcher/releases/download/22000.778.47.1_0ff6b1b/ep_setup.exe",
     "hash": "545bcd91352a38f1805bd154b5b637a632bcf74300b401dd6815900f46aefc08",
     "installer": {
-        "script": "Start-Process -FilePath \"$dir\\ep_setup.exe\" -WorkingDirectory \"$dir\" -Wait"
+        "script": "Start-Process \"$dir\\ep_setup.exe\" -WorkingDirectory \"$dir\" -Wait"
     },
     "uninstaller": {
         "file": "ep_setup.exe",

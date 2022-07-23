@@ -18,14 +18,14 @@
                 "}"
             ],
             "installer": {
-                "script": "Start-Process -filepath \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
+                "script": "Start-Process \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
             }
         }
     },
     "post_install": "@('installer.exe') | ForEach-Object { Remove-Item \"$dir\\$_\" -Force -ErrorAction SilentlyContinue }",
     "uninstaller": {
         "script": [
-            "Start-Process -filepath \"$dir\\Uninstall 语雀.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -Wait",
+            "Start-Process \"$dir\\Uninstall 语雀.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -Wait",
             "info 'Backing up user data...'",
             "if (Test-Path \"$env:AppData\\yuque-desktop\\*\") {",
             "    ensure \"$persist_dir\\User Data\" | Out-Null",

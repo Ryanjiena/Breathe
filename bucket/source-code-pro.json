@@ -3,7 +3,7 @@
     "description": "Monospaced font family for user interface and coding environments.",
     "homepage": "https://github.com/adobe-fonts/source-code-pro",
     "license": {
-        "identifier": "SIL Open Font License"
+        "identifier": "OFL-1.1"
     },
     "notes": "You may need to restart the system to use recently installed fonts.",
     "depends": "sudo",

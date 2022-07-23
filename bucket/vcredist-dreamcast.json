@@ -10,7 +10,7 @@
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/vcredist-dreamcast_2022.06.21.exe#/vcredist.exe",
     "hash": "08a98ea06f72877e146985e532b0663b62b34e7f549fd750c63bc20ae9423584",
     "installer": {
-        "script": "Start-Process -FilePath \"$dir\\vcredist.exe\" -WorkingDirectory \"$dir\" -ArgumentList '/silent' -Wait"
+        "script": "Start-Process \"$dir\\vcredist.exe\" -WorkingDirectory \"$dir\" -ArgumentList '/silent' -Wait"
     },
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",

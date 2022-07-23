@@ -14,14 +14,14 @@
                 "script": [
                     "ensure \"$persist_dir\" | Out-Null",
                     "New-Item \"$env:AppData\\bilibili\" -ItemType Junction -Target \"$persist_dir\" | Out-Null",
-                    "Start-Process -filepath \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
+                    "Start-Process \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
                 ]
             },
             "post_install": "Remove-Item \"$dir\\installer.exe\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
             "uninstaller": {
                 "script": [
                     "Remove-Item \"$env:AppData\\bilibili\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
-                    "Start-Process -filepath \"$dir\\Uninstall 哔哩哔哩.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -Wait"
+                    "Start-Process \"$dir\\Uninstall 哔哩哔哩.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -Wait"
                 ]
             }
         }

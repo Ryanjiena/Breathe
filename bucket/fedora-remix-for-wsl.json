@@ -15,7 +15,7 @@
     },
     "pre_install": "Expand-7zipArchive \"$dir\\Fedora-Remix-for-WSL-SL_$version.0_x64.msix\" -Removal",
     "post_install": [
-        "Start-Process -FilePath \"$dir\\fedoraremix.exe\" -ArgumentList \"install\" -Wait",
+        "Start-Process \"$dir\\fedoraremix.exe\" -ArgumentList \"install\" -Wait",
         "Remove-Item \"$dir\\Fedora-Remix-for-WSL-SL_$version.0_ARM64.msix\" -Force",
         "$text = @(",
         "    \"Installation failed with error 0x8007007e: \"",

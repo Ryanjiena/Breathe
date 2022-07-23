@@ -17,10 +17,10 @@
     "hash": "e5d7fee3750bf4e0776beeac3c3dc5241a3a6e728119fa947a8e2c7899ac9790",
     "extract_dir": "wps2019pro.11.8.2.11542lite-nocef",
     "installer": {
-        "script": "sudo Start-Process -FilePath \"$dir\\绿化-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
+        "script": "sudo Start-Process \"$dir\\绿化-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
     },
     "uninstaller": {
-        "script": "sudo Start-Process -FilePath \"$dir\\卸载-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
+        "script": "sudo Start-Process \"$dir\\卸载-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
     },
     "checkver": {
         "url": "https://raw.iqiq.io/Ryanjiena/MetaVersion/main/oneindex.txt",

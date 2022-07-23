@@ -11,11 +11,11 @@
     "hash": "e0c37554726ed40d06bbc4d66f63f5c4edde98afa4d4ffa51ab8d1574d14eeb3",
     "pre_install": "Rename-Item \"$dir\\foobox_*.exe\" 'installer.exe'",
     "installer": {
-        "script": "Start-Process -filepath \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
+        "script": "Start-Process \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
     },
     "post_install": "Remove-Item \"$dir\\installer.exe\" -Force -ErrorAction SilentlyContinue",
     "uninstaller": {
-        "script": "Start-Process -filepath \"$dir\\Uninstall.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -Wait"
+        "script": "Start-Process \"$dir\\Uninstall.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -Wait"
     },
     "bin": "foobar2000.exe",
     "shortcuts": [

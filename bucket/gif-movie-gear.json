@@ -9,7 +9,7 @@
     "pre_install": [
         "$batName=(Get-ChildItem $dir\\GIF*.bat).Name",
         "Rename-Item \"$dir\\$batName\" 'register-clean.bat'",
-        "Start-Process -filepath \"$dir\\register-clean.bat\" -Wait"
+        "Start-Process \"$dir\\register-clean.bat\" -Wait"
     ],
     "shortcuts": [
         [

@@ -18,7 +18,7 @@
     ],
     "installer": {
         "script": [
-            "Start-Process -filepath \"$dir\\Installer.exe\" -ArgumentList \"/DIR=$dir /NoIcons=1 /SILENT /NORESTART\"",
+            "Start-Process \"$dir\\Installer.exe\" -ArgumentList \"/DIR=$dir /NoIcons=1 /SILENT /NORESTART\"",
             "Start-Sleep -s 60",
             "sudo regedit /s \"$dir\\idm-custom-settings.reg\""
         ]
@@ -28,7 +28,7 @@
         "script": [
             "Stop-Process -Name explorer, IDM*, IEMonitor*, IDMMsgHost*, MediumILStart*, IDMIntegrator64* -Force -ErrorAction Ignore | Out-Null",
             "Remove-Item IDMShellExt*.dll -Force -ErrorAction SilentlyContinue",
-            "Start-Process -FilePath \"$dir\\unins000.exe\" -ArgumentList \"/SILENT /NORESTART\" -WorkingDirectory \"$dir\" -Wait | Out-Null",
+            "Start-Process \"$dir\\unins000.exe\" -ArgumentList \"/SILENT /NORESTART\" -WorkingDirectory \"$dir\" -Wait | Out-Null",
             "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
         ]
     },

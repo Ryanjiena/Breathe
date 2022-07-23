@@ -10,7 +10,7 @@
     "url": "https://eaglefile.oss-cn-shenzhen.aliyuncs.com/releases/Eagle-3.0-build7.exe#/installer.exe",
     "hash": "73bb7a6d6528e4c1e41292d90a77aaedf3548bd979eb33a79514c898db3fb34e",
     "installer": {
-        "script": "Start-Process -Filepath \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
+        "script": "Start-Process \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
     },
     "post_install": [
         "Remove-Item -path \"$dir\\installer.exe\" -Force",
