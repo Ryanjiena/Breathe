@@ -1,5 +1,5 @@
 {
-    "version": "15.6.0",
+    "version": "15.6.1",
     "description": "Iosevka is an open-source, sans-serif + slab-serif, monospace + quasi‑proportional typeface family, designed for writing code, using in terminals, and preparing technical documents.",
     "homepage": "https://github.com/be5invis/Iosevka",
     "license": {
@@ -7,8 +7,8 @@
     },
     "notes": "You may need to restart the system to use recently installed fonts.",
     "depends": "sudo",
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v15.6.0/super-ttc-iosevka-ss13-15.6.0.zip",
-    "hash": "06adf3abbe3fa71a90cbcb2defd5620a0286859d313ad84d9df25797dd44b60d",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v15.6.1/super-ttc-iosevka-ss13-15.6.1.zip",
+    "hash": "b50ca6d9a15a3d9172a3f5ea021491948d3821e7d6156d9b42c2f47752f52273",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
