@@ -1,5 +1,5 @@
 {
-    "version": "1.4.6",
+    "version": "1.4.7",
     "description": "Gajim aims to be an easy to use and fully-featured XMPP chat client. It is open source and released under the GNU General Public License (GPL).",
     "homepage": "https://gajim.org",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gajim.org/downloads/1.4/Gajim-Portable-1.4.6-64bit.exe#/dl.7z",
-            "hash": "332c168daa214085df2e088c500f80001b99b238554bcb66e1664ed1c60d8009"
+            "url": "https://gajim.org/downloads/1.4/Gajim-Portable-1.4.7-64bit.exe#/dl.7z",
+            "hash": "cb1708d04f8e2a7cdfcf366105864e80e34c24dda554be29477411c03bdb3e77"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
