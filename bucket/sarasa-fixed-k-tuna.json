@@ -1,5 +1,5 @@
 {
-    "version": "0.36.8",
+    "version": "0.36.7",
     "description": "This is SARASA GOTHIC, a CJK programming font based on Iosevka and Source Han Sans(Download from TUNA mirror).",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "license": {
@@ -7,7 +7,7 @@
     },
     "notes": "You may need to restart the system to use recently installed fonts.",
     "depends": "sudo",
-    "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/be5invis/Sarasa-Gothic/LatestRelease/sarasa-gothic-ttf-0.36.8.7z#/dl.7z_",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/be5invis/Sarasa-Gothic/LatestRelease/sarasa-gothic-ttf-0.36.7.7z#/dl.7z_",
     "hash": "aa1ceecb06a5c87a6592b50e93a04b33565e8864ecfe05daa34a740bdc4474ca",
     "pre_install": [
         "Invoke-ExternalCommand 7z -ArgumentList('e', \"`\"$dir\\dl.7z_`\"\" ,\"`\"-o$dir`\"\", 'sarasa-fixed-k*.ttf') | Out-Null",
