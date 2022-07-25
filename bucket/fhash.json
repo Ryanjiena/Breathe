@@ -1,5 +1,5 @@
 {
-    "version": "2.3.0",
+    "version": "2.4.0",
     "description": "an open source files' hash calculator for Windows and macOS.",
     "homepage": "https://github.com/sunjw/fhash",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sunjw/fhash/releases/download/2.3.0/fHash64-2.3.0-win64.zip",
-            "hash": "ce25ecf0650ebfa1f8f2d8ebc557ad3db0cd75e80bda647c59314668e0281a35"
+            "url": "https://github.com/sunjw/fhash/releases/download/3.0.1/fHash64-2.4.0-win64.zip",
+            "hash": "c54b5957f0a28075081cd91c1681855190e0d38be5b8576e18601594b285e8ad"
         }
     },
     "shortcuts": [
@@ -17,13 +17,16 @@
             "fHash64"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/sunjw/fhash/releases",
+        "regex": "href=\"/sunjw/fhash/releases/download/(?<tag>[\\d.]+)/fHash64-([\\d.]+)-win64.zip"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/sunjw/fhash/releases/download/$version/fHash64-$version-win64.zip",
+                "url": "https://github.com/sunjw/fhash/releases/download/$matchTag/fHash64-$version-win64.zip",
                 "hash": {
-                    "url": "https://github.com/sunjw/fhash/releases",
+                    "url": "https://github.com/sunjw/fhash/releases/tag/$matchTag",
                     "mode": "extract",
                     "regex": "(?sm)$basename.*?$sha256"
                 }
