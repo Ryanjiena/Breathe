@@ -1,13 +1,13 @@
 {
-    "version": "6.5.20.6139101",
+    "version": "6.5.30.7229101",
     "description": "DingTalk is an intelligent working platform created by Alibaba Group to support tens of millions of enterprises to achieve higher working efficiency with the new digitalized working method.",
     "homepage": "https://www.dingtalk.com",
     "license": {
         "identifier": "Proprietary",
         "url": "https://page.dingtalk.com/wow/dingtalk/act/service-en-lite"
     },
-    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v6.5.20.6139101.exe#/dl.7z",
-    "hash": "md5:a937a2069b755bf5c37880723a762384",
+    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v6.5.30.7229101.exe#/dl.7z",
+    "hash": "md5:23f4fe5133c8e37c8661336e16df8258",
     "pre_install": [
         "info '[Portable Mode]: Copying user data...'",
         "if (Test-Path \"$persist_dir\\User Data\\*\") {",

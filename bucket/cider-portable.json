@@ -1,5 +1,5 @@
 {
-    "version": "1.5.1-beta.458",
+    "version": "1.5.1-beta.461",
     "description": "A new cross-platform Apple Music experience based on Electron and Vue.js written from scratch with performance in mind.",
     "homepage": "https://cider.sh",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ciderapp/cider-releases/releases/download/v1.5.1-beta.458/Cider-Setup-1.5.1-beta.458.exe#/dl.7z",
-            "hash": "sha512:c2c16ba17f004e06bc51a61e4c70afca70d877e8a0d4ca5e789e948ba69481b35e452541225b88183f8b9de39844be1ff89d62b9fa0b16ecde4dcf0da94dc5db",
+            "url": "https://github.com/ciderapp/cider-releases/releases/download/v1.5.1-beta.461/Cider-Setup-1.5.1-beta.461.exe#/dl.7z",
+            "hash": "sha512:572060999093f5c78285a3d38a6f4b39c71d19ad4d7bef2148b3d395210503332d7b5f2d3860f0b4f180a79af4c7b34982fc9de178747cf1192bfeab521660ce",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal"
         }
     },
