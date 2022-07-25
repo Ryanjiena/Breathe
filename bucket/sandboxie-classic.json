@@ -1,5 +1,5 @@
 {
-    "version": "5.57.5",
+    "version": "5.57.6",
     "description": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems.",
     "homepage": "https://sandboxie-plus.com/",
     "license": {
@@ -9,12 +9,12 @@
     "notes": "Get Sandboxie Plus if you are a first-time user or want the latest features.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.2.5/Sandboxie-Classic-x64-v5.57.5.exe",
-            "hash": "695e1862157787f649599b29ff018646e0f3cbe2f181418cb3217ada7240ef8c"
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.2.6/Sandboxie-Classic-x64-v5.57.6.exe",
+            "hash": "e4bb6361abe9b74f29f6743fd6a46eb2fa20a2e6c34b6b72257e6ed71b49ef63"
         },
         "32bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.2.5/Sandboxie-Classic-x86-v5.57.5.exe",
-            "hash": "696f5d26b6b145be3d4844b2c4b8169235ba18d66c48ed640c0ebc76df93e44c"
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.2.6/Sandboxie-Classic-x86-v5.57.6.exe",
+            "hash": "2301fa38ed1e905a35ddc2ccf97a0beaa8afac5a4d4f3b47ad8dcb49945c462f"
         }
     },
     "pre_install": "if (Test-Path \"$persist_dir\\sandboxie.ini\") { Copy-Item \"$persist_dir\\sandboxie.ini\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
