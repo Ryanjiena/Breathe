@@ -1,5 +1,5 @@
 {
-    "version": "9.12.0",
+    "version": "9.12.2",
     "description": "Postman Chinese patch package, maintained by hlmd.",
     "homepage": "https://github.com/hlmd/postman-cn",
     "license": {
@@ -9,8 +9,8 @@
     "depends": "extras/postman",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hlmd/Postman-cn/releases/download/9.12.0/app.zip",
-            "hash": "727b159780374095e320c697bd6eb15d419fd9839c8d51a4e8ef7d150812365a"
+            "url": "https://github.com/hlmd/Postman-cn/releases/download/9.12.2/app.zip",
+            "hash": "bb6e561a40b94bbef75ae5835a0b184847c4ead7f74e2fe5f12df810f7440496"
         }
     },
     "installer": {
