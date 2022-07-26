@@ -23,7 +23,7 @@
     "post_install": "Remove-Item -Path \"$dir\\installer.exe\" -Force",
     "uninstaller": {
         "script": [
-            "$productId = (Get-WmiObject win32_product | where{$_.name -eq \"`\"Pure Writer`\"\"}).IdentifyingNumber",
+            "$productId = (Get-WmiObject win32_product | Where-Object { $_.name -eq \"`\"Pure Writer`\"\" }).IdentifyingNumber",
             "Start-Process msiexec -ArgumentList @('/uninstall', \"`\"$productId`\"\", '/passive', '/norestart') -Wait | Out-Null"
         ]
     },
