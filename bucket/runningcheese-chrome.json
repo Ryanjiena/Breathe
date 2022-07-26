@@ -1,6 +1,6 @@
 {
-    "version": "100.0.4896.60",
-    "description": "Google Chrome Portable and Enhanced Edition, Maintained by runningcheese.",
+    "version": "103.0.5060.53",
+    "description": "Google Chrome Portable and Enhanced Edition, Maintained by @runningcheese.",
     "homepage": "https://www.runningcheese.com/chrome",
     "license": {
         "identifier": "Freeware"
@@ -11,29 +11,38 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome-v100.0.4896.60.7z",
-            "hash": "188d22465a2bb2dcd48fb2b078decedf90b8a8eae02164682a95d052072d2382"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_103.0.5060.53_64bit_Protable.7z",
+            "hash": "4e0a2ea8a0950cb09679ec47fcaaa172c7bcbb565edcf42d575b9c4a7ecb886f",
+            "extract_dir": "RunningCheeseChrome_103.0.5060.53_64bit_Protable\\RunningCheeseChrome"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_32bit-v100.0.4896.60.7z",
-            "hash": "3e283fb31762e483f16c73925a9d67d937c4a8a98696f81fe65568609650f9bf"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_103.0.5060.53_32bit_Protable.7z",
+            "hash": "e88169daa68e94737d3c432cae87eb028a379aa90a8cf35e1ece54a73f7cb870",
+            "extract_dir": "RunningCheeseChrome_103.0.5060.53_32bit_Protable\\RunningCheeseChrome"
         }
     },
     "post_install": "Start-Process \"dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
     "persist": "Data",
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)RunningCheeseChrome-v([\\d.]+)\\.7z",
+        "regex": "(?s)RunningCheeseChrome_([\\d.]+)_64bit_Protable.7z",
         "reverse": true
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome-v$version.7z"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_$version_64bit_Protable.7z",
+                "extract_dir": "RunningCheeseChrome_$version_64bit_Protable\\RunningCheeseChrome"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_32bit-v$version.7z"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_$version_32bit_Protable.7z",
+                "extract_dir": "RunningCheeseChrome_$version_32bit_Protable\\RunningCheeseChrome"
             }
+        },
+        "hash": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/hash.txt",
+            "mode": "extract",
+            "regex": "$sha256\\s+$basename"
         }
     }
 }

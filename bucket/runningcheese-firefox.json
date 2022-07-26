@@ -1,6 +1,6 @@
 {
-    "version": "99.0",
-    "description": "A Graceful and Powerful Customized Firefox, Maintained by runningcheese.",
+    "version": "102.0",
+    "description": "A Graceful and Powerful Customized Firefox, Maintained by @runningcheese.",
     "homepage": "https://www.runningcheese.com/firefox",
     "license": {
         "identifier": "Freeware"
@@ -10,32 +10,40 @@
         "- User manual: <https://www.runningcheese.com/firefox-usage>",
         "- Development manual: <https://www.runningcheese.com/firefox-development>"
     ],
-    "depends": "sudo",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox-v99.0.7z",
-            "hash": "49d41d9c916bab7949b817a28126f6021f2acbe6474c82982ab521720486525c"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_102.0_64bit_Portable.7z",
+            "hash": "42b0bd7c1f48f67d7eea902c4c36c543f701b8c6478c9ad2c4269bd98e39eed7",
+            "extract_dir": "RunningCheeseFirefox_102.0_64bit_Portable"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_32bit-v99.0.7z",
-            "hash": "d0c2d760f26d798ff47ca35e6045943a0d830d4107c001232247ac9d941997d8"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_102.0_32bit_Portable.7z",
+            "hash": "26cd28119348614ea247a5e3ee442fcadaa0d2a9ced242e6dc1237bdc54af716",
+            "extract_dir": "RunningCheeseFirefox_102.0_32bit_Portable"
         }
     },
     "post_install": "Start-Process \"dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
     "persist": "Profiles",
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)RunningCheeseFirefox-v([\\d.]+)\\.7z",
+        "regex": "(?s)RunningCheeseFirefox_([\\d.]+)_64bit_Portable\\.7z",
         "reverse": true
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox-v$version.7z"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_$version_64bit_Portable.7z",
+                "extract_dir": "RunningCheeseFirefox_$version_64bit_Portable"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_32bit-v$version.7z"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_$version_32bit_Portable.7z",
+                "extract_dir": "RunningCheeseFirefox_$version_32bit_Portable"
             }
+        },
+        "hash": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/hash.txt",
+            "mode": "extract",
+            "regex": "$sha256\\s+$basename"
         }
     }
 }
