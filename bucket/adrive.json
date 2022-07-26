@@ -1,13 +1,13 @@
 {
-    "version": "3.6.1",
+    "version": "3.7.1",
     "description": "aDrive is a fast, non-intrusive, secure and easy-to-share personal netdisk where you can store, manage and explore things, and build a flourishing digital world.",
     "homepage": "https://www.aliyundrive.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_dingtalk/suit_bu1_dingtalk202103191654_76478.html"
     },
-    "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-3.6.1.exe#/installer.exe",
-    "hash": "sha512:61194482d87e6e3845286cadea47ef9eb09d3df000d50fbab0e1bac77f1e7dacce132c5f0ce421a4557c5ead5796baf9044bb04e80e63fa52b9eb49aa3af475b",
+    "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-3.7.1.exe#/installer.exe",
+    "hash": "sha512:294c21da9174f051afdf5b34b1888eec31a9cddc3b866c24c6d614bd5fc23885df65fa965725efa9bc5a9c806a3671da243d6a9d93a36924535d4fd02c900fdc",
     "installer": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
