@@ -1,0 +1,25 @@
+{
+    "version": "20220726.023b01a",
+    "description": "A language for humans and computers.",
+    "homepage": "https://crystal-lang.org/",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/crystal-lang/crystal/blob/master/LICENSE"
+    },
+    "depends": "vswhere",
+    "url": "https://nightly.link/crystal-lang/crystal/actions/runs/2743151327/crystal.zip",
+    "hash": "58f7f3def08ecaec2e2681985035e1c1a3476c1dc22fdeefa9676462bb9a6b7c",
+    "post_install": "If (Test-Path \"$env:LOCALAPPDATA\\crystal\\cache\") { Remove-Item \"$env:LOCALAPPDATA\\crystal\\cache\" -ErrorAction 'SilentlyContinue' -Recurse -Force }",
+    "bin": [
+        "crystal.exe",
+        "shards.exe"
+    ],
+    "checkver": {
+        "url": "https://scoop-apps.vercel.app/crystal-lang/crystal",
+        "regex": "(?sm)crystal-lang/crystal/actions/runs/(?<runid>\\d+).+datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).*?commit/(?<sha>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}.${sha}"
+    },
+    "autoupdate": {
+        "url": "https://nightly.link/crystal-lang/crystal/actions/runs/$matchRunid/crystal.zip"
+    }
+}
