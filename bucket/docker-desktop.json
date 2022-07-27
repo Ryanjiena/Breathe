@@ -12,7 +12,7 @@
         "    https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file",
         "",
         "Updating is handled by docker itself.",
-        "    No updates will be done to this manifest.",
+        "    Run 'scoop hold docker-desktop' to disable updates via Scoop.",
         "",
         "'scoop uninstall docker' will uninstall docker completely.",
         "    Images, VM, settings, ..."
@@ -30,6 +30,7 @@
         ],
         "keep": true
     },
+    "post_install": "scoop hold docker-desktop",
     "uninstaller": {
         "file": "DockerDesktopInstall.exe",
         "args": [
