@@ -1,5 +1,5 @@
 {
-    "version": "9.6.2.28755",
+    "version": "9.6.3.28769",
     "description": "Tencent QQ third-party modified version, maintained by Dreamcast(With NtrQQ Edition).",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -20,8 +20,8 @@
             "meta/vcredist-dreamcast"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/腾讯QQ_9.6.2.28755_安装版_With_NtrQQ_7.1.2.rar",
-    "hash": "f25bc89aac854372f82212625334173d056b89e03dd664c251c5964181c26580",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/腾讯QQ_9.6.3.28769_安装版_With_NtrQQ_7.1.2.rar",
+    "hash": "b79c9c4ebfb40533c6e9be431033968882542237eab5b365e744d303cc65380c",
     "installer": {
         "script": [
             "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
