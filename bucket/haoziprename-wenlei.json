@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://haozip.2345.cc/help/help1-2.htm"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/HaoZipRename_v6.3.1.11134.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/好压批量文件改名_v6.3.1.11134.7z",
     "hash": "7ddff2f30f2d8aec98f94a3216d9834324e5e2e91489880cec094d9ca58ecc26",
     "architecture": {
         "64bit": {
@@ -34,10 +34,10 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "HaoZipRename_v([\\d.]+)\\.7z",
+        "regex": "好压批量文件改名_v([\\d.]+)\\.7z",
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/HaoZipRename_v$version.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/好压批量文件改名_v$version.7z"
     }
 }

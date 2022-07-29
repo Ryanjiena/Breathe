@@ -1,0 +1,79 @@
+{
+    "version": "16.2.3.19376536",
+    "description": "VMware Workstation Pro™ enables technical professionals to develop, test, demonstrate, and deploy software by running multiple x86-based Windows, Linux, and other operating systems simultaneously on the same PC. You can replicate server, desktop, and tablet environments in a virtual machine and allocate multiple processor cores, gigabytes of main memory and graphics memory to each virtual machine, whether the virtual machine resides on a personal PC or on a private enterprise cloud.",
+    "homepage": "https://www.vmware.com/products/workstation-pro.html",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.vmware.com/download/eula/universal_eula.html"
+    },
+    "notes": [
+        "Docs: <https://docs.vmware.com/en/VMware-Workstation-Player-for-Windows/index.html>",
+        "ZF3R0-FHED2-M80TY-8QYGC-NPKYF"
+    ],
+    "suggest": {
+        "vcredist": [
+            "vcredist-aio",
+            "vcredist-dreamcast",
+            "vcredist-qiuquan"
+        ]
+    },
+    "architecture": {
+        "64bit": {
+            "url": "http://download3.vmware.com/software/wkst/file/VMware-workstation-full-15.5.2-15785246.exe#/cosi.exe",
+            "hash": "393bfd82ccf13bcda4658072a3c17a1e9277431c45387b417853de53625fa2ad"
+        }
+    },
+    "installer": {
+        "args": [
+            "/s",
+            "/v\"",
+            "/qn",
+            "EULAS_AGREED=1",
+            "DATACOLLECTION=0",
+            "DESKTOP_SHORTCUT=0",
+            "STARTMENU_SHORTCUT=0",
+            "AUTOSOFTWAREUPDATE=0",
+            "INSTALLDIR=\"\"$dir\"\"",
+            "\""
+        ],
+        "keep": true
+    },
+    "uninstaller": {
+        "file": "cosi.exe",
+        "args": [
+            "/s",
+            "/v\"",
+            "/qn",
+            "REMOVE=ALL",
+            "\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "vmware.exe",
+            "VMware Workstation Pro"
+        ],
+        [
+            "vmplayer.exe",
+            "VMware Workstation Player"
+        ],
+        [
+            "vmnetcfg.exe",
+            "Virtual Network Editor"
+        ]
+    ],
+    "checkver": {
+        "url": "https://customerconnect.vmware.com/channel/public/api/v1.0/products/getDLGHeader?downloadGroup=WKST-PLAYER-1621&productId=1039",
+        "jsonpath": "$.versions[0]",
+        "regex": "download3.vmware.com/software/(?<path>.*?)/VMware-workstation-full-(?<ver>[\\d.]+)-(?<build>\\d+).exe",
+        "replace": "${ver}.${build}"
+    },
+    "autoupdate": {
+        "url": "https://download3.vmware.com/software/$matchPath/VMware-workstation-full-$matchVer-$matchBuild.exe",
+        "hash": {
+            "url": "https: //my.vmware.com/channel/public/api/v1.0/dlg/details?locale=en_US&downloadGroup=$($product.code)&productId=$($product.productId)&rPId=$($product.releasePackageId)",
+            "mode": "json",
+            "jsonpath": "$.downloads[0].downloadUrl"
+        }
+    }
+}

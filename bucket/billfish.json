@@ -1,0 +1,39 @@
+{
+    "version": "1.0",
+    "description": "Billfish is a reference image management tool for designers to efficiently manage all kinds of reference images, supporting a variety of image formats including PNG, JPG, PSD, AI, GIF, SVG, EPS, CDR, etc. Billfish allows you to manage reference images quickly and easily so you can spend more time focusing on the design.",
+    "homepage": "https://www.billfish.cn",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.billfish.cn/user-agreement"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn-resource.aunbox.cn/application/soft_package/pc/10301011/software/2.9.0.11/Nfljrl/install.exe",
+            "hash": "5096FD63838A46EC40B0848F8EC5B2F2661054363149ADDD7751D9C70431B117"
+        },
+        "32bit": {
+            "url": "https://cdn-resource.aunbox.cn/application/soft_package/pc/10301011/software/2.9.0.11/xqYCgS/install.exe",
+            "hash": "0ECDFAF538F7E9AB9281DB78BD6BC1986380522DA9470CDA51B120EF8DC5CF06"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "Billfish.exe",
+            "Billfish"
+        ]
+    ],
+    "checkver": "",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "",
+                "hash": ""
+            },
+            "32bit": {
+                "url": "",
+                "hash": ""
+            }
+        }
+    }
+}
