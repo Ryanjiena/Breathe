@@ -1,13 +1,13 @@
 {
-    "version": "6.3.1.11134",
+    "version": "6.3.1.11144",
     "description": "Batch file renaming tool extracted from haozip, maintained by wenlei.",
     "homepage": "https://haozip.2345.cc/help/help1-2.htm",
     "license": {
         "identifier": "Proprietary",
         "url": "https://haozip.2345.cc/help/help1-2.htm"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/好压批量文件改名_v6.3.1.11134.7z",
-    "hash": "7ddff2f30f2d8aec98f94a3216d9834324e5e2e91489880cec094d9ca58ecc26",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/好压批量文件改名_v6.3.1.11144.7z",
+    "hash": "45fe6d6e83e1cf708e268224fafa65254bf6e2686d95a7d94eecec349841187b",
     "architecture": {
         "64bit": {
             "extract_dir": "HaoZipRename_64bit"

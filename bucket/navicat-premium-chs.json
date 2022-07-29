@@ -25,7 +25,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.navicat.com/en/products/navicat-premium-release-note",
+        "url": "https://www.navicat.com.cn/products/navicat-premium-release-note",
         "regex": "<b>Navicat Premium \\(Windows\\) version (16[\\d.]+)</b>"
     },
     "autoupdate": {
