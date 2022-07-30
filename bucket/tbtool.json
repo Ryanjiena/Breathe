@@ -1,7 +1,7 @@
 {
     "version": "2022.01",
-    "description": "Tuba Toolbox.",
-    "homepage": "http://www.tbtool.cn/",
+    "description": "Tuba Toolbox is a collection of open source, free, green and pure hardware testing tools designed for all computer hardware geeks, DIY enthusiasts, gods and rookies. Integration of a large number of common hardware testing, scoring tools, one-click download, easy to use.",
+    "homepage": "http://www.tbtool.cn",
     "license": {
         "identifier": "Freeware"
     },
