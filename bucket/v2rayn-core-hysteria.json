@@ -1,5 +1,5 @@
 {
-    "version": "5.30",
+    "version": "5.31",
     "description": "A V2Ray client for Windows, support Xray core, v2fly core and hysteria core.",
     "homepage": "https://github.com/2dust/v2rayN",
     "license": {
@@ -11,8 +11,8 @@
         "geoip-country-mmdb",
         "v2ray-rules-dat-git"
     ],
-    "url": "https://github.com/2dust/v2rayN/releases/download/5.30/v2rayN-Core.zip",
-    "hash": "253b1c9cf4cd3033552065b80b80945cc2f8acacf07ee3b8c384208ae0f30177",
+    "url": "https://github.com/2dust/v2rayN/releases/download/5.31/v2rayN-Core.zip",
+    "hash": "206164096eafb7a67280e97dc3709650278927acbf095850c07ead9d2f5ce5b1",
     "extract_dir": "v2rayN-Core",
     "pre_install": [
         "Copy-Item \"$(scoop prefix hysteria)\\hysteria.exe\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
