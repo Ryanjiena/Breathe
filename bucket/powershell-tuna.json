@@ -1,5 +1,5 @@
 {
-    "version": "7.2.4",
+    "version": "7.2.5",
     "description": "PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework.",
     "homepage": "https://microsoft.com/PowerShell",
     "license": {
@@ -7,12 +7,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/PowerShell/PowerShell/LatestRelease/PowerShell-7.2.4-win-x64.msi#/powershell.msi_",
-            "hash": "06b93c2263fbd6d975ac59e09ab2390635aff0455ad2504ffd60f0a5e0e61103"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/PowerShell/PowerShell/LatestRelease/PowerShell-7.2.5-win-x64.msi#/powershell.msi_",
+            "hash": "632a69ea46f966a03a1ee0aa1647c5970df7b5936bdf27df3cf18e6c63c21198"
         },
         "32bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/PowerShell/PowerShell/LatestRelease/PowerShell-7.2.4-win-x86.msi#/powershell.msi_",
-            "hash": "acf2d2ff232fa641b028c951ea184bc3e7e26c82b2f7df7f7a9a32478685988c"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/PowerShell/PowerShell/LatestRelease/PowerShell-7.2.5-win-x86.msi#/powershell.msi_",
+            "hash": "820c87d28425d7ec902730044c60c894e015fe4c899d61c427844fb31052d9c1"
         }
     },
     "installer": {
