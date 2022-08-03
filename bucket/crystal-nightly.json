@@ -1,5 +1,5 @@
 {
-    "version": "20220802.474129b",
+    "version": "20220803.e0051ae",
     "description": "A language for humans and computers.",
     "homepage": "https://crystal-lang.org/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://github.com/crystal-lang/crystal/blob/master/LICENSE"
     },
     "depends": "vswhere",
-    "url": "https://nightly.link/crystal-lang/crystal/actions/runs/2785525445/crystal.zip",
-    "hash": "f43e50401c2c28556151a94929a69bc9f3f44f5ce4136dcd627fae753a217912",
+    "url": "https://nightly.link/crystal-lang/crystal/actions/runs/2789810132/crystal.zip",
+    "hash": "2f7f7fe5e11cd126e661d54e764465a3b85b4446d83f31bff19ab03ad59ceb52",
     "post_install": "If (Test-Path \"$env:LOCALAPPDATA\\crystal\\cache\") { Remove-Item \"$env:LOCALAPPDATA\\crystal\\cache\" -ErrorAction 'SilentlyContinue' -Recurse -Force }",
     "bin": [
         "crystal.exe",
