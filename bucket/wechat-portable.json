@@ -1,5 +1,5 @@
 {
-    "version": "3.7.5.23",
+    "version": "3.7.5.31",
     "description": "WeChat is more than a messaging and social media app - it is a lifestyle for over one billion users across the world.",
     "homepage": "https://weixin.qq.com/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.wechat.com/en/service_terms.html"
     },
     "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-    "hash": "c91856d0721b09a10c7b37013ca93cabb5e618ea768e66a70141052930c0c351",
+    "hash": "d102e48bec231adfaccb4640032fcce930dee30fc95103e20aac668a97836d40",
     "pre_install": [
         "info '[Portable Mode]: Copying user data...'",
         "if (Test-Path \"$persist_dir\\User Data\\*\") {",
