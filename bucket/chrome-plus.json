@@ -1,5 +1,5 @@
 {
-    "version": "20220504.023630",
+    "version": "20220805.072022",
     "description": "Goolgle Chrome Enhancement Software, maintained by shuax.",
     "homepage": "https://github.com/shuax/chrome_plus",
     "license": {
@@ -16,12 +16,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/shuax/chrome_plus/actions/runs/2267434457/windows_x64.zip",
-            "hash": "dbae01a60aab46d594d6358c5b9d7475c9bb6f81aac82eee6622e6241dfc04e8"
+            "url": "https://nightly.link/shuax/chrome_plus/actions/runs/2801958053/windows_x64.zip",
+            "hash": "c7ab71bc40384df766b9c124afcb6bb1274ade14d5344500b59252b2ee9e1273"
         },
         "32bit": {
-            "url": "https://nightly.link/shuax/chrome_plus/actions/runs/2267434457/windows_x86.zip",
-            "hash": "cce625a13f5b4064bf3e8f437616cc9c20a9618b45fd04f52a438b160031232f"
+            "url": "https://nightly.link/shuax/chrome_plus/actions/runs/2801958053/windows_x86.zip",
+            "hash": "7a51fb3c3f363ae197f642de65b7970123268c5cf7049345762c173c8499e799"
         }
     },
     "installer": {
