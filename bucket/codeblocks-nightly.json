@@ -1,5 +1,5 @@
 {
-    "version": "20220709.12847",
+    "version": "20220806.12858",
     "description": "Free open-source C/C++/Fortran IDE (nightly version)",
     "homepage": "http://www.codeblocks.org",
     "license": {
@@ -11,8 +11,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/2022/CB_20220709_rev12847_win64.7z",
-            "hash": "sha1:f024b46498d256f69d880b1b5dfd0182c6a79945"
+            "url": "https://sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/2022/CB_20220806_rev12858_win64.7z",
+            "hash": "sha1:de446c5382a91ad0ae3f7ef42b1112e66458b27c"
         }
     },
     "bin": [
