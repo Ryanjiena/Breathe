@@ -11,6 +11,7 @@
     "hash": "de63dc2ef45d5b094a239fc704051270f3185bf9e883132532b7e17d2fdaf81b",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\Rime\")) {",
+        "    ensure \"$persist_dir\\appdata\" | Out-Null",
         "    Copy-Item \"$env:APPDATA\\Rime\" \"$persist_dir\\appdata\" -ErrorAction SilentlyContinue -Recurse -Force",
         "}",
         "ensure \"$persist_dir\\appdata\" | Out-Null",

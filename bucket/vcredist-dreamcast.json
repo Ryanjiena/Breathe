@@ -7,7 +7,7 @@
         "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
     },
     "notes": "You can now remove this installer with 'scoop uninstall vcredist-dreamcast'",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/vcredist-dreamcast_2022.06.21.exe#/vcredist.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/vcredist-dreamcast_2022.06.21.exe#/vcredist.exe",
     "hash": "08a98ea06f72877e146985e532b0663b62b34e7f549fd750c63bc20ae9423584",
     "installer": {
         "script": "Start-Process \"$dir\\vcredist.exe\" -WorkingDirectory \"$dir\" -ArgumentList '/silent' -Wait"
@@ -18,6 +18,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/$matchFilename#/vcredist.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/$matchFilename#/vcredist.exe"
     }
 }
