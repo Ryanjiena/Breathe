@@ -1,5 +1,5 @@
 {
-    "version": "7.0.0-preview.6.22351.3",
+    "version": "7.0.0-preview.7.22377.1",
     "description": "Microsoft .NET 7 Desktop Runtime.",
     "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
     "license": {
@@ -9,12 +9,12 @@
     "notes": "You can now remove this installer with 'scoop uninstall windowsdesktop-runtime-7'",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.6.22351.3/windowsdesktop-runtime-7.0.0-preview.6.22351.3-win-x64.exe",
-            "hash": "sha512:031de8a2654becf115402116f8a5751064acf4d74412ef81e82c11979e1f7ecc3f9b2f8e085ecb875fd14699952922d8078531c4c25683ecdde4954db62c787b"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.7.22377.1/windowsdesktop-runtime-7.0.0-preview.7.22377.1-win-x64.exe",
+            "hash": "sha512:4135ee9c6546c72b90054c5deabbaa824c32fb832d71b9c7b73b146a4e2150e859331ae40ea2ed8f13e9d18dc9c0fb35aff0815beb1af2aa0833b8ebdac9ccb0"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.6.22351.3/windowsdesktop-runtime-7.0.0-preview.6.22351.3-win-x86.exe",
-            "hash": "sha512:d738c4903c805e045a8f8227802fba0eff04cd053ae195bf8a1e57a8baccbcc71b4ecdc93abcf1a521aa88b64f1be6e5caf95243ef0411aecbaad597eab7d79d"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-preview.7.22377.1/windowsdesktop-runtime-7.0.0-preview.7.22377.1-win-x86.exe",
+            "hash": "sha512:b89f66cdde6d97cc3fe78d6223414fc2d75b7caca67b98c48d8adf5c45c3f2c40ce50833849740aac1902ca3eeb59183e04abad81e2e5d7beaf4e80f89335740"
         }
     },
     "pre_install": "if (!(is_admin)) { throw 'Admin privileges are required.' }",
