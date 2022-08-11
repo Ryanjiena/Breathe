@@ -1,13 +1,13 @@
 {
-    "version": "3.7.1",
+    "version": "3.8.0",
     "description": "aDrive is a fast, non-intrusive, secure and easy-to-share personal netdisk where you can store, manage and explore things, and build a flourishing digital world.",
     "homepage": "https://www.aliyundrive.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_dingtalk/suit_bu1_dingtalk202103191654_76478.html"
     },
-    "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-3.7.1.exe#/dl.7z",
-    "hash": "sha512:294c21da9174f051afdf5b34b1888eec31a9cddc3b866c24c6d614bd5fc23885df65fa965725efa9bc5a9c806a3671da243d6a9d93a36924535d4fd02c900fdc",
+    "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-3.8.0.exe#/dl.7z",
+    "hash": "sha512:d0e4eacf6b77446967a147a69ba139722bd5ee8b5e00ce8a6327618c8c7ae7ba9ff4524168c83b0fa4a230d0fd1a95a3f46b25c0f4d0e62e64848668d19655c5",
     "pre_install": "Remove-Item \"$dir\\`$*\",\"$dir\\Uninst*\" -Recurse",
     "shortcuts": [
         [
