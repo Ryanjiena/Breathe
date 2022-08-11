@@ -1,6 +1,6 @@
 {
     "version": "nightly",
-    "description": "Android emulator.",
+    "description": "BlueStacks. An Android emulator. (version 4)",
     "homepage": "https://www.bluestacks.com/",
     "license": {
         "identifier": "Freeware",
@@ -8,7 +8,10 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://cloud.bluestacks.com/get_offline_download?os_arch=x64&is_hyperv=true#/setup.7z"
+            "url": "https://cloud.bluestacks.com/get_offline_download?os_arch=x64#/setup.7z"
+        },
+        "32bit": {
+            "url": "https://cloud.bluestacks.com/get_offline_download?os_arch=x86#/setup.7z"
         }
     },
     "installer": {
