@@ -1,5 +1,5 @@
 {
-    "version": "20220808.3936f01",
+    "version": "20220810.ffaf795",
     "description": "ShadowsocksR for Windows(with dotnet runtime), maintained by @HMBSbige.",
     "homepage": "https://github.com/HMBSbige/ShadowsocksR-Windows",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/2817455640/ShadowsocksR-Win64.zip",
-            "hash": "6bd7b3f096d77dfa3a6dd81f8cf438a24b5290588a4b2de1bca6170261184453"
+            "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/2833366655/ShadowsocksR-Win64.zip",
+            "hash": "24fb0f2adbcecfa8ca61c7724b316e9529d1f32b0bb3b371f6a49ee9cd461a8a"
         },
         "32bit": {
-            "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/2817455640/ShadowsocksR-Win32.zip",
-            "hash": "1b77e80a7b54410887691e1ba57c428db449e96b33c1bb7b430ff5ba0d75e1da"
+            "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/2833366655/ShadowsocksR-Win32.zip",
+            "hash": "2f31e2655edc260b6cfd7f2c30e1267546578dee61cc007c7548c97c25c62b9b"
         }
     },
     "pre_install": [

@@ -1,12 +1,12 @@
 {
-    "version": "0.25.0",
+    "version": "0.26.0",
     "description": "HFS is a web file server to run on your computer. Share folders or even a single file thanks to the virtual file system.",
     "homepage": "https://telegram.dog/hfsusers",
     "license": {
         "identifier": "GPL-3.0-or-later"
     },
-    "url": "https://github.com/rejetto/hfs/releases/download/v0.25.0/hfs-windows.zip",
-    "hash": "b99a2f8df0c12358514b605e36bdcb0a5c41ce8da749db15364fb9a694ce6155",
+    "url": "https://github.com/rejetto/hfs/releases/download/v0.26.0/hfs-windows.zip",
+    "hash": "b16daf6cb9cfd1b05855c7d4bf3f6699a44645a4577e12dc7cb205f53e2063f7",
     "pre_install": [
         "if (Test-Path \"$persist_dir\\config.yaml\") {",
         "    Copy-Item \"$persist_dir\\config.yaml\" \"$dir\\\" | Out-Null",

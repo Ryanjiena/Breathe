@@ -1,5 +1,5 @@
 {
-    "version": "2022.8.6.29506",
+    "version": "2022.8.11.44373",
     "description": "A Genshin Impact game launcher, with a lot of features.",
     "homepage": "https://www.snapgenshin.com",
     "license": {
@@ -12,7 +12,7 @@
         ]
     },
     "url": "https://github.com/DGP-Studio/Snap.Genshin/releases/latest/download/Publish.zip",
-    "hash": "b063c68a1d4345d25316ed18f50b0d032773728a4ffb3aed1e8182d075e53b1e",
+    "hash": "3b084c7aeaad793972da78817dbf66e43f6fda5b8c12d8256957b480daa30fe6",
     "shortcuts": [
         [
             "DGP.Genshin.exe",
