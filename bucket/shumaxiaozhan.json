@@ -1,12 +1,12 @@
 {
-    "version": "0.2.1",
+    "version": "0.2.3",
     "description": "A downloader of Baidu Netdisk.",
     "homepage": "https://pan.baidu.com",
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/数码小站_V0.2.1.zip#dl.zip_",
-    "hash": "aa5c2f2632598c017266a902c52e10feff8540810392a35eae905f8819b219d6",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/数码小站_V0.2.3.zip#dl.zip_",
+    "hash": "68bd00279b73ce458bdac54049bc4811bdb8c2caa8f23723ce56ba8b1fcde46f",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\$fname\" -Switches '-p2022' -Removal",
         "if (Test-Path \"$persist_dir\\数码小站.ini\") {",

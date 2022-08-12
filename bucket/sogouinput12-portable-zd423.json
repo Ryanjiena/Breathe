@@ -1,5 +1,5 @@
 {
-    "version": "12.3.0.6377",
+    "version": "12.3.0.6426",
     "description": "Sogou Pinyin Input 3rd party modified version, maintained by 423down.com.",
     "homepage": "https://pinyin.sogou.com",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://www.423down.com/587.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗输入法v12.3.0.6377核心型绿色精简版.7z",
-    "hash": "584bd1283238656d881847d1d6deda5d5d10bba9553780ffbb861997ecbb0cf1",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗输入法v12.3.0.6426核心型绿色精简版.7z",
+    "hash": "a54b6fab3c9247e8aa8f1bd3840c18b7eb87b0e1684883bf06e6da1d1a2446be",
     "extract_dir": "搜狗拼音",
     "installer": {
         "script": [
