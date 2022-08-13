@@ -1,12 +1,12 @@
 {
-    "version": "1.8.3.0",
+    "version": "1.8.4.0",
     "description": "Batch download NetEaseMusic / QQMusic playlist tool.",
     "homepage": "http://bilibili.bio/MusicDownloader",
     "license": {
         "identifier": "MIT"
     },
-    "url": "https://github.com/Beadd/MusicDownloader/releases/download/v1.8.3.0/MusicDownloader.exe",
-    "hash": "65a73d0e1eb35cfd6148f730377ecb6293a9fc9f248195338f7699d7ef5900df",
+    "url": "https://github.com/Beadd/MusicDownloader/releases/download/v1.8.4.0/MusicDownloader.exe",
+    "hash": "e06c4f123084855bd6ccb91db28f739971681fcc6dfa5ea81a32631ce63d63eb",
     "bin": "MusicDownloader.exe",
     "checkver": {
         "github": "https://github.com/Beadd/MusicDownloader"
