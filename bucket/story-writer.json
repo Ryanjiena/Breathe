@@ -1,5 +1,5 @@
 {
-    "version": "8.10.0",
+    "version": "8.10.1",
     "description": "A feature-rich, powerful knowledge management tool(xiaoshujiang).",
     "homepage": "http://soft.xiaoshujiang.com/",
     "license": {
@@ -7,12 +7,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suziwen/markdownxiaoshujiang/releases/download/v8.10.0/Story-writer-win64-setup.exe",
-            "hash": "md5:e26dba2a78d30b7ebc03c6abdc6fe827"
+            "url": "https://github.com/suziwen/markdownxiaoshujiang/releases/download/v8.10.1/Story-writer-win64-setup.exe",
+            "hash": "md5:617d394423d613bef74265bb97dbb569"
         },
         "32bit": {
-            "url": "https://github.com/suziwen/markdownxiaoshujiang/releases/download/v8.10.0/Story-writer-win32-setup.exe",
-            "hash": "md5:f29f1a91aa5b521d4749c6898ab9cde3"
+            "url": "https://github.com/suziwen/markdownxiaoshujiang/releases/download/v8.10.1/Story-writer-win32-setup.exe",
+            "hash": "md5:9db9030e92e9876b4a6bd715bf307dc2"
         }
     },
     "innosetup": true,

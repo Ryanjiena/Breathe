@@ -1,14 +1,14 @@
 {
-    "version": "1.9.7",
-    "description": "Password Manager based on Flutter for all platforms. Keepass 2.x (kdbx 3.x) compatible.",
-    "homepage": "https://authpass.app",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/authpass/authpass/blob/master/LICENSE"
+    "version": "1.9.7_1940",
+    "description": "Open-source password manager compatible with KeePass",
+    "homepage": "https://authpass.app/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/authpass/authpass/releases/download/v1.9.7/AuthPass-setup-1.9.7_1940.exe",
+            "hash": "b450c50f79bc3926fa4f83f8a37032a5ee35577be243e6a5d62a3440b3fd51ad"
+        }
     },
-    "notes": "wiki: <https://github.com/authpass/authpass/wiki>",
-    "url": "https://github.com/authpass/authpass/releases/download/v1.9.7/AuthPass-setup-1.9.7_1940.exe",
-    "hash": "b450c50f79bc3926fa4f83f8a37032a5ee35577be243e6a5d62a3440b3fd51ad",
     "innosetup": true,
     "shortcuts": [
         [
@@ -17,10 +17,14 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/authpass/authpass/releases",
-        "regex": "releases/download/v([\\d.]+)/AuthPass-setup-(?<tag>[\\d._]+).exe"
+        "github": "https://github.com/authpass/authpass",
+        "regex": "AuthPass-setup-([\\d._]+).exe"
     },
     "autoupdate": {
-        "url": "https://github.com/authpass/authpass/releases/download/v$version/AuthPass-setup-$matchTag.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/authpass/authpass/releases/download/v$matchHead/AuthPass-setup-$version.exe"
+            }
+        }
     }
 }
