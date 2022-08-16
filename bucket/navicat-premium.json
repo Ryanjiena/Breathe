@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dn.navicat.com/download/navicat161_premium_en_x64.exe",
+            "url": "https://download3.navicat.com/download/navicat161_premium_en_x64.exe",
             "hash": "92abd1080f3010c41fe888a9b95d929bb988334d3415d86a8d1f289ed4adc0a7"
         },
         "32bit": {
-            "url": "https://dn.navicat.com/download/navicat161_premium_en_x86.exe",
+            "url": "https://download3.navicat.com/download/navicat161_premium_en_x86.exe",
             "hash": "0f3e7131a855704b598a647e97da291966541a0b1fb6379c73f85ae3274912ed"
         }
     },
@@ -31,10 +31,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dn.navicat.com/download/navicat$majorVersion$minorVersion_premium_en_x64.exe"
+                "url": "https://download3.navicat.com/download/navicat$majorVersion$minorVersion_premium_en_x64.exe"
             },
             "32bit": {
-                "url": "https://dn.navicat.com/download/navicat$majorVersion$minorVersion_premium_en_x86.exe"
+                "url": "https://download3.navicat.com/download/navicat$majorVersion$minorVersion_premium_en_x86.exe"
             }
         }
     }
