@@ -1,12 +1,12 @@
 {
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Personal daily use of a set of key mapping, it can improve my operational efficiency and optimize the input experience.",
     "homepage": "https://xianyukang.com/MyKeymap.html",
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://static.xianyukang.com/MyKeymap-1.2.1.7z",
-    "hash": "ddd56fde149df9e193894233f748f18018e4ca4d2e4ec93ac1f677faf9838e88",
+    "url": "https://static.xianyukang.com/MyKeymap-1.2.2.7z",
+    "hash": "1037f86196c70ccd7a2cddbe12ce9c04d5f73bc80223503895e95c22caf8d27c",
     "extract_dir": "MyKeymap",
     "shortcuts": [
         [

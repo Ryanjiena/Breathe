@@ -1,12 +1,15 @@
 {
-    "version": "0.2.5",
-    "description": "Elegant music app to play & manage music library, lyrics and playlists (with YouTube support).",
+    "version": "0.2.8",
+    "description": "Elegant music app to play & manage music library. Time-synced lyrics, playlists & visuals. YouTube Music.",
     "homepage": "https://github.com/harmonoid/harmonoid",
-    "license": "GPL-3.0-only",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://raw.githubusercontent.com/harmonoid/harmonoid/master/EULA.txt"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/harmonoid/harmonoid/releases/download/v0.2.5/harmonoid-windows-setup.exe",
-            "hash": "93784e26ce03a4a72236cbc5ad356374f328434710d5dfb87edc8246ed38e19c"
+            "url": "https://github.com/alexmercerind2/harmonoid-releases/releases/download/v0.2.8/harmonoid-windows-setup.exe",
+            "hash": "1aa1661c2123bec5fabe8eb102261042c7c6f43a861affbe5b86b7e4495aad39"
         }
     },
     "innosetup": true,
@@ -17,13 +20,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/harmonoid/harmonoid/releases/",
-        "regex": "tree/v([\\d.]+(?:[-hotfix\\d]+)?)"
+        "github": "https://github.com/alexmercerind2/harmonoid-releases"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/harmonoid/harmonoid/releases/download/v$version/harmonoid-windows-setup.exe"
+                "url": "https://github.com/alexmercerind2/harmonoid-releases/releases/download/v$version/harmonoid-windows-setup.exe"
             }
         }
     }
