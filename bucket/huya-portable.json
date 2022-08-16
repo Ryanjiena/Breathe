@@ -1,5 +1,5 @@
 {
-    "version": "5.34.0.0",
+    "version": "5.35.1.0",
     "description": "Huya is a pop-up interactive live streaming platform with a focus on live games.",
     "homepage": "https://www.huya.com",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://hd.huya.com/huyaDIYzt/6811/pc/index.html#diySetTab=4"
     },
     "url": "https://download.huya.com/huyapc/install/HuyaClientInstall.exe#/dl.7z",
-    "hash": "9c4a2d80c0e752d14ff8966d953a75ddef408c22bb83b5fa2bac42706c1620dd",
+    "hash": "32fed0ac418b842bbdf2b72ea5d37f6812d4e4bd910518b48e4bc9d0d64a8df2",
     "installer": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
