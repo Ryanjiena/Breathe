@@ -1,0 +1,30 @@
+{
+    "version": "20220232",
+    "description": "OpenCore Auxiliary Tools is a GUI-based Configurator for editing config.plist files for Acidanthera's OpenCore Boot Manager.",
+    "homepage": "https://github.com/ic005k/OCAuxiliaryTools",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/ic005k/OCAuxiliaryTools/raw/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ic005k/OCAuxiliaryTools/releases/download/20220232/OCAT-Win64.zip",
+            "hash": "d2947fce10625bd6af02033eb135846af314faf903cac1814e2591d6a2741301"
+        }
+    },
+    "extract_dir": "OCAT-Win64",
+    "shortcuts": [
+        [
+            "@OCAT.exe",
+            "OCAT"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ic005k/OCAuxiliaryTools/releases/download/$version/OCAT-Win64.zip"
+            }
+        }
+    }
+}
