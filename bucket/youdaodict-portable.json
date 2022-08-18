@@ -1,13 +1,13 @@
 {
-    "version": "9.0.4.0",
+    "version": "9.0.6.0",
     "description": "Youdao Dictionary has typical acoustic translation, smart screen word identification, real-time synchronization with network up-to-date vocabulary, and other word look-up features.",
     "homepage": "https://cidian.youdao.com",
     "license": {
         "identifier": "Proprietary",
         "url": "http://xue.youdao.com/sw/m/1191866"
     },
-    "url": "https://codown.youdao.com/cidian/static/9.0/20220708/YoudaoDictSetup.exe#/dl.7z",
-    "hash": "da1133bc532274ad315a56186c54bca32434dc57de9a6c99c97f92619b1e761e",
+    "url": "https://codown.youdao.com/cidian/static/9.0/20220817/YoudaoDictSetup.exe#/dl.7z",
+    "hash": "d96883916d5cbf3ea71239f8b06b9a2ac9862015aec1e537e8835363211ed5d8",
     "pre_install": "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\dict.7z\" \"$dir\"",
     "post_install": "@('$PLUGINSDIR', '[NSIS].nsi', 'uninst.exe', '$_67_') | ForEach-Object { Remove-Item \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force -Recurse }",
     "bin": "YoudaoDict.exe",

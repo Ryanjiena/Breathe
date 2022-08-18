@@ -1,5 +1,5 @@
 {
-    "version": "6.3.3.611",
+    "version": "6.3.5.613",
     "description": "Clean registry and junk files from your PCs. Protect your privacy and make your PCs more secure.",
     "homepage": "https://www.wisecleaner.com/wise-care-365.html",
     "license": {
@@ -8,14 +8,14 @@
     },
     "depends": "sudo",
     "url": [
-        "https://downloads.wisecleaner.com/soft/WiseCare365_6.3.3.611.zip",
+        "https://downloads.wisecleaner.com/soft/WiseCare365_6.3.5.613.zip",
         "https://pan.jiemi.workers.dev/?file=/scoop/patch/wisecare365.7z#dl.7z_"
     ],
     "hash": [
-        "3c87406846738f50f86723f91fd8268aa225af609ee2b36fac1b70212aa4eb4e",
+        "c08c29211b65df61334068379e22a8d178f51e8b0fe2ac05170174d4f718a9b6",
         "65d3521a86a464a8cd75a4c628beeed936bf96029d7520b73afce41033eec348"
     ],
-    "extract_dir": "WiseCare365_6.3.3.611",
+    "extract_dir": "WiseCare365_6.3.5.613",
     "pre_install": [
         "$7z=(Get-ChildItem $dir\\wisecare365.7z*).Name",
         "7z x -p2022 $dir\\$7z $('-o' + $dir) | Out-Null",
