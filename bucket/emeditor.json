@@ -1,0 +1,56 @@
+{
+    "version": "21.9.1",
+    "description": "A text editor supporting very large files, CSV, macros, and plugins.",
+    "homepage": "https://www.emeditor.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.emeditor.com/support/"
+    },
+    "notes": "KEY 'DMAZM-WHY52-AX222-ZQJXN-79JXH'",
+    "architecture": {
+        "64bit": {
+            "url": "https://emeditor.blob.core.windows.net/emed64_21.9.1_portable.zip",
+            "hash": "f37896d1ae92ef93791069de257e1588691c26c4ddb1d7ed6e9c9f3862e1183c"
+        },
+        "32bit": {
+            "url": "https://emeditor.blob.core.windows.net/emed32_21.9.1_portable.zip",
+            "hash": "ab8a6b7627fad6abc305a89ba0f3421d8245c45932394fdf0c2f5e7007b081d5"
+        }
+    },
+    "pre_install": [
+        "@('eeCommon.ini', 'eeConfig.ini', 'eeLM.ini', 'eePlugins.ini') | ForEach-Object {",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" | Out-Null }",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "@('eeCommon.ini', 'eeConfig.ini', 'eeLM.ini', 'eePlugins.ini') | ForEach-Object {",
+            "    if (Test-Path \"$dir\\$_\") {",
+            "        ensure \"$persist_dir\" | Out-Null",
+            "        Copy-Item \"$dir\\$_\" \"$persist_dir\\\" | Out-Null",
+            "    }",
+            "}"
+        ]
+    },
+    "shortcuts": [
+        [
+            "EmEditor.exe",
+            "EmEditor"
+        ]
+    ],
+    "persist": "AppData",
+    "checkver": {
+        "url": "https://www.emeditor.com/download/",
+        "regex": "<h3>Download latest version: v([\\d.]+)</h3>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://emeditor.blob.core.windows.net/emed64_$version_portable.zip"
+            },
+            "32bit": {
+                "url": "https://emeditor.blob.core.windows.net/emed32_$version_portable.zip"
+            }
+        }
+    }
+}
