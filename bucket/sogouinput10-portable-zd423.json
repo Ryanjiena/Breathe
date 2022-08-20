@@ -7,7 +7,7 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://www.423down.com/587.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗输入法v10.5.0.4737绿色精简版WinXP.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗输入法v10.5.0.4737绿色精简版WinXP.7z",
     "hash": "1ea620587877d713d2644bbe033c235491d44456a6c4e3d79079986553825655",
     "extract_dir": "搜狗拼音",
     "installer": {
@@ -45,6 +45,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename"
     }
 }

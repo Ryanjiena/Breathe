@@ -7,7 +7,7 @@
         "url": "https://pan.baidu.com/disk/main#/protocol/duty_mobi"
     },
     "notes": "Features: <https://www.423down.com/8999.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/BaiduNetdisk_v6.5.0.3_NoAD_Green_NoP2P.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/BaiduNetdisk_v6.5.0.3_NoAD_Green_NoP2P.7z",
     "hash": "41cf786ed460d3f4c33fe0b6581647aa3e156059c465714aeac213d26d206b40",
     "extract_dir": "BaiduNetdisk",
     "installer": {
@@ -28,6 +28,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/BaiduNetdisk_v6.5.0.3_NoAD_Green_NoP2P.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/BaiduNetdisk_v6.5.0.3_NoAD_Green_NoP2P.7z"
     }
 }

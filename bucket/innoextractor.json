@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/52pj/InnoExtractor_V5.4.5.202.rar",
+    "url": "https://pan.jiemi.workers.dev/?file=/52pj/InnoExtractor_V5.4.5.202.rar",
     "hash": "833179a90d0249151cc2e79eccf6b28bfa76f39dba07ff6894d667f6bf196000",
     "pre_install": "if (!(Test-Path \"$persist_dir\\Config.ini\")) { New-Item \"$dir\\Config.ini\" -ItemType File | Out-Null }",
     "shortcuts": [
@@ -20,6 +20,6 @@
         "regex": "(?<filename>InnoExtractor_V([\\d.]+)\\.rar)"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/52pj/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/52pj/$matchFilename"
     }
 }

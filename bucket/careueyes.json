@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Shareware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/CareUEyes_2.1.12.0_Portable.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/CareUEyes_2.1.12.0_Portable.7z",
     "hash": "7afc302fff3c1cda6f4c29fcc264659139e8e3ac87080f9e85255d7ea51aa842",
     "extract_dir": "CareUEyesPortable.JS",
     "shortcuts": [
@@ -21,6 +21,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/CareUEyes_$version_Portable.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/else/CareUEyes_$version_Portable.7z"
     }
 }

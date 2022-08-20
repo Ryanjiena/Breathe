@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/antdownload_3.0.5.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/antdownload_3.0.5.zip",
     "hash": "7096739e6b751eeeaa9b42b5835d21fb04f7fe58dd1c35f24aa8a6fe31c01e96",
     "shortcuts": [
         [
@@ -23,7 +23,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/antdownload_$version.zip",
+        "url": "https://pan.jiemi.workers.dev/?file=/zd423/antdownload_$version.zip",
         "extract_dir": "antdownload $version"
     }
 }

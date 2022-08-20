@@ -7,7 +7,7 @@
         "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
     },
     "notes": "Features: <https://www.ghxi.com/ce.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/CheatEngine_7.4_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/CheatEngine_7.4_Green.7z",
     "hash": "b8402ee4c2fd1db400b153c6997308f7f9bb4bc4ddb0b24143a7ee79ea6b8cb8",
     "extract_dir": "Cheat Engine 7.4",
     "architecture": {
@@ -50,7 +50,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFile",
+        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFile",
         "extract_dir": "Cheat Engine $version"
     }
 }

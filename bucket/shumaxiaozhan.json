@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/数码小站_V0.2.3.zip#dl.zip_",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/数码小站_V0.2.3.zip#dl.zip_",
     "hash": "68bd00279b73ce458bdac54049bc4811bdb8c2caa8f23723ce56ba8b1fcde46f",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\$fname\" -Switches '-p2022' -Removal",
@@ -34,6 +34,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/数码小站_V$version.zip#dl.zip_"
+        "url": "https://pan.jiemi.workers.dev/?file=/else/数码小站_V$version.zip#dl.zip_"
     }
 }

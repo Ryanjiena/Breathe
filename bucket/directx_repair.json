@@ -9,7 +9,7 @@
         "FAQ: <https://blog.csdn.net/VBcom/article/details/12647463>",
         "Feedback: <https://blog.csdn.net/vbcom/article/details/7245186>"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/DirectX_Repair(Enhanced_Edition)_v4.2.0.40217.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/DirectX_Repair(Enhanced_Edition)_v4.2.0.40217.7z",
     "hash": "a2f4ddec887eebc70dd70a9f1ee38dbbe8ad0297f92c9ecde611a617b619c9d9",
     "extract_dir": "DirectX_Repair(Enhanced_Edition)",
     "shortcuts": [
@@ -24,7 +24,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/DirectX_Repair(Enhanced_Edition)_v$version.7z",
+        "url": "https://pan.jiemi.workers.dev/?file=/else/DirectX_Repair(Enhanced_Edition)_v$version.7z",
         "extract_dir": "DirectX_Repair(Enhanced_Edition)"
     }
 }

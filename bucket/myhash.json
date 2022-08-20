@@ -6,7 +6,7 @@
         "identifier": "Freeware"
     },
     "notes": "Add right mouse button menu: Software title bar -> Right click -> Add right click menu (R)",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/MyHash_1.4.7_Final_drag0n.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/MyHash_1.4.7_Final_drag0n.7z",
     "hash": "5c7306a6081d81197d8c623a5c1a1ab1ecba9e7f031c3fb9772e7962428e35e9",
     "extract_dir": "MyHash",
     "architecture": {
@@ -35,6 +35,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/MyHash_$version_Final_drag0n.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/MyHash_$version_Final_drag0n.7z"
     }
 }

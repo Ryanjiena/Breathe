@@ -8,7 +8,7 @@
     "suggest": {
         "adb": "adb"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/搞机工具箱V9.10.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/搞机工具箱V9.10.7z",
     "hash": "ec999f68a31a5a11cf05a389bf06902240933e65cc08d84402826ec89619341f",
     "extract_dir": "搞机工具箱V9.10",
     "shortcuts": [
@@ -23,7 +23,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/搞机工具箱V$version.7z",
+        "url": "https://pan.jiemi.workers.dev/?file=/else/搞机工具箱V$version.7z",
         "extract_dir": "搞机工具箱V$version"
     }
 }

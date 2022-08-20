@@ -10,7 +10,7 @@
         "Since WeChat has strong payment properties, the third-party version has certain risks, so it is recommended to use the official wechat package (scoop install wechat-portable) if you don't just need it.",
         "Features: <http://www.qiuquan.cc/chat/wechat.html>"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/WeChat_3.7.5.5.Beta_QiuQuan.exe#/Installer.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/tencent/WeChat_3.7.5.5.Beta_QiuQuan.exe#/Installer.exe",
     "hash": "be867cd8469685f75f8a858617d332652e9db7767ce4d28e7b66972b399e3e50",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\Tencent\\WeChat\")) {",
@@ -44,6 +44,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/$matchFilename#/Installer.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/tencent/$matchFilename#/Installer.exe"
     }
 }

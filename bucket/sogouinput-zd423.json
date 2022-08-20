@@ -7,7 +7,7 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://www.423down.com/587.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/SogouInput_v11.9.0.5784_zd423_noad_lite.exe#/installer.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/sogou/SogouInput_v11.9.0.5784_zd423_noad_lite.exe#/installer.exe",
     "hash": "32ca0c77fc86691e236ab8b3ecad846ffdbe8055b307776c188890207276c7d7",
     "installer": {
         "script": [
@@ -38,7 +38,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename#/installer.exe",
+        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename#/installer.exe",
         "hash": {
             "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
             "mode": "extract",

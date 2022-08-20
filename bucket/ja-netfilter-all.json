@@ -7,7 +7,7 @@
         "url": "https://github.com/ja-netfilter/ja-netfilter/blob/master/LICENSE"
     },
     "notes": "Configure as described in \"$dir\\readme.txt\"! For testing purposes only, not for commercial use!",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/ja-netfilter-all-20220601-c119ea0685a8de09a5ee4d9cb22ed9b73e85d890.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/patch/ja-netfilter-all-20220601-c119ea0685a8de09a5ee4d9cb22ed9b73e85d890.zip",
     "hash": "cae11d583a01043ae36bbc4d8e92e8ecdc8fe12523118998e644bf7dcac2991a",
     "extract_dir": "ja-netfilter-all",
     "bin": [
@@ -22,6 +22,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/patch/$matchFilename"
     }
 }

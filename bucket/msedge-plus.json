@@ -16,11 +16,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x64-v20220504.024707.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x64-v20220504.024707.zip",
             "hash": "17fbea367fd8dca6e6369e9a57c59edd973b8938d595b25c456431ab23948b20"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x86-v20220504.024707.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x86-v20220504.024707.zip",
             "hash": "275dc3466e9410ab2794a615b6628080c896cd24b6802262169c76aac1003292"
         }
     },
@@ -48,10 +48,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x64-v$version.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x64-v$version.zip"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/edge_plus-x86-v$version.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x86-v$version.zip"
             }
         }
     }

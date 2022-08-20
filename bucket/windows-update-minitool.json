@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/wumt_v22.04.2022.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/wumt_v22.04.2022.zip",
     "hash": "1bd6fbd5e65d9e88f47cb43f60e0e694b702513fde26afb18a0d1396bcb7307d",
     "architecture": {
         "64bit": {
@@ -43,6 +43,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
     }
 }

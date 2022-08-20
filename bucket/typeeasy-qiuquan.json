@@ -7,7 +7,7 @@
         "url": "https://www.51dzt.com/agreement/personal"
     },
     "notes": "Feature: <http://www.qiuquan.cc/other/typeeasy.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/TypeEasy_2.2.0.56_QiuQuan.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/TypeEasy_2.2.0.56_QiuQuan.7z",
     "hash": "6866ae7d4ddb80170f8a55de42f2ce40076b78989b2b3a100147c3322a0ec35d",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\TypeEasyData\") -and (Test-Path \"$env:APPDATA\\TypeEasyData\")) {",
@@ -42,6 +42,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/$matchFilename"
     }
 }

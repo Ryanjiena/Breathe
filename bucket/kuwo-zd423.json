@@ -7,7 +7,7 @@
         "url": "http://www.kuwo.cn/static/page/license/license.html"
     },
     "notes": "Features: <https://www.423down.com/9195.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/KwMusic_9.1.1.7_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/KwMusic_9.1.1.7_Green.7z",
     "hash": "3688c5e845e40c627fb19379807e91f481e0f08c639721a6c9fd6c671caa0f2a",
     "extract_dir": "KwMusic",
     "installer": {
@@ -36,6 +36,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
     }
 }

@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/MicroSoftKeys_v1.0.rar#dl.7z_",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/MicroSoftKeys_v1.0.rar#dl.7z_",
     "hash": "3e7bda16af23faad228e74b4d9701eb8948cc081b020cc8892de823eea07f59c",
     "pre_install": [
         "$7z=(Get-ChildItem $dir\\MicroSoftKeys_v*).Name",
@@ -24,6 +24,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/MicroSoftKeys_v$version.rar#dl.7z_"
+        "url": "https://pan.jiemi.workers.dev/?file=/else/MicroSoftKeys_v$version.rar#dl.7z_"
     }
 }

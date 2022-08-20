@@ -9,7 +9,7 @@
     "depends": "sudo",
     "url": [
         "https://downloads.wisecleaner.com/soft/WiseCare365_6.3.5.613.zip",
-        "https://pan.jiemi.workers.dev/?file=/scoop/patch/wisecare365.7z#dl.7z_"
+        "https://pan.jiemi.workers.dev/?file=/patch/wisecare365.7z#dl.7z_"
     ],
     "hash": [
         "c08c29211b65df61334068379e22a8d178f51e8b0fe2ac05170174d4f718a9b6",

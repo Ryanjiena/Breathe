@@ -1,5 +1,5 @@
 {
-    "version": "9.8.0.3746",
+    "version": "9.8.03746",
     "description": "Sogou Pinyin Input 3rd party modified version, maintained by 423down.com.",
     "homepage": "https://pinyin.sogou.com",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://www.423down.com/587.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗输入法v9.8.0.3746去广告精简优化版.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗输入法v9.8.03746去广告精简优化版.exe",
     "hash": "d64cffb2e9eb169f4a4cd15be8e936de9a458d614f67519eaf736b1c6453b7e9",
     "installer": {
         "script": [
@@ -38,6 +38,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename"
     }
 }

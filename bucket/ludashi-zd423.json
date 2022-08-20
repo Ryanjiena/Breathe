@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "http://www.ludashi.com/licence.html"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/LuDaShi_v5.21.1300_NoAD_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/LuDaShi_v5.21.1300_NoAD_Green.7z",
     "hash": "3a5904ec2569eebe6623195d90dc18c750370d635a296f22ae339881c78b60ce",
     "extract_dir": "LuDaShi",
     "installer": {
@@ -27,6 +27,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/LuDaShi_v$version_NoAD_Green.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/LuDaShi_v$version_NoAD_Green.7z"
     }
 }

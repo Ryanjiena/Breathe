@@ -10,11 +10,11 @@
     "depends": "typora",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/Typora/app_asar_file_v1.3.8-windows-x64.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v1.3.8-windows-x64.zip",
             "hash": "b90ede94bba59bb24b9b15a90707967100e394ee50121fccae401ee2b0ac5f9b"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/Typora/app_asar_file_v1.3.8-windows-x86.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v1.3.8-windows-x86.zip",
             "hash": "35e539f2b6e952fcb953de0501e6ce5c2f6181b27f0345115223a4b1a1518587"
         }
     },
@@ -43,10 +43,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/Typora/app_asar_file_v$version-windows-x64.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v$version-windows-x64.zip"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/Typora/app_asar_file_v$version-windows-x86.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v$version-windows-x86.zip"
             }
         }
     }

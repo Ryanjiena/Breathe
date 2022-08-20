@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://haozip.2345.cc/help/help1-2.htm"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/好压批量文件改名_v6.3.1.11144.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/好压批量文件改名_v6.3.1.11144.7z",
     "hash": "45fe6d6e83e1cf708e268224fafa65254bf6e2686d95a7d94eecec349841187b",
     "architecture": {
         "64bit": {
@@ -38,6 +38,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/好压批量文件改名_v$version.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/好压批量文件改名_v$version.7z"
     }
 }

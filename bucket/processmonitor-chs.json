@@ -9,7 +9,7 @@
     "notes": "Chs Release Page: <https://www.52pojie.cn/thread-1652817-1-1.html>",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Procmon_chs_v3.89.exe#/Procmon_chs.exe",
+            "url": "https://pan.jiemi.workers.dev/?file=/else/Procmon_chs_v3.89.exe#/Procmon_chs.exe",
             "hash": "3fb15171ad376626ce5ca301585fc5c33bc9034a1f80c659ce73fba03cc1a9c1",
             "pre_install": [
                 "$sysint = 'HKCU:\\SOFTWARE\\Sysinternals'",
@@ -41,6 +41,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Procmon_chs_v$version.exe#/Procmon_chs.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/else/Procmon_chs_v$version.exe#/Procmon_chs.exe"
     }
 }

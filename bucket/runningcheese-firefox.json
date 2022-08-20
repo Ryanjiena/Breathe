@@ -12,12 +12,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_102.0_64bit_Portable.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseFirefox_102.0_64bit_Portable.7z",
             "hash": "42b0bd7c1f48f67d7eea902c4c36c543f701b8c6478c9ad2c4269bd98e39eed7",
             "extract_dir": "RunningCheeseFirefox_102.0_64bit_Portable"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_102.0_32bit_Portable.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseFirefox_102.0_32bit_Portable.7z",
             "hash": "26cd28119348614ea247a5e3ee442fcadaa0d2a9ced242e6dc1237bdc54af716",
             "extract_dir": "RunningCheeseFirefox_102.0_32bit_Portable"
         }
@@ -32,16 +32,16 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_$version_64bit_Portable.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseFirefox_$version_64bit_Portable.7z",
                 "extract_dir": "RunningCheeseFirefox_$version_64bit_Portable"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseFirefox_$version_32bit_Portable.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseFirefox_$version_32bit_Portable.7z",
                 "extract_dir": "RunningCheeseFirefox_$version_32bit_Portable"
             }
         },
         "hash": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/hash.txt",
+            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/hash.txt",
             "mode": "extract",
             "regex": "$sha256\\s+$basename"
         }

@@ -10,7 +10,7 @@
         "meta/chrome-canary",
         "meta/chrome-plus"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/Chrome.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/shuax/Chrome.7z",
     "hash": "7545b06b1ee39aeb9ea1467b6db429f5fb0ec6863bb5b8b921d4d29057127087",
     "installer": {
         "script": [
@@ -43,6 +43,6 @@
         "regex": "(?sm)canary.*?win-x86.*?chrome/[\\w-]+_([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/shuax/Chrome.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/shuax/Chrome.7z"
     }
 }

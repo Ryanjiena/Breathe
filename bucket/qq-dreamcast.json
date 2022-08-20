@@ -20,7 +20,7 @@
             "meta/vcredist-dreamcast"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/腾讯QQ_9.6.3.28769_安装版.rar",
+    "url": "https://pan.jiemi.workers.dev/?file=/tencent/腾讯QQ_9.6.3.28769_安装版.rar",
     "hash": "c3067d1d82d80a33a3a4241c02bcc531e774caf6af731ae4b6112fb14a56b2f6",
     "installer": {
         "script": [
@@ -49,6 +49,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/tencent/$matchFilename"
     }
 }

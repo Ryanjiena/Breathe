@@ -7,7 +7,7 @@
         "url": "https://www.netsarang.com/docs/ver7_eula.pdf"
     },
     "notes": "Features: <https://www.423down.com/8196.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/XshellPlus_v7.0.0019.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/XshellPlus_v7.0.0019.7z",
     "hash": "65441099f0ff490af2297418ee0b398fe70022c746fade370ee28cbc930ef3a7",
     "extract_dir": "XshellPlus",
     "installer": {
@@ -35,6 +35,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
     }
 }

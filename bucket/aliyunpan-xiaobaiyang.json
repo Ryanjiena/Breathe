@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/阿里小白羊版Win_v2.12.14.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/阿里小白羊版Win_v2.12.14.7z",
     "hash": "8467a10afa28daf514645eed93d1fd9c27fd347c0dd42979687ae38a036fb081",
     "extract_dir": "阿里云盘小白羊版v2",
     "installer": {
@@ -33,6 +33,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/阿里小白羊版Win_v$version.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/else/阿里小白羊版Win_v$version.7z"
     }
 }

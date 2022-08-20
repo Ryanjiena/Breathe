@@ -7,7 +7,7 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://weibo.com/521798567>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗拼音传统版_v6.7i(6.7.0.0747)_大水牛去广告优化屏蔽升级版v2.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗拼音传统版_v6.7i(6.7.0.0747)_大水牛去广告优化屏蔽升级版v2.exe",
     "hash": "18a4a6b14bd71f0c8caf9eeae49bac16e80f51462d6107cb75b76c6998985840",
     "installer": {
         "script": [
@@ -38,6 +38,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename"
     }
 }

@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/阿里云盘小白羊版_3.05.23.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/阿里云盘小白羊版_3.05.23.exe",
     "hash": "be696b62d1792ee4c11945b7c63ab1eac5a650ff6ea7c733178dae29ba4f6fae",
     "installer": {
         "script": [
@@ -33,6 +33,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/阿里云盘小白羊版_$version.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/else/阿里云盘小白羊版_$version.exe"
     }
 }

@@ -8,7 +8,7 @@
     },
     "notes": "Features: <https://www.423down.com/7415.html>",
     "depends": "sudo",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/TIM_3.3.9.22051_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/tencent/TIM_3.3.9.22051_Green.7z",
     "hash": "10e033cf7e55d8ba13480b5cb3f53156b1374569fda4572489f49e84255e9f17",
     "extract_dir": "TIM",
     "pre_install": [
@@ -40,6 +40,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/tencent/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/tencent/$matchFilename"
     }
 }

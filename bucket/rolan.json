@@ -6,7 +6,7 @@
         "identifier": "Freeware"
     },
     "notes": "When using other skins, rename the skin file to 'Rolan.skin'",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Rolan_v1.3.6.1_NoNet_2016.04-fix.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Rolan_v1.3.6.1_NoNet_2016.04-fix.7z",
     "hash": "a9ecc1d985f932661ab66fa355e410b85ed8271fa52f807edeb5bab22f4568b7",
     "bin": "Rolan.exe",
     "shortcuts": [
@@ -21,6 +21,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFile"
+        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/$matchFile"
     }
 }

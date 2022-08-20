@@ -28,7 +28,9 @@
         "script": [
             "Copy-Item \"$bucketsdir\\tian\\scripts\\winrar\\Windows_11_x64_.theme.rar\" \"$dir\\Windows_11_x64_.theme.rar\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
             "Copy-Item \"$bucketsdir\\tian\\scripts\\winrar\\Win11_kentaP.2.0_64x.theme.rar\" \"$dir\\Win11_kentaP.2.0_64x.theme.rar\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-            "Copy-Item \"$bucketsdir\\tian\\scripts\\winrar\\Win11_DARK.kentaP.2.0_64x.theme.rar\" \"$dir\\Win11_DARK.kentaP.2.0_64x.theme.rar\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+            "Copy-Item \"$bucketsdir\\tian\\scripts\\winrar\\Win11_DARK.kentaP.2.0_64x.theme.rar\" \"$dir\\Win11_DARK.kentaP.2.0_64x.theme.rar\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$bucketsdir\\tian\\scripts\\winrar\\winrar-custom-settings.reg\" \"$dir\\winrar-custom-settings.reg\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "sudo regedit /s \"$dir\\winrar-custom-settings.reg\""
         ]
     },
     "bin": [
