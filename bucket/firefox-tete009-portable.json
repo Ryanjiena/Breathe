@@ -1,5 +1,5 @@
 {
-    "version": "103.0.1",
+    "version": "103.0.2",
     "description": "tete009 private builds (Win32) of Mozilla Firefox.",
     "homepage": "http://www1.plala.or.jp/tete009/en-US/software.html#FFDL#FIREFOX",
     "license": {
@@ -12,12 +12,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-103.0.1-2022072922.en-US.win32-tete009-x64-pgo.7z",
-            "hash": "69166eb456e63389457a1d58e55512685fd6f7711d34285eb56b98aadf536176"
+            "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-103.0.2-2022080812.en-US.win32-tete009-x64-pgo.7z",
+            "hash": "7e951725681eb7e7dccc18bfd7d128d9d6cab841dfde03405591dee97194635b"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-103.0.1-2022072922.en-US.win32-tete009-sse2-pgo.7z",
-            "hash": "10f82ece03fa34b85b61558913d9a2fc6940a4d3fa5b889edfad32d67893b9e1"
+            "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-103.0.2-2022080812.en-US.win32-tete009-sse2-pgo.7z",
+            "hash": "346ca362c34f57a4edbdf1c457377cb1a50f86db3b681f1cc1d465b50c4fab67"
         }
     },
     "pre_install": [

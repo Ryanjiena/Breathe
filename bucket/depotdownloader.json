@@ -1,13 +1,13 @@
 {
-    "version": "2.4.6",
+    "version": "2.4.7",
     "description": "Steam depot downloader utilizing the SteamKit2 library. Supports .NET 6.0",
     "homepage": "https://bluepointlilac.github.io/ContextMenuManager/",
     "license": {
         "identifier": "GPL-2.0-or-later",
         "url": "https://github.com/SteamRE/DepotDownloader/blob/master/LICENSE"
     },
-    "url": "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.4.6/depotdownloader-2.4.6.zip",
-    "hash": "7a09702f8fa414076d9c07a17f5238db555dc826c8f2dd3921c117ba49223a98",
+    "url": "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.4.7/depotdownloader-2.4.7.zip",
+    "hash": "0613007b77bd69795c8386fb566467ffae3d2d83c241bfbb33fe3c65e332b7a9",
     "bin": [
         [
             "DepotDownloader.exe",
