@@ -14,7 +14,7 @@
  | [ScoopInstaller/Main](https://github.com/ScoopInstaller/Main.git) | [![ScoopInstaller/Main badge](https://img.shields.io/static/v1?label=ScoopInstaller/Main&message=1069&color=green)](https://github.com/ScoopInstaller/Main.git) |
  | [ScoopInstaller/Nonportable](https://github.com/ScoopInstaller/Nonportable.git) | [![ScoopInstaller/Nonportable badge](https://img.shields.io/static/v1?label=ScoopInstaller/Nonportable&message=97&color=green)](https://github.com/ScoopInstaller/Nonportable.git) |
  | [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions.git) | [![ScoopInstaller/Versions badge](https://img.shields.io/static/v1?label=ScoopInstaller/Versions&message=353&color=green)](https://github.com/ScoopInstaller/Versions.git) |
- | [ScoopInstaller/Extras](https://github.com/ScoopInstaller/Extras.git) | [![ScoopInstaller/Extras badge](https://img.shields.io/static/v1?label=ScoopInstaller/Extras&message=1657&color=green)](https://github.com/ScoopInstaller/Extras.git) |
+ | [ScoopInstaller/Extras](https://github.com/ScoopInstaller/Extras.git) | [![ScoopInstaller/Extras badge](https://img.shields.io/static/v1?label=ScoopInstaller/Extras&message=1658&color=green)](https://github.com/ScoopInstaller/Extras.git) |
  | [Ryanjiena/Meta](https://github.com/Ryanjiena/Meta.git) | [![Ryanjiena/Meta badge](https://img.shields.io/static/v1?label=Ryanjiena/Meta&message=818&color=green)](https://github.com/Ryanjiena/Meta.git) |
  | [chawyehsu/dorado](https://github.com/chawyehsu/dorado.git) | [![chawyehsu/dorado badge](https://img.shields.io/static/v1?label=chawyehsu/dorado&message=215&color=green)](https://github.com/chawyehsu/dorado.git) |
 
