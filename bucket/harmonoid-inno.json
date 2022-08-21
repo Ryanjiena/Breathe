@@ -1,5 +1,5 @@
 {
-    "version": "0.2.7",
+    "version": "0.2.8",
     "description": "Elegant music app to play & manage music library. Time-synced lyrics, playlists & visuals. YouTube Music.",
     "homepage": "https://github.com/harmonoid/harmonoid",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/alexmercerind2/harmonoid-releases/releases/download/v0.2.7/harmonoid-windows-setup.exe",
-            "hash": "dd49493e6da904b8329afd448dc38ec1b43f584367a4a04e11e7fa9be08a5591"
+            "url": "https://github.com/alexmercerind2/harmonoid-releases/releases/download/v0.2.8/harmonoid-windows-setup.exe",
+            "hash": "1aa1661c2123bec5fabe8eb102261042c7c6f43a861affbe5b86b7e4495aad39"
         }
     },
     "innosetup": true,

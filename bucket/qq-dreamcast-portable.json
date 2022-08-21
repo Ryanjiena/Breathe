@@ -21,7 +21,7 @@
             "meta/vcredist-dreamcast"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/tencent/腾讯QQ_9.6.3.28769_绿色版.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/腾讯QQ_9.6.3.28769_绿色版.7z",
     "hash": "34411696b044c24e2f945d721449b30bb8f458357eb62e8a917df37d285cbe34",
     "extract_dir": "QQ",
     "installer": {
