@@ -1,5 +1,5 @@
 {
-    "version": "2.5",
+    "version": "2.6",
     "description": "File centipede is an internet file download manager with enhanced features, it's fast, customizable, user-friendly, multi-protocol supported, contains lots of useful auxiliary tools, and it's free with no ads, you can also use it to download audio and videos from websites, increase your download speeds by up to 1.1 times, it's the best internet download manager you can find(so far).",
     "homepage": "http://www.filecxx.com",
     "license": {
@@ -8,8 +8,8 @@
     "notes": "If the BT DHT is 0 from the bottom of the software, and there is no speed for downloading magnet links and torrents, this is caused by the Windows firewall. You should try to close the filec process or restart your computer.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/filecxx/FileCentipede/releases/download/2.5/filecxx_2.5_win_x64.zip",
-            "hash": "0b7015e83a26ffdb2050d3f31d83ae25cd1728a24c8ff26473fb482875402882"
+            "url": "https://github.com/filecxx/FileCentipede/releases/download/2.6/filecxx_2.6_win_x64.zip",
+            "hash": "95065d5d6ea376d5e61e193d37b5c47b869de58c80ca58ad6df2bb61a7159451"
         }
     },
     "pre_install": [
