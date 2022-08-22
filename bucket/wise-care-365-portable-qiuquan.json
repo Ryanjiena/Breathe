@@ -1,0 +1,32 @@
+{
+    "version": "6.3.3.611",
+    "description": "WiseCare365 3rd party modified version, maintained by qiuquan.cc.",
+    "homepage": "https://www.wisecleaner.com/wise-care-365.html",
+    "license": {
+        "identifier": "Proprietary|Shareware",
+        "url": "https://www.wisecleaner.com/eula.html"
+    },
+    "notes": "Features: <http://www.qiuquan.cc/systemtool/wise-care-365.html>",
+    "depends": "sudo",
+    "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/Wise.Care.365_6.3.3.611_QiuQuan_Green_20220725.7z",
+    "hash": "02eefff3325e5c9a6c8cdb1b718aa91a4d68748084aca7923f8107c9c1c329d3",
+    "shortcuts": [
+        [
+            "WiseCare365.exe",
+            "Wise Care 365 Pro"
+        ]
+    ],
+    "persist": [
+        "config.ini",
+        "Config_tray.ini",
+        "DefragOptions.ini"
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?<filename>Wise.Care.365_([\\d.]+)_QiuQuan_Green_(?<date>\\d{8})\\.7z)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/$matchFilename"
+    }
+}
