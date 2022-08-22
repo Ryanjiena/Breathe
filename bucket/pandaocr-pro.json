@@ -1,5 +1,5 @@
 {
-    "version": "5.42",
+    "version": "5.43",
     "description": "Multifunctional multi-engine OCR graphic recognition, translation, read aloud, game machine turning Chinese tools.",
     "homepage": "https://github.com/miaomiaosoft/PandaOCR.Pro",
     "license": {
@@ -9,8 +9,8 @@
         "Tutorials: <https://support.qq.com/products/322047/faqs-more#classifyId=59199>",
         "Feedback: <https://github.com/miaomiaosoft/PandaOCR.Pro/issues>"
     ],
-    "url": "https://github.com/miaomiaosoft/PandaOCR.Pro/releases/download/5.42/PandaOCR.Pro_5.42.zip",
-    "hash": "1d7758b4ae1a8f7ebd7c44f6b40788e2797da4a657cef7a40c758525378e0423",
+    "url": "https://github.com/miaomiaosoft/PandaOCR.Pro/releases/download/5.43/PandaOCR.Pro_5.43.zip",
+    "hash": "02334fa5fe74b2c2bff3f22b1ed0846674d8ff7dabc9770dfdb665e335f99355",
     "bin": "PandaOCR.Pro.exe",
     "shortcuts": [
         [
