@@ -10,13 +10,23 @@
     "url": "https://pan.jiemi.workers.dev/?file=/zd423/QQ_9.6.3.28774_Green.7z",
     "hash": "b39e64ae51a091f52cf9f844f47142fbd1a87921fef39e689d43de3a4ea861cb",
     "extract_dir": "QQ",
+    "pre_install": [
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\qq\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\qq\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+    ],
     "installer": {
-        "file": "!)绿化处理.bat",
+        "file": "install.bat",
         "keep": true
     },
     "uninstaller": {
-        "file": "!)卸载清除.bat"
+        "file": "uninstall.bat"
     },
+    "shortcuts": [
+        [
+            "Bin\\QQScLauncher.exe",
+            "Tencent\\QQ"
+        ]
+    ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
         "regex": "QQ_([\\d.]+)_Green.7z",
