@@ -1,5 +1,5 @@
 {
-    "version": "1.14.94",
+    "version": "1.14.95",
     "description": "Bypass - Eaiser to buy your tickets.",
     "homepage": "https://www.bypass.cn/",
     "license": {
@@ -8,7 +8,7 @@
     "notes": "Tips: the Bypass software requires elevated privileges to run.",
     "depends": "sudo",
     "url": "https://www.bypass.cn/api/download?name=Bypass.zip#/dl.7z",
-    "hash": "e40b7b628f4aa4568ef500e6f89c4b6ae192a4606941b0b5d9a71cd9f8b3d1c0",
+    "hash": "78a1f4d2ca421bf2414df717e739bdb614f1a27b5eb40649cac5ca6b28ce121d",
     "installer": {
         "script": "Copy-Item \"$bucketsdir\\tian\\scripts\\bypass\\start-bypass.ps1\" \"$dir\\start-bypass.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
     },
