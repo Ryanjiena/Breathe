@@ -1,12 +1,8 @@
 {
     "version": "21.9.1",
-    "description": "A text editor supporting very large files, CSV, macros, and plugins.",
-    "homepage": "https://www.emeditor.com",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.emeditor.com/support/"
-    },
-    "notes": "KEY 'DMAZM-WHY52-AX222-ZQJXN-79JXH'",
+    "description": "A fast, lightweight and extensible text editor for Windows. Useful for opening very large files.",
+    "homepage": "https://www.emeditor.com/",
+    "license": "Shareware",
     "architecture": {
         "64bit": {
             "url": "https://emeditor.blob.core.windows.net/emed64_21.9.1_portable.zip",
@@ -18,30 +14,28 @@
         }
     },
     "pre_install": [
-        "@('eeCommon.ini', 'eeConfig.ini', 'eeLM.ini', 'eePlugins.ini') | ForEach-Object {",
-        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" | Out-Null }",
+        "$manifest.persist | ForEach-Object {",
+        "    if ([io.path]::GetExtension($_)) {",
+        "        if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
+        "    }",
         "}"
     ],
-    "uninstaller": {
-        "script": [
-            "@('eeCommon.ini', 'eeConfig.ini', 'eeLM.ini', 'eePlugins.ini') | ForEach-Object {",
-            "    if (Test-Path \"$dir\\$_\") {",
-            "        ensure \"$persist_dir\" | Out-Null",
-            "        Copy-Item \"$dir\\$_\" \"$persist_dir\\\" | Out-Null",
-            "    }",
-            "}"
-        ]
-    },
+    "bin": "EmEditor.exe",
     "shortcuts": [
         [
             "EmEditor.exe",
             "EmEditor"
         ]
     ],
-    "persist": "AppData",
+    "persist": [
+        "eeCommon.ini",
+        "eeConfig.ini",
+        "eeLM.ini",
+        "eePlugins.ini"
+    ],
     "checkver": {
         "url": "https://www.emeditor.com/download/",
-        "regex": "<h3>Download latest version: v([\\d.]+)</h3>"
+        "regex": "latest version: v([\\d.]+)</h3>"
     },
     "autoupdate": {
         "architecture": {
