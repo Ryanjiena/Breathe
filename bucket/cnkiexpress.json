@@ -1,5 +1,5 @@
 {
-    "version": "0.2.23",
+    "version": "0.2.24",
     "description": "CNKI Express integrates academic communication, reading, Q&A, sync, personalization, intelligent pushing and instant messaging in one, making academics more efficient and convenient.",
     "homepage": "https://m.cnki.net/mcnkidown",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.cnki.net/cnkiexpress/%E5%85%A8%E7%90%83%E5%AD%A6%E6%9C%AF%E5%BF%AB%E6%8A%A5%20Setup%200.2.23.exe#/dl.7z",
-            "hash": "178157fe1ce8e33f20a445536f1ceb2d1b42be3fece43b0b0ab03f4928e4fb28",
+            "url": "https://download.cnki.net/cnkiexpress/%E5%85%A8%E7%90%83%E5%AD%A6%E6%9C%AF%E5%BF%AB%E6%8A%A5%20Setup%200.2.24.exe#/dl.7z",
+            "hash": "c6950045223cfe1811bca63f12e36f9ae97494402dfa62a63c1e8ee08cd3a5a8",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
             "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\resources\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
         }
