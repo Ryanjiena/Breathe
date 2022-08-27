@@ -1,13 +1,13 @@
 {
-    "version": "2.2.0",
+    "version": "2.3.0",
     "description": "BiliBili Stream Recorder.",
     "homepage": "https://rec.danmuji.org",
     "license": {
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/Bililive/BililiveRecorder/blob/dev/LICENSE"
     },
-    "url": "https://github.com/Bililive/BililiveRecorder/releases/download/v2.2.0/BililiveRecorder-WPF-Portable.zip",
-    "hash": "2dd438e893f8b7d41ee02ed689df7f3366bfd50c4f59ad68c4c3b4c303e1c384",
+    "url": "https://github.com/Bililive/BililiveRecorder/releases/download/v2.3.0/BililiveRecorder-WPF-Portable.zip",
+    "hash": "5622e80596bb87bf8bc6b8dc76403c10ffbfe9ad4c28cff9bc452c7b6d9ab6af",
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" -ItemType \"file\" -Value \"{}\" | Out-Null }",
     "shortcuts": [
         [
