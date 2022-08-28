@@ -1,6 +1,6 @@
 {
     "version": "20220601",
-    "description": "ja-netfilter all in one",
+    "description": "ja-netfilter all in one.",
     "homepage": "https://jetbra.in/s",
     "license": {
         "identifier": "GPL-3.0-only",
@@ -18,7 +18,7 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>ja-netfilter-all-([\\d]{8})-(?<Sha>[a-fA-F0-9]{40})\\.(?:zip|7z))",
+        "regex": "(?s)(?<filename>jetbra-([\\d]{8})-(?<Sha>[a-fA-F0-9]{40})\\.(?:zip|7z))",
         "reverse": true
     },
     "autoupdate": {
