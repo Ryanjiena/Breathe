@@ -1,5 +1,5 @@
 {
-    "version": "103.0.1264.37",
+    "version": "104.0.1293.54",
     "description": "Microsoft Edge Portable and Enhanced Edition, Maintained by @runningcheese.",
     "homepage": "https://www.runningcheese.com/edge",
     "license": {
@@ -11,9 +11,9 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseEdge_103.0.1264.37_64bit_Portable.7z",
-            "hash": "290db8fefb8cabed450543f9c1a6c3de7870175e2fb91feee19942a55dde096f",
-            "extract_dir": "RunningCheeseEdge_103.0.1264.37_64bit_Portable\\RunningCheeseEdge_103.0.1264.37_64bit_Portable"
+            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseEdge_104.0.1293.54_64bit_Portable.7z",
+            "hash": "c717321d16ad3c278a62fd96f4b2793a5537c19b0b86d8c54a7134d533b79b63",
+            "extract_dir": "RunningCheeseEdge_104.0.1293.54_64bit_Portable\\RunningCheeseEdge_104.0.1293.54_64bit_Portable"
         }
     },
     "post_install": "Start-Process \"dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",

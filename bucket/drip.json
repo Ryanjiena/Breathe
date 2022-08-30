@@ -1,5 +1,5 @@
 {
-    "version": "0.2.5-alpha",
+    "version": "0.3.0-alpha",
     "description": "A simple YouTube Music Client written in Dart using Flutter Framework with @microsoft Fluent design guidlines.",
     "homepage": "https://github.com/Spsden/Drip",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://github.com/Spsden/Drip/blob/master/LICENSE"
     },
     "notes": "wiki: <https://github.com/Spsden/Drip/wiki>",
-    "url": "https://github.com/Spsden/Drip/releases/download/v0.2.5-alpha/Dripsetup.exe",
-    "hash": "c0b97fb89472bf359f871dd0435b87f86849a6f306c99cc5445da7697d9329b8",
+    "url": "https://github.com/Spsden/Drip/releases/download/v0.3.0-alpha/Dripsetup.exe",
+    "hash": "7ee121839a709742b5463550c01f57581946c359d6be9e91896be59bf901b230",
     "innosetup": true,
     "shortcuts": [
         [
