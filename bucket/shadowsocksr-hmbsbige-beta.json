@@ -1,5 +1,5 @@
 {
-    "version": "20220823.aba0c9d",
+    "version": "20220830.4bd1a26",
     "description": "ShadowsocksR for Windows(without dotnet runtime), maintained by @HMBSbige.",
     "homepage": "https://github.com/HMBSbige/ShadowsocksR-Windows",
     "license": {
@@ -12,8 +12,8 @@
             "dotnet-desktopruntime-6"
         ]
     },
-    "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/2914012908/ShadowsocksR.zip",
-    "hash": "5f44f5ee5ab5fb58af7b27b1e7ee7cffe908f8baa22f413c57257fa207dcedab",
+    "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/2958260756/ShadowsocksR.zip",
+    "hash": "7a1ccf75f1184ae4073e976a7d59fcdbf7a4351df4c6d3544c114063afac8a50",
     "pre_install": [
         "@('gui-config.json', 'pac.txt', 'transfer_log.json', 'user-rule.txt') | ForEach-Object {",
         "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" | Out-Null }",
