@@ -1,5 +1,5 @@
 {
-    "version": "9.6.3.28774",
+    "version": "9.6.6.28796",
     "description": "Tencent QQ 3rd party modified version, maintained by 423down.com.",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://ti.qq.com/agreement/index.html"
     },
     "notes": "Features: <https://www.ghxi.com/qq9.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/QQ_9.6.3.28774_Green.7z",
-    "hash": "b39e64ae51a091f52cf9f844f47142fbd1a87921fef39e689d43de3a4ea861cb",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/QQ_9.6.6.28796_Green.7z",
+    "hash": "3f82f12fc046ec14f3aac578404af7ed278e7c87a7847d994359941ee906d47e",
     "extract_dir": "QQ",
     "pre_install": [
         "Copy-Item \"$bucketsdir\\tian\\scripts\\qq\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",

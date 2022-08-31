@@ -1,5 +1,5 @@
 {
-    "version": "9.6.5.28778",
+    "version": "9.6.6.28796",
     "description": "Tencent QQ third-party modified version, maintained by Dreamcast.",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -20,8 +20,8 @@
             "meta/vcredist-dreamcast"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/腾讯QQ_9.6.5.28778_安装版.rar",
-    "hash": "7c8312dbf78c0df51a891074604ea3930481a9517e77dc86dd4f14ba02f15afa",
+    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/腾讯QQ_9.6.6.28796_安装版.rar",
+    "hash": "281587cae50bfa58eda1c24c019bf5b198097213c9d30a095dca727374bcd493",
     "installer": {
         "script": [
             "Stop-Process -Name TXP*,tad*,QQP*,QQC*,QQ -Force -ErrorAction Ignore | Out-Null",
