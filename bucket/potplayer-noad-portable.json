@@ -1,5 +1,5 @@
 {
-    "version": "220712",
+    "version": "220831",
     "description": "Potplayer Stable, NoAD, Portable Edition, maintained by wenlei.",
     "homepage": "https://potplayer.daum.net",
     "license": {
@@ -12,8 +12,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Pot_Player64_v220712(1.7.21765)_Public.7z",
-            "hash": "35c61741eeac547bcf0ab00e1efed11da55a9f49fc74ef3da60b7acd294646d0",
+            "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Pot_Player64_v220831(1.7.21793)_Public.7z",
+            "hash": "1f66f581d6619619a78a211fcdc5443219a1e1a746f840ecbc8f3d98d8bf0dff",
             "extract_dir": "PotPlayer64",
             "installer": {
                 "script": [
