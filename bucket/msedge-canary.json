@@ -1,5 +1,5 @@
 {
-    "version": "106.0.1366.0",
+    "version": "106.0.1368.0",
     "description": "Microsoft Edge is the fast and secure browser that helps you protect your data and save time and money(Canary Channel, Portable Edition).",
     "homepage": "https://www.microsoft.com/en-us/edge",
     "license": {
@@ -15,11 +15,11 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-apps.vercel.app/msedge-canary-win-X64#/dl.7z",
-            "hash": "b57738ae94a44fc4571b07dfe3de2cdaae5a69d4d019f7eb03caa4ccdc364af0"
+            "hash": "c7798822a97be3bb6fdfd81f83e24cada7f734a7acff46f8af95064e1fbd68f0"
         },
         "32bit": {
             "url": "https://scoop-apps.vercel.app/msedge-canary-win-X86#/dl.7z",
-            "hash": "a44050dfed070d66751dbf8dd4a627e0d5409651f22ceb2288edf01989c3ac9f"
+            "hash": "f6e5a44e948f5098721fb154dfbd01955a03cb31b8a91fbdda8dd3f422f8d33b"
         }
     },
     "installer": {
