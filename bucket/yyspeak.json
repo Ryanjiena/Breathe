@@ -30,7 +30,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://baoku.360.cn/soft/show/appid/105192",
+        "script": "Write-Output $(Invoke-WebRequest -Uri 'https://baoku.360.cn/soft/show/appid/105192').Content",
         "regex": "(?sm)版本.*?([\\d.]+)"
     },
     "autoupdate": {
