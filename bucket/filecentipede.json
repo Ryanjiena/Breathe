@@ -35,13 +35,12 @@
     ],
     "checkver": {
         "url": "http://www.filecxx.com/release/FileCentipede_pad.xml",
-        "xpath": "/XML_DIZ_INFO/Web_Info/Download_URLs/Primary_Download_URL",
-        "regex": "releases/download/(?<tag>.*?)/filecxx_([\\d.]+)_win_x64.zip"
+        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/filecxx/FileCentipede/releases/download/$matchTag/filecxx_$version_win_x64.zip"
+                "url": "https://github.com/filecxx/FileCentipede/raw/main/release/filecxx_latest_win_x64.zip"
             }
         }
     }
