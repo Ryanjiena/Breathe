@@ -1,5 +1,5 @@
 {
-    "version": "11.6.0.12",
+    "version": "12.0.0.9",
     "description": "IObit Uninstaller 3rd party modified version, maintained by ghxi.com.",
     "homepage": "https://www.iobit.com/en/advanceduninstaller.php",
     "license": {
@@ -7,9 +7,9 @@
         "url": "https://www.iobit.com/en/eula.php"
     },
     "notes": "Features: <https://www.ghxi.com/iobituninstaller.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/IObitUninstaller_11.6.0.12_Green.7z",
-    "hash": "cc55c5e7ed912bad617b4b16191dc52a0329fc01378dcd73e011e4211517ecf1",
-    "extract_dir": "IObitUninstaller_11.6.0.12_Green\\IObitUninstaller",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/IObitUninstaller_12.0.0.9_Green.7z",
+    "hash": "025b85162d9e0730f462e39cd64d7a912e99f3bf62f330210c9160a59e6217ee",
+    "extract_dir": "IObitUninstaller_12.0.0.9_Green\\IObitUninstaller",
     "uninstaller": {
         "file": "!)清理残留.bat"
     },
