@@ -8,11 +8,11 @@
     },
     "url": [
         "https://dl.bandisoft.com/bandizip.std/BANDIZIP-PORTABLE.ZIP",
-        "https://pan.jiemi.workers.dev/?file=/Bandizip/Bandizip_v7.xx_x32-x64_Patch_20201104.7z#dl.7z_"
+        "https://pan.jiemi.workers.dev/?file=/Bandizip/Bandizip_v7.xx_x32-x64_Patch_20201104.zip#dl.7z_"
     ],
     "hash": [
         "462b528d9e56aeea38de309169bcbd5c1ed59c4c972875bc773b55a4d7b7d83e",
-        "342325dd3c9212fce9b4dbf01d1009155110ea3078887a09304e4323f754686b"
+        "874ea62e05603ab7c153a9cf4f01ddb37b59b33049f99eb8a323c1ac9d8bcf87"
     ],
     "architecture": {
         "64bit": {

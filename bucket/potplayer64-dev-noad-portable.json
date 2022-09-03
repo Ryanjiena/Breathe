@@ -9,7 +9,7 @@
     "notes": "Feature: <https://pan.lanzoui.com/b0i38vsd>",
     "depends": "sudo",
     "suggest": {
-        "potplayer-skins": "meta/potplayer-skins"
+        "potplayer-skins": "potplayer-skins"
     },
     "architecture": {
         "64bit": {

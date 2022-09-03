@@ -8,8 +8,9 @@
     "suggest": {
         "potplayer": [
             "potplayer",
-            "meta/potplayer-noad-portable",
-            "meta/potplayer-dev-noad-portable"
+            "potplayer64-noad-portable",
+            "potplayer64-noad-portable-7sh3",
+            "potplayer64-dev-noad-portable"
         ]
     },
     "url": "https://pan.jiemi.workers.dev/?file=/wenlei/potplayer-skin-20220501.7z",
@@ -24,8 +25,9 @@
             "   }",
             "}",
             "CopyFile \"potplayer\"",
-            "CopyFile \"potplayer-noad-portable\"",
-            "CopyFile \"potplayer-dev-noad-portable\""
+            "CopyFile \"potplayer64-noad-portable\"",
+            "CopyFile \"potplayer64-noad-portable-7sh3\"",
+            "CopyFile \"potplayer64-dev-noad-portable\""
         ]
     },
     "checkver": {

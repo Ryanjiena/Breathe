@@ -6,7 +6,7 @@
         "identifier": "MIT"
     },
     "url": "https://github.com/Beadd/MusicDownloader/releases/download/v1.8.4.0/MusicDownloader.exe",
-    "hash": "e06c4f123084855bd6ccb91db28f739971681fcc6dfa5ea81a32631ce63d63eb",
+    "hash": "4c592669759ec3c18a224ef68761b103685065e7571987f4e338b5ed2e49391b",
     "bin": "MusicDownloader.exe",
     "checkver": {
         "github": "https://github.com/Beadd/MusicDownloader"
