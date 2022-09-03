@@ -1,5 +1,5 @@
 {
-    "version": "20220805.072022",
+    "version": "20220805.9a32203",
     "description": "Goolgle Chrome Enhancement Software, maintained by shuax.",
     "homepage": "https://github.com/shuax/chrome_plus",
     "license": {
@@ -42,8 +42,8 @@
     },
     "checkver": {
         "url": "https://scoop-apps.vercel.app/shuax/chrome_plus",
-        "regex": "(?sm)/shuax/chrome_plus/actions/runs/(?<runid>\\d+).*?datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).(?<hour>\\d+).(?<minute>\\d+).(?<second>\\d+)",
-        "replace": "${year}${month}${day}.${hour}${minute}${second}"
+        "regex": "(?sm)/shuax/chrome_plus/actions/runs/(?<runid>\\d+).+datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).*?commit/(?<sha>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}.${sha}"
     },
     "autoupdate": {
         "architecture": {

@@ -1,5 +1,5 @@
 {
-    "version": "20220504.024707",
+    "version": "20220805.f604778",
     "description": "Microsoft Edge Enhancement Software, maintained by shuax.",
     "homepage": "https://github.com/shuax/edge_plus",
     "license": {
@@ -16,12 +16,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x64-v20220504.024707.zip",
-            "hash": "17fbea367fd8dca6e6369e9a57c59edd973b8938d595b25c456431ab23948b20"
+            "url": "https://nightly.link/shuax/edge_plus/actions/runs/2801960857/windows_x64.zip",
+            "hash": "05e4fb90adbbad7902cae67d8b46472e1a7e93fc140bd43aef74c3fc465a5b66"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x86-v20220504.024707.zip",
-            "hash": "275dc3466e9410ab2794a615b6628080c896cd24b6802262169c76aac1003292"
+            "url": "https://nightly.link/shuax/edge_plus/actions/runs/2801960857/windows_x86.zip",
+            "hash": "8d17b756295e4fc030346b582572971b9d25541c55d86be6633b0b96df33162b"
         }
     },
     "installer": {
@@ -41,17 +41,17 @@
         ]
     },
     "checkver": {
-        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "edge_plus-x64-v([\\d.]+)\\.zip",
-        "reverse": true
+        "url": "https://scoop-apps.vercel.app/shuax/edge_plus",
+        "regex": "(?sm)/shuax/edge_plus/actions/runs/(?<runid>\\d+).+datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).*?commit/(?<sha>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}.${sha}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x64-v$version.zip"
+                "url": "https://nightly.link/shuax/edge_plus/actions/runs/$matchRunid/windows_x64.zip"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/shuax/edge_plus-x86-v$version.zip"
+                "url": "https://nightly.link/shuax/edge_plus/actions/runs/$matchRunid/windows_x86.zip"
             }
         }
     }

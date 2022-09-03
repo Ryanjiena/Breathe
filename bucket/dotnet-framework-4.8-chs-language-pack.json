@@ -7,6 +7,7 @@
         "identifier": "Freeware",
         "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
     },
+    "depends": "dotnet-framework-4.8",
     "url": "https://download.visualstudio.microsoft.com/download/pr/c2ad65ab-bab3-4d24-ada4-aaf2ff0c1266/da0b04eeb40d81b63dcb74711ebbe8d9/ndp48-x86-x64-allos-chs.exe",
     "hash": "dd0fa8f4fc32b22ff43fb355f85a536f6ed5884be0400b3465fc8d2c4ddcb350",
     "installer": {
