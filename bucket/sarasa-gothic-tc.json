@@ -69,9 +69,9 @@
     "autoupdate": {
         "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z#/dl.7z_",
         "hash": {
-            "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/program.json",
-            "mode": "json",
-            "jsonpath": "$.sarasa.ttf"
+            "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/release.txt",
+            "mode": "extract",
+            "regex": "$sha256\\s+$basename"
         }
     }
 }

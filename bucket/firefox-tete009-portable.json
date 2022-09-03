@@ -5,11 +5,6 @@
     "license": {
         "identifier": "MPL-2.0"
     },
-    "notes": [
-        "Language packs:",
-        "- <http://releases.mozilla.org/pub/mozilla.org/firefox/releases/$version/win32/xpi/>",
-        "- <http://releases.mozilla.org/pub/mozilla.org/firefox/releases/$version/win64/xpi/>"
-    ],
     "architecture": {
         "64bit": {
             "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-104.0.1-2022082914.en-US.win32-tete009-x64-pgo.7z",
@@ -28,11 +23,16 @@
         "    Copy-Item \"$bucketsdir\\tian\\scripts\\tete009\\tmemutil.ini\" \"$dir\\App\\tmemutil.ini\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
         "}"
     ],
+    "post_install": [
+        "if ($architecture -eq '64bit') { $txt = \"http://releases.mozilla.org/pub/mozilla.org/firefox/releases/$version/win64/xpi/\" }",
+        "elseif ($architecture -eq '32bit') { $txt = \"http://releases.mozilla.org/pub/mozilla.org/firefox/releases/$version/win32/xpi/\" }",
+        "info \"- Language packs: $txt\""
+    ],
     "bin": "App\\firefox.exe",
     "shortcuts": [
         [
             "App\\firefox.exe",
-            "Firefox"
+            "Firefox tete009"
         ]
     ],
     "persist": [
