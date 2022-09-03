@@ -5,8 +5,9 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/antdownload_3.0.5.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/antdownload_3.0.5.zip",
     "hash": "7096739e6b751eeeaa9b42b5835d21fb04f7fe58dd1c35f24aa8a6fe31c01e96",
+    "extract_dir": "antdownload $version",
     "shortcuts": [
         [
             "antdownload.exe",
@@ -19,11 +20,11 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "Antdownload_v([\\d.]+)\\.zip",
+        "regex": "antdownload_([\\d.]+)\\.zip",
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/antdownload_$version.zip",
+        "url": "https://pan.jiemi.workers.dev/?file=/else/antdownload_$version.zip",
         "extract_dir": "antdownload $version"
     }
 }
