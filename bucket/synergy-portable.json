@@ -38,15 +38,14 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/DEAKSoftware/Synergy-Binaries/releases?per_page=1",
-        "jsonpath": "$[0].tag_name",
-        "regex": "(?<tag>([\\d.]+)-.*)"
+        "url": "https://api.github.com/repos/DEAKSoftware/Synergy-Binaries/releases",
+        "regex": "synergy-([\\d.]+)-(?<build>[0-9a-f]{8})-windows-10-amd64\\.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/DEAKSoftware/Synergy-Binaries/releases/download/$matchTag/synergy-$matchTag-windows-10-amd64.zip",
-                "extract_dir": "synergy-$matchTag-windows-10-amd64"
+                "url": "https://github.com/DEAKSoftware/Synergy-Binaries/releases/download/$version/synergy-$version-$matchBuild-windows-10-amd64.zip",
+                "extract_dir": "synergy-$version-$matchBuild-windows-10-amd64"
             }
         }
     }

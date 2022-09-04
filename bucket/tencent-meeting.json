@@ -6,9 +6,9 @@
         "identifier": "Proprietary",
         "url": "https://meeting.tencent.com/declare.html"
     },
+    "notes": "The Tencent Meeting doesn't seem to get access to config files through the current linked folder, you need run 'scoop update; scoop config NO_JUNCTIONS true' to reinstall it.",
     "url": "https://updatecdn.meeting.qq.com/cos/7661cbf0961770dab60c12dd0661142b/TencentMeeting_0300000000_3.10.8.405.publish.exe#/dl.7z",
     "hash": "md5:7661cbf0961770dab60c12dd0661142b",
-    "pre_install": "Rename-Item -Path \"$dir\\`$_*\" -NewName \"$version\" -Force",
     "installer": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
@@ -16,6 +16,7 @@
         ]
     },
     "post_install": [
+        "Rename-Item -Path \"$dir\\`$_*\" -NewName \"$version\" -Force",
         "Remove-Item \"$dir\\`$*\" -Recurse -Force -ErrorAction SilentlyContinue",
         "Remove-Item \"$dir\\wemeetapp_new.exe\" -Force -ErrorAction SilentlyContinue"
     ],
