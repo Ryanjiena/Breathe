@@ -7,7 +7,7 @@
         "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/blob/master/LICENSE"
     },
     "notes": [
-        "clash.NET最后一版进行修改的, 增 Clash 虚拟网卡代理, 主要内核是 p 版 clash",
+        "clash.NET 最后一版进行修改的, 增 Clash 虚拟网卡代理, 主要内核是 p 版 clash",
         "使用方法: 使用管理员模式打开, 这样在系统适配器里多一个 clash 的适配器",
         "",
         "仅作学习使用, 请遵守当地法律。",
