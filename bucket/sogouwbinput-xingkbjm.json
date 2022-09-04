@@ -34,7 +34,7 @@
     },
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>SogouWBInput_v(?<shortVersion>[\\w.]+)[(]([\\d.]+)[)]_xingkbjm_noad\\.exe)",
+        "regex": "(?s)(?<filename>搜狗五笔输入法_v(?<shortVersion>[\\w.]+)\\(([\\d.]+)\\)_星空不寂寞去广告版\\.exe)",
         "reverse": true
     },
     "autoupdate": {

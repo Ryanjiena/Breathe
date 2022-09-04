@@ -30,7 +30,7 @@
     },
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>SogouWBInput_([\\d.]+)_qiuquan_noad-[\\d]+\\.exe)",
+        "regex": "(?s)(?<filename>搜狗五笔输入法_([\\d.]+)_去升级版_[\\d]+\\.exe)",
         "reverse": true
     },
     "autoupdate": {

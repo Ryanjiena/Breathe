@@ -1,5 +1,5 @@
 {
-    "version": "1.14.5.13",
+    "version": "1.14.5.17",
     "description": "Synergy is a keyboard and mouse sharing tool for devices connected over a network.",
     "homepage": "https://github.com/DEAKSoftware/Synergy-Binaries",
     "license": {
@@ -8,9 +8,9 @@
     "notes": "This repository maintains Synergy binaries to download, including convenience tools and documentation for building the Synergy application.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/DEAKSoftware/Synergy-Binaries/releases/download/1.14.5.13-stable/synergy-1.14.5.13-stable-windows-10-amd64.zip",
-            "hash": "baca0392164e50ec8d55d6b7e0433addadb12c47bf560a057b191a68e5344b16",
-            "extract_dir": "synergy-1.14.5.13-stable-windows-10-amd64"
+            "url": "https://github.com/DEAKSoftware/Synergy-Binaries/releases/download/1.14.5.17/synergy-1.14.5.17-ad30acbc-windows-10-amd64.zip",
+            "hash": "24ba5c423c358482ac04548e546ec8a8bb6f8275686bbeac7f78c4a0ef9097cf",
+            "extract_dir": "synergy-1.14.5.17-ad30acbc-windows-10-amd64"
         }
     },
     "bin": [
