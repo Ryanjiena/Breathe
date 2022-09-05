@@ -1,12 +1,12 @@
 {
-    "version": "3.9.1.0",
+    "version": "4.0.0.0",
     "description": "General input method status tracking prompt, you can use only two characters to prompt Chinese and English, full half width, case, Chinese and English punctuation, multilingual keyboard layout and so on.",
     "homepage": "https://imtip.aardio.com",
     "license": {
         "identifier": "MIT"
     },
     "url": "https://imtip.aardio.com/update/ImTip.7z",
-    "hash": "8794e15c8d85cf6b49e90a616fdcae5e5e399929195a30adff4692abf4942d58",
+    "hash": "0ffbbd07ed8fbb648b6abed89cb0200ff928e3357413e73697cfdea7e98138f5",
     "shortcuts": [
         [
             "ImTip.exe",
