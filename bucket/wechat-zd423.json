@@ -1,5 +1,5 @@
 {
-    "version": "3.7.6.43",
+    "version": "3.7.6.44",
     "description": "WeChat third-party modified version, maintained by 423down.com.",
     "homepage": "https://weixin.qq.com/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.wechat.com/en/service_terms.html"
     },
     "notes": "Feature: <https://www.423down.com/12027.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Wechat_3.7.6.43_Green.7z",
-    "hash": "81e4c43cede15afb95a9e688f0a74f5caf63534c27e90b1957363dde62ee341f",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Wechat_3.7.6.44_Green.7z",
+    "hash": "d062ccf2a46c0f89902aba6879ef5e13ed562c31c121adda59cf030d83aac436",
     "extract_dir": "WeChat",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\Tencent\\WeChat\")) {",

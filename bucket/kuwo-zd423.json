@@ -1,5 +1,5 @@
 {
-    "version": "9.1.1.7",
+    "version": "9.1.1.8-PQ",
     "description": "Kuwo Music third-party modified version, maintained by 423down.com.",
     "homepage": "http://kuwo.cn",
     "license": {
@@ -7,8 +7,8 @@
         "url": "http://www.kuwo.cn/static/page/license/license.html"
     },
     "notes": "Features: <https://www.423down.com/9195.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/KwMusic_9.1.1.7_Green.7z",
-    "hash": "3688c5e845e40c627fb19379807e91f481e0f08c639721a6c9fd6c671caa0f2a",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/酷我音乐-v9.1.1.8-PQ-去广告破解豪华VIP绿色版.7z",
+    "hash": "15eb72dfdfc49b3344881ffbbdfb9d964fde37e0063bab3ee583a8b986cfb86e",
     "extract_dir": "KwMusic",
     "pre_install": [
         "Copy-Item \"$bucketsdir\\tian\\scripts\\kuwo\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
