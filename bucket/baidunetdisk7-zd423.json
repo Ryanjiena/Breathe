@@ -28,6 +28,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/BaiduNetdisk_v6.5.0.3_NoAD_Green_NoP2P.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/BaiduNetdisk_v$version_NoAD_Green_NoWorkspace.7z"
     }
 }

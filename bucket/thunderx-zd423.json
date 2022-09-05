@@ -27,10 +27,10 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "Thunder_X_v([\\d.]+)__NoAD_SVIP_Green\\.7z",
+        "regex": "Thunder_X_v([\\d.]+)_NoAD_SVIP_Green\\.7z",
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Thunder_X_v$version__NoAD_SVIP_Green.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Thunder_X_v$version_NoAD_SVIP_Green.7z"
     }
 }
