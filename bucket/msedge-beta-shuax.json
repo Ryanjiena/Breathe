@@ -1,5 +1,5 @@
 {
-    "version": "104.0.1293.35",
+    "version": "105.0.1343.27",
     "description": "msedge-beta + msedge-plus.",
     "homepage": "https://www.microsoft.com/en-us/edge",
     "license": {
@@ -11,7 +11,7 @@
         "meta/msedge-plus"
     ],
     "url": "https://pan.jiemi.workers.dev/?file=/shuax/Edge.7z",
-    "hash": "c2fd0884682d06bb8a3ad84c82e9a33093fdf14fe11c5f0fec0277717052bada",
+    "hash": "8e01c43af023ee70f6d2713c79bba96f0b1eab371839fc282156a8ddc80a6b0e",
     "pre_install": [
         "Get-ChildItem \"$(appdir msedge-beta $global)\\current\\\" -Exclude *install.json,*manifest.json,*Data | ForEach-Object { Copy-Item $_.FullName \"$dir\" -Recurse -Force -ErrorAction SilentlyContinue }",
         "Get-ChildItem \"$(appdir msedge-plus $global)\\current\\\" -Exclude *install.json,*manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\" -Recurse -Force -ErrorAction SilentlyContinue }"

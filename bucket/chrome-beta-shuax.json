@@ -1,5 +1,5 @@
 {
-    "version": "105.0.5195.28",
+    "version": "106.0.5249.21",
     "description": "chrome-beta + chrome-plus.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -11,7 +11,7 @@
         "meta/chrome-plus"
     ],
     "url": "https://pan.jiemi.workers.dev/?file=/shuax/Chrome.7z",
-    "hash": "7545b06b1ee39aeb9ea1467b6db429f5fb0ec6863bb5b8b921d4d29057127087",
+    "hash": "048164d44312ced1fa1e54d084b857a8c1391bb533d00f9d153e7112c5accab6",
     "installer": {
         "script": [
             "New-Item -Path \"$dir\" -Name \"App\" -ItemType \"directory\" | Out-Null",
