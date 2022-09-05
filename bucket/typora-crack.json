@@ -31,36 +31,10 @@
     },
     "innosetup": true,
     "post_install": "Copy-Item \"$dir\\app-windows-*.asar\" \"$dir\\resources\\app.asar\" -Force -ErrorAction SilentlyContinue",
-    "bin": [
-        [
-            "Typora.exe",
-            "Typora Crack"
-        ]
-    ],
     "shortcuts": [
         [
             "Typora.exe",
             "Typora Crack"
         ]
-    ],
-    "checkver": {
-        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "typora-setup-x64-([\\d.]+)\\.exe"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": [
-                    "https://pan.jiemi.workers.dev/?file=/Typora/typora-setup-ia32-$version.exe",
-                    "https://pan.jiemi.workers.dev/?file=/Typora/app-windows-$version-x86.asar"
-                ]
-            },
-            "32bit": {
-                "url": [
-                    "https://pan.jiemi.workers.dev/?file=/Typora/typora-setup-x64-$version.exe",
-                    "https://pan.jiemi.workers.dev/?file=/Typora/app-windows-$version-x64.asar"
-                ]
-            }
-        }
-    }
+    ]
 }
