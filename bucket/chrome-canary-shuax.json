@@ -6,22 +6,27 @@
         "identifier": "Freeware",
         "url": "https://www.google.com/chrome/privacy/eula_text.html"
     },
-    "depends": [
-        "meta/chrome-canary",
-        "meta/chrome-plus"
-    ],
-    "url": "https://pan.jiemi.workers.dev/?file=/shuax/Chrome.7z",
-    "hash": "048164d44312ced1fa1e54d084b857a8c1391bb533d00f9d153e7112c5accab6",
+    "depends": "chrome-plus",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.google.com/release2/chrome/hxh4hbpvjdxh4je6ohbsuvd5ca_107.0.5284.0/107.0.5284.0_chrome_installer.exe#/dl.7z",
+            "hash": "67b3d875f7fae074b1c6feb0cd161ceae3a865c8fd9883318e512a066f853b99"
+        },
+        "32bit": {
+            "url": "https://dl.google.com/release2/chrome/dkuc55bjmqdjlvmrcfjhyho2ua_107.0.5284.0/107.0.5284.0_chrome_installer.exe#/dl.7z",
+            "hash": "c1e06c2435cec5b11ec7ffbdec8d5b28792d4a66c2fdf2091beeac6a69f81326"
+        }
+    },
     "installer": {
         "script": [
+            "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
             "New-Item -Path \"$dir\" -Name \"App\" -ItemType \"directory\" | Out-Null",
-            "Get-ChildItem \"$(appdir chrome-canary $global)\\current\\\" -Exclude *install.json,*manifest.json,*Data | ForEach-Object { Copy-Item $_.FullName \"$dir\\App\\\" -Recurse -Force -ErrorAction SilentlyContinue }",
-            "Get-ChildItem \"$(appdir chrome-plus $global)\\current\\\" -Exclude *install.json,*manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\\App\\\" -Recurse -Force -ErrorAction SilentlyContinue }"
+            "Get-ChildItem \"$dir\" -Exclude *install.json, *manifest.json | ForEach-Object { Move-Item $_.FullName \"$dir\\App\\\" -Recurse -Force -ErrorAction SilentlyContinue }",
+            "Get-ChildItem \"$(appdir chrome-plus $global)\\current\\\" -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\\App\\\" -Recurse -Force -ErrorAction SilentlyContinue }",
+            "@('Chrome.exe', '说明.txt', '清理.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\chrome\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }"
         ]
     },
-    "uninstaller": {
-        "script": "Start-Process \"$dir\\清理.bat\" -WorkingDirectory \"$dir\" -Wait"
-    },
+    "pre_uninstall": "Start-Process \"$dir\\清理.bat\" -WorkingDirectory \"$dir\" -Wait",
     "bin": [
         [
             "Chrome.exe",
@@ -40,9 +45,24 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
-        "regex": "(?sm)canary.*?win-x86.*?chrome/[\\w-]+_([\\d.]+)"
+        "regex": "(?sm)canary.*?win-x86.*?(?<86>chrome/[\\w-]+_(?<version>[\\d.]+).*?_chrome_installer.exe).*?win-x64.*?(?<64>chrome/[\\w-]+_(?<version>[\\d.]+).*?_chrome_installer.exe)"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/shuax/Chrome.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.google.com/release2/$match64#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
+                    "jsonpath": "$[?(@.Product == 'canary')].Release[?(@.Architecture == 'win-x64')].Hash"
+                }
+            },
+            "32bit": {
+                "url": "https://dl.google.com/release2/$match86#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
+                    "jsonpath": "$[?(@.Product == 'canary')].Release[?(@.Architecture == 'win-x86')].Hash"
+                }
+            }
+        }
     }
 }

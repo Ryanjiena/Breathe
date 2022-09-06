@@ -8,10 +8,10 @@
     },
     "suggest": {
         "chrome": [
-            "meta/chrome-beta",
-            "meta/chrome-canary",
-            "meta/chrome-dev",
-            "meta/chrome-stable"
+            "chrome-beta",
+            "chrome-canary",
+            "chrome-dev",
+            "chrome-stable"
         ]
     },
     "architecture": {

@@ -14,7 +14,6 @@
         }
     },
     "extract_dir": "Bandicam",
-    "bin": "BandicamPortable.exe",
     "shortcuts": [
         [
             "BandicamPortable.exe",
@@ -23,7 +22,7 @@
     ],
     "checkver": {
         "url": "https://github.com/ryanjiena/metaversion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>Bandicam_v(?<version>[\\d.]+)_x(?:64)\\.(?:zip|7z))",
+        "regex": "(?s)(?<filename>Bandicam-([\\d.]+)-x(?:64)\\.(?:zip|7z))",
         "reverse": true
     },
     "autoupdate": {

@@ -8,10 +8,10 @@
     },
     "suggest": {
         "msedge": [
-            "meta/msedge-beta",
-            "meta/msedge-canary",
-            "meta/msedge-dev",
-            "meta/msedge-stable"
+            "msedge-beta",
+            "msedge-canary",
+            "msedge-dev",
+            "msedge-stable"
         ]
     },
     "architecture": {
