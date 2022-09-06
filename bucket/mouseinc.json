@@ -1,5 +1,5 @@
 {
-    "version": "2.13.1",
+    "version": "2.13.2",
     "description": "MouseInc is a small and easy to use global mouse gesture software.",
     "homepage": "https://shuax.com/project/mouseinc/",
     "license": {
@@ -10,8 +10,8 @@
         "User Manuals: <https://docs.shuax.com/MouseInc/>",
         "Feedback: <https://github.com/shuax/MouseInc.Settings/discussions>"
     ],
-    "url": "https://update.shuax.com/MouseInc2.13.1.7z",
-    "hash": "175ad084573ce4ce624387518b5c4846435af3b610599270f0a209c0a654fca6",
+    "url": "https://update.shuax.com/MouseInc2.13.2.7z",
+    "hash": "2696d275978b57db7060814df6ef1ef4c3b7d419eb6c9d7a72c6f42cb8ed7e6b",
     "extract_dir": "MouseInc",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\MouseInc.json\")) {",
