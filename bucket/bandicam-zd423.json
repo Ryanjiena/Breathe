@@ -1,5 +1,5 @@
 {
-    "version": "5.4.0.1907",
+    "version": "6.0.2.2018",
     "description": "Third-party modifications of bandicam, maintained by CheshireCat and Elchupacabra.",
     "homepage": "https://www.bandicam.com",
     "license": {
@@ -9,8 +9,8 @@
     "notes": "Features: <https://www.423down.com/2119.html>",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/zd423/Bandicam_v5.4.0.1907_x64.7z",
-            "hash": "9f048f0397ba0e2c3e21f1b7bd0e86bc5392a9db2d725c791667e91f3e7b0f93"
+            "url": "https://pan.jiemi.workers.dev/?file=/zd423/Bandicam-6.0.2.2018-x64.7z",
+            "hash": "d2db45ffb4c0133f69ae93069ce670d2a8cb41f52b5468eb3170f370d99e9c6f"
         }
     },
     "extract_dir": "Bandicam",

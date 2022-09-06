@@ -1,5 +1,5 @@
 {
-    "version": "3.7.6.38",
+    "version": "3.7.6.43",
     "description": "WeChat third party modified version, maintained by qiuquan.",
     "homepage": "https://weixin.qq.com/",
     "license": {
@@ -10,8 +10,8 @@
         "Since WeChat has strong payment properties, the third-party version has certain risks, so it is recommended to use the official wechat package (scoop install wechat-portable) if you don't just need it.",
         "Features: <http://www.qiuquan.cc/chat/wechat.html>"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/WeChat_3.7.6.38_QiuQuan_20220831.exe#/Installer.exe",
-    "hash": "925f39fc2c23d550929304408c59333a5d63684d84ee1ca86b7fc7a7d4f298fa",
+    "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/WeChat_3.7.6.43_QiuQuan_20220901.exe#/Installer.exe",
+    "hash": "1d7739a365c6815278f1e34b7a28a9e4a705c682acbfff1ba4dbf65dbc9ada15",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\Tencent\\WeChat\")) {",
         "    Copy-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\appdata\" -ErrorAction SilentlyContinue -Recurse -Force",

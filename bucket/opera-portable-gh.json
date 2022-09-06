@@ -1,5 +1,5 @@
 {
-    "version": "90.0.4480.48",
+    "version": "90.0.4480.84",
     "description": "Third-party modifications of Opera, maintained by ghxi.com.",
     "homepage": "https://www.opera.com/",
     "license": {
@@ -7,9 +7,9 @@
         "url": "https://www.opera.com/eula/computers"
     },
     "notes": "Features: <https://www.ghxi.com/operachrome.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Opera_90.0.4480.48_Portable.7z",
-    "hash": "4ba971bc635d542940629c3837af11105c685c14627c52b87f056c358372a1f6",
-    "extract_dir": "Opera_90.0.4480.48_Portable\\OperaPortable",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Opera_90.0.4480.84_Portable.7z",
+    "hash": "c691251c87e9376b7e58abd983e37729141080cc8bc173b3e1df445249968f38",
+    "extract_dir": "Opera_90.0.4480.84_Portable\\OperaPortable",
     "pre_uninstall": [
         "if (Test-Path \"$dir\\OperaChromePortable.ini\") {",
         "    ensure \"$persist_dir\" | Out-Null",

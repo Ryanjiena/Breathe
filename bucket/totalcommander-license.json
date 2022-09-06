@@ -1,13 +1,13 @@
 {
-    "version": "10.x",
+    "version": "10.50",
     "description": "Total Commander key.",
     "homepage": "https://www.ghisler.com/",
     "license": {
         "identifier": "Shareware"
     },
     "depends": "totalcommander",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/TotalCMD.v10.x.license.rar",
-    "hash": "5a507630d66bdcb4b3e17a92bb69f5d39353ce173e332b56c7bd74a3d4896022",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/TotalCMD.v10.50.license.zip",
+    "hash": "c62e6bb85a82df3ed32cb177eae54f964b2f13089a4afbf67b9e9a4e3dd41e92",
     "pre_install": "Get-ChildItem \"$dir\" -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir totalcommander $global)\\current\\\" -Force -ErrorAction SilentlyContinue }",
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
