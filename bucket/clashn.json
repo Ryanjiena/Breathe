@@ -1,5 +1,5 @@
 {
-    "version": "1.21",
+    "version": "1.20",
     "description": "A clash client for Windows, support clash core and Clash.Meta core",
     "homepage": "https://github.com/2dust/clashN",
     "license": {
@@ -22,8 +22,8 @@
             "windowsdesktop-runtime-6"
         ]
     },
-    "url": "https://github.com/2dust/clashN/releases/download/1.21/clashN.zip",
-    "hash": "8ee058565cd8dff41d3cac1a1b2a6d3db8f0fdf98c70e329807d9e79d0fea852",
+    "url": "https://github.com/2dust/clashN/releases/download/1.20/clashN.zip",
+    "hash": "8b5d37bafae3b1ab21203572ea0725bbc2d7133e72093824d0b2b44a83e7ff14",
     "extract_dir": "clashN-Core",
     "pre_install": [
         "Copy-Item \"$(appdir clash $global)\\current\\Clash.exe\" \"$dir\" -Force | Out-Null",
