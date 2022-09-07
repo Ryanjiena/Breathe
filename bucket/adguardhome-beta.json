@@ -1,5 +1,5 @@
 {
-    "version": "0.108.0-b.13",
+    "version": "0.108.0-b.14",
     "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.",
     "homepage": "https://github.com/AdguardTeam/AdGuardHome",
     "license": {
@@ -7,12 +7,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.108.0-b.13/AdGuardHome_windows_amd64.zip",
-            "hash": "06c909d6e1f583378e8b82dd0f26c16f8c2dbe2610e77ac3d8f71d1b60991dbe"
+            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.108.0-b.14/AdGuardHome_windows_amd64.zip",
+            "hash": "6fbe8ddf7dcaf6fc2e2162a3cc520bf951869e7a3676865088190ae609d0877f"
         },
         "32bit": {
-            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.108.0-b.13/AdGuardHome_windows_386.zip",
-            "hash": "5e09cfceba7b1841810dbf474391b3fb7bf6e81d1c7d30e69fb3dc561e7c63fb"
+            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.108.0-b.14/AdGuardHome_windows_386.zip",
+            "hash": "d185c299460b8abdb3b2a37800afefeea85e69e130fcaac4a642ef40093cdad2"
         }
     },
     "extract_dir": "AdGuardHome",
