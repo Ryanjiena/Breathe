@@ -31,10 +31,10 @@
     ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "MusicTag_v([\\d.]+)",
+        "regex": "MusicTag_v([\\d.]+)\\.7z",
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/MusicTag_v1.0.8.0.7z#/dl.7z_"
+        "url": "https://pan.jiemi.workers.dev/?file=/else/MusicTag_v$version.7z#/dl.7z_"
     }
 }

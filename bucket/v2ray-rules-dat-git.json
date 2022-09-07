@@ -1,14 +1,14 @@
 {
-    "version": "0.2022.09.05.02cbb8d",
+    "version": "0.2022.09.06.c7e7dfe",
     "description": "Data files from Loyalsoldier/v2ray-rules-dat, works for v2ray and Xray.",
     "homepage": "https://github.com/Loyalsoldier/v2ray-rules-dat",
     "license": {
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/blob/master/LICENSE"
     },
-    "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/archive/02cbb8d008f562100e73b845d890e07464511b16.zip",
-    "hash": "f4de274d84fa542281fc37e14c594c59c9a15c1059d9563fa72183d968cc7cc0",
-    "extract_dir": "v2ray-rules-dat-02cbb8d008f562100e73b845d890e07464511b16",
+    "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/archive/c7e7dfe7f91590a5dc1d4786079b2b13c0857b4a.zip",
+    "hash": "719ed26bbf45ca7c13f1113e547d0c83e1d7ef2b64b067694e1164c43f51803b",
+    "extract_dir": "v2ray-rules-dat-c7e7dfe7f91590a5dc1d4786079b2b13c0857b4a",
     "checkver": {
         "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/commits/release.atom",
         "regex": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>(?<short>[0-9a-f]{7})[0-9a-f]{33})",
