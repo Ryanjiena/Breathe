@@ -1,12 +1,12 @@
 {
-    "version": "2.2.9.2",
+    "version": "2.2.9.7",
     "description": "YXCalendar is a Win10-style desktop calendar software, which makes a lot of improvements and innovations on the basis of the calendar flyout that comes with Win10 while retaining its simple interface and comprehensive content.",
     "homepage": "https://www.youxiao.cn",
     "license": {
         "identifier": "Proprietary"
     },
-    "url": "https://static.youxiao.cn/yxcalendar/yxcalendar_v2.2.9.2.exe",
-    "hash": "b6d644084445850f4513a972717f2c301f23205386c299f8f40bdb21a447258a",
+    "url": "https://static.youxiao.cn/yxcalendar/yxcalendar_v2.2.9.7.exe",
+    "hash": "2b1b6745bcb5cdd5658463473149522f3343227e60491bd5439bfe183831093b",
     "installer": {
         "args": [
             "/S",
