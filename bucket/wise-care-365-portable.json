@@ -1,14 +1,14 @@
 {
-    "version": "6.3.5.613",
+    "version": "6.3.6.614",
     "description": "Clean registry and junk files from your PCs. Protect your privacy and make your PCs more secure.",
     "homepage": "https://www.wisecleaner.com/wise-care-365.html",
     "license": {
         "identifier": "Proprietary|Shareware",
         "url": "https://www.wisecleaner.com/eula.html"
     },
-    "url": "https://downloads.wisecleaner.com/soft/WiseCare365_6.3.5.613.zip",
-    "hash": "c08c29211b65df61334068379e22a8d178f51e8b0fe2ac05170174d4f718a9b6",
-    "extract_dir": "WiseCare365_6.3.5.613",
+    "url": "https://downloads.wisecleaner.com/soft/WiseCare365_6.3.6.614.zip",
+    "hash": "5c7b48bb5d734a9386af83eb39256c62995a2c0ca7c6cb5962883f499eec2ed5",
+    "extract_dir": "WiseCare365_6.3.6.614",
     "pre_install": [
         "@('config.ini', 'DefragOptions.ini') | ForEach-Object {",
         "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
