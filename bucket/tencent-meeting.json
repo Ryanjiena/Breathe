@@ -1,5 +1,5 @@
 {
-    "version": "3.10.8.405",
+    "version": "3.10.9.408",
     "description": "This package installs/upgrades the Tencent Meeting(腾讯会议). Tencent Meeting displays Simplified Chinese only. For other languages, please switch to VooV Meeting.",
     "homepage": "https://meeting.tencent.com/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://meeting.tencent.com/declare.html"
     },
     "notes": "The Tencent Meeting doesn't seem to get access to config files through the current linked folder, you need run 'scoop update; scoop config NO_JUNCTIONS true' to reinstall it.",
-    "url": "https://updatecdn.meeting.qq.com/cos/7661cbf0961770dab60c12dd0661142b/TencentMeeting_0300000000_3.10.8.405.publish.exe#/dl.7z",
-    "hash": "md5:7661cbf0961770dab60c12dd0661142b",
+    "url": "https://updatecdn.meeting.qq.com/cos/e7de12b866acedb2f25efa5169728100/TencentMeeting_0300000000_3.10.9.408.publish.exe#/dl.7z",
+    "hash": "md5:e7de12b866acedb2f25efa5169728100",
     "installer": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
