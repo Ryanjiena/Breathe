@@ -1,5 +1,5 @@
 {
-    "version": "11.8.2.11718",
+    "version": "11.8.2.11734",
     "description": "WPS2019 lite version(without chromium embedded framework), maintaned by c2y. Streamlined from the official installation package, removing irrelevant web and pdf related components and keeping the traditional 3 major pieces(excel, word and ppt).",
     "homepage": "http://bbs.wuyou.net/forum.php?mod=viewthread&tid=429396",
     "license": {
@@ -13,9 +13,9 @@
             "adobe-flash-player-cy"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/wps2019pro.11.8.2.11718lite-nocef.7z",
-    "hash": "33baff31904d6f2031b698d21b0e916e4bc61fd6f4a18aa5b2ae64090aa83ff1",
-    "extract_dir": "wps2019pro.11.8.2.11718lite-nocef",
+    "url": "https://pan.jiemi.workers.dev/?file=/else/wps2019pro.11.8.2.11734lite-nocef.7z",
+    "hash": "09dc4a1e9628e920a156c2014b90423c8e17bd83ef0ecda9f5b2eca61d0ee973",
+    "extract_dir": "wps2019pro.11.8.2.11734lite-nocef",
     "installer": {
         "script": "sudo Start-Process \"$dir\\绿化-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
     },
