@@ -1,5 +1,5 @@
 {
-    "version": "0.19.29",
+    "version": "0.20.0",
     "description": "Clash For Windows Chs Portable.",
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "license": {
@@ -12,22 +12,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.29/Clash.for.Windows-0.19.29-win.7z",
+                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.0/Clash.for.Windows-0.20.0-win.7z",
                 "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z"
             ],
             "hash": [
-                "34036288f3404085ab51e07483b174c6a234c3d72035faaa83adc48e39f77c91",
-                "d39ec1483784046a572d593e35e27bcadfe64d64b17e38aa921bd297f867cde4"
+                "bbd48d0795fe5b34b335e0cca38fbdcd4b8e149ac2b776c7f61f3240cfd434f1",
+                "2d965ae01a317958f18ce983d5df609a8e2f867a2c2d12212347c2bf44508849"
             ]
         },
         "32bit": {
             "url": [
-                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.29/Clash.for.Windows-0.19.29-ia32-win.7z",
+                "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.0/Clash.for.Windows-0.20.0-ia32-win.7z",
                 "https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases/latest/download/app.7z"
             ],
             "hash": [
-                "085353032afbba7b2de3b7f757aa2ab43ed92f38658e42febbf32a9df5d63fc6",
-                "d39ec1483784046a572d593e35e27bcadfe64d64b17e38aa921bd297f867cde4"
+                "fed3dd9cec83c9aa0c99daa30a13a8906dd14d56afc7388fd4847efcfa572706",
+                "2d965ae01a317958f18ce983d5df609a8e2f867a2c2d12212347c2bf44508849"
             ]
         }
     },
