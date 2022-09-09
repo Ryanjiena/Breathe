@@ -1,5 +1,5 @@
 {
-    "version": "106.0.1370.4",
+    "version": "107.0.1375.0",
     "description": "msedge-dev + msedge-plus.",
     "homepage": "https://www.microsoft.com/en-us/edge",
     "license": {
@@ -10,11 +10,11 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-apps.vercel.app/msedge-dev-win-X64#/dl.7z",
-            "hash": "c8bc6b52243c150646bda70f59c7310e64923d9fa43ee42a4d7fa41f2c70b290"
+            "hash": "a21d239768cfb9c523ccba9f52a42a5ee6263316c19a0331921a3d0358af235b"
         },
         "32bit": {
             "url": "https://scoop-apps.vercel.app/msedge-dev-win-X86#/dl.7z",
-            "hash": "db92d306ec89e0e67b960470b77bdcda9196d54343a44fb94e119c78ea8b08c1"
+            "hash": "8b8ccac0818ce050bf53b4ee1606d3a9719c5f5c823f03043be868a669d17c92"
         }
     },
     "pre_install": [
