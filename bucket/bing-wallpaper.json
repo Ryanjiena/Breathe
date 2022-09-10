@@ -21,5 +21,15 @@
             "BingVisualSearchLauncher.exe",
             "Bing Visual Search"
         ]
-    ]
+    ],
+    "checkver": {
+        "script": [
+            "#(Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?linkid=2126594'-MaximumRedirection 0 -SkipHttpErrorCheck -ErrorAction:SilentlyContinue).Headers.Location",
+            "return (Invoke-WebRequest -Uri 'https://bingwallpaper.microsoft.com/api/BWC/downloadPackage?brand=bing'-MaximumRedirection 0 -SkipHttpErrorCheck -ErrorAction:SilentlyContinue).Headers.Location"
+        ],
+        "regex": "download/(?<path>[\\w-/]+)/Installer/([\\d.]+)/Bing/W011/BingWallpaper.exe"
+    },
+    "autoupdate": {
+        "url": "https://download.microsoft.com/download/$matchPath/Installer/$version/Bing/W011/BingWallpaper.exe"
+    }
 }
