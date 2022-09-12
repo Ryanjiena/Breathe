@@ -1,12 +1,12 @@
 {
-    "version": "8.17.6",
+    "version": "8.17.7",
     "description": "A HDD/SSD utility software which supports a part of USB, Intel RAID and NVMe(Shizuku Edition).",
     "homepage": "https://osdn.net/projects/crystaldiskinfo/",
     "license": {
         "identifier": "MIT"
     },
-    "url": "https://free.nchc.org.tw/osdn//crystaldiskinfo/77675/CrystalDiskInfo8_17_6Shizuku.zip",
-    "hash": "0d55fb6c544891a40b89740c46a0b7c2fea2159d5d8fc98831541dba406bc8eb",
+    "url": "https://free.nchc.org.tw/osdn//crystaldiskinfo/77771/CrystalDiskInfo8_17_7Shizuku.zip",
+    "hash": "4b2bf845dc6ef837a6f355b437625956ac27dc5beaec35f81f22336596368822",
     "pre_install": "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
     "architecture": {
         "64bit": {

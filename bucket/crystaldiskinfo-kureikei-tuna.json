@@ -1,12 +1,12 @@
 {
-    "version": "8.17.6",
+    "version": "8.17.7",
     "description": "CrystalDiskInfo Kurei Kei Edition(Download from TUNA mirror).",
     "homepage": "https://osdn.net/projects/crystaldiskinfo/",
     "license": {
         "identifier": "MIT"
     },
-    "url": "https://mirrors.tuna.tsinghua.edu.cn/osdn/crystaldiskinfo/77675/CrystalDiskInfo8_17_6KureiKei.zip",
-    "hash": "00cc132d0c96cf8fc7f1b16ba3aa886bd12967eda10b2418c3a59f6bed568f55",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/osdn/crystaldiskinfo/77771/CrystalDiskInfo8_17_7KureiKei.zip",
+    "hash": "3d911e4c51b1c4c812004dc42e31fe341374301f1dc556499044b62d42b005df",
     "pre_install": "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
     "architecture": {
         "64bit": {
