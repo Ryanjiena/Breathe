@@ -1,5 +1,5 @@
 {
-    "version": "1.14.2282.0",
+    "version": "1.15.2525.0",
     "description": "Windows Terminal is a new, modern, feature-rich, productive terminal application for command-line users. It includes many of the features most frequently requested by the Windows command-line community including support for tabs, rich text, globalization, configurability, theming & styling, and more.",
     "homepage": "https://github.com/microsoft/terminal",
     "license": {
@@ -9,8 +9,8 @@
     "suggest": {
         "vcredist": "extras/vcredist2022"
     },
-    "url": "https://github.com/microsoft/terminal/releases/download/v1.14.2281.0/Microsoft.WindowsTerminal_Win11_1.14.2282.0_8wekyb3d8bbwe.msixbundle",
-    "hash": "a0101652c47c75c3a84c66809ef88aafbd8e928c39707e35e58c98abd01aaa7e",
+    "url": "https://github.com/microsoft/terminal/releases/download/v1.15.2524.0/Microsoft.WindowsTerminal_Win11_1.15.2525.0_8wekyb3d8bbwe.msixbundle",
+    "hash": "a7080e93608b823dd27faa68d3583b59a49a64bcc9c38e89b7020c503c8aa0f6",
     "installer": {
         "script": [
             "$winVer = [Environment]::OSVersion.Version",
