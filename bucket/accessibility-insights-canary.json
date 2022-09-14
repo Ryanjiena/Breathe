@@ -1,13 +1,13 @@
 {
-    "version": "1.1.2076.02",
+    "version": "1.1.2081.03",
     "description": "Accessibility Insights for Windows is the project for Accessibility tools on the Windows platform(Canary Edition).",
     "homepage": "https://accessibilityinsights.io/",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/microsoft/accessibility-insights-windows/blob/main/license.txt"
     },
-    "url": "https://github.com/microsoft/accessibility-insights-windows/releases/download/v1.1.2076.02/AccessibilityInsights.msi",
-    "hash": "4061d2cf2366c70c5672c770c7cda1a69064df6fe0a5e4a408e68e96374e7e93",
+    "url": "https://github.com/microsoft/accessibility-insights-windows/releases/download/v1.1.2081.03/AccessibilityInsights.msi",
+    "hash": "cffdd0470220fd4244cca24fa09e8fe9e7eb080ae95af4a839af10a8638939b8",
     "pre_install": [
         "Move-Item \"$dir\\AccessibilityInsights\\1.*\\*\" \"$dir\" -Force",
         "Remove-Item \"$dir\\AccessibilityInsights\" -Recurse -Force"
