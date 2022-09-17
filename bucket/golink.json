@@ -1,13 +1,13 @@
 {
-    "version": "1.0.8.3",
+    "version": "1.0.8.4",
     "description": "A gas pedal that supports PUBG, APEX and other games.",
     "homepage": "https://www.golink.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.golink.com/protocol"
     },
-    "url": "https://update.golink.com/download/GoLink_v1.0.8.3.exe#/dl.7z",
-    "hash": "eda0a4c4444a2d46dc64de7a08271c5b5c9eb98c4113924e006fad66d72a33a1",
+    "url": "https://update.golink.com/download/GoLink_v1.0.8.4.exe#/dl.7z",
+    "hash": "688ffb4f6622f73e4751c1c1d4c62b23447b695d606e4670785d8ae9d181c849",
     "post_install": "@('$PLUGINSDIR', '[NSIS].nsi', '卸载GoLink加速器.exe.nsis') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue }",
     "shortcuts": [
         [
