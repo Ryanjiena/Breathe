@@ -1,5 +1,5 @@
 {
-    "version": "4.22.07r4278",
+    "version": "4.22.09r4360",
     "description": "Fork of Notepad2, a light-weight Scintilla-based text editor. Featuring syntax highlighting, code folding, auto-completion and API list for about 80 programming languages/documzh-Hansts.",
     "homepage": "https://github.com/zufuliu/notepad2",
     "license": {
@@ -7,12 +7,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v4.22.07r4278/Notepad2_zh-Hans_x64_v4.22.07r4278.zip",
-            "hash": "0b7240bf48dd84d0e6063b2804976a56cc7eecda2ebad1cd981abb6d7b5322e2"
+            "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v4.22.09r4360/Notepad2_zh-Hans_x64_v4.22.09r4360.zip",
+            "hash": "cc15835cdb62a470c7425959b3551e4415ec45da9c6ae51c26387bbc4b92b074"
         },
         "32bit": {
-            "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v4.22.07r4278/Notepad2_zh-Hans_Win32_v4.22.07r4278.zip",
-            "hash": "a1b55230492a5547e0c276e963a3a5f417f486f01371400c016e56208d3526e9"
+            "url": "https://mirrors.sdu.edu.cn/github-release/zufuliu_notepad2/v4.22.09r4360/Notepad2_zh-Hans_Win32_v4.22.09r4360.zip",
+            "hash": "089c922cc2ae135304fdc5f781a273ea86aac6bdfe06d688983a418009d2dcee"
         }
     },
     "bin": "notepad2.exe",
