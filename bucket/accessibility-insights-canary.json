@@ -4,7 +4,7 @@
     "homepage": "https://accessibilityinsights.io/",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/microsoft/accessibility-insights-windows/blob/main/license.txt"
+        "url": "https://github.com/microsoft/accessibility-insights-windows/raw/main/license.txt"
     },
     "url": "https://github.com/microsoft/accessibility-insights-windows/releases/download/v1.1.2084.01/AccessibilityInsights.msi",
     "hash": "d989cf176dd50cbb6be75700fc079a6a8e87225b4a5813e77f8506fcd197ab9e",

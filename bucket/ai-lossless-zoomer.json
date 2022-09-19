@@ -4,7 +4,7 @@
     "homepage": "https://github.com/X-Lucifer/AI-Lossless-Zoomer",
     "license": {
         "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/X-Lucifer/AI-Lossless-Zoomer/blob/master/LICENSE"
+        "url": "https://github.com/X-Lucifer/AI-Lossless-Zoomer/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {

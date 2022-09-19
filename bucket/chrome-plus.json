@@ -4,7 +4,7 @@
     "homepage": "https://github.com/shuax/chrome_plus",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/shuax/chrome_plus/blob/main/LICENSE"
+        "url": "https://github.com/shuax/chrome_plus/raw/main/LICENSE"
     },
     "suggest": {
         "chrome": [

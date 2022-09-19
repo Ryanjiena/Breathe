@@ -4,7 +4,7 @@
     "homepage": "https://github.com/Spsden/Drip",
     "license": {
         "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/Spsden/Drip/blob/master/LICENSE"
+        "url": "https://github.com/Spsden/Drip/raw/master/LICENSE"
     },
     "notes": "wiki: <https://github.com/Spsden/Drip/wiki>",
     "url": "https://github.com/Spsden/Drip/releases/download/v0.3.0-alpha/Dripsetup.exe",

@@ -4,7 +4,7 @@
     "homepage": "https://opencc.byvoid.com/",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/BYVoid/OpenCC/blob/master/LICENSE"
+        "url": "https://github.com/BYVoid/OpenCC/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {

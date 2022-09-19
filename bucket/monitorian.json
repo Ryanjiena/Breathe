@@ -4,7 +4,7 @@
     "homepage": "https://github.com/emoacht/Monitorian",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/emoacht/Monitorian/blob/master/LICENSE.txt"
+        "url": "https://github.com/emoacht/Monitorian/raw/master/LICENSE.txt"
     },
     "url": "https://github.com/emoacht/Monitorian/releases/download/3.13.0-Installer/MonitorianInstaller3130.zip",
     "hash": "8a451d297faa23fb154189915dadc5313cdb464e416ee62087832e57c26a1844",

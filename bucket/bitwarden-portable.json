@@ -4,7 +4,7 @@
     "homepage": "https://bitwarden.com",
     "license": {
         "identifier": "Unknown|GPL-3.0-or-later",
-        "url": "https://github.com/bitwarden/clients/blob/master/LICENSE.txt"
+        "url": "https://github.com/bitwarden/clients/raw/master/LICENSE.txt"
     },
     "architecture": {
         "64bit": {

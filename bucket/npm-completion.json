@@ -4,7 +4,7 @@
     "homepage": "https://github.com/PowerShell-Completion/npm-completion",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/PowerShell-Completion/npm-completion/blob/master/LICENSE"
+        "url": "https://github.com/PowerShell-Completion/npm-completion/raw/master/LICENSE"
     },
     "notes": [
         "Use the module by running: 'Import-Module npm-completion'",

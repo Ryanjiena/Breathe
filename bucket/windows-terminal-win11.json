@@ -4,7 +4,7 @@
     "homepage": "https://github.com/microsoft/terminal",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/microsoft/terminal/blob/main/LICENSE"
+        "url": "https://github.com/microsoft/terminal/raw/main/LICENSE"
     },
     "suggest": {
         "vcredist": "extras/vcredist2022"

@@ -4,7 +4,7 @@
     "homepage": "https://github.com/jdhitsolutions/PSScriptTools",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/jdhitsolutions/PSScriptTools/blob/master/license.txt"
+        "url": "https://github.com/jdhitsolutions/PSScriptTools/raw/master/license.txt"
     },
     "notes": [
         "Use the module by running: 'Import-Module PSScriptTools'",

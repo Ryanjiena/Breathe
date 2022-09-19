@@ -4,7 +4,7 @@
     "homepage": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader",
     "license": {
         "identifier": "AGPL-3.0-only",
-        "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/blob/master/LICENSE"
+        "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/raw/master/LICENSE"
     },
     "notes": "The Lite version of BilibiliLiveRecordDownLoader requires .NET 5.0 to be installed in order to run.",
     "suggest": {

@@ -4,7 +4,7 @@
     "homepage": "https://github.com/gaowanliang/LightUploader",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/gaowanliang/LightUploader/blob/main/LICENSE"
+        "url": "https://github.com/gaowanliang/LightUploader/raw/main/LICENSE"
     },
     "architecture": {
         "64bit": {

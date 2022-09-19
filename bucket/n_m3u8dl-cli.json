@@ -4,7 +4,7 @@
     "homepage": "https://github.com/nilaoda/N_m3u8DL-CLI",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/nilaoda/N_m3u8DL-CLI/blob/master/LICENSE"
+        "url": "https://github.com/nilaoda/N_m3u8DL-CLI/raw/master/LICENSE"
     },
     "suggest": {
         "ffmpeg": "ffmpeg"

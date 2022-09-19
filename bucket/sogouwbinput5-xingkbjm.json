@@ -1,5 +1,5 @@
 {
-    "version": "5.5.0.2580",
+    "version": "5.5.0.2581",
     "description": "Sogou Wubi Input 3rd party modified version, maintained by xingkbjm.com.",
     "homepage": "https://wubi.sogou.com",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://rule.tencent.com/rule/preview/ff3e4cc2-caf4-4f7b-847e-162158ad2d99"
     },
     "notes": "Features: <https://www.xingkbjm.com/sogouwubi/>",
-    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗五笔输入法_v5.5b(5.5.0.2580)_星空不寂寞去广告版.exe",
-    "hash": "7fda1dae1800099f8c911ef4cfdc6004cfad43f3e2da6188962bcd98e4c81280",
+    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗五笔输入法_v5.5c(5.5.0.2581)_星空不寂寞去广告版.exe",
+    "hash": "20cab3323fa1ee24e931ce7b7aed6a3fba46788a9bac008f72ecde00dbd8adf0",
     "installer": {
         "script": [
             "ensure \"$persist_dir\\SogouWB\" | Out-Null",

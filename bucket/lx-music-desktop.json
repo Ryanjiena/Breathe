@@ -4,7 +4,7 @@
     "homepage": "https://github.com/lyswhut/lx-music-desktop",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/lyswhut/lx-music-desktop/blob/master/LICENSE"
+        "url": "https://github.com/lyswhut/lx-music-desktop/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {

@@ -4,7 +4,7 @@
     "homepage": "https://github.com/jpochyla/psst",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/jpochyla/psst/blob/master/LICENSE.md"
+        "url": "https://github.com/jpochyla/psst/raw/master/LICENSE.md"
     },
     "notes": "Spotify Premium account is required.",
     "url": "https://nightly.link/jpochyla/psst/actions/runs/2925145710/Psst.exe.zip",

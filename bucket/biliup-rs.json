@@ -4,7 +4,7 @@
     "homepage": "https://github.com/ForgQi/biliup-rs",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/ForgQi/biliup-rs/blob/master/LICENSE"
+        "url": "https://github.com/ForgQi/biliup-rs/raw/master/LICENSE"
     },
     "url": "https://github.com/ForgQi/biliup-rs/releases/download/v0.1.13/biliupR-v0.1.13-x86_64-windows.zip",
     "hash": "debfcb895abb09a779461d3f51847eee49cf54789d2d9b4447519874cca7c1f2",

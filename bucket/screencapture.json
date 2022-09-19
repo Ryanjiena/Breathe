@@ -8,10 +8,10 @@
     "url": "https://pan.jiemi.workers.dev/?file=/else/SGScreencapture_v12.4.0.6503.zip",
     "hash": "2b25a7564272c6e4bea920aef470f911aa43270fad161ca61e26a5ca30fe135c",
     "installer": {
-        "file": "绿化.bat"
+        "script": "Start-Process -FilePath \"$dir\\绿化.bat\" -Verb RunAs -Wait"
     },
     "uninstaller": {
-        "file": "卸载.bat"
+        "script": "Start-Process -FilePath \"$dir\\卸载.bat\" -Verb RunAs -Wait"
     },
     "shortcuts": [
         [

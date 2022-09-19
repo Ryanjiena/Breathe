@@ -4,7 +4,7 @@
     "homepage": "https://github.com/ClashDotNetFramework/ClashDotNetFramework",
     "license": {
         "identifier": "Freeware",
-        "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/blob/master/LICENSE"
+        "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/raw/master/LICENSE"
     },
     "notes": [
         "clash.NET 最后一版进行修改的, 增 Clash 虚拟网卡代理, 主要内核是 p 版 clash",

@@ -4,7 +4,7 @@
     "homepage": "https://flokk.app/",
     "license": {
         "identifier": "BSD-2-Clause",
-        "url": "https://github.com/gskinnerTeam/flokk/blob/master/LICENSE"
+        "url": "https://github.com/gskinnerTeam/flokk/raw/master/LICENSE"
     },
     "notes": "wiki: <https://github.com/gskinnerTeam/flokk/wiki>",
     "url": "https://flokk.app/windows/flokk-v1.0.1-signed.zip",

@@ -4,7 +4,7 @@
     "homepage": "https://github.com/jdhitsolutions/PSCalendar",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/jdhitsolutions/PSCalendar/blob/master/license.txt"
+        "url": "https://github.com/jdhitsolutions/PSCalendar/raw/master/LICENSE.txt"
     },
     "notes": "Usage: <https://github.com/jdhitsolutions/PSCalendar/blob/master/README.md>",
     "url": "https://psg-prod-eastus.azureedge.net/packages/pscalendar.2.8.0.nupkg",

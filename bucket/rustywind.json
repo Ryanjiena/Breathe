@@ -4,7 +4,7 @@
     "homepage": "https://github.com/avencera/rustywind",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/avencera/rustywind/blob/master/LICENSE"
+        "url": "https://github.com/avencera/rustywind/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {

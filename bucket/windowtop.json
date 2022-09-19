@@ -4,7 +4,7 @@
     "homepage": "https://windowtop.info/",
     "license": {
         "identifier": "Freeware",
-        "url": "https://github.com/BiGilSoft/WindowTop/blob/master/LICENSE"
+        "url": "https://github.com/BiGilSoft/WindowTop/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {

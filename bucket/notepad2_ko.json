@@ -4,7 +4,7 @@
     "homepage": "https://github.com/zufuliu/notepad2",
     "license": {
         "identifier": "BSD-3-Clause",
-        "url": "https://github.com/zufuliu/notepad2/blob/main/License.txt"
+        "url": "https://github.com/zufuliu/notepad2/raw/main/LICENSE.txt"
     },
     "notes": "If you find any bugs or have any suggestions feel free to write proposals/issues or provide patches/pull requests.",
     "architecture": {

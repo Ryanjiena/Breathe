@@ -4,7 +4,7 @@
     "homepage": "https://jetbra.in/s",
     "license": {
         "identifier": "GPL-3.0-only",
-        "url": "https://github.com/ja-netfilter/ja-netfilter/blob/master/LICENSE"
+        "url": "https://github.com/ja-netfilter/ja-netfilter/raw/master/LICENSE"
     },
     "notes": "Configure as described in \"$dir\\readme.txt\"! For testing purposes only, not for commercial use!",
     "url": "https://pan.jiemi.workers.dev/?file=/patch/jetbra-20220801-1126574a2f82debceb72e7f948eb7d4f616ffddf.zip",

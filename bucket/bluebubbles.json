@@ -4,7 +4,7 @@
     "homepage": "https://bluebubbles.app",
     "license": {
         "identifier": "MIT",
-        "url": "https://github.com/BlueBubblesApp/bluebubbles-app/blob/master/LICENSE"
+        "url": "https://github.com/BlueBubblesApp/bluebubbles-app/raw/master/LICENSE"
     },
     "notes": "BlueBubbles requires a Mac and an Apple ID to function! A macOS VM on Windows or Linux can suffice as well.",
     "url": "https://github.com/BlueBubblesApp/bluebubbles-app/releases/download/v1.10.0%2B31/bluebubbles_standalone.exe",

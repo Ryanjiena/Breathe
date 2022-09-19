@@ -4,7 +4,7 @@
     "homepage": "https://gitee.com/wanglifree/tianruoocr-cl",
     "license": {
         "identifier": "GPL-3.0-only",
-        "url": "https://gitee.com/wanglifree/tianruoocr-cl/blob/master/LICENSE"
+        "url": "https://gitee.com/wanglifree/tianruoocr-cl/raw/master/LICENSE"
     },
     "notes": [
         "如果出现 Exception from HRESULT: 0x8007007E 可以使用 DirectX Repair 进行修复, 一般能够启动 'scoop install directx_repair'",

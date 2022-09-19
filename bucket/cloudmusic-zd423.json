@@ -1,5 +1,5 @@
 {
-    "version": "2.10.3.200198",
+    "version": "2.10.4.200380",
     "description": "NetEase Cloud Music 3rd party modified version, maintained by 423down.com.",
     "homepage": "https://music.163.com",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://st.music.163.com/official-terms/service"
     },
     "notes": "Features: <https://www.423down.com/2943.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/CloudMusic-2.10.3.200198.7z",
-    "hash": "710fbd67a545e11b6ed152f69f8c5843ace601dc7da4266be99b3a7c6dc45239",
+    "url": "https://pan.jiemi.workers.dev/?file=/zd423/CloudMusic-2.10.4.200380.7z",
+    "hash": "49dfe0cb268ed9e0487acc538a880c8680a31be971d8ffc4b9eeb585311a0473",
     "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\cloudmusic\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
     "extract_dir": "CloudMusic",
     "uninstaller": {

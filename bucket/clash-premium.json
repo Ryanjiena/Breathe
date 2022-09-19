@@ -4,7 +4,7 @@
     "homepage": "https://github.com/Dreamacro/clash",
     "license": {
         "identifier": "GPL-3.0-only",
-        "url": "https://github.com/Dreamacro/clash/blob/master/LICENSE"
+        "url": "https://github.com/Dreamacro/clash/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {

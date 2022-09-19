@@ -4,7 +4,7 @@
     "homepage": "https://github.com/vladimiry/ElectronMail",
     "license": {
         "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/vladimiry/ElectronMail/blob/master/LICENSE"
+        "url": "https://github.com/vladimiry/ElectronMail/raw/master/LICENSE"
     },
     "notes": "Desktop notification is not working when using portable version.",
     "architecture": {

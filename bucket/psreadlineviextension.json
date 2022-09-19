@@ -4,7 +4,7 @@
     "homepage": "https://github.com/belotn/PsReadLineVIExtension",
     "license": {
         "identifier": "BSD-2-Clause",
-        "url": "https://github.com/belotn/PsReadLineVIExtension/blob/main/LICENSE"
+        "url": "https://github.com/belotn/PsReadLineVIExtension/raw/main/LICENSE"
     },
     "notes": [
         "Use the module by running: 'Import-Module PsReadLineVIExtension'",

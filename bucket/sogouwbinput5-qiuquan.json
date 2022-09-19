@@ -1,5 +1,5 @@
 {
-    "version": "5.5.0.2580",
+    "version": "5.5.0.2581",
     "description": "Sogou Wubi Input 3rd party modified version, maintained by qiuquan.cc.",
     "homepage": "https://wubi.sogou.com",
     "license": {
@@ -8,8 +8,8 @@
     },
     "depends": "sudo",
     "notes": "Features: <http://www.qiuquan.cc/input/sogouwb.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗五笔输入法_5.5.0.2580_去升级版_20220520.exe",
-    "hash": "ecada6c557746549eab10d381fd900982d1073931c251e50c8a346e1cb061623",
+    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗五笔输入法_5.5.0.2581_去升级版_20220916.exe",
+    "hash": "5c811cd4976669c7c62c54273d9326d8ac634c208e67b46117a52b8dba652ce3",
     "installer": {
         "script": [
             "ensure \"$persist_dir\\SogouWB\" | Out-Null",

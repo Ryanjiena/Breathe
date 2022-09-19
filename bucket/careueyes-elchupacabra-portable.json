@@ -1,12 +1,12 @@
 {
-    "version": "2.2.2.1",
+    "version": "2.2.3.0",
     "description": "CareUEyes 3rd party modified version, maintained by elchupacabra.",
     "homepage": "https://lrepacks.net/repaki-raznyh-programm/446-careueyes-repack-amp-portable.html",
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/lrepacks/careueyes_2.2.2.1.zip",
-    "hash": "f2557cebd2c19fde50b07126d890d8b40a5a8b7665b778475272c3064d23a98f",
+    "url": "https://pan.jiemi.workers.dev/?file=/lrepacks/careueyes_2.2.3.0.zip",
+    "hash": "40c457160a212f2e65e713ce7b8ade7878b7ecb30b9dbc40bee90adcef4f2401",
     "pre_install": [
         "Get-ChildItem \"$dir\\CareUEyes*.exe\" | Rename-Item -NewName 'setup.exe'",
         "Get-ChildItem \"$dir\" -Exclude setup.exe, *install.json, *manifest.json | ForEach-Object { Remove-Item \"$dir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue }",

@@ -4,7 +4,7 @@
     "homepage": "https://www.whitewaterfoundry.com/fedora-remix-for-wsl",
     "license": {
         "identifier": "Freeware",
-        "url": "https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL/blob/master/LICENSE.md"
+        "url": "https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL/raw/master/LICENSE.md"
     },
     "depends": "sudo",
     "architecture": {

@@ -4,7 +4,7 @@
     "homepage": "https://github.com/dream7180/ClashWarden",
     "license": {
         "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/dream7180/ClashWarden/blob/master/LICENSE"
+        "url": "https://github.com/dream7180/ClashWarden/raw/master/LICENSE"
     },
     "notes": [
         "集成的订阅来自网络, 开箱即用.",

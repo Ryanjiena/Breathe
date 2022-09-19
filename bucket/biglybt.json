@@ -4,7 +4,7 @@
     "homepage": "https://www.biglybt.com",
     "license": {
         "identifier": "GPL-2.0-or-later",
-        "url": "https://github.com/BiglySoftware/BiglyBT/blob/master/LICENSE"
+        "url": "https://github.com/BiglySoftware/BiglyBT/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {

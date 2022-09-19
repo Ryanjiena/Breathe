@@ -4,7 +4,7 @@
     "homepage": "https://koodo.960960.xyz/",
     "license": {
         "identifier": "AGPL-3.0-only",
-        "url": "https://github.com/troyeguo/koodo-reader/blob/master/LICENSE"
+        "url": "https://github.com/troyeguo/koodo-reader/raw/master/LICENSE"
     },
     "notes": [
         "Images are not showing or shows red error message in some epub books",

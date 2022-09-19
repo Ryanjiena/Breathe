@@ -4,7 +4,7 @@
     "homepage": "https://github.com/huiyadanli/RevokeMsgPatcher",
     "license": {
         "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/huiyadanli/RevokeMsgPatcher/blob/master/LICENSE"
+        "url": "https://github.com/huiyadanli/RevokeMsgPatcher/raw/master/LICENSE"
     },
     "notes": [
         "NET Framework 4.5 or higher is required. Versions lower than this may not respond when opening the program, or may simply report an error.",

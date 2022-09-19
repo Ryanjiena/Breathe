@@ -4,7 +4,7 @@
     "homepage": "https://crystal-lang.org",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/crystal-lang/crystal/blob/master/LICENSE"
+        "url": "https://github.com/crystal-lang/crystal/raw/master/LICENSE"
     },
     "depends": "vswhere",
     "url": "https://github.com/crystal-lang/crystal/releases/download/1.5.0/crystal-1.5.0-windows-x86_64-msvc-unsupported.zip",

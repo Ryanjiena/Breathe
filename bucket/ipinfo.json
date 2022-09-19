@@ -4,7 +4,7 @@
     "homepage": "https://ipinfo.io/",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/ipinfo/cli/blob/master/LICENSE"
+        "url": "https://github.com/ipinfo/cli/raw/master/LICENSE"
     },
     "architecture": {
         "64bit": {
