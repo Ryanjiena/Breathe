@@ -1,5 +1,5 @@
 {
-    "version": "2022.06.21",
+    "version": "2022.09.15",
     "description": "Microsoft common runtime library collection - based on roustar31's original script Dreamcast takeover update, 32+64 bit collection, WinXP~Win11 auto-determination.",
     "homepage": "http://dreamcast2.ys168.com",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
     },
     "notes": "You can now remove this installer with 'scoop uninstall vcredist-dreamcast'",
-    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/vcredist-dreamcast_2022.06.21.exe#/vcredist.exe",
-    "hash": "08a98ea06f72877e146985e532b0663b62b34e7f549fd750c63bc20ae9423584",
+    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/vcredist-dreamcast_2022.09.15.exe#/vcredist.exe",
+    "hash": "9d3ae4afdf8c61e65c46b6cd5f151eef537a572d0b159f556d23287740e0279c",
     "installer": {
         "script": [
             "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
