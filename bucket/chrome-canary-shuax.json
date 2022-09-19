@@ -1,5 +1,5 @@
 {
-    "version": "108.0.5307.0",
+    "version": "108.0.5308.0",
     "description": "chrome-canary + chrome-plus.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -9,12 +9,12 @@
     "depends": "chrome-plus",
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/aduvxocovbvozv5mfdn5gx6wqp3q_108.0.5307.0/108.0.5307.0_chrome_installer.exe#/dl.7z",
-            "hash": "a539654feecbc170ffd058d98bff2c44edf8944b93ec758ba0ae64821908e977"
+            "url": "https://dl.google.com/release2/chrome/adjy2wnloiumhxpdb6xcd3wvadia_108.0.5308.0/108.0.5308.0_chrome_installer.exe#/dl.7z",
+            "hash": "76917f7edf497e06eba048342d8237b5ae44445c2eac28f0aec9631db39c539f"
         },
         "32bit": {
-            "url": "https://dl.google.com/release2/chrome/m3752rptlsspfxkajtq5v2rag4_108.0.5307.0/108.0.5307.0_chrome_installer.exe#/dl.7z",
-            "hash": "61c2333b59e1de8d295bfa5dd4b73dabbd9d87673c5b8efe819bee110dd9e0db"
+            "url": "https://dl.google.com/release2/chrome/adz5ojwqir5gw6jxuoev3ayu4y2q_108.0.5308.1/108.0.5308.1_chrome_installer.exe#/dl.7z",
+            "hash": "f10c93c6d91b8eb11bff5b496e645a8e30664f55ab5992543d6e51d791cf7519"
         }
     },
     "installer": {
