@@ -10,7 +10,10 @@
     "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/vcredist-dreamcast_2022.06.21.exe#/vcredist.exe",
     "hash": "08a98ea06f72877e146985e532b0663b62b34e7f549fd750c63bc20ae9423584",
     "installer": {
-        "script": "Start-Process \"$dir\\vcredist.exe\" -WorkingDirectory \"$dir\" -ArgumentList '/silent' -Wait"
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Invoke-ExternalCommand \"$dir\\vcredist.exe\" -ArgumentList @('/silent') -RunAs | Out-Null"
+        ]
     },
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
