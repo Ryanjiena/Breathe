@@ -1,5 +1,5 @@
 {
-    "version": "1.2.0",
+    "version": "1.5.0",
     "description": "🆙 Upscayl - Free and Open Source AI Image Upscaler for Linux, MacOS and Windows built with Linux-First philosophy.",
     "homepage": "https://github.com/upscayl/upscayl",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/upscayl/upscayl/releases/download/v1.2.0/Upscayl-Setup-1.2.0.exe#/dl.7z",
-            "hash": "sha512:4a2dc5033758b8a30e22b7f53cea1e4135bddf703d29b8146fa4e349a688a2429563810f34dcb4554ed67f4f16c308d994ed0d4cd298ad39497270965c8fa1ee",
+            "url": "https://github.com/upscayl/upscayl/releases/download/v1.5.0/Upscayl-Setup-1.5.0.exe#/dl.7z",
+            "hash": "sha512:e5688669b5fce2fa2cb615f241c44ff740106d0a916796964b95f75aa3043023cc7132dd6d5525658b273b8ac5b83ce114618c69c14594ba0fe9a446adb15d4f",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal"
         }
     },
