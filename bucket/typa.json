@@ -1,5 +1,5 @@
 {
-    "version": "1.4.3",
+    "version": "1.4.4",
     "description": "A truly minimal markdown editor.",
     "homepage": "https://typora.io",
     "license": {
@@ -10,12 +10,12 @@
     "depends": "typora",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/1.4.3/app_asar_file_v1.4.3-windows-x64.zip",
-            "hash": "02c7cff5ac9af8f3106110fcb6947ed59272650c025da8f9a144ee313afb67e8"
+            "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/1.4.4/app_asar_file_v1.4.4-windows-x64.zip",
+            "hash": "6851d10b68086a8d9e71f42fcb4d88ea8de103e541bbf3932e050bc1c78e30a2"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/1.4.3/app_asar_file_v1.4.3-windows-x86.zip",
-            "hash": "afe60d28065aa1106c05cf9b42a6972344b107a907157df0ca514538169b88bb"
+            "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/1.4.4/app_asar_file_v1.4.4-windows-x86.zip",
+            "hash": "b81f934194a1ca269ed3dfb4e8d9c0fe06ee6d4736c4dea25e791245ee63394a"
         }
     },
     "installer": {
