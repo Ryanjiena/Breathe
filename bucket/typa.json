@@ -10,11 +10,11 @@
     "depends": "typora",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v1.4.3-windows-x64.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/1.4.3/app_asar_file_v1.4.3-windows-x64.zip",
             "hash": "02c7cff5ac9af8f3106110fcb6947ed59272650c025da8f9a144ee313afb67e8"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v1.4.3-windows-x86.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/1.4.3/app_asar_file_v1.4.3-windows-x86.zip",
             "hash": "afe60d28065aa1106c05cf9b42a6972344b107a907157df0ca514538169b88bb"
         }
     },
@@ -37,17 +37,23 @@
     },
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "app_asar_file_v([\\d.]+)-windows-x64.zip",
-        "reverse": true
+        "regex": "app_asar_file_v(?<ver>[\\d.]+)(?<dev>-dev)?-windows-x64.zip",
+        "reverse": true,
+        "replace": "${ver}${dev}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v$version-windows-x64.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/$version/app_asar_file_v$version-windows-x64.zip"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/Typora/app_asar_file_v$version-windows-x86.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/$version/app_asar_file_v$version-windows-x86.zip"
             }
+        },
+        "hash": {
+            "url": "$baseurl/hash.txt",
+            "mode": "extract",
+            "regex": "$sha256\\s+$basename"
         }
     }
 }
