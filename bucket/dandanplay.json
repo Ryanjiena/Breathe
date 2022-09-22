@@ -1,5 +1,5 @@
 {
-    "version": "12.5.0",
+    "version": "12.6.0",
     "description": "A free video playback, video management and catch-up software that plays video files on your local hard drive and displays pop-up comments from other users watching the same program.",
     "homepage": "https://www.dandanplay.com",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dandan.sakurateam.top/dandanplay-x64_12.5.0.exe",
-            "hash": "61cf1cf7707b64249cf913e5899ca7e415b1fd1603c7ecccc0a52792b72e7e60"
+            "url": "https://dandan.sakurateam.top/dandanplay-x64_12.6.0.exe",
+            "hash": "dab5990ae0e139eca44c247ddf3922e5bdb3522d106255a21c1b5b3dafe2db37"
         }
     },
     "pre_install": [
