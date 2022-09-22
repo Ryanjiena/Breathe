@@ -1,12 +1,12 @@
 {
-    "version": "202209170820",
+    "version": "202209220151",
     "description": "V2Ray MaxMind mmdb format file Country.mmdb, maintained by @Loyalsoldier. This project releases GeoIP files automatically every Thursday.",
     "homepage": "https://github.com/Loyalsoldier/geoip",
     "license": {
         "identifier": "CC-BY-SA-4.0"
     },
-    "url": "https://github.com/Loyalsoldier/geoip/releases/download/202209170820/Country.mmdb",
-    "hash": "c18624f3a96260ec1dfb5866b30673a2bf2f026bbdecbfaa8eac1f250b656649",
+    "url": "https://github.com/Loyalsoldier/geoip/releases/download/202209220151/Country.mmdb",
+    "hash": "c00be016fe270234c8f0262cf7f18805fc9d4cd5c534dce57b5c33e0eb6af255",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Loyalsoldier/geoip/releases/download/$version/Country.mmdb",
