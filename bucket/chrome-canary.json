@@ -1,5 +1,5 @@
 {
-    "version": "108.0.5318.0",
+    "version": "108.0.5319.0",
     "description": "Fast, secure, and free web browser, built for the modern web(Canary, Portable Edition).",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/dohnkvi67j7uu2i5kshbtfvvxy_108.0.5318.0/108.0.5318.0_chrome_installer.exe#/dl.7z",
-            "hash": "bb353ee4171e6608c463e988c3be9216e73ee4090784e866531a0849b96fd600"
+            "url": "https://dl.google.com/release2/chrome/adpwnb6fgxiju7hgchvnoqhc2l3q_108.0.5319.0/108.0.5319.0_chrome_installer.exe#/dl.7z",
+            "hash": "7afa665a279d0c465cdf792e2df5aa5b4508456020c0b879b17b93552fe0d04a"
         },
         "32bit": {
-            "url": "https://dl.google.com/release2/chrome/acs2mt5hhwzdmo4hoef7dy6nsa2a_108.0.5318.0/108.0.5318.0_chrome_installer.exe#/dl.7z",
-            "hash": "5420b890e57314641214927c1f8b847a94b5715900a5cd78b3a39d00f7c25710"
+            "url": "https://dl.google.com/release2/chrome/achl2hkib7ndcu4dchwqs7hssckq_108.0.5319.0/108.0.5319.0_chrome_installer.exe#/dl.7z",
+            "hash": "09fb5d1ce788ad1565403382cca241dd6e2f7489841d614431f24b0f9abfe63f"
         }
     },
     "installer": {
