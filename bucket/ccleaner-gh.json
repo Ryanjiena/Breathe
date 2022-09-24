@@ -6,7 +6,7 @@
         "identifier": "Freeware"
     },
     "notes": "Features: <https://www.ghxi.com/ccleanerpro.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/CCleaner_v6.03.10002_Business_Portable.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/CCleaner_v6.03.10002_Business_Portable.7z",
     "hash": "c44a9e3de9793809001103d44f2162476e0b9813a45938272ae45f95b5f1a8b0",
     "extract_dir": "CCleaner Business",
     "pre_uninstall": [
@@ -46,6 +46,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
     }
 }

@@ -9,7 +9,7 @@
         "Feature: <https://www.ghxi.com/x64_dbg.html>",
         "Add x64dbg as a context menu option by running: '$dir\\install.bat'"
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/x64dbg_2022-07-04_Mod_Green.7z#dl.7z_",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/x64dbg_2022-07-04_Mod_Green.7z#dl.7z_",
     "hash": "7637d275af6c264cba833ceca29ce7d9a460150eb9917b3877012e648e29821f",
     "pre_install": [
         "7z x -p2022 $dir\\$fname $('-o' + $dir) | Out-Null",
@@ -76,6 +76,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/x64dbg_$version_Mod_Green.7z#dl.7z_"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/x64dbg_$version_Mod_Green.7z#dl.7z_"
     }
 }

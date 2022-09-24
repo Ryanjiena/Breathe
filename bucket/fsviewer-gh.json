@@ -6,7 +6,7 @@
         "identifier": "Unknown"
     },
     "notes": "Features: <https://www.ghxi.com/faststoneiw.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/FastStoneimageViewer_7.7_Portable.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/FastStoneimageViewer_7.7_Portable.7z",
     "hash": "29c7965b1d212a037fb8b5b72b26e601c2ba797dd0fdfcb5af28cac8de4a35d3",
     "extract_dir": "FastStoneimageViewer_7.7_Portable\\FastStone Image Viewer",
     "pre_install": [
@@ -31,7 +31,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename",
         "extract_dir": "FastStoneimageViewer_$version_Portable\\FastStone Image Viewer"
     }
 }

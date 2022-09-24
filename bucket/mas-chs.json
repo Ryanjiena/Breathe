@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/kms/MAS_1.6_AIO_Password_1234.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/kms/MAS_1.6_AIO_Password_1234.7z",
     "hash": "9e3a5ed72cebd471c62377036d3908f2b64cdb7b944438a760f913db85bce807",
     "pre_install": "Expand-7zipArchive \"$dir\\$fname\" -Switches '-p1234' -ExtractDir \"MAS_$version_AIO\" -Removal",
     "post_install": "Get-ChildItem \"$dir\" '*.cmd' | Rename-Item -NewName { $_.FullName -replace \"_$version\", '' }",
@@ -26,6 +26,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/kms/MAS_$matchVer_AIO$matchPasswd$matchPatch.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/kms/MAS_$matchVer_AIO$matchPasswd$matchPatch.7z"
     }
 }

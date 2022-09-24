@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.adobe.com/products/clients/all_dist_agreement.html"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/Adobe_Flash_Player_PPAPI_34.0.0.267_dreamcast.exe#/setup.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/Adobe_Flash_Player_PPAPI_34.0.0.267_dreamcast.exe#/setup.exe",
     "hash": "af9ee19e22dfc33336ad7d55bd1465130f627c16d4459ddf5599ab3bd37f5fca",
     "installer": {
         "script": [
@@ -26,6 +26,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/Adobe_Flash_Player_PPAPI_$version_dreamcast.exe#/setup.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/Adobe_Flash_Player_PPAPI_$version_dreamcast.exe#/setup.exe"
     }
 }

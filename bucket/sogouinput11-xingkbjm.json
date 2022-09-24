@@ -7,7 +7,7 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://www.xingkbjm.com/sogopy/>",
-    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗拼音输入法_v11.9e(11.9.0.5877)_星空不寂寞精简版.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗拼音输入法_v11.9e(11.9.0.5877)_星空不寂寞精简版.exe",
     "hash": "3719d669dca1faa9c28ead939ef740ce8801a3cd6a780c2ec4838c13da7c787d",
     "installer": {
         "script": [
@@ -38,6 +38,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename"
     }
 }

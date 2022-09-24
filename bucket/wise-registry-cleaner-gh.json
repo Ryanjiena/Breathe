@@ -7,7 +7,7 @@
         "url": "https://www.wisecleaner.com/eula.html"
     },
     "notes": "Features: <https://www.ghxi.com/wiseregcleaner.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/WiseRegistryCleaner_10.8.2.703_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/WiseRegistryCleaner_10.8.2.703_Green.7z",
     "hash": "33ba30752b9e0e6821086cb308d3b986be69595917f1006bfd7ab52db6574455",
     "extract_dir": "WiseRegistryCleaner_10.8.2.703_Green",
     "shortcuts": [
@@ -22,7 +22,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename",
         "extract_dir": "WiseRegistryCleaner_$version_Green"
     }
 }

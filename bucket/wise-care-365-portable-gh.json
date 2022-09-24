@@ -8,7 +8,7 @@
     },
     "notes": "Features: <https://www.ghxi.com/wisecare365.html>",
     "depends": "sudo",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/WiseCare365_6.3.5.613_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/WiseCare365_6.3.5.613_Green.7z",
     "hash": "3b9b776ea30ce7fff91378adbb47ec13654fa6b8c0888e7a33c4e8e74d7e2c84",
     "extract_dir": "WiseCare365_6.3.5.613_Green\\WiseCare365",
     "uninstaller": {
@@ -31,7 +31,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename",
         "extract_dir": "WiseCare365_$version_Green\\WiseCare365"
     }
 }

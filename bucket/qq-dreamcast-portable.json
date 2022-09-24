@@ -29,7 +29,7 @@
             "adobe-flash-player-ppapi-zd423"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/腾讯QQ_9.6.6.28796_绿色版.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/腾讯QQ_9.6.6.28796_绿色版.7z",
     "hash": "7ef8af09c4daf3e090a2f145655e42859c1e942467d3f7f3ec976297d52c2406",
     "extract_dir": "QQ",
     "installer": {
@@ -57,6 +57,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/$matchFilename"
     }
 }

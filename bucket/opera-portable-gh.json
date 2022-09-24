@@ -7,7 +7,7 @@
         "url": "https://www.opera.com/eula/computers"
     },
     "notes": "Features: <https://www.ghxi.com/operachrome.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Opera_91.0.4516.16_Portable.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Opera_91.0.4516.16_Portable.7z",
     "hash": "3005be352d8ced8ebda819abd6fa9aed0da2eaa991987b061b32c7ab0b96ebd2",
     "extract_dir": "Opera_91.0.4516.16_Portable\\OperaPortable",
     "pre_uninstall": [
@@ -29,7 +29,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename",
         "extract_dir": "Opera_$version_Portable\\OperaPortable"
     }
 }

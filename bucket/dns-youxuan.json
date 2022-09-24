@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/DNS优选_v0.0.4.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/DNS优选_v0.0.4.zip",
     "hash": "f1a7895f8473a616ee2ee1ceb2f4ad5e535444be792bc41ed8912a9120904cb1",
     "pre_install": "Expand-7zipArchive \"$dir\\$fname\" -Switches '-p2022' -Removal",
     "shortcuts": [
@@ -20,6 +20,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/DNS优选_v$version.zip"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/DNS优选_v$version.zip"
     }
 }

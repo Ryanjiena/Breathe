@@ -7,7 +7,7 @@
         "url": "https://www.adobe.com/products/clients/all_dist_agreement.html"
     },
     "notes": "Warning: The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Adobe_Flash_Player_ActiveX_v34.0.0.267.exe#/setup.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Adobe_Flash_Player_ActiveX_v34.0.0.267.exe#/setup.exe",
     "hash": "0ee54414d33e2cad141c97dc96ee3653bd88c95098dfa5bab487d26280fab41e",
     "installer": {
         "script": [
@@ -29,6 +29,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/Adobe_Flash_Player_ActiveX_v$version.exe#/setup.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Adobe_Flash_Player_ActiveX_v$version.exe#/setup.exe"
     }
 }

@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "http://i.xunlei.com/policy/agreement.html"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Thunder_11_v11.1.12.1692_NoAD_SVIP_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Thunder_11_v11.1.12.1692_NoAD_SVIP_Green.7z",
     "hash": "0e79ff37c9e1fc3ed1a766154d71dff55a1b63a4756545c27ef9c3a5b867db35",
     "extract_dir": "Thunder",
     "installer": {
@@ -31,6 +31,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Thunder_11_v$version_NoAD_SVIP_Green.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Thunder_11_v$version_NoAD_SVIP_Green.7z"
     }
 }

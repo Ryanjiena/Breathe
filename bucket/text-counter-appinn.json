@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/小众计数器_v1.0.47.6.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/小众计数器_v1.0.47.6.zip",
     "hash": "d5624b71bcefa8b1530f71dfb45d000077d8318baea7b103d1f98416e4916085",
     "shortcuts": [
         [
@@ -19,6 +19,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/小众计数器_v$version.zip"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/小众计数器_v$version.zip"
     }
 }

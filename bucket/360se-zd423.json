@@ -7,7 +7,7 @@
         "url": "http://www.360.cn/xukexieyi.html#liulanqi"
     },
     "notes": "Features: <https://www.423down.com/13888.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/360SE-13.1.6170-Stable-Mod-Lite.exe#/dl.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/360SE-13.1.6170-Stable-Mod-Lite.exe#/dl.7z",
     "hash": "ae3977c1dd84adc68832577aca5adac3b6371cd785fa91101fca9fb00766dd2b",
     "extract_dir": "360SE",
     "pre_uninstall": [
@@ -32,6 +32,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename#/dl.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename#/dl.7z"
     }
 }

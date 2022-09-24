@@ -7,7 +7,7 @@
         "url": "https://www.tracker-software.com/PDF_VE.pdf"
     },
     "notes": "Features: <https://www.423down.com/8466.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/PDF-XChange_Editor_Plus_9.4.363.0_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/PDF-XChange_Editor_Plus_9.4.363.0_Green.7z",
     "hash": "303a1d2b8c9d741565741015720da7f0d8455bc19f1e1f6654d58100759b197b",
     "extract_dir": "PDFEditor",
     "pre_install": [
@@ -31,6 +31,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
     }
 }

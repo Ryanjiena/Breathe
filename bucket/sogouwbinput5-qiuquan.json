@@ -8,7 +8,7 @@
     },
     "depends": "sudo",
     "notes": "Features: <http://www.qiuquan.cc/input/sogouwb.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗五笔输入法_5.5.0.2581_去升级版_20220916.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗五笔输入法_5.5.0.2581_去升级版_20220916.exe",
     "hash": "5c811cd4976669c7c62c54273d9326d8ac634c208e67b46117a52b8dba652ce3",
     "installer": {
         "script": [
@@ -34,6 +34,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename"
     }
 }

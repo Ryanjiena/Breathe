@@ -7,7 +7,7 @@
         "url": "https://www.wechat.com/en/service_terms.html"
     },
     "notes": "Feature: <https://www.423down.com/12027.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/WeChat_3.3.0.115_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/WeChat_3.3.0.115_Green.7z",
     "hash": "a4e52156bc7f0b115713f9662e37eb5f8f2f237f33d28c857a20434fc4ab69a4",
     "extract_dir": "WeChat_3.3.0.115_Green\\WeChat",
     "pre_install": [

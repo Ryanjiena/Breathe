@@ -7,7 +7,7 @@
         "url": "https://www.bitcomet.com/en/term-of-use"
     },
     "notes": "Features: <https://www.ghxi.com/bitcomet.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/BitComet_1.94_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/BitComet_1.94_Green.7z",
     "hash": "0aff9d1fbf4ae1cc2c2d331eb4b3353908f0b204ab3fd8f6671ebed7f63dc7c2",
     "extract_dir": "BitComet_1.94_Green\\BitComet",
     "pre_install": [
@@ -61,7 +61,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename",
         "extract_dir": "BitComet_$version_Green\\BitComet"
     }
 }

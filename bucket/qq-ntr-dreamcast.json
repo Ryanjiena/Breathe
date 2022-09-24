@@ -29,7 +29,7 @@
             "adobe-flash-player-ppapi-zd423"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/腾讯QQ_9.6.3.28769_安装版_With_NtrQQ_7.1.2.rar",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/腾讯QQ_9.6.3.28769_安装版_With_NtrQQ_7.1.2.rar",
     "hash": "b79c9c4ebfb40533c6e9be431033968882542237eab5b365e744d303cc65380c",
     "installer": {
         "script": [
@@ -58,6 +58,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/dreamcast/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/$matchFilename"
     }
 }

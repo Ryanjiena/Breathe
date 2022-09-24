@@ -12,7 +12,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Pot_Player64_v220914(1.7.21801)_Public_7sh3.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Pot_Player64_v220914(1.7.21801)_Public_7sh3.7z",
             "hash": "324836c2a2e8938463e28521d8fd82815ed4f0552726f7d2c1f9392a2d80cabf",
             "extract_dir": "PotPlayer64",
             "installer": {
@@ -47,7 +47,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/wenlei/$matchFilename"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFilename"
             }
         }
     }

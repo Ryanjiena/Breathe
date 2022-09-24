@@ -8,7 +8,7 @@
     },
     "depends": "sudo",
     "notes": "Feature: <https://lrepacks.net/repaki-programm-dlya-interneta/56-internet-download-manager-repack.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/IDM_v6.41.2_Repack_Elchupacabra.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/IDM_v6.41.2_Repack_Elchupacabra.7z",
     "hash": "d6f2334831719e357e3799ab0350efcf9c6d79b1af7da88461795790ece566d2",
     "extract_dir": "Internet Download Manager",
     "pre_install": [
@@ -34,6 +34,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFilename"
     }
 }

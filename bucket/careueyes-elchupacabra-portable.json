@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/lrepacks/careueyes_2.2.3.0.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/lrepacks/careueyes_2.2.3.0.zip",
     "hash": "40c457160a212f2e65e713ce7b8ade7878b7ecb30b9dbc40bee90adcef4f2401",
     "pre_install": [
         "Get-ChildItem \"$dir\\CareUEyes*.exe\" | Rename-Item -NewName 'setup.exe'",
@@ -30,6 +30,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/lrepacks/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/lrepacks/$matchFilename"
     }
 }

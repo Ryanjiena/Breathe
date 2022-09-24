@@ -1,5 +1,5 @@
 {
-    "version": "21.0.1130.0",
+    "version": "21.0.1140.0",
     "description": "Third-party modifications of 360 Extreme Browser X, maintained by 423down.com.",
     "homepage": "https://browser.360.cn/eex/",
     "license": {
@@ -9,8 +9,8 @@
     "notes": "Features: <https://www.423down.com/13808.html>",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/zd423/360Chrome-21.0.1130.0-x64-Mod.exe#/dl.7z",
-            "hash": "33fee879be9a3a1d10f576bca6244b67ffa0b91d37e72a154a37b211b89ed6c9"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/360Chromex-21.0.1140.0-x64-Mod.exe#/dl.7z",
+            "hash": "29c54401871be99ccefd6d2b156e482bf399831cb1ff144ad1a8f3490b8ef86a"
         }
     },
     "extract_dir": "360Chrome",
@@ -32,13 +32,13 @@
     "persist": "User Data",
     "checkver": {
         "url": "https://github.com/ryanjiena/metaversion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>360Chrome-([\\d.]+)-x64-Mod\\.(?:exe|zip|7z))",
+        "regex": "(?s)(?<filename>360Chromex-([\\d.]+)-x64-Mod\\.(?:exe|zip|7z))",
         "reverse": true
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename#/dl.7z"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename#/dl.7z"
             }
         }
     }

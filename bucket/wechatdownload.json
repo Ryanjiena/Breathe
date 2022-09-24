@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/微信公众号文章下载器_v1.2.rar",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/微信公众号文章下载器_v1.2.rar",
     "hash": "57da5392621b2a9d2479c550b7517de2384f21029be6e11ef7bdf1b77063df55",
     "extract_dir": "微信公众号文章下载器_v1.2",
     "shortcuts": [
@@ -20,7 +20,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/微信公众号文章下载器_v$version.rar",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/微信公众号文章下载器_v$version.rar",
         "extract_dir": "微信公众号文章下载器_v$version"
     }
 }

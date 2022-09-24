@@ -1,0 +1,44 @@
+{
+    "version": "1.0.47.beta",
+    "description": "Unofficial Telegram Desktop.",
+    "homepage": "https://64gr.am",
+    "license": {
+        "identifier": "GPL-3.0-with-OpenSSL-exception",
+        "url": "https://github.com/TDesktop-x64/tdesktop/blob/dev/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/TDesktop-x64/tdesktop/releases/download/v1.0.47/64Gram_1.0.47.beta_x64.zip",
+            "hash": "896272630f94f243897aaf93a6d177d6dc0c6ac33021071ce3a816cfc5ceb5f4"
+        },
+        "32bit": {
+            "url": "https://github.com/TDesktop-x64/tdesktop/releases/download/v1.0.47/64Gram_1.0.47.beta_x86.zip",
+            "hash": "7d7b4f9f78f5f27e4ac6a68a8930056e29f2c0972744575446ec336e21ffaec0"
+        }
+    },
+    "pre_install": "if (Test-Path \"$persist_dir\\log.txt\") { Copy-Item \"$persist_dir\\log.txt\" \"$dir\\\" }",
+    "pre_uninstall": "if (Test-Path \"$dir\\log.txt\") { Copy-Item \"$dir\\log.txt\" \"$persist_dir\\\" }",
+    "bin": "Telegram.exe",
+    "shortcuts": [
+        [
+            "Telegram.exe",
+            "64Gram"
+        ]
+    ],
+    "persist": "tdata",
+    "checkver": {
+        "url": "https://api.github.com/repos/TDesktop-x64/tdesktop/releases",
+        "regex": "releases/download/v(?<ver>[\\d.]+)/64Gram_[\\d.]+(?<beta>.beta)?_x64.zip",
+        "replace": "${ver}${beta}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/TDesktop-x64/tdesktop/releases/download/v$matchVer/64Gram_$matchVer$matchBeta_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/TDesktop-x64/tdesktop/releases/download/v$matchVer/64Gram_$matchVer$matchBeta_x86.zip"
+            }
+        }
+    }
+}

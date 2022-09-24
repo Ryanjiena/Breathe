@@ -6,7 +6,7 @@
         "identifier": "Shareware"
     },
     "notes": "Features: <https://www.ghxi.com/win10manager.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Windows10Manager_3.6.9_Portable.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Windows10Manager_3.6.9_Portable.7z",
     "hash": "41317157718f05bba63ebb8f70671b73a15cc2cd0709bfbe126ca10ceb196b01",
     "extract_dir": "Windows10Manager",
     "shortcuts": [
@@ -22,6 +22,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/Windows10Manager_$version_Portable.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Windows10Manager_$version_Portable.7z"
     }
 }

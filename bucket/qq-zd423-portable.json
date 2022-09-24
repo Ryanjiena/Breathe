@@ -25,7 +25,7 @@
             "adobe-flash-player-ppapi-zd423"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/QQ_9.6.6.28796_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/QQ_9.6.6.28796_Green.7z",
     "hash": "3f82f12fc046ec14f3aac578404af7ed278e7c87a7847d994359941ee906d47e",
     "extract_dir": "QQ",
     "pre_install": [
@@ -51,6 +51,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/QQ_$version_Green.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/QQ_$version_Green.7z"
     }
 }

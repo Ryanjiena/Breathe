@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Chrome_87.0.4280.141_Portable_x64.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Chrome_87.0.4280.141_Portable_x64.7z",
             "hash": "68c8af6408c99baaf883898841254c39c22b8d1daa05ab9d30e3237e42865762",
             "extract_dir": "Chrome87"
         }
@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/wenlei/Chrome_$version_Portable_x64.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/Chrome_$version_Portable_x64.7z",
                 "extract_dir": "Chrome$majorVersion"
             }
         }

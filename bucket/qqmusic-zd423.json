@@ -7,7 +7,7 @@
         "url": "https://y.qq.com/i/user_terms.html"
     },
     "notes": "Features: <https://www.423down.com/193.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/QQMusic_18.59_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/QQMusic_18.59_Green.7z",
     "hash": "70001405d22e05f9e0b1d997485fa2cf4aa59540f16c16c50f2130924a534898",
     "extract_dir": "QQMusic",
     "pre_install": [
@@ -34,6 +34,6 @@
         "regex": "(?s)(?<filename>QQMusic_([\\d.]+)_Green\\.7z)"
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
     }
 }

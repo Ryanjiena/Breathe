@@ -9,11 +9,11 @@
     "notes": "Free during beta",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/typora/typora_0.11.18_ia32_1117.exe",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/typora/typora_0.11.18_ia32_1117.exe",
             "hash": "e1e9aec7a251472c25afffcde292ea67fb913e8984c816b8e516244a3160effc"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/typora/typora_0.11.18_x64_1117.exe",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/typora/typora_0.11.18_x64_1117.exe",
             "hash": "2c2c80c32d813744b6d48851687c752e819c0cd4246440842effd3d10473dd22"
         }
     },
@@ -31,10 +31,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/typora/typora_$version_ia32_$matchDate.exe"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/typora/typora_$version_ia32_$matchDate.exe"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/typora/typora_$version_x64_$matchDate.exe"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/typora/typora_$version_x64_$matchDate.exe"
             }
         }
     }

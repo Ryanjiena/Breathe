@@ -8,7 +8,7 @@
     },
     "notes": "Features: <http://www.qiuquan.cc/systemtool/wise-care-365.html>",
     "depends": "sudo",
-    "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/Wise.Care.365_6.3.5.613_QiuQuan_Green_20220821.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/Wise.Care.365_6.3.5.613_QiuQuan_Green_20220821.7z",
     "hash": "61559c92375c0d1e1adc9028fb811af598aff189c2b137b5dd2c532776788fbd",
     "shortcuts": [
         [
@@ -27,6 +27,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/$matchFilename"
     }
 }

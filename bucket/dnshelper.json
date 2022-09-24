@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/dnshelper_2.0.8.0.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/dnshelper_2.0.8.0.7z",
     "hash": "a03a835a45dcc63253826a1c8c1960defcc1d12851a1795fd64c5e0a74a50be4",
     "shortcuts": [
         [
@@ -19,6 +19,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/dnshelper_$version.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/dnshelper_$version.7z"
     }
 }

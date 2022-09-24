@@ -12,7 +12,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/else/PotPlayer64_1.7.4353_20171027_DIO.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/PotPlayer64_1.7.4353_20171027_DIO.7z",
             "hash": "e3b965b4c0294d9d6958d559c679431c0dcb2e048b61080139217d50c2e1059d",
             "installer": {
                 "script": "sudo regedit /s \"$dir\\内置解码器HEVC软解_关闭TV窗口_优化设置-PotPlayer64.reg\""

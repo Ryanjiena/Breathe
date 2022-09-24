@@ -7,7 +7,7 @@
         "url": "https://crystalidea.com/eula"
     },
     "notes": "Features: <http://www.qiuquan.cc/systemtool/uninstall.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/Uninstall_Tool_3.6.1.5687_QiuQuan_20220717.exe#/Setup.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/Uninstall_Tool_3.6.1.5687_QiuQuan_20220717.exe#/Setup.exe",
     "hash": "0e2c2dd90d45fa95085eac6c1dea5ee61efbba122625af1bfd73918ba153d57a",
     "installer": {
         "args": [
@@ -31,6 +31,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/$matchFilename#/Setup.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/$matchFilename#/Setup.exe"
     }
 }

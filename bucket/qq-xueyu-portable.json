@@ -29,7 +29,7 @@
             "adobe-flash-player-ppapi-zd423"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/xueyu/QQ9.6.6.28796精简优化版-by雪域.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/xueyu/QQ9.6.6.28796精简优化版-by雪域.7z",
     "hash": "3888c5b9d03d6d8d6b62ca83a3e51aa7af8aa01310d388e318f7a0d92d90dfc9",
     "pre_install": "Expand-7zipArchive \"$dir\\$fname\" -Switches '-pwww.xueyu521.cn' -ExtractDir \"QQ$version\" -Removal",
     "installer": {
@@ -51,6 +51,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/xueyu/QQ$version精简优化版-by雪域.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/xueyu/QQ$version精简优化版-by雪域.7z"
     }
 }

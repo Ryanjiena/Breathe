@@ -7,7 +7,7 @@
         "url": "https://ti.qq.com/agreement/index.html"
     },
     "notes": "Feedback: <https://bbs.pediy.com/thread-271225.htm>",
-    "url": "https://pan.jiemi.workers.dev/?file=/else/QQScreenShotV2.5.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/QQScreenShotV2.5.7z",
     "hash": "3f918bbfff2d5b4b53672edc8152d8c15dca9f363cdfb41ecd8ecac223da259d",
     "extract_dir": "QQScreenShot",
     "shortcuts": [
@@ -22,6 +22,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/QQScreenShotV$version.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/QQScreenShotV$version.7z"
     }
 }

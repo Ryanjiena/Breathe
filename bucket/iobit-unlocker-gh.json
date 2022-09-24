@@ -7,7 +7,7 @@
         "url": "http://www.iobit.com/en/eula.php"
     },
     "notes": "Features: <https://www.ghxi.com/iobitunlocker.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/IObit_Unlocker_1.3.0.11_Single.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/IObit_Unlocker_1.3.0.11_Single.zip",
     "hash": "4f9c655a9435014895b2921cb487372384955a0367ddac4fe2052165bffbed11",
     "extract_dir": "IObit_Unlocker_1.3.0.11_Single",
     "pre_install": "Rename-Item \"$dir\\IObit_Unlocker*.exe\" 'IObitUnlocker.exe' -ErrorAction 'SlientContinue' -Force",
@@ -24,7 +24,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/IObit_Unlocker_$version_Single.zip",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/IObit_Unlocker_$version_Single.zip",
         "extract_dir": "IObit_Unlocker_$version_Single"
     }
 }

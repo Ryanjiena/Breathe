@@ -9,11 +9,11 @@
     "notes": "Java SE subscribers will receive JDK 8 updates until at least December of 2030.",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/jdk/jdk-8u333/jdk-8u333-windows-x64.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/jdk/jdk-8u333/jdk-8u333-windows-x64.zip",
             "hash": "ec8b49c0868a988d20ded43b2bfa9a759ad0dea1657273874971adfb4efdddb6"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/jdk/jdk-8u333/jdk-8u333-windows-i586.zip",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/jdk/jdk-8u333/jdk-8u333-windows-i586.zip",
             "hash": "15db4c3fb6b630024e171e82e9bdee32b72267a7bfd2631f8fe30b7ef562b745"
         }
     },

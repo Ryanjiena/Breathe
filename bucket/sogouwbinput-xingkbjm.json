@@ -7,7 +7,7 @@
         "url": "https://rule.tencent.com/rule/preview/ff3e4cc2-caf4-4f7b-847e-162158ad2d99"
     },
     "notes": "Features: <https://www.xingkbjm.com/sogouwubi/>",
-    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗五笔输入法_v5.5c(5.5.0.2581)_星空不寂寞去广告版.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗五笔输入法_v5.5c(5.5.0.2581)_星空不寂寞去广告版.exe",
     "hash": "20cab3323fa1ee24e931ce7b7aed6a3fba46788a9bac008f72ecde00dbd8adf0",
     "installer": {
         "script": [
@@ -38,6 +38,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename"
     }
 }

@@ -7,7 +7,7 @@
         "url": "https://www.iobit.com/en/eula.php"
     },
     "notes": "Features: <http://www.qiuquan.cc/systemtool/iobit-uninstaller.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/IObit.Uninstaller_11.6.0.12_QiuQuan_20220817.exe#/Setup.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/IObit.Uninstaller_11.6.0.12_QiuQuan_20220817.exe#/Setup.exe",
     "hash": "6e44cd24dd360b9a72b478e76128c65c2318dd91bd1d7303ec4dc5a860ecb907",
     "installer": {
         "args": [
@@ -31,6 +31,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/qiuquan/$matchFilename#/Setup.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/$matchFilename#/Setup.exe"
     }
 }

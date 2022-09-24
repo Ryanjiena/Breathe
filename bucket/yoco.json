@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/Yoco_0.2_x86.exe#/dl.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Yoco_0.2_x86.exe#/dl.7z",
     "hash": "3bd64559ad5679c0d0c34154117f3805b0ea8d22eb1f8af91aa0503606fbac77",
     "shortcuts": [
         [
@@ -19,6 +19,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/Yoco_$version_x86.exe#/dl.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Yoco_$version_x86.exe#/dl.7z"
     }
 }

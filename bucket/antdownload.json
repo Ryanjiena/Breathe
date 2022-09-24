@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/antdownload_3.0.6.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/antdownload_3.0.6.zip",
     "hash": "d01332c935199d5841d5f7d9419373b150c68045288227fd2bf66399f10addf1",
     "extract_dir": "antdownload 3.0.6",
     "shortcuts": [
@@ -24,7 +24,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/antdownload_$version.zip",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/antdownload_$version.zip",
         "extract_dir": "antdownload $version"
     }
 }

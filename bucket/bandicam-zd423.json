@@ -9,7 +9,7 @@
     "notes": "Features: <https://www.423down.com/2119.html>",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/zd423/Bandicam-6.0.2.2018-x64.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Bandicam-6.0.2.2018-x64.7z",
             "hash": "d2db45ffb4c0133f69ae93069ce670d2a8cb41f52b5468eb3170f370d99e9c6f"
         }
     },
@@ -28,7 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
             }
         }
     }

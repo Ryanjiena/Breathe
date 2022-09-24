@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/tbtool_v2022.07_20220715.exe#/dl.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/tbtool_v2022.07_20220715.exe#/dl.7z",
     "hash": "bdf7b597937197a63cf9b538bf59f3d9b6fc155fc12a74ede6b6874bdcf0d874",
     "post_install": [
         "'config.ini', 'hwinfo.ini', 'PnPDevice.ini' | ForEach-Object {",
@@ -33,6 +33,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/$matchFilename#/dl.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFilename#/dl.7z"
     }
 }

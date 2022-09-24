@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/MusicTag_v1.0.9.0.7z#/dl.7z_",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/MusicTag_v1.0.9.0.7z#/dl.7z_",
     "hash": "71b58bc9d75fcb3702e53021ff152324fcc39aaf417159e2bd5c4a49b2170cd5",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\$fname\" -Switches '-pwww.coolapk.com' -Removal",
@@ -35,6 +35,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/MusicTag_v$version.7z#/dl.7z_"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/MusicTag_v$version.7z#/dl.7z_"
     }
 }

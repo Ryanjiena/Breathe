@@ -12,7 +12,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/else/Clash.NET.1.2.8.x64.Setup.exe",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Clash.NET.1.2.8.x64.Setup.exe",
             "hash": "b5c9e1db89e516586388ab536a9ec36d9dbe5953ee0f2f7ecefbe9feefa98d37"
         }
     },
@@ -31,7 +31,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/else/Clash.NET.$version.x64.Setup.exe"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Clash.NET.$version.x64.Setup.exe"
             }
         }
     }

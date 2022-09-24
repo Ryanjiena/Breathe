@@ -13,7 +13,7 @@
             "potplayer64-dev-noad-portable"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/potplayer-skin-20220903.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/potplayer-skin-20220903.zip",
     "hash": "0eabf3a591a6dc4079a0eb22ffdaa089c3c0bfe0f69e2755c98730445d5a6a8e",
     "installer": {
         "script": [
@@ -36,6 +36,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFilename"
     }
 }

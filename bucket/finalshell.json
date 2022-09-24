@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/FinalShell_3.9.3.4_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/FinalShell_3.9.3.4_Green.7z",
     "hash": "93c0ce27fb6419d19f6fbf41d1e86a05f5eb0d7d0f409c1e2d68e8229328e712",
     "post_install": [
         "'config.json', 'tconfig.json' | ForEach-Object {",
@@ -33,7 +33,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename",
         "extract_dir": "FinalShell_$version_Green"
     }
 }

@@ -12,11 +12,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/else/2345Pic_10.9.0.9730_优化版_X64.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_10.9.0.9730_优化版_X64.7z",
             "hash": "de02c64089ff72c746c9efbbcf95e4862dc447ebfc2c5d080ef2e8831df01046"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/else/2345Pic_10.9.0.9730_优化版_X86.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_10.9.0.9730_优化版_X86.7z",
             "hash": "e37765afefff52b943dd97a41f800b1dbe8eb6b473305e6a76c0142ee0746eae"
         }
     },
@@ -50,10 +50,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/else/2345Pic_$version_优化版_X64.7z"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_$version_优化版_X64.7z"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/else/2345Pic_$version_优化版_X86.7z"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_$version_优化版_X86.7z"
             }
         }
     }

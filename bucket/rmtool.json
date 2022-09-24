@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/wenlei/rmtool_v7.4_2022017.exe#/Installer.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/rmtool_v7.4_2022017.exe#/Installer.exe",
     "hash": "eede2f27cba8b9713c0da87d245c7319ec1914ad213a5e5d0edb4bde6581faa0",
     "pre_install": "Start-Process \"$dir\\Installer.exe\" -ArgumentList \"/DIR=$dir /SILENT /NORESTART\" -WorkingDirectory \"$dir\" -Wait",
     "post_install": "Remove-Item $dir\\Installer.exe -Force",
@@ -30,6 +30,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/wenlei/$matchFilename#/Installer.exe"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/$matchFilename#/Installer.exe"
     }
 }

@@ -7,7 +7,7 @@
         "url": "https://iristech.co/eula/"
     },
     "notes": "Features: <https://www.ghxi.com/irispro.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/Iris_v1.2.0_gh.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Iris_v1.2.0_gh.7z",
     "hash": "4a32eccd101f271ef36ea841145bbf86992e5b1476071c68fdba1d0c49d1eb2c",
     "shortcuts": [
         [
@@ -22,6 +22,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/Iris_v$version_gh.7z"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Iris_v$version_gh.7z"
     }
 }

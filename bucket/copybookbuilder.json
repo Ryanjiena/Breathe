@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/CopybookBuilder_20220809.rar#/dl.7z_",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/CopybookBuilder_20220809.rar#/dl.7z_",
     "hash": "6ae7d9eb3a907afba9e3b1772858a98db8fb24d41dbfe460793db7010894bd37",
     "architecture": {
         "64bit": {
@@ -27,6 +27,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/CopybookBuilder_$version.rar#/dl.7z_"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/CopybookBuilder_$version.rar#/dl.7z_"
     }
 }

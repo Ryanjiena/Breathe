@@ -7,7 +7,7 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://www.423down.com/587.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/sogou/搜狗输入法v11.9.0.5877去广告精简优化版.exe",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗输入法v11.9.0.5877去广告精简优化版.exe",
     "hash": "9a9443e04638c8c27d487bc82ae846bfb620c90cf3b91a18a5e4e559c2ee7bb1",
     "installer": {
         "script": [
@@ -38,6 +38,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/sogou/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/$matchFilename"
     }
 }

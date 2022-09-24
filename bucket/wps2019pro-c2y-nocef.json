@@ -13,7 +13,7 @@
             "adobe-flash-player-cy"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/wps2019pro.11.8.2.11734lite-nocef.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/wps2019pro.11.8.2.11734lite-nocef.7z",
     "hash": "09dc4a1e9628e920a156c2014b90423c8e17bd83ef0ecda9f5b2eca61d0ee973",
     "extract_dir": "wps2019pro.11.8.2.11734lite-nocef",
     "installer": {
@@ -28,7 +28,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/wps2019pro.$versionlite-nocef.7z",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/wps2019pro.$versionlite-nocef.7z",
         "extract_dir": "wps2019pro.$versionlite-nocef"
     }
 }

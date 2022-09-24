@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/SGScreencapture_v12.4.0.6503.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/SGScreencapture_v12.4.0.6503.zip",
     "hash": "2b25a7564272c6e4bea920aef470f911aa43270fad161ca61e26a5ca30fe135c",
     "installer": {
         "script": "Start-Process -FilePath \"$dir\\绿化.bat\" -Verb RunAs -Wait"
@@ -25,6 +25,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/SGScreencapture_v$version.zip"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/SGScreencapture_v$version.zip"
     }
 }

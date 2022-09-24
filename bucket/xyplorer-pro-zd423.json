@@ -7,7 +7,7 @@
         "url": "https://www.xyplorer.com/LicenseXY.txt"
     },
     "notes": "Features: <https://www.423down.com/9854.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/XYplorer-23.50.0300.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/XYplorer-23.50.0300.7z",
     "hash": "c2e8cf3ccc1a6bc27b408a348f2dac03bafdcef97afd7a6bc31d84b66ba0edfb",
     "extract_dir": "XYplorer",
     "shortcuts": [
@@ -23,6 +23,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
     }
 }

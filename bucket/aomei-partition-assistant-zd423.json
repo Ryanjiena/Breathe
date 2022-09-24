@@ -7,7 +7,7 @@
         "url": "https://www.diskpart.com/terms.html"
     },
     "notes": "Features: <https://www.423down.com/5969.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/PAssist_Tech_9.9.0_Green.7z",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/PAssist_Tech_9.9.0_Green.7z",
     "hash": "372a74c33fca611b1560066651ffa15fe358c7757712d2ad0482870b4b80cf21",
     "extract_dir": "PAssist_Tech_9.9.0_Green\\AOMEIPartAssist",
     "shortcuts": [
@@ -23,7 +23,7 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFilename",
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename",
         "extract_dir": "PAssist_Tech_$version_Green\\AOMEIPartAssist"
     }
 }

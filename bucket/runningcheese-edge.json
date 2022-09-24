@@ -11,7 +11,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseEdge_104.0.1293.54_64bit_Portable.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseEdge_104.0.1293.54_64bit_Portable.7z",
             "hash": "c717321d16ad3c278a62fd96f4b2793a5537c19b0b86d8c54a7134d533b79b63",
             "extract_dir": "RunningCheeseEdge_104.0.1293.54_64bit_Portable\\RunningCheeseEdge_104.0.1293.54_64bit_Portable"
         }
@@ -26,12 +26,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseEdge_$version_64bit_Portable.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseEdge_$version_64bit_Portable.7z",
                 "extract_dir": "RunningCheeseEdge_$version_64bit_Portable\\RunningCheeseEdge_$version_64bit_Portable"
             }
         },
         "hash": {
-            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/hash.txt",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/hash.txt",
             "mode": "extract",
             "regex": "$sha256\\s+$basename"
         }

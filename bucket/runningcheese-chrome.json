@@ -11,12 +11,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseChrome_103.0.5060.53_64bit_Protable.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_103.0.5060.53_64bit_Protable.7z",
             "hash": "4e0a2ea8a0950cb09679ec47fcaaa172c7bcbb565edcf42d575b9c4a7ecb886f",
             "extract_dir": "RunningCheeseChrome_103.0.5060.53_64bit_Protable\\RunningCheeseChrome"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseChrome_103.0.5060.53_32bit_Protable.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_103.0.5060.53_32bit_Protable.7z",
             "hash": "e88169daa68e94737d3c432cae87eb028a379aa90a8cf35e1ece54a73f7cb870",
             "extract_dir": "RunningCheeseChrome_103.0.5060.53_32bit_Protable\\RunningCheeseChrome"
         }
@@ -31,16 +31,16 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseChrome_$version_64bit_Protable.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_$version_64bit_Protable.7z",
                 "extract_dir": "RunningCheeseChrome_$version_64bit_Protable\\RunningCheeseChrome"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/RunningCheeseChrome_$version_32bit_Protable.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_$version_32bit_Protable.7z",
                 "extract_dir": "RunningCheeseChrome_$version_32bit_Protable\\RunningCheeseChrome"
             }
         },
         "hash": {
-            "url": "https://pan.jiemi.workers.dev/?file=/runningcheese/hash.txt",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/hash.txt",
             "mode": "extract",
             "regex": "$sha256\\s+$basename"
         }

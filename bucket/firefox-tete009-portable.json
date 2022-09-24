@@ -7,12 +7,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-104.0.2-2022090215.en-US.win32-tete009-x64-pgo.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-104.0.2-2022090215.en-US.win32-tete009-x64-pgo.7z",
             "hash": "07a4ace5e141fc775a46a6a489ffa30fc5f46b6f501443cf51d391890d4aacff",
             "extract_dir": "firefox-104.0.2-2022090215.en-US.win32-tete009-x64-pgo"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-104.0.2-2022090215.en-US.win32-tete009-sse2-pgo.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-104.0.2-2022090215.en-US.win32-tete009-sse2-pgo.7z",
             "hash": "1bb8e0fccc711755985edb712c2c5c546bda65cfa9cefb420791786ee578cea4",
             "extract_dir": "firefox-104.0.2-2022090215.en-US.win32-tete009-sse2-pgo"
         },
@@ -45,7 +45,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-$version-$matchDate.en-US.win32-tete009-x64-pgo.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-$version-$matchDate.en-US.win32-tete009-x64-pgo.7z",
                 "hash": {
                     "url": "http://www1.plala.or.jp/tete009/en-US/software.html#FFDL",
                     "mode": "extract",
@@ -54,7 +54,7 @@
                 "extract_dir": "firefox-$version-$matchDate.en-US.win32-tete009-x64-pgo"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/tete009/firefox-$version-$matchDate.en-US.win32-tete009-sse2-pgo.7z",
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/tete009/firefox-$version-$matchDate.en-US.win32-tete009-sse2-pgo.7z",
                 "hash": {
                     "url": "http://www1.plala.or.jp/tete009/en-US/software.html#FFDL",
                     "mode": "extract",

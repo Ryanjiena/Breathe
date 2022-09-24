@@ -6,7 +6,7 @@
         "identifier": "Freeware"
     },
     "notes": "2022 年 5 月底, 至少从 3.7.0.26 版开始, 微信图片的保存路径发生了重大改变, 已经是按群、按人分别保存图片及文件了.",
-    "url": "https://pan.jiemi.workers.dev/?file=/else/WxDatViewer_2.5.rar",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/WxDatViewer_2.5.rar",
     "hash": "2ecb35f238a411c6decd9d9afe7db936baa58d58ef2a96290ada7d195d961cd7",
     "shortcuts": [
         [
@@ -20,6 +20,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/WxDatViewer_$version.rar"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/WxDatViewer_$version.rar"
     }
 }

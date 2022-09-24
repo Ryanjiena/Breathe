@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/zd423/Beyond_Compare_4.4.3.26655_64bit_Green.7z",
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Beyond_Compare_4.4.3.26655_64bit_Green.7z",
             "hash": "ec1a29958aa29fd8c007d3329eada433cdffd5a914ccfa83a0727ce52d6dafff"
         }
     },
@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/zd423/$matchFile"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFile"
             }
         }
     }

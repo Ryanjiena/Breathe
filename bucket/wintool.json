@@ -5,7 +5,7 @@
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/else/wintool_v2.5.4.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/wintool_v2.5.4.zip",
     "hash": "5d3f1e0a872a36567d9459b42d4e28ac98c09a2dba710fdef5296946416f1015",
     "shortcuts": [
         [
@@ -19,6 +19,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/else/wintool_v$version.zip"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/wintool_v$version.zip"
     }
 }

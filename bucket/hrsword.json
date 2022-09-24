@@ -11,7 +11,7 @@
         "    2. 重启电脑.",
         "    3. 运行 HRSword Uninstall.bat 卸载火绒剑."
     ],
-    "url": "https://pan.jiemi.workers.dev/?file=/zd423/HRSword_5.0.69.2.zip",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/HRSword_5.0.69.2.zip",
     "hash": "e3f63e3a0cd880caa1a5afc6c43fee825aef7f356b67ac10320388fff5fe5698",
     "installer": {
         "file": "HRSword Install.bat"
@@ -28,6 +28,6 @@
         "reverse": true
     },
     "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/zd423/HRSword_5.0.69.2.zip"
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/HRSword_5.0.69.2.zip"
     }
 }

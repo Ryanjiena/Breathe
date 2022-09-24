@@ -44,10 +44,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/$version/app_asar_file_v$version-windows-x64.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/typora/$version/app_asar_file_v$version-windows-x64.zip"
             },
             "32bit": {
-                "url": "https://pan.jiemi.workers.dev/?file=/patch/typora/$version/app_asar_file_v$version-windows-x86.zip"
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/typora/$version/app_asar_file_v$version-windows-x86.zip"
             }
         },
         "hash": {
