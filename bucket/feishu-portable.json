@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.feishu.cn/en/terms"
     },
-    "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/0f270bf6/Feishu-win32_ia32-5.21.5-signed.exe#/setup.exe",
+    "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/0f270bf6/Feishu-win32_ia32-5.21.5-signed.exe#/dl.7z",
     "hash": "md5:61f5a1491d8382d915ae0d34363ac41e",
     "pre_install": [
         "if (Test-Path \"$env:AppData\\LarkShell\") {",
@@ -17,20 +17,9 @@
         "}",
         "New-Item \"$env:AppData\\LarkShell\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
     ],
-    "installer": {
-        "file": "setup.exe",
-        "args": [
-            "--command=quiet_install",
-            "--target_dir=\"$dir\""
-        ]
-    },
-    "uninstaller": {
-        "file": "Feishu\\uninstall.exe",
-        "args": "/quiet"
-    },
     "shortcuts": [
         [
-            "Feishu\\Feishu.exe",
+            "Feishu.exe",
             "ByteDance\\Feishu"
         ]
     ],
@@ -40,7 +29,7 @@
         "regex": "(?sm)https://(?<link>.*?.exe).*?version_number.*?V([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://$matchLink#/setup.exe",
+        "url": "https://$matchLink#/dl.7z",
         "hash": {
             "url": "https://www.feishu.cn/api/downloads",
             "mode": "json",

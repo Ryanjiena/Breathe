@@ -1,0 +1,50 @@
+{
+    "version": "5.17.11",
+    "description": "Lark - The Next-Gen Collaboration Suite. Lark is a next-generation office suite that integrates messaging, schedule management, collaborative documents, video conferencing, and many more applications in a single platform.",
+    "homepage": "https://www.larksuite.com/en_us/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.larksuite.com/en_us/user-terms-of-service"
+    },
+    "url": "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/5f8ecb/Lark-win32_ia32-5.17.11-signed.exe#/setup.exe",
+    "hash": "md5:5f8ecbf0bb6cc90685ff5962e961c7d6",
+    "pre_install": [
+        "if (Test-Path \"$env:AppData\\LarkInternational\") {",
+        "    info '[Persistent data]: Copying user data...'",
+        "    ensure \"$persist_dir\" | Out-Null",
+        "    Copy-Item \"$env:AppData\\LarkInternational\\*\" \"$persist_dir\\\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Remove-Item \"$env:AppData\\LarkInternational\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "}",
+        "New-Item \"$env:AppData\\LarkInternational\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
+    ],
+    "installer": {
+        "file": "setup.exe",
+        "args": [
+            "--command=quiet_install",
+            "--target_dir=\"$dir\""
+        ]
+    },
+    "uninstaller": {
+        "file": "Lark\\uninstall.exe",
+        "args": "/quiet"
+    },
+    "shortcuts": [
+        [
+            "Lark\\Lark.exe",
+            "ByteDance\\Lark"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.larksuite.com/api/downloads",
+        "jsonpath": "$.versions.Windows",
+        "regex": "(?sm)https://(?<link>.*?.exe).*?version_number.*?V([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://$matchLink#/setup.exe",
+        "hash": {
+            "url": "https://www.larksuite.com/api/downloads",
+            "mode": "json",
+            "jsonpath": "$.versions.Windows.hash"
+        }
+    }
+}
