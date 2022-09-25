@@ -22,6 +22,7 @@
             "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
             "New-Item -Path \"$dir\" -Name \"App\" -ItemType \"directory\" | Out-Null",
             "Get-ChildItem \"$dir\" -Exclude *install.json, *manifest.json, App | ForEach-Object { Move-Item $_.FullName \"$dir\\App\\\" -Force -ErrorAction SilentlyContinue }",
+            "Get-ChildItem \"$(appdir chrome-plus $global)\\current\\\" -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\\\" -Recurse -Force -ErrorAction SilentlyContinue }",
             "Get-ChildItem \"$(appdir chrome-plus $global)\\current\\\" -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\\App\\\" -Recurse -Force -ErrorAction SilentlyContinue }",
             "@('Chrome.exe', '说明.txt', '清理.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\chrome\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }"
         ]
