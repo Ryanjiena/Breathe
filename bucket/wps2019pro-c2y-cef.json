@@ -19,9 +19,36 @@
     "installer": {
         "script": "sudo Start-Process \"$dir\\绿化-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
     },
+    "post_install": "Remove-Item \"$([Environment]::GetFolderPath('Desktop'))\\WPS*.lnk\" -Force -ErrorAction SilentlyContinue",
     "uninstaller": {
         "script": "sudo Start-Process \"$dir\\卸载-ksomisc.cmd\" -WorkingDirectory \"$dir\" -Wait"
     },
+    "shortcuts": [
+        [
+            "office6\\wpp.exe",
+            "WPS Office\\PPT"
+        ],
+        [
+            "office6\\et.exe",
+            "WPS Office\\Excel"
+        ],
+        [
+            "office6\\wps.exe",
+            "WPS Office\\Word"
+        ],
+        [
+            "office6\\wpp.exe",
+            "WPS Office\\WPS 演示"
+        ],
+        [
+            "office6\\et.exe",
+            "WPS Office\\WPS 表格"
+        ],
+        [
+            "office6\\wps.exe",
+            "WPS Office\\WPS 文字"
+        ]
+    ],
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
         "regex": "wps2019pro.([\\d.]+)lite.cef.7z",
