@@ -1,30 +1,19 @@
 {
-    "version": "5.7.9",
-    "description": "千千静听经典本地版",
-    "homepage": "http://ttplayer.qianqian.com",
-    "license": {
-        "identifier": "Freeware"
-    },
-    "notes": "Features: <https://www.423down.com/7815.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/TTPlayer_v5.7.9.7z",
-    "hash": "abc73e7f005787a47a435497ea89afe5e092c7dfa70d0e5ccb42bf4503093208",
-    "extract_dir": "TTPlayer",
+    "homepage": "https://zh.wikipedia.org/wiki/%E5%8D%83%E5%8D%83%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8",
+    "description": "This is the last classical version of TTPlayer",
+    "version": "5.0.2",
+    "license": "Freeware",
+    "url": "https://github.com/chawyehsu/dorado/raw/binaries/ttplayer/TTPlayer_v5.0.2_Final.zip",
+    "hash": "aff4c3654e3c8fac3800dd24ea34951de0ee81666fd5225ccab4b5c2e30e5c3f",
     "shortcuts": [
         [
             "TTPlayer.exe",
-            "TTPlayer"
+            "千千静听"
         ]
     ],
     "persist": [
-        "AddIn",
-        "PlayList"
-    ],
-    "checkver": {
-        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
-        "regex": "(?s)(?<filename>TTPlayer_v(?<version>([\\d.]+))\\.(?:7z|zip|rar))",
-        "reverse": true
-    },
-    "autoupdate": {
-        "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename"
-    }
+        "PlayList",
+        "Profile",
+        "TTPlayer.xml"
+    ]
 }

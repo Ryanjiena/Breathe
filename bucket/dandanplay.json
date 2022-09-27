@@ -1,58 +1,43 @@
 {
+    "homepage": "https://www.dandanplay.com/",
+    "description": "A free to use bangumi player with danmaku support",
     "version": "12.6.0",
-    "description": "A free video playback, video management and catch-up software that plays video files on your local hard drive and displays pop-up comments from other users watching the same program.",
-    "homepage": "https://www.dandanplay.com",
-    "license": {
-        "identifier": "Freeware"
-    },
+    "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://dandan.sakurateam.top/dandanplay-x64_12.6.0.exe",
-            "hash": "dab5990ae0e139eca44c247ddf3922e5bdb3522d106255a21c1b5b3dafe2db37"
+            "url": "https://dandan.sakurateam.top/dandanplay-x64_12.6.0.zip",
+            "hash": "c535bc53c346143e9c469e73da6a2f0905ff543af81d808abe5290f6bb11e2dd",
+            "extract_dir": "dandanplay-x64"
         }
     },
     "pre_install": [
-        "@('DandanDb.db', 'library.json') | ForEach-Object {",
-        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\Config\")) {",
+        "    New-Item -Path \"$persist_dir\\Config\" -ItemType Directory | Out-Null",
+        "}",
+        "# Disable auto update",
+        "if (!(Test-Path \"$persist_dir\\Config\\ConnectionSettings.xml\")) {",
+        "    New-Item -Force -Path \"$persist_dir\\Config\\ConnectionSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><ConnectionSettings><EnableAutoUpdate>false</EnableAutoUpdate><NotifyOnUpdateDownloaded>false</NotifyOnUpdateDownloaded></ConnectionSettings>' | Out-Null",
+        "}",
+        "# Disable  tracking",
+        "if (!(Test-Path \"$persist_dir\\Config\\UserSettings.xml\")) {",
+        "    New-Item -Force -Path \"$persist_dir\\Config\\UserSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><UserSettings><EnableTelemetry>false</EnableTelemetry></UserSettings>' | Out-Null",
         "}"
     ],
-    "installer": {
-        "script": [
-            "Start-Process  \"$dir\\$fname\" -ArgumentList \"/extract\" -Wait",
-            "Remove-Item \"$dir\\$fname\",\"$dir\\decoder.dll\" -ErrorAction 'SilentlyContinue' -Force",
-            "Remove-Item \"$dir\\.NET Framework 4.7.2\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
-            "$dandir = (Get-ChildItem \"$dir\" | Select-Object -First 1).FullName",
-            "Move-Item \"$dandir\\*\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force",
-            "Remove-Item \"$dandir\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "@('DandanDb.db', 'library.json') | ForEach-Object {",
-            "    ensure \"$persist_dir\" | Out-Null",
-            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
-            "}"
-        ]
-    },
     "shortcuts": [
         [
             "dandanplay.exe",
-            "DanDan Play"
+            "弹弹play"
         ]
     ],
     "persist": [
-        "Cache",
         "Config",
-        "Log"
+        "Log",
+        "Cache"
     ],
     "checkver": {
-        "regex": "dandanplay-x64_([\\d.]+).exe"
+        "regex": "dandanplay-x64_([\\d.]+).zip"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dandan.sakurateam.top/dandanplay-x64_$version.exe"
-            }
-        }
+        "url": "https://dandan.sakurateam.top/dandanplay-x64_$version.zip"
     }
 }
