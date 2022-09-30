@@ -41,7 +41,8 @@
         "file": "cleanPortableCache.bat"
     },
     "checkver": {
-        "github": "https://github.com/coodesker/coodesker-desktop"
+        "url": "https://api.github.com/repos/coodesker/coodesker-desktop/releases",
+        "regex": "releases/download/v([\\d.]+)/Coodesker-Portable-x64_[\\d.]+.zip"
     },
     "autoupdate": {
         "architecture": {

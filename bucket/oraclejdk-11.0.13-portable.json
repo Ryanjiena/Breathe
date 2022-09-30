@@ -3,7 +3,7 @@
     "description": "Oracle JDK 11.",
     "homepage": "https://www.oracle.com/java/technologies/downloads/#java11",
     "license": {
-        "identifier": "Oracle Technology Network License Agreement for Oracle Java SE",
+        "identifier": "Proprietary",
         "url": "https://java.com/otnlicense"
     },
     "notes": "Java SE subscribers will receive JDK 11 updates until at least September of 2026.",

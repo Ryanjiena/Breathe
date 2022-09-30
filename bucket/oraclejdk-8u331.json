@@ -3,7 +3,7 @@
     "description": "Oracle JDK 8.",
     "homepage": "https://www.oracle.com/java/technologies/downloads/#java8",
     "license": {
-        "identifier": "Oracle Technology Network License Agreement for Oracle Java SE",
+        "identifier": "Proprietary",
         "url": "https://www.oracle.com/downloads/licenses/javase-license1.html"
     },
     "notes": "Java SE subscribers will receive JDK 8 updates until at least December of 2030.",
