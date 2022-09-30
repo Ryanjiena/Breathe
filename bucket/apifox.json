@@ -1,0 +1,50 @@
+{
+    "version": "2.1.37",
+    "description": "Apifox = Postman + Swagger + Mock + JMeter",
+    "homepage": "https://www.apifox.cn/",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "http://cdn.apifox.cn/download/2.1.37/Apifox-2.1.37.exe#/installer.exe",
+            "hash": "sha512:480a71016bdbe2196868683fcf258103109ec7523ddfef327bb15e8d1f267eee8c9a89d7220f8f9183b5b50cdffb99001c4c67a67e06a534e403e8e9df1ced6a",
+            "installer": {
+                "script": [
+                    "ensure \"$persist_dir\" | Out-Null",
+                    "New-Item \"$env:AppData\\apifox\" -ItemType Junction -Target \"$persist_dir\" | Out-Null",
+                    "Start-Process \"$dir\\installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait"
+                ]
+            },
+            "post_install": "Remove-Item \"$dir\\installer.exe\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+            "uninstaller": {
+                "script": [
+                    "Remove-Item \"$env:AppData\\apifox\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+                    "Start-Process \"$dir\\Uninstall Apifox.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -Wait"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "Apifox.exe",
+            "Apifox"
+        ]
+    ],
+    "checkver": {
+        "url": "http://cdn.apifox.cn/download/latest.yml",
+        "regex": "(?sm)version:[\\s]+([\\d.]+).*?http://(?<url>.*?\\.exe)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://$matchUrl#/installer.exe",
+                "hash": {
+                    "url": "http://cdn.apifox.cn/download/latest.yml",
+                    "mode": "extract",
+                    "regex": "sha512.*?$base64"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "version": "14.20.1",
+    "description": "As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications. (Long Term Support)",
+    "homepage": "https://nodejs.org",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/v14.20.1/node-v14.20.1-win-x64.7z",
+            "hash": "273bd6319232e685b66c5cebff02f1e7b8f30069dbe1d775045bd4894270a300",
+            "extract_dir": "node-v14.20.1-win-x64"
+        },
+        "32bit": {
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/v14.20.1/node-v14.20.1-win-x86.7z",
+            "hash": "3b35474d1e6329dbd95e7d867057e805ed007b1363acf158f613c050b2f2bcc2",
+            "extract_dir": "node-v14.20.1-win-x86"
+        }
+    },
+    "persist": [
+        "bin",
+        "cache"
+    ],
+    "env_add_path": [
+        "bin",
+        "."
+    ],
+    "post_install": [
+        "# Set npm prefix to install modules inside bin and npm cache so they persist",
+        "Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path \"$dir\\node_modules\\npm\\npmrc\"",
+        "npm config set registry http://mirrors.cloud.tencent.com/npm/"
+    ],
+    "checkver": {
+        "url": "https://nodejs.org/dist/latest-v14.x/",
+        "regex": "node-v(14.[\\d.]+)-win-x64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/v$version/node-v$version-win-x64.7z",
+                "extract_dir": "node-v$version-win-x64"
+            },
+            "32bit": {
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/v$version/node-v$version-win-x86.7z",
+                "extract_dir": "node-v$version-win-x86"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHASUMS256.txt.asc"
+        }
+    }
+}

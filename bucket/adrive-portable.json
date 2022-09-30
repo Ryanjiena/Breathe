@@ -1,0 +1,32 @@
+{
+    "version": "3.11.1",
+    "description": "aDrive is a fast, non-intrusive, secure and easy-to-share personal netdisk where you can store, manage and explore things, and build a flourishing digital world.",
+    "homepage": "https://www.aliyundrive.com/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_dingtalk/suit_bu1_dingtalk202103191654_76478.html"
+    },
+    "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-3.11.1.exe#/dl.7z",
+    "hash": "sha512:dd4a8f3366eb26b56550fb66ea9b75f045d9ce97e0bd68436ad9d58ad5c4ebe92dfad831ae0cca2e2e5f5d068d3c09e63fc36c90ded48851c5b342c459823d0e",
+    "pre_install": "Remove-Item \"$dir\\`$*\",\"$dir\\Uninst*\" -Recurse",
+    "shortcuts": [
+        [
+            "aDrive.exe",
+            "Alibaba\\aDrive",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/Ryanjiena/MetaVersion/main/alibaba.json",
+        "jsonpath": "$[?(@.name == 'aDrive')].version"
+    },
+    "autoupdate": {
+        "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive-$version.exe#/dl.7z",
+        "hash": {
+            "url": "https://raw.githubusercontent.com/Ryanjiena/MetaVersion/main/alibaba.json",
+            "mode": "json",
+            "jsonpath": "$[?(@.name == 'aDrive')].hash"
+        }
+    }
+}

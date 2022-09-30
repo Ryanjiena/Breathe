@@ -1,0 +1,29 @@
+{
+    "version": "1.3.0",
+    "description": "OCR offline batch picture character recognition software with interface. The interference such as watermark in video picture and UI in game picture can be eliminated and clean text can be extracted. Based on PaddleOCR.",
+    "homepage": "https://github.com/hiroi-sora/Umi-OCR",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hiroi-sora/Umi-OCR/releases/download/v1.3.0/Umi-OCR.v1.3.0.7z",
+            "hash": "dbdf26b7afa88671b90cd19d8c9a239d51bd7f8cbbaf92691267730846c53109"
+        }
+    },
+    "extract_dir": "Umi-OCR",
+    "shortcuts": [
+        [
+            "Umi-OCR 批量图片转文字.exe",
+            "Umi-OCR"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hiroi-sora/Umi-OCR/releases/download/v$version/Umi-OCR.v$version.7z"
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "version": "20220929.c659bdd",
+    "description": "ShadowsocksR for Windows(with dotnet runtime), maintained by @HMBSbige.",
+    "homepage": "https://github.com/HMBSbige/ShadowsocksR-Windows",
+    "license": {
+        "identifier": "AGPL-3.0-only",
+        "url": "https://github.com/HMBSbige/ShadowsocksR-Windows/raw/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/3150920722/ShadowsocksR-Win64.zip",
+            "hash": "67e7335d1c0dd90b850880ad045e63a738723c7a1feb5d5d6809cb2cc72d8d81"
+        },
+        "32bit": {
+            "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/3150920722/ShadowsocksR-Win32.zip",
+            "hash": "77c2945a61d204221701193cde353878db4f81b2ed5ebbf8db928f7dcf1451a4"
+        }
+    },
+    "pre_install": [
+        "@('gui-config.json', 'pac.txt', 'transfer_log.json', 'user-rule.txt') | ForEach-Object {",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" | Out-Null }",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "@('gui-config.json', 'pac.txt', 'transfer_log.json', 'user-rule.txt') | ForEach-Object {",
+            "    if (Test-Path \"$dir\\$_\") {",
+            "        ensure \"$persist_dir\" | Out-Null",
+            "        Copy-Item \"$dir\\$_\" \"$persist_dir\\\" | Out-Null",
+            "    }",
+            "}"
+        ]
+    },
+    "bin": "ShadowsocksR.exe",
+    "shortcuts": [
+        [
+            "ShadowsocksR.exe",
+            "ShadowsocksR"
+        ]
+    ],
+    "persist": "temp",
+    "checkver": {
+        "url": "https://scoop-apps.vercel.app/HMBSbige/ShadowsocksR-Windows",
+        "regex": "(?sm)HMBSbige/ShadowsocksR-Windows/actions/runs/(?<runid>\\d+).+datetime=\"(?<year>\\d+).(?<month>\\d+).(?<day>\\d+).*?commit/(?<sha>[0-9a-f]{7})",
+        "replace": "${year}${month}${day}.${sha}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/$matchRunid/ShadowsocksR-Win64.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/HMBSbige/ShadowsocksR-Windows/actions/runs/$matchRunid/ShadowsocksR-Win32.zip"
+            }
+        }
+    }
+}

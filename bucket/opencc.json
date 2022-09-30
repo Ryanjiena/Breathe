@@ -1,0 +1,39 @@
+{
+    "version": "1.1.4",
+    "description": "Conversion between Traditional and Simplified Chinese.",
+    "homepage": "https://opencc.byvoid.com/",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/BYVoid/OpenCC/raw/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://ci.appveyor.com/api/projects/Carbo/opencc/artifacts/OpenCC.zip?branch=master&job=Environment:%20nodejs_version=none;%20Platform:%20x64",
+            "hash": "e8ea9765c8a9027330edb7ab792808b38ca7a0cac88f4bb1bd4f8303a1f6fabc"
+        },
+        "32bit": {
+            "url": "https://ci.appveyor.com/api/projects/Carbo/opencc/artifacts/OpenCC.zip?branch=master&job=Environment:%20nodejs_version=none;%20Platform:%20x86",
+            "hash": "cbc2f7ed19e8d3c6626801b523ac79c80fd10d915767cd58abaffb918b3354df"
+        }
+    },
+    "extract_dir": "build",
+    "bin": [
+        "bin\\opencc.exe",
+        "bin\\opencc_dict.exe"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/BYVoid/OpenCC/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "ver.([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ci.appveyor.com/api/projects/Carbo/opencc/artifacts/OpenCC.zip?branch=master&job=Environment:%20nodejs_version=none;%20Platform:%20x64"
+            },
+            "32bit": {
+                "url": "https://ci.appveyor.com/api/projects/Carbo/opencc/artifacts/OpenCC.zip?branch=master&job=Environment:%20nodejs_version=none;%20Platform:%20x86"
+            }
+        }
+    }
+}

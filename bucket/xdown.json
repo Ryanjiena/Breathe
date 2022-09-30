@@ -1,0 +1,27 @@
+{
+    "version": "2.0.5.1",
+    "description": "Professional file downloading and sharing tools(BitTorrent/HTTP/FTP).",
+    "homepage": "http://xdown.org",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "notes": "xdown chrome extensions: <https://xdown.org/extensions/>",
+    "url": "http://dl.xdown.org/windows/i386/xdown-2.0.5.1.zip",
+    "hash": "d8139b829a77232218e1c86fa772c5b62a7e52fe8950948a20bb14d033b95d82",
+    "extract_dir": "xdown",
+    "persist": "profile",
+    "bin": "XDown.exe",
+    "shortcuts": [
+        [
+            "XDown.exe",
+            "XDown"
+        ]
+    ],
+    "checkver": {
+        "url": "http://xdown.org",
+        "regex": "Latest update version number:([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://dl.xdown.org/windows/i386/xdown-$version.zip"
+    }
+}

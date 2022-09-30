@@ -1,0 +1,62 @@
+{
+    "version": "0.107.14",
+    "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.",
+    "homepage": "https://github.com/AdguardTeam/AdGuardHome",
+    "license": {
+        "identifier": "GPL-3.0-or-later"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.107.14/AdGuardHome_windows_amd64.zip",
+            "hash": "3dc849e7cea83480c95c79753770c5cdc661ba188a2d12a75f6613b594bf158a"
+        },
+        "32bit": {
+            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.107.14/AdGuardHome_windows_386.zip",
+            "hash": "76df4911d1b6dcae6c3a24a6c1305d4d104564228fbec5ce9b96f20aefcde585"
+        }
+    },
+    "extract_dir": "AdGuardHome",
+    "pre_install": [
+        "if (Test-Path \"$persist_dir\\AdGuardHome.yaml\") {",
+        "    Copy-Item \"$persist_dir\\AdGuardHome.yaml\" \"$dir\\\" | Out-Null",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\AdGuardHome.yaml\") {",
+            "    ensure \"$persist_dir\" | Out-Null",
+            "    Copy-Item \"$dir\\AdGuardHome.yaml\" \"$persist_dir\\\" | Out-Null",
+            "}"
+        ]
+    },
+    "bin": [
+        [
+            "AdGuardHome.exe",
+            "adguardhome"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/AdguardTeam/AdGuardHome"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v$version/AdGuardHome_windows_amd64.zip",
+                "hash": {
+                    "url": "$baseurl/checksums.txt",
+                    "mode": "extract",
+                    "regex": "$sha256\\s+./$basename"
+                }
+            },
+            "32bit": {
+                "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v$version/AdGuardHome_windows_386.zip",
+                "hash": {
+                    "url": "$baseurl/checksums.txt",
+                    "mode": "extract",
+                    "regex": "$sha256\\s+./$basename"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "version": "106.0.5249.62",
+    "description": "chrome-stable + chrome-plus.",
+    "homepage": "https://www.google.com/chrome/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.google.com/chrome/privacy/eula_text.html"
+    },
+    "depends": "chrome-plus",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.google.com/release2/chrome/lmus33rqp2v5pelnqrqysu6vsu_106.0.5249.62/106.0.5249.62_chrome_installer.exe#/dl.7z",
+            "hash": "75a050c99cb24f2bfb3f40502fb960644e7c2f4ed143fdb5479a95a2ad487482"
+        },
+        "32bit": {
+            "url": "https://dl.google.com/release2/chrome/ad5wyiursdvn75aoiuotqtp7n77a_106.0.5249.62/106.0.5249.62_chrome_installer.exe#/dl.7z",
+            "hash": "fb0b94e8ac447bdf82a9ab80525f257b6e1db4628793a9738f5d375452729871"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
+            "New-Item -Path \"$dir\" -Name \"App\" -ItemType \"directory\" | Out-Null",
+            "Get-ChildItem \"$dir\" -Exclude *install.json, *manifest.json, App | ForEach-Object { Move-Item $_.FullName \"$dir\\App\\\" -Force -ErrorAction SilentlyContinue }",
+            "#Get-ChildItem \"$(appdir chrome-plus $global)\\current\\\" -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\\\" -Recurse -Force -ErrorAction SilentlyContinue }",
+            "Get-ChildItem \"$(appdir chrome-plus $global)\\current\\\" -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\\App\\\" -Recurse -Force -ErrorAction SilentlyContinue }",
+            "@('Chrome.exe', '说明.txt', '清理.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\chrome\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }"
+        ]
+    },
+    "pre_uninstall": "Start-Process \"$dir\\清理.bat\" -WorkingDirectory \"$dir\" -Wait",
+    "bin": [
+        [
+            "Chrome.exe",
+            "chrome-stable-plus"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Chrome.exe",
+            "Google Chrome Stable Plus"
+        ]
+    ],
+    "persist": [
+        "Data",
+        "Cache"
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
+        "regex": "(?sm)stable.*?win-x86.*?(?<86>chrome/[\\w-]+_(?<version>[\\d.]+).*?_chrome_installer.exe).*?win-x64.*?(?<64>chrome/[\\w-]+_(?<version>[\\d.]+).*?_chrome_installer.exe)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.google.com/release2/$match64#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
+                    "jsonpath": "$[?(@.Product == 'stable')].Release[?(@.Architecture == 'win-x64')].Hash"
+                }
+            },
+            "32bit": {
+                "url": "https://dl.google.com/release2/$match86#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/chrome.json",
+                    "jsonpath": "$[?(@.Product == 'stable')].Release[?(@.Architecture == 'win-x86')].Hash"
+                }
+            }
+        }
+    }
+}

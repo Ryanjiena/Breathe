@@ -1,0 +1,38 @@
+{
+    "version": "1.2.8",
+    "description": "A .NET Framework based GUI Proxy For Windows",
+    "homepage": "https://github.com/ClashDotNetFramework/ClashDotNetFramework",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/raw/master/LICENSE"
+    },
+    "notes": [
+        "仅作学习使用, 请遵守当地法律。",
+        "恨国党, 带路党, 香蕉人, 精美精日份子等请自行绕道。"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Clash.NET.1.2.8.x64.Setup.exe",
+            "hash": "b5c9e1db89e516586388ab536a9ec36d9dbe5953ee0f2f7ecefbe9feefa98d37"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "ClashDotNet.exe",
+            "Clash .NET"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "Clash.NET.([\\d.]+).x64.Setup.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Clash.NET.$version.x64.Setup.exe"
+            }
+        }
+    }
+}

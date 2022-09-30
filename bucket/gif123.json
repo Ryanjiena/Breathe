@@ -1,0 +1,23 @@
+{
+    "version": "3.2.0.0",
+    "description": "Record an area of your desktop to a GIF, easily copy and paste it wherever you want.",
+    "homepage": "https://gif123.aardio.com/",
+    "license": {
+        "identifier": "MIT|GPL-2.0-or-later"
+    },
+    "url": "https://gif123.aardio.com/download/Gif123.7z",
+    "hash": "410ecfa8015ad2a8a7c0b78f336429d4abfa76464874d3ca10e0671d209fa1ed",
+    "shortcuts": [
+        [
+            "Gif123.exe",
+            "Gif123"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/aardio/Gif123/raw/main/default.aproj",
+        "regex": "ProductVersion=\"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://gif123.aardio.com/download/Gif123.7z"
+    }
+}

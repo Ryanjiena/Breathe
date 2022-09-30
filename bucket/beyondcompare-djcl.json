@@ -1,0 +1,25 @@
+{
+    "version": "4.4.1.26165",
+    "description": "A third-party revision of Beyond Compare, maintained by DJCL(断剑残留).",
+    "homepage": "https://www.scootersoftware.com",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
+    },
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/djcl/Beyond.Compare_4.4.1.26165_Portable.DJLH.7z",
+    "hash": "97cfc1365e0a19a31ae7da9f2e2e3485f52bcc131d892b077f6c563fca16976b",
+    "shortcuts": [
+        [
+            "BComparePortable.exe",
+            "Beyond Compare DJLH"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/ryanjiena/metaversion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>Beyond.Compare_([\\d.]+)_Portable.DJLH\\.7z)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/djcl/$matchFilename"
+    }
+}

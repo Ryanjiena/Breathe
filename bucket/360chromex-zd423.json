@@ -1,0 +1,45 @@
+{
+    "version": "21.0.1140.0",
+    "description": "Third-party modifications of 360 Extreme Browser X, maintained by 423down.com.",
+    "homepage": "https://browser.360.cn/eex/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "http://www.360.cn/xukexieyi.html#jisu"
+    },
+    "notes": "Features: <https://www.423down.com/13808.html>",
+    "architecture": {
+        "64bit": {
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/360Chromex-21.0.1140.0-x64-Mod.exe#/dl.7z",
+            "hash": "29c54401871be99ccefd6d2b156e482bf399831cb1ff144ad1a8f3490b8ef86a"
+        }
+    },
+    "extract_dir": "360Chrome",
+    "pre_uninstall": [
+        "if (Test-Path \"$dir\\360chrome.ini\") {",
+        "    ensure \"$persist_dir\" | Out-Null",
+        "    Copy-Item \"$dir\\360chrome.ini\" \"$persist_dir\\\" | Out-Null",
+        "}"
+    ],
+    "uninstaller": {
+        "file": "卸载清理.bat"
+    },
+    "shortcuts": [
+        [
+            "360Chrome.exe",
+            "360ChromeX"
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "url": "https://github.com/ryanjiena/metaversion/raw/main/oneindex.txt",
+        "regex": "(?s)(?<filename>360Chromex-([\\d.]+)-x64-Mod\\.(?:exe|zip|7z))",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/$matchFilename#/dl.7z"
+            }
+        }
+    }
+}

@@ -1,19 +1,31 @@
 {
     "version": "1.5.3",
-    "description": "BiliBili Vedio Downloader",
+    "description": "bilibili video download tool, support batch download, 4K, remove regional download restrictions, provide toolbox(audio and video extraction, watermark removal, etc.).",
     "homepage": "https://github.com/leiurayer/downkyi",
-    "license": "Apache-2.0",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/leiurayer/downkyi/raw/main/LICENSE"
+    },
     "url": "https://github.com/leiurayer/downkyi/releases/download/v1.5.3/DownKyi-1.5.3.zip",
     "hash": "bdadb1125765f0bf6b76d9448a673efd75480d24e8ce7e8900658780f77eb579",
+    "bin": "DownKyi.exe",
     "shortcuts": [
         [
             "DownKyi.exe",
             "DownKyi"
         ]
     ],
-    "persist": "Config",
-    "checkver": "github",
+    "persist": [
+        "Config",
+        "Media",
+        "aria"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/leiurayer/downkyi/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "(?<tag>v([\\w.-]+))"
+    },
     "autoupdate": {
-        "url": "https://github.com/leiurayer/downkyi/releases/download/v$version/DownKyi-$version.zip"
+        "url": "https://github.com/leiurayer/downkyi/releases/download/$matchTag/DownKyi-$version.zip"
     }
 }

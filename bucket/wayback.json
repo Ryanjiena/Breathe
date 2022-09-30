@@ -1,0 +1,45 @@
+{
+    "version": "0.17.0",
+    "description": "Wayback is a tool that supports running as a command-line tool and docker container, purpose to snapshot webpage to time capsules.",
+    "homepage": "https://github.com/wabarc/wayback",
+    "license": {
+        "identifier": "GPL-3.0-or-later"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wabarc/wayback/releases/download/v0.17.0/wayback-windows-amd64-0.17.0.zip",
+            "hash": "6767f8f67e0a2b5a6c4364cf2f6a1f679d2b351524a85236fd6efca983696bc2"
+        },
+        "32bit": {
+            "url": "https://github.com/wabarc/wayback/releases/download/v0.17.0/wayback-windows-386-0.17.0.zip",
+            "hash": "93a3bb7ad4b6d2b3e81d99368b9c3a0528a6a0928fe9dcd406208e5cfe8b6b67"
+        }
+    },
+    "pre_install": "Rename-Item \"$dir\\wayback*.exe\" \"$dir\\wayback.exe\" -Force",
+    "bin": "wayback.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/wabarc/wayback/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "^v(.+)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wabarc/wayback/releases/download/v$version/wayback-windows-amd64-$version.zip",
+                "hash": {
+                    "url": "https://github.com/wabarc/wayback/releases/tag/v$version",
+                    "mode": "extract",
+                    "regex": "$sha256\\s+$basename"
+                }
+            },
+            "32bit": {
+                "url": "https://github.com/wabarc/wayback/releases/download/v$version/wayback-windows-386-$version.zip",
+                "hash": {
+                    "url": "https://github.com/wabarc/wayback/releases/tag/v$version",
+                    "mode": "extract",
+                    "regex": "$sha256\\s+$basename"
+                }
+            }
+        }
+    }
+}

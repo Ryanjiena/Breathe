@@ -1,0 +1,49 @@
+{
+    "version": "3.7.6.45",
+    "description": "WeChat third party modified version, maintained by qiuquan.",
+    "homepage": "https://weixin.qq.com/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
+    },
+    "notes": [
+        "Since WeChat has strong payment properties, the third-party version has certain risks, so it is recommended to use the official wechat package (scoop install wechat-portable) if you don't just need it.",
+        "Features: <http://www.qiuquan.cc/chat/wechat.html>"
+    ],
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/WeChat_3.7.6.45_QiuQuan_20220916.exe#/Installer.exe",
+    "hash": "269c497470cdeabf5959cd440d0e9605c777a850c10f23d4b9abb6c3fcd4cde4",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\Tencent\\WeChat\")) {",
+        "    Copy-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\appdata\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+        "}"
+    ],
+    "installer": {
+        "script": [
+            "ensure \"$persist_dir\\appdata\" | Out-Null",
+            "New-Item \"$env:APPDATA\\Tencent\\WeChat\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null",
+            "Start-Process \"$dir\\Installer.exe\" -ArgumentList /DIR=\"$dir\",/SILENT -Wait",
+            "Remove-Item \"$dir\\Installer.exe\" -ErrorAction SilentlyContinue -Force"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+            "Start-Process \"$dir\\UninsFile\\unins000.exe\" -ArgumentList /VERYSILENT -Wait"
+        ]
+    },
+    "shortcuts": [
+        [
+            "WeChat.exe",
+            "Tencent\\WeChat QIUQUAN"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",
+        "regex": "(?<filename>WeChat_([\\w.]+)_QiuQuan_(?<date>\\d{8}).exe)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/$matchFilename#/Installer.exe"
+    }
+}
