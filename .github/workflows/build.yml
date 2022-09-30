@@ -47,6 +47,7 @@ jobs:
               "ScoopInstaller/Nonportable@nonportable@master"
               "ScoopInstaller/Versions@versions@master"
               "ScoopInstaller/Extras@extras@master"
+              "Ryanjiena/Meta@meta@main"
               "chawyehsu/dorado@dorado@master")
 
           # init
