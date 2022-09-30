@@ -53,8 +53,9 @@ jobs:
           # init
           function init() {
               git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/tian.git "${TMP_DIR}/tian"
-              git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/fantastic-bucket.git "${TMP_DIR}/fantastic"
-              bucket_arr=("tian" "fantastic")
+              # git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/fantastic-bucket.git "${TMP_DIR}/fantastic"
+              # bucket_arr=("tian" "fantastic")
+              bucket_arr=("tian")
               for bucket in "${bucket_arr[@]}"; do
                   cd "${TMP_DIR}/${bucket}/"
                   if [ -d "bucket" ]; then
@@ -104,10 +105,10 @@ jobs:
           # commit and push
           function commit() {
               # Copy tian to fantastic-bucket
-              cp ${TMP_DIR}/tian/bucket/* ${TMP_DIR}/fantastic/bucket/
-              cp ${TMP_DIR}/tian/scripts/* ${TMP_DIR}/fantastic/scripts/ -r
-              cp ${TMP_DIR}/tian/bin/* ${TMP_DIR}/fantastic/bin/
-              cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/fantastic/README.md -f
+              # cp ${TMP_DIR}/tian/bucket/* ${TMP_DIR}/fantastic/bucket/
+              # cp ${TMP_DIR}/tian/scripts/* ${TMP_DIR}/fantastic/scripts/ -r
+              # cp ${TMP_DIR}/tian/bin/* ${TMP_DIR}/fantastic/bin/
+              # cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/fantastic/README.md -f
 
               # remove cracked
               cd "${TMP_DIR}/tian/bucket"
@@ -115,7 +116,7 @@ jobs:
 
               # push
               cd "${TMP_DIR}/tian" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
-              cd "${TMP_DIR}/fantastic" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
+              # cd "${TMP_DIR}/fantastic" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
           }
 
           # sync to jihulab
@@ -125,7 +126,7 @@ jobs:
               git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
               git clone -q --depth=1 git@jihulab.com:Ryanjie/Tian.git "${TMP_DIR}/tian-cn"
 
-              cd ${TMP_DIR}/fantastic/bucket/
+              cd ${TMP_DIR}/tian/bucket/
               # sed -i 's|\(https://github.com/.*/releases/download\)|https://ghproxy.com/\1|g;s|\(https://github.com/.*/archive\)|https://ghproxy.com/\1|g;s|\(https://raw.githubusercontent.com/\)|https://ghproxy.com/\1|g' *json
 
               cd ${TMP_DIR}/tian-cn/
@@ -134,10 +135,10 @@ jobs:
               fi
               mkdir bin bucket scripts
 
-              cp ${TMP_DIR}/fantastic/bin/* ${TMP_DIR}/tian-cn/bin/ -f
-              cp ${TMP_DIR}/fantastic/bucket/* ${TMP_DIR}/tian-cn/bucket/ -f
-              cp ${TMP_DIR}/fantastic/scripts/* ${TMP_DIR}/tian-cn/scripts/ -r -f
-              cp ${TMP_DIR}/fantastic/README.md ${TMP_DIR}/tian-cn/README.md -f
+              cp ${TMP_DIR}/tian/bin/* ${TMP_DIR}/tian-cn/bin/ -f
+              cp ${TMP_DIR}/tian/bucket/* ${TMP_DIR}/tian-cn/bucket/ -f
+              cp ${TMP_DIR}/tian/scripts/* ${TMP_DIR}/tian-cn/scripts/ -r -f
+              cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/tian-cn/README.md -f
 
               git add . && git commit -m "Sync by: ${USER}, at: ${DATE}"
               git push -u origin main
