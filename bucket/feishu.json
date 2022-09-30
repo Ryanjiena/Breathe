@@ -24,6 +24,7 @@
             "--target_dir=\"$dir\""
         ]
     },
+    "pre_uninstall": "Remove-Item \"$env:AppData\\LarkShell\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
     "uninstaller": {
         "file": "Feishu\\uninstall.exe",
         "args": "/quiet"

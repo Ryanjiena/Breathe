@@ -1,5 +1,5 @@
 {
-    "version": "3.9.0",
+    "version": "3.8.2",
     "description": "Bilibili Live Recording and Playback Download(with dotnet runtime).",
     "homepage": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader",
     "license": {
@@ -11,17 +11,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/3.9.0/BilibiliLiveRecordDownLoader-win-x64-3.9.0.7z",
-            "hash": "f5a0bf9bf1c24248ed07b992b210114c0821d94548c75ea7ddbc52ba9621825b"
+            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/3.8.2/BilibiliLiveRecordDownLoader-Win64-3.8.2.7z",
+            "hash": "35b16abaad8c55a8dfd0ebc8e6683ef6ee2c162e4ffbf8194afb1ccf14553664"
         },
         "32bit": {
-            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/3.9.0/BilibiliLiveRecordDownLoader-win-x86-3.9.0.7z",
-            "hash": "0ad7c895b8d8fc71a76ce0defadca61afb82f2888320b3a89bd5c69955e349c1"
+            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/3.8.2/BilibiliLiveRecordDownLoader-Win32-3.8.2.7z",
+            "hash": "1ad8457da3604b48a2d2e2d5d6f6e19b21dfbb29a6ace7545825d97da04fb705"
         }
     },
     "extract_dir": "BilibiliLiveRecordDownLoader",
     "pre_install": "if (!(Test-Path \"$persist_dir\\BilibiliLiveRecordDownLoader.json\")) { New-Item \"$dir\\BilibiliLiveRecordDownLoader.json\" -ItemType \"file\" -Value \"{}\" | Out-Null }",
-    "bin": "BilibiliLiveRecordDownLoader.exe",
     "shortcuts": [
         [
             "BilibiliLiveRecordDownLoader.exe",
@@ -30,20 +29,20 @@
     ],
     "persist": "BilibiliLiveRecordDownLoader.json",
     "checkver": {
-        "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases",
-        "regex": "<span class=.*?BilibiliLiveRecordDownLoader-win-x64-([\\d.]+)\\.7z</span>"
+        "url": "https://api.github.com/repos/HMBSbige/BilibiliLiveRecordDownLoader/releases/latest",
+        "jsonpath": "$.tag_name"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/$version/BilibiliLiveRecordDownLoader-win-x64-$version.7z"
+                "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/$version/BilibiliLiveRecordDownLoader-Win64-$version.7z"
             },
             "32bit": {
-                "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/$version/BilibiliLiveRecordDownLoader-win-x86-$version.7z"
+                "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/download/$version/BilibiliLiveRecordDownLoader-Win32-$version.7z"
             }
         },
         "hash": {
-            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases",
+            "url": "https://github.com/HMBSbige/BilibiliLiveRecordDownLoader/releases/tag/$version",
             "regex": "(?sm)$basename.*?$sha256"
         }
     }

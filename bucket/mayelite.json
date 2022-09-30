@@ -22,7 +22,6 @@
             "}"
         ]
     },
-    "bin": "Maye.exe",
     "shortcuts": [
         [
             "Maye.exe",
@@ -34,7 +33,7 @@
         "cfg.json"
     ],
     "checkver": {
-        "url": "https://github.com/25H/MayeLite/releases/latest",
+        "url": "https://api.github.com/repos/25H/MayeLite/releases",
         "regex": "MayeLite.([\\d.]+)-(?<date>\\d+)\\.zip"
     },
     "autoupdate": {

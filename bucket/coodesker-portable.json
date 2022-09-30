@@ -27,14 +27,18 @@
             ]
         }
     },
-    "installer": {
-        "script": [
-            "ensure \"$persist_dir\" | Out-Null",
-            "New-Item \"$env:AppData\\Coodesker\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
-        ]
-    },
+    "pre_install": [
+        "if (Test-Path \"$env:AppData\\Coodesker\") {",
+        "    info '[Persistent data]: Copying user data...'",
+        "    ensure \"$persist_dir\" | Out-Null",
+        "    Copy-Item \"$env:AppData\\Coodesker\\*\" \"$persist_dir\\\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Remove-Item \"$env:AppData\\Coodesker\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "}",
+        "New-Item \"$env:AppData\\Coodesker\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
+    ],
+    "pre_uninstall": "Remove-Item \"$env:AppData\\Coodesker\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
     "uninstaller": {
-        "script": "Remove-Item \"$env:AppData\\Coodesker\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        "file": "cleanPortableCache.bat"
     },
     "checkver": {
         "github": "https://github.com/coodesker/coodesker-desktop"

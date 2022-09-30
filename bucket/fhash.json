@@ -18,8 +18,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/sunjw/fhash/releases",
-        "regex": "href=\"/sunjw/fhash/releases/download/(?<tag>[\\d.]+)/fHash64-([\\d.]+)-win64.zip"
+        "url": "https://api.github.com/repos/sunjw/fhash/releases",
+        "regex": "releases/download/(?<tag>[\\d.]+)/fHash64-([\\d.]+)-win64.zip"
     },
     "autoupdate": {
         "architecture": {

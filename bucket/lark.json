@@ -24,6 +24,7 @@
             "--target_dir=\"$dir\""
         ]
     },
+    "pre_uninstall": "Remove-Item \"$env:AppData\\LarkInternational\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
     "uninstaller": {
         "file": "Lark\\uninstall.exe",
         "args": "/quiet"
