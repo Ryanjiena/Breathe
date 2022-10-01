@@ -1,5 +1,5 @@
 {
-    "version": "12.4.0.6542",
+    "version": "12.5.0.6558",
     "description": "Sogou Pinyin Input 3rd party modified version, maintained by xingkbjm.com.",
     "homepage": "https://pinyin.sogou.com",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://pinyin.sogou.com/help.php?list=9&q=1"
     },
     "notes": "Features: <https://www.xingkbjm.com/sogopy/>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗拼音输入法_v12.4c(12.4.0.6542)_星空不寂寞精简版.exe",
-    "hash": "09ae98ed7937d2bf8e9452376e310f31ff14b5c375bbed80c0ad78ce1f9c6659",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/sogou/搜狗拼音输入法_v12.5(12.5.0.6558)_星空不寂寞精简版.exe",
+    "hash": "cada3d2104b0e8df6c7f7f0912d06c1ab868be984efe3e9c775a3685fc9c7707",
     "installer": {
         "script": [
             "ensure \"$persist_dir\\SogouPY\" | Out-Null",

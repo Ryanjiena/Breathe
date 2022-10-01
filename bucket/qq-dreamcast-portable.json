@@ -1,5 +1,5 @@
 {
-    "version": "9.6.6.28796",
+    "version": "9.6.7.28807",
     "description": "Tencent QQ third-party modified version, maintained by Dreamcast(Portable Edition).",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -29,8 +29,8 @@
             "adobe-flash-player-ppapi-zd423"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/腾讯QQ_9.6.6.28796_绿色版.7z",
-    "hash": "7ef8af09c4daf3e090a2f145655e42859c1e942467d3f7f3ec976297d52c2406",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/dreamcast/腾讯QQ_9.6.7.28807_绿色版.7z",
+    "hash": "9f6732a9080fb90fd25df987a4bdee271966161e6beb7d173e28080dfc824802",
     "extract_dir": "QQ",
     "installer": {
         "script": [

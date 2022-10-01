@@ -1,12 +1,12 @@
 {
-    "version": "12.4.0.6503",
+    "version": "12.5.0.6558",
     "description": "SogouInput screenshot standalone version, maintained by @断剑留痕.",
     "homepage": "https://bbs.kafan.cn/thread-2243330-1-1.html",
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/SGScreencapture_v12.4.0.6503.zip",
-    "hash": "2b25a7564272c6e4bea920aef470f911aa43270fad161ca61e26a5ca30fe135c",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/SGScreencapture_v12.5.0.6558.zip",
+    "hash": "aa56160e22883d937731baf0c0c4e0b096fb312c16c2e4e414d7e05e83a14247",
     "installer": {
         "script": "Start-Process -FilePath \"$dir\\绿化.bat\" -Verb RunAs -Wait"
     },

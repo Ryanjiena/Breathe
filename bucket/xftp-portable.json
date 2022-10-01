@@ -1,5 +1,5 @@
 {
-    "version": "7.0.0109",
+    "version": "7.0.0111",
     "description": "Effortless File Transfers Over A Network(Portable Edition).",
     "homepage": "https://www.netsarang.com/en/xftp",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.netsarang.com/docs/ver7_eula.pdf"
     },
     "notes": "Features: <https://www.423down.com/8196.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Xftp_v7.0.0109.7z",
-    "hash": "52886e4689f7e39777bc0bfa0fc2a5cd4295a6d1952e2318ed543728391415b3",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/Xftp_v7.0.0111.7z",
+    "hash": "1e4d4843c12fb525e69ef3361cfc3df8ae1af78f17c3694d3d04af6c02a500df",
     "extract_dir": "Xftp",
     "installer": {
         "file": "!)绿化处理.bat",

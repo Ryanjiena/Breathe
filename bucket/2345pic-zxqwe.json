@@ -1,5 +1,5 @@
 {
-    "version": "10.9.0.9730",
+    "version": "10.9.0.9764",
     "description": "The fastest picture-viewing software! Free and simple, compatible with all mainstream picture formats, using the world's fastest powerful picture engine, even on low-configuration computers also quickly open tens of megabytes of large images, more able to support mouse page turning operation, more convenient to see the picture.",
     "homepage": "https://pic.2345.cc/",
     "license": {
@@ -12,12 +12,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_10.9.0.9730_优化版_X64.7z",
-            "hash": "de02c64089ff72c746c9efbbcf95e4862dc447ebfc2c5d080ef2e8831df01046"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_10.9.0.9764_优化版_X64.7z",
+            "hash": "4a8abdb8697378671e9d7a2ec1654d8784618cf7751111cfdef1b5d33aaded95"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_10.9.0.9730_优化版_X86.7z",
-            "hash": "e37765afefff52b943dd97a41f800b1dbe8eb6b473305e6a76c0142ee0746eae"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/2345Pic_10.9.0.9764_优化版_X86.7z",
+            "hash": "27e6ff25d9bbebc822b61cfdc647bb0340a9143848d5bde587dcf1a083d8e42e"
         }
     },
     "shortcuts": [

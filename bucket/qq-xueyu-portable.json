@@ -1,5 +1,5 @@
 {
-    "version": "9.6.6.28796",
+    "version": "9.6.7.28815",
     "description": "Tencent QQ 3rd party modified version, maintained by xueyu521.cn.",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -29,8 +29,8 @@
             "adobe-flash-player-ppapi-zd423"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/xueyu/QQ9.6.6.28796精简优化版-by雪域.7z",
-    "hash": "3888c5b9d03d6d8d6b62ca83a3e51aa7af8aa01310d388e318f7a0d92d90dfc9",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/xueyu/QQ9.6.7.28815精简优化版-by雪域.7z",
+    "hash": "3ef6f9527b89953bd5c878880bb18e7c4841f7ed203d92d6e1e8f3c73cefd678",
     "pre_install": "Expand-7zipArchive \"$dir\\$fname\" -Switches '-pwww.xueyu521.cn' -ExtractDir \"QQ$version\" -Removal",
     "installer": {
         "script": [

@@ -1,5 +1,5 @@
 {
-    "version": "6.3.5.613",
+    "version": "6.3.7.615",
     "description": "WiseCare365 3rd party modified version, maintained by ghxi.com.",
     "homepage": "https://www.wisecleaner.com/wise-care-365.html",
     "license": {
@@ -8,9 +8,9 @@
     },
     "notes": "Features: <https://www.ghxi.com/wisecare365.html>",
     "depends": "sudo",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/WiseCare365_6.3.5.613_Green.7z",
-    "hash": "3b9b776ea30ce7fff91378adbb47ec13654fa6b8c0888e7a33c4e8e74d7e2c84",
-    "extract_dir": "WiseCare365_6.3.5.613_Green\\WiseCare365",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/WiseCare365_6.3.7.615_Green.7z",
+    "hash": "b1bf17425d9f44d394070525350620bd0b727b596ecd294582575d05230868b3",
+    "extract_dir": "WiseCare365_6.3.7.615_Green\\WiseCare365",
     "uninstaller": {
         "file": "移除残留.bat"
     },
