@@ -1,5 +1,5 @@
 {
-    "version": "108.0.5333.1",
+    "version": "108.0.5333.0",
     "description": "chrome-canary + chrome-plus.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -9,8 +9,8 @@
     "depends": "chrome-plus",
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/adnn53rn5glaracd6py7uazpnxmq_108.0.5333.1/108.0.5333.1_chrome_installer.exe#/dl.7z",
-            "hash": "99b28f2d5a23bde19ed430ce98a742b6be6ebc3140659df749a2b0f5443b7fcc"
+            "url": "https://dl.google.com/release2/chrome/ac7extu72jtjnjuzc5572qhto5ha_108.0.5333.0/108.0.5333.0_chrome_installer.exe#/dl.7z",
+            "hash": "62aab66fffc01a1e01a5f5c0de2268761bc159644e67853847eda15565e24833"
         },
         "32bit": {
             "url": "https://dl.google.com/release2/chrome/adb575spy4ow2voxpihhntlz3fgq_108.0.5333.0/108.0.5333.0_chrome_installer.exe#/dl.7z",
