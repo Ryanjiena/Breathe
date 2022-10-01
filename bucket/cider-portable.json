@@ -24,13 +24,12 @@
     "persist": "User Data",
     "checkver": {
         "url": "https://api.github.com/repos/ciderapp/cider-releases/releases",
-        "jsonpath": "$[0].tag_name",
-        "regex": "v(.*)"
+        "regex": "releases/download/(?<tag>(?:v|V)?[\\w.-]+)/Cider-Setup-([\\w.-]+).exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ciderapp/cider-releases/releases/download/v$version/Cider-Setup-$version.exe#/dl.7z",
+                "url": "https://github.com/ciderapp/cider-releases/releases/download/$matchTag/Cider-Setup-$version.exe#/dl.7z",
                 "hash": {
                     "url": "$baseurl/latest.yml",
                     "regex": "(?sm)$basename.*?sha512:\\s+$base64"
