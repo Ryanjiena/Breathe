@@ -1,5 +1,5 @@
 {
-    "version": "3.0.0.14",
+    "version": "3.0.0.15",
     "description": "Dopamine is an elegant audio player which tries to make organizing and listening to music as simple and pretty as possible. This version is written using Electron, Angular and Typescript.",
     "homepage": "https://github.com/digimezzo/dopamine",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/digimezzo/dopamine/releases/download/v3.0.0-preview14/Dopamine-3.0.0-preview.14.exe#/dl.7z",
-            "hash": "fcd53a8d7d68dade2ed0cf79d3f2208717fb0ab5e507309b87672bb6de1ab1c9",
+            "url": "https://github.com/digimezzo/dopamine/releases/download/v3.0.0-preview15/Dopamine-3.0.0-preview.15.exe#/dl.7z",
+            "hash": "618dc82fb0b9523e7068aaa0b884549a23d0bc5e7487a0bc76e01c3fc1faefcb",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
             "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -ErrorAction 'SilentlyContinue' -Recurse -Force"
         }
