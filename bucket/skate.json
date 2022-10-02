@@ -1,0 +1,36 @@
+{
+    "version": "0.2.1",
+    "description": "A personal key-value store. 🛼 Skate is simple and powerful. Use it to save and retrieve anything you'd like—even binary data. It's fully encrypted, backed up to the cloud (that you can self-host if you want) and can be synced with all your machines.",
+    "homepage": "https://github.com/charmbracelet/skate",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/charmbracelet/skate/raw/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/charmbracelet/skate/releases/download/v0.2.1/skate_0.2.1_Windows_x86_64.zip",
+            "hash": "599c9efa1803cf7ad38a4700030c93b4e3e6e31747f3ee4a084093446260c940"
+        },
+        "32bit": {
+            "url": "https://github.com/charmbracelet/skate/releases/download/v0.2.1/skate_0.2.1_Windows_i386.zip",
+            "hash": "ea936fbeec93c879a03ba45885baec319e5fc4ce84d66e907873c0bbb980b547"
+        }
+    },
+    "bin": "skate.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/charmbracelet/skate/releases/download/v$version/skate_$version_Windows_x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/charmbracelet/skate/releases/download/v$version/skate_$version_Windows_i386.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt",
+            "mode": "extract",
+            "regex": "$sha256\\s+$basename\\n"
+        }
+    }
+}

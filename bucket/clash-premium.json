@@ -16,7 +16,7 @@
             "hash": "6fdccdf8b8bee757a59847865603ed95e0223205218abc27b7131bc4fc910928"
         }
     },
-    "pre_install": "Rename-Item \"dir\\clash*.exe\" \"dir\\Clash.Premium.exe\" -Force",
+    "pre_install": "Rename-Item \"$dir\\clash*.exe\" \"$dir\\Clash.Premium.exe\" -Force",
     "bin": [
         [
             "Clash.Premium.exe",

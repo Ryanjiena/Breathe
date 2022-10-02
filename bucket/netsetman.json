@@ -1,0 +1,42 @@
+{
+    "version": "5.1.1",
+    "description": "NetSetMan is a network settings manager software which can easily switch between your preconfigured profiles!",
+    "homepage": "https://www.netsetman.com/en/freeware",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.netsetman.com/en/txt/license"
+    },
+    "url": "https://www.netsetman.com/netsetman.exe",
+    "hash": "3bf24e39de512527df288e13d90e354b3218c4fd448e0059f9ddb197db708646",
+    "innosetup": true,
+    "architecture": {
+        "64bit": {
+            "pre_install": "Get-ChildItem \"$dir\\*,2.*\" -Recurse | Rename-Item -NewName { $_.FullName -replace ',2\\.', '.' }"
+        },
+        "32bit": {
+            "pre_install": "Get-ChildItem \"$dir\\*,1.*\" -Recurse | Rename-Item -NewName { $_.FullName -replace ',1\\.', '.' }"
+        }
+    },
+    "post_install": [
+        "if (Test-Path \"$persist_dir\\settings.ini\") {",
+        "    Copy-Item \"$persist_dir\\settings.ini\" \"$dir\\\" | Out-Null",
+        "}",
+        "Get-ChildItem \"$dir\\*,[0-9].*\" -Recurse | Remove-Item"
+    ],
+    "pre_uninstall": [
+        "if (Test-Path \"$dir\\settings.ini\") {",
+        "    ensure \"$persist_dir\" | Out-Null",
+        "    Copy-Item \"$dir\\settings.ini\" \"$persist_dir\\\" | Out-Null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "netsetman.exe",
+            "NetSetMan"
+        ]
+    ],
+    "checkver": "NetSetMan ([\\d.]+)",
+    "autoupdate": {
+        "url": "https://www.netsetman.com/netsetman.exe"
+    }
+}

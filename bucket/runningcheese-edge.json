@@ -16,7 +16,7 @@
             "extract_dir": "RunningCheeseEdge_104.0.1293.54_64bit_Portable\\RunningCheeseEdge_104.0.1293.54_64bit_Portable"
         }
     },
-    "post_install": "Start-Process \"dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
+    "post_install": "Start-Process \"$dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
     "persist": "Data",
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",

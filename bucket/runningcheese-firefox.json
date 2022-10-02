@@ -22,7 +22,7 @@
             "extract_dir": "RunningCheeseFirefox_102.0_32bit_Portable"
         }
     },
-    "post_install": "Start-Process \"dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
+    "post_install": "Start-Process \"$dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
     "persist": "Profiles",
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",

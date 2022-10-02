@@ -12,7 +12,7 @@
     "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\cloudmusic\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
     "extract_dir": "CloudMusic",
     "uninstaller": {
-        "script": "Start-Process \"dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait"
+        "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait"
     },
     "shortcuts": [
         [

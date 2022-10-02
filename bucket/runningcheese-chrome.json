@@ -21,7 +21,7 @@
             "extract_dir": "RunningCheeseChrome_103.0.5060.53_32bit_Protable\\RunningCheeseChrome"
         }
     },
-    "post_install": "Start-Process \"dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
+    "post_install": "Start-Process \"$dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",
     "persist": "Data",
     "checkver": {
         "url": "https://github.com/Ryanjiena/MetaVersion/raw/main/oneindex.txt",

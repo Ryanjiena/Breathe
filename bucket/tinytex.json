@@ -1,0 +1,25 @@
+{
+    "version": "2022.10",
+    "description": "TinyTeX is a custom LaTeX distribution based on TeX Live that is relatively small in size, but functions well in most cases, especially for R users. If you run into the problem of missing LaTeX packages, it should be super clear to you what you need to do (in fact, R users won’t need to do anything). You only install LaTeX packages you actually need.",
+    "homepage": "https://yihui.org/tinytex",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://tug.org/texlive/LICENSE.TL"
+    },
+    "notes": [
+        "Please see the full documentation at <https://yihui.org/tinytex/>.",
+        "中国大陆地区用户: 国内的 CTAN 镜像 <https://ctan.org/mirrors/mirmon#cn>",
+        "This package contains about 90 LaTeX packages enough to compile common R Markdown documents (which was the original motivation of the TinyTeX project)."
+    ],
+    "url": "https://github.com/yihui/tinytex-releases/releases/download/v2022.10/TinyTeX-1-v2022.10.zip",
+    "hash": "59c352121a5edf84e77401283f7b61d35e1be0e6e4ef6d812c787a61a5b3a5bc",
+    "extract_dir": "TinyTeX",
+    "env_add_path": "bin\\win32",
+    "persist": "texmf-config",
+    "checkver": {
+        "github": "https://github.com/yihui/tinytex-releases"
+    },
+    "autoupdate": {
+        "url": "https://github.com/yihui/tinytex-releases/releases/download/v$version/TinyTeX-1-v$version.zip"
+    }
+}

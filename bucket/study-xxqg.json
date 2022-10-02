@@ -1,0 +1,42 @@
+{
+    "version": "1.0.37",
+    "description": "学习强国自动化学习, 基于 playwright-go 开发.",
+    "homepage": "https://github.com/johlanse/study_xxqg",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/johlanse/study_xxqg/raw/main/LICENSE"
+    },
+    "notes": "该项目仅用于学习, Windows 使用教程: <https://johlanse.shhy.xyz/#/./windows/index?id=windows%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b>",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/johlanse/study_xxqg/releases/download/v1.0.37/study_xxqg_windows_amd64.zip",
+            "hash": "b7511c569cd22a9bf1fe25375259da4ba6808210e2a58a9f72f720238e1e65f9"
+        },
+        "32bit": {
+            "url": "https://github.com/johlanse/study_xxqg/releases/download/v1.0.37/study_xxqg_windows_386.zip",
+            "hash": "9bb091bdd4adb8edb3c42a85bd84697edc49ab6d3444f074382ee9615c6f5fb4"
+        }
+    },
+    "bin": "study_xxqg.exe",
+    "persist": "config",
+    "checkver": {
+        "url": "https://api.github.com/repos/johlanse/study_xxqg/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/johlanse/study_xxqg/releases/download/v$version/study_xxqg_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/johlanse/study_xxqg/releases/download/v$version/study_xxqg_windows_386.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/study_xxqg_checksums.txt",
+            "mode": "extract",
+            "regex": "$sha256\\s+$basename"
+        }
+    }
+}

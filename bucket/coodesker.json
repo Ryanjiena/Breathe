@@ -1,0 +1,55 @@
+{
+    "version": "1.0.3.2",
+    "description": "Coodesker helps you organize your PC by automatically placing your shortcuts and icons into resizable shaded areas on your desktop called boxes. Coodesker will always be free to users.",
+    "homepage": "https://www.coodesker.com",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/coodesker/coodesker-desktop/releases/download/v1.0.3.2/Coodesker-x64_1.0.3.2.exe#/dl.7z",
+            "hash": "06b8925af371e3e403aa5dee29abe05cb70f95a9b24b11a0f3674d72d2b5c754",
+            "shortcuts": [
+                [
+                    "coodesker-x64.exe",
+                    "Coodesker"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/coodesker/coodesker-desktop/releases/download/v1.0.3.2/Coodesker-x86_1.0.3.2.exe#/dl.7z",
+            "hash": "7a1db6c13aeba4b9938470f8a31b2f27eb706c274239d3744fb9c901c3b6a770",
+            "shortcuts": [
+                [
+                    "coodesker.exe",
+                    "Coodesker"
+                ]
+            ]
+        }
+    },
+    "pre_install": [
+        "if (Test-Path \"$env:AppData\\Coodesker\") {",
+        "    info '[Persistent data]: Copying user data...'",
+        "    ensure \"$persist_dir\" | Out-Null",
+        "    Copy-Item \"$env:AppData\\Coodesker\\*\" \"$persist_dir\\\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Remove-Item \"$env:AppData\\Coodesker\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "}",
+        "New-Item \"$env:AppData\\Coodesker\" -ItemType Junction -Target \"$persist_dir\" | Out-Null",
+        "Remove-Item \"$dir\\uninst.exe\" -ErrorAction SilentlyContinue -Force"
+    ],
+    "pre_uninstall": "Remove-Item \"$env:AppData\\Coodesker\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "checkver": {
+        "url": "https://api.github.com/repos/coodesker/coodesker-desktop/releases",
+        "regex": "releases/download/v([\\d.]+)/Coodesker-x64_[\\d.]+.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/coodesker/coodesker-desktop/releases/download/v$version/Coodesker-x64_$version.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/coodesker/coodesker-desktop/releases/download/v$version/Coodesker-x86_$version.exe#/dl.7z"
+            }
+        }
+    }
+}

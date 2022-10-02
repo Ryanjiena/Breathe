@@ -15,7 +15,7 @@
         "    Copy-Item \"$persist_dir\\User Data\\*\" \"$env:AppData\\Tencent\\WXWork\\\" -Recurse -Force | Out-Null",
         "}"
     ],
-    "post_install": "@('$PLUGINSDIR', '[NSIS].nsi', 'Uninstall.exe') | ForEach-Object { Remove-Item \"dir\\$_\" -Force -ErrorAction SilentlyContinue }",
+    "post_install": "@('$PLUGINSDIR', '[NSIS].nsi', 'Uninstall.exe') | ForEach-Object { Remove-Item \"$dir\\$_\" -Force -ErrorAction SilentlyContinue }",
     "uninstaller": {
         "script": [
             "info '[Portable Mode]: Backing up user data...'",

@@ -8,7 +8,10 @@
     },
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/Flash_34.0.0.267_Patch.7z#/dl.7z_",
     "hash": "d65f4d97f2a2593170ea33da70f6e62acb149558fa2ac4541cf4992f8714061b",
-    "pre_install": "Expand-7zipArchive \"$dir\\$fname\" -Switches '-pwww.cyxitong.com' -ExtractDir \"Flash_$version_Patch\" -Removal",
+    "pre_install": [
+        "$flash_zip=(Get-ChildItem $dir\\Flash_*).Name",
+        "Expand-7zipArchive \"$dir\\$flash_zip\" -Switches '-pwww.cyxitong.com' -ExtractDir \"Flash_$version_Patch\" -Removal"
+    ],
     "installer": {
         "file": "Setup.bat",
         "keep": true
