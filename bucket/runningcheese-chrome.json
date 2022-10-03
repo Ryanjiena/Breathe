@@ -1,5 +1,5 @@
 {
-    "version": "103.0.5060.53",
+    "version": "105.0.5195.102",
     "description": "Google Chrome Portable and Enhanced Edition, Maintained by @runningcheese.",
     "homepage": "https://www.runningcheese.com/chrome",
     "license": {
@@ -11,14 +11,14 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_103.0.5060.53_64bit_Protable.7z",
-            "hash": "4e0a2ea8a0950cb09679ec47fcaaa172c7bcbb565edcf42d575b9c4a7ecb886f",
-            "extract_dir": "RunningCheeseChrome_103.0.5060.53_64bit_Protable\\RunningCheeseChrome"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_105.0.5195.102_64bit_Protable.7z",
+            "hash": "8e481d80d9744fc9716fd1c84d6e817317694589b7095c69f2de8f97b8581deb",
+            "extract_dir": "RunningCheeseChrome_105.0.5195.102_64bit_Protable\\RunningCheeseChrome"
         },
         "32bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_103.0.5060.53_32bit_Protable.7z",
-            "hash": "e88169daa68e94737d3c432cae87eb028a379aa90a8cf35e1ece54a73f7cb870",
-            "extract_dir": "RunningCheeseChrome_103.0.5060.53_32bit_Protable\\RunningCheeseChrome"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/runningcheese/RunningCheeseChrome_105.0.5195.102_32bit_Protable.7z",
+            "hash": "dff7be91e4bfdf57c338c169088d2e7f8ad7fddc42f00a8bbce86ee0081d8069",
+            "extract_dir": "RunningCheeseChrome_105.0.5195.102_32bit_Protable\\RunningCheeseChrome"
         }
     },
     "post_install": "Start-Process \"$dir\\开始.bat\" -WorkingDirectory \"$dir\" -Wait",

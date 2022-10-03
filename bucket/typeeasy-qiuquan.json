@@ -1,5 +1,5 @@
 {
-    "version": "2.2.0.56",
+    "version": "2.2.0.59",
     "description": "Kingsoft TypeEasy 2016 features Wubi typing, Pinyin typing, Chinese typing, typing technique practice, typing speed test and unique task level mode, helping beginners become typing experts easily.",
     "homepage": "https://www.51dzt.com",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.51dzt.com/agreement/personal"
     },
     "notes": "Feature: <http://www.qiuquan.cc/other/typeeasy.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/TypeEasy_2.2.0.56_QiuQuan.7z",
-    "hash": "6866ae7d4ddb80170f8a55de42f2ce40076b78989b2b3a100147c3322a0ec35d",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/TypeEasy_2.2.0.59_QiuQuan.7z",
+    "hash": "b9b221766f675a750ba92bff8895797cd623035c32e1a5813c4a0cb07000dc70",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\TypeEasyData\") -and (Test-Path \"$env:APPDATA\\TypeEasyData\")) {",
         "    Copy-Item \"$env:APPDATA\\TypeEasyData\" \"$persist_dir\\TypeEasyData\" -ErrorAction SilentlyContinue -Recurse -Force",

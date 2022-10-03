@@ -1,5 +1,5 @@
 {
-    "version": "21.0.1140.0",
+    "version": "21.0.1150.0",
     "description": "Third-party modifications of 360 Extreme Browser X, maintained by 423down.com.",
     "homepage": "https://browser.360.cn/eex/",
     "license": {
@@ -9,8 +9,8 @@
     "notes": "Features: <https://www.423down.com/13808.html>",
     "architecture": {
         "64bit": {
-            "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/360Chromex-21.0.1140.0-x64-Mod.exe#/dl.7z",
-            "hash": "29c54401871be99ccefd6d2b156e482bf399831cb1ff144ad1a8f3490b8ef86a"
+            "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/360Chromex-21.0.1150.0-x64-Mod.exe#/dl.7z",
+            "hash": "88b0114edb26cdaab6c69f8894154c4f1896ab5ddca1a2c30e6cc7576b7b25ea"
         }
     },
     "extract_dir": "360Chrome",
