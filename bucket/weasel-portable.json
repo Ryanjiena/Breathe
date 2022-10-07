@@ -1,0 +1,40 @@
+{
+    "version": "0.14.3",
+    "description": "Open source technology based on Zhongzhou rhyme input method engine/Rime Input Method Engine.",
+    "homepage": "https://rime.im",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/rime/weasel/raw/master/LICENSE.txt"
+    },
+    "notes": [
+        "Reinstall Rime by running: '$dir\\weasel-reinstall.bat'",
+        "Sync Rime Data by running: '$dir\\weasel-sync.bat'"
+    ],
+    "url": "https://github.com/rime/weasel/releases/download/0.14.3/weasel-0.14.3.0-installer.exe#/dl.7z",
+    "hash": "de63dc2ef45d5b094a239fc704051270f3185bf9e883132532b7e17d2fdaf81b",
+    "extract_dir": "weasel-0.14.3",
+    "pre_install": [
+        "if (Test-Path \"$env:AppData\\Rime\") {",
+        "    info '[Persistent data]: Copying user data...'",
+        "    ensure \"$persist_dir\\appdata\" | Out-Null",
+        "    Copy-Item \"$env:AppData\\Rime\\*\" \"$persist_dir\\appdata\\\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Remove-Item \"$env:AppData\\Rime\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "}",
+        "New-Item \"$env:AppData\\Rime\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null",
+        "@('weasel-install.bat', 'weasel-uninstall.bat', 'weasel-sync.bat', 'weasel-reinstall.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\weasel\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+        "Start-Process \"$dir\\weasel-install.bat\" -Verb runas -Wait -WorkingDirectory \"$dir\""
+    ],
+    "pre_uninstall": [
+        "ensure \"$persist_dir\\data\" | Out-Null",
+        "Copy-Item \"$dir\\weasel-$version\\data\\*\" \"$persist_dir\\data\" -Force -Recurse",
+        "Remove-Item \"$env:APPDATA\\Rime\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+        "Start-Process \"$dir\\weasel-uninstall.bat\" -Verb runas -Wait -WorkingDirectory \"$dir\""
+    ],
+    "checkver": {
+        "github": "https://github.com/rime/weasel"
+    },
+    "autoupdate": {
+        "url": "https://github.com/rime/weasel/releases/download/$version/weasel-$version.0-installer.exe#/dl.7z",
+        "extract_dir": "weasel-$version"
+    }
+}

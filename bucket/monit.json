@@ -1,0 +1,48 @@
+{
+    "version": "0.7.0",
+    "description": "Monit - 用于展示各种信息的桌面小组件.",
+    "homepage": "https://monit.fzf404.art",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/fzf404/Monit/raw/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/fzf404/Monit/releases/download/v0.7.0/Monit-0.7.0-win-x64.exe#/dl.7z",
+            "hash": "sha512:f542cbef9a7e78e972bc942333193635fab6910434b172cc21ce6f2dd612b038036e70e22967fa6c9d14242d8fd149d0cb8cc926c64fdb38e5d0c54eb4506d6a",
+            "pre_install": [
+                "if (Test-Path \"$env:AppData\\monit\") {",
+                "    info '[Persistent data]: Copying user data...'",
+                "    ensure \"$dir\\User Data\" | Out-Null",
+                "    Copy-Item \"$env:AppData\\monit\\*\" \"$dir\\User Data\\\" -ErrorAction SilentlyContinue -Recurse -Force",
+                "    Remove-Item \"$env:AppData\\monit\" -ErrorAction SilentlyContinue -Recurse -Force",
+                "}",
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal"
+            ],
+            "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Unin*\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        }
+    },
+    "shortcuts": [
+        [
+            "Monit.exe",
+            "Monit",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "github": "https://github.com/fzf404/Monit"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/fzf404/Monit/releases/download/v$version/Monit-$version-win-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "mode": "extract",
+                    "regex": "(?sm)$basename.*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "version": "0.14.3.92",
+    "description": "Rime Input Method Engine, maintained by fxliang.",
+    "homepage": "https://rime.im",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/fxliang/weasel/raw/master/LICENSE.txt"
+    },
+    "notes": [
+        "Reinstall Rime by running: '$dir\\weasel-reinstall.bat'",
+        "Sync Rime Data by running: '$dir\\weasel-sync.bat'"
+    ],
+    "url": "https://github.com/fxliang/weasel/releases/download/0.14.3_dev_0.92/weasel-0.14.3_dev_0.92.7z",
+    "hash": "8367ffb72829ccf0c26ce01c512b27f16f468b1188d2baa25ff54cf28fc5f17e",
+    "extract_dir": "weasel-0.14.3",
+    "pre_install": [
+        "if (Test-Path \"$env:AppData\\Rime\") {",
+        "    info '[Persistent data]: Copying user data...'",
+        "    ensure \"$persist_dir\\appdata\" | Out-Null",
+        "    Copy-Item \"$env:AppData\\Rime\\*\" \"$persist_dir\\appdata\\\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Remove-Item \"$env:AppData\\Rime\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "}",
+        "New-Item \"$env:AppData\\Rime\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null",
+        "@('weasel-install.bat', 'weasel-uninstall.bat', 'weasel-sync.bat', 'weasel-reinstall.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\weasel\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+        "Start-Process \"$dir\\weasel-install.bat\" -Verb runas -Wait -WorkingDirectory \"$dir\""
+    ],
+    "post_install": "if (Test-Path \"$persist_dir\\data\") { Move-Item \"$persist_dir\\data\\*\" \"$dir\\weasel-$version\\data\" -ErrorAction 'SilentlyContinue' -Force }",
+    "pre_uninstall": [
+        "ensure \"$persist_dir\\data\" | Out-Null",
+        "Copy-Item \"$dir\\weasel-$version\\data\\*\" \"$persist_dir\\data\" -Force -Recurse",
+        "Remove-Item \"$env:APPDATA\\Rime\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+        "Start-Process \"$dir\\weasel-uninstall.bat\" -Verb runas -Wait -WorkingDirectory \"$dir\""
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/fxliang/weasel/releases",
+        "regex": "(?<sm>)(?<file>weasel-(?<ver>[\\d.]+)(?<dev>_dev_)?\\d.(?<build>\\d+).7z).*?releases/download/(?<tag>([\\w.]+))",
+        "replace": "${ver}.${build}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/fxliang/weasel/releases/download/$matchTag/$matchFile",
+        "extract_dir": "weasel-$matchHead"
+    }
+}
