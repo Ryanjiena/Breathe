@@ -1,5 +1,5 @@
 {
-    "version": "4.0.0.1",
+    "version": "4.1.0.0",
     "description": "General input method status tracking prompt, you can use only two characters to prompt Chinese and English, full half width, case, Chinese and English punctuation, multilingual keyboard layout and so on.",
     "homepage": "https://imtip.aardio.com",
     "license": {
