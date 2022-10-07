@@ -10,13 +10,13 @@
     "url": "https://github.com/rime/weasel/releases/download/0.14.3/weasel-0.14.3.0-installer.exe#/installer.exe",
     "hash": "de63dc2ef45d5b094a239fc704051270f3185bf9e883132532b7e17d2fdaf81b",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\Rime\")) {",
+        "if (Test-Path \"$env:AppData\\Rime\") {",
+        "    info '[Persistent data]: Copying user data...'",
         "    ensure \"$persist_dir\\appdata\" | Out-Null",
-        "    Copy-Item \"$env:APPDATA\\Rime\" \"$persist_dir\\appdata\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Copy-Item \"$env:AppData\\Rime\\*\" \"$persist_dir\\appdata\\\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Remove-Item \"$env:AppData\\Rime\" -ErrorAction SilentlyContinue -Recurse -Force",
         "}",
-        "ensure \"$persist_dir\\appdata\" | Out-Null",
-        "Remove-Item \"$env:APPDATA\\Rime\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
-        "New-Item \"$env:APPDATA\\Rime\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
+        "New-Item \"$env:AppData\\Rime\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
     ],
     "installer": {
         "script": [
