@@ -1,5 +1,5 @@
 {
-    "version": "6.3.5.613",
+    "version": "6.3.7.615",
     "description": "WiseCare365 3rd party modified version, maintained by qiuquan.cc.",
     "homepage": "https://www.wisecleaner.com/wise-care-365.html",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.wisecleaner.com/eula.html"
     },
     "notes": "Features: <http://www.qiuquan.cc/systemtool/wise-care-365.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/Wise_Care_365_6.3.5.613_QiuQuan_20220821.exe#/Setup.exe",
-    "hash": "371deb4a4476d95df7dcc63e03c93fed01e587714111046ca338f5d4a66ae865",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/qiuquan/Wise_Care_365_6.3.7.615_QiuQuan_20220930.exe#/Setup.exe",
+    "hash": "c3201fd8ef088eb04b824ce1317b721d9908b29b46cb242b1669038d59ab9f6d",
     "installer": {
         "args": [
             "/DIR=\"$dir\"",
