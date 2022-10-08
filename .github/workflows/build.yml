@@ -125,9 +125,9 @@ jobs:
               git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
               git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
               git clone -q --depth=1 git@jihulab.com:Ryanjie/Tian.git "${TMP_DIR}/tian-cn"
-              git clone -q --depth=1 git@jihulab.com:Ryanjie/Meta.git "${TMP_DIR}/tian-cn"
+              git clone -q --depth=1 git@jihulab.com:Ryanjie/Meta.git "${TMP_DIR}/meta-cn"
               git clone -q --depth=1 git@jihulab.com:Ryanjie/Lydia.git "${TMP_DIR}/lydia-cn"
-              # git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/Meta.git "${TMP_DIR}/Meta"
+              # git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/Meta.git "${TMP_DIR}/meta"
               git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/Lydia.git "${TMP_DIR}/lydia"
 
 
