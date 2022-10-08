@@ -20,7 +20,8 @@
         "script": [
             "Start-Process \"$dir\\Installer.exe\" -ArgumentList \"/DIR=$dir /NoIcons=1 /SILENT /NORESTART\"",
             "Start-Sleep -s 60",
-            "sudo regedit /s \"$dir\\idm-custom-settings.reg\""
+            "sudo regedit /s \"$dir\\idm-custom-settings.reg\"",
+            "Start-Process \"$dir\\IDMan.exe\" -ArgumentList @(\"/rtr\", \"/setlngid 2052\", \"/fulllngfile idm_chn2.lng\") -Wait | Out-Null"
         ]
     },
     "post_install": "Remove-Item \"$dir\\Installer.exe\" -Force",
