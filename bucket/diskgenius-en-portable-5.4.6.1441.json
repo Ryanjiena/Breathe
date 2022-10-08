@@ -1,0 +1,28 @@
+{
+    "version": "5.4.6.1441",
+    "description": "DiskGenius provides an all-in-one solution for data recovery, disk partition management and backup & restore for Windows PCs, Servers and workstations. DiskGenius, 专家级数据恢复软件, 集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件。",
+    "homepage": "https://www.diskgenius.com",
+    "license": {
+        "identifier": "Proprietary|Shareware"
+    },
+    "suggest": {
+        "diskgenius": "diskgenius-en-portable-5.4.6.1441"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://engdownload.eassos.cn/winpe/DGEng5461441_x64.zip",
+            "hash": "d5611a90e9a8796422d32f79763ef8457b148453110762ce1b2faf7ec197f821"
+        },
+        "32bit": {
+            "url": "https://engdownload.eassos.cn/winpe/DGEng5461441_x86.zip",
+            "hash": "aa2ccf1461027c6b4793e96357606adbc96c81ee04418268121b8401240f25f6"
+        }
+    },
+    "extract_dir": "DiskGenius",
+    "shortcuts": [
+        [
+            "DiskGenius.exe",
+            "DiskGenius"
+        ]
+    ]
+}

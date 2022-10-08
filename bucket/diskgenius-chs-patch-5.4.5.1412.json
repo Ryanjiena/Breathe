@@ -1,0 +1,31 @@
+{
+    "version": "5.4.5.1412",
+    "description": "DiskGenius 官方英文版汉化补丁(无忧论坛 @HIGHQ 制作).",
+    "homepage": "http://bbs.wuyou.net/forum.php?mod=viewthread&tid=431501",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "depends": "diskgenius-en-portable-5.4.5.1412",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/diskgenius/Diskgenius_Chs_Version(5.4.5.1412).7z",
+    "hash": "799b5edfc2f9fe3226c6992f09b3fb92c2a568eb2fbf51d07eef158eec3441aa",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "DiskGenius64"
+        },
+        "32bit": {
+            "extract_dir": "DiskGenius32"
+        }
+    },
+    "pre_install": [
+        "Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object {",
+        "  Get-ChildItem \"$(scoop prefix diskgenius-en-portable-5.4.5.1412)\\$($_.Name)\" | Rename-Item -NewName { $_.Name + '.metabak' }",
+        "  Copy-Item $_.FullName -destination \"$(scoop prefix diskgenius-en-portable-5.4.5.1412)\" -Force -ErrorAction SilentlyContinue",
+        "}"
+    ],
+    "pre_uninstall": [
+        "Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object {",
+        "  Remove-Item \"$(scoop prefix diskgenius-en-portable-5.4.5.1412)\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+        "  Get-ChildItem \"$(scoop prefix diskgenius-en-portable-5.4.5.1412)\\$($_.Name).metabak\" | Rename-Item -NewName { $_.Name -replace '.metabak', '' }",
+        "}"
+    ]
+}

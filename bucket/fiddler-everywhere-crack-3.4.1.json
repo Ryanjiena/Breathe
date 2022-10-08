@@ -1,0 +1,19 @@
+{
+    "version": "3.4.1",
+    "description": "Fiddler Everywhere Crack.",
+    "homepage": "https://github.com/msojocs/fiddler-everywhere-crack",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "depends": "fiddler-everywhere-3.4.1",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/fiddler-everywhere/fiddler-everywhere-crack_v3.4.1.zip",
+    "hash": "2d3ce759c1f794a6a08ca4ff14854694e6281b13399c267465406aa6a095bd07",
+    "pre_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\fiddle-everywhere\\README-341.md\" \"$dir\\README.md\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "installer": {
+        "script": [
+            "Copy-Item \"$dir\\main.js\" \"$(scoop prefix fiddler-everywhere-3.4.1)\\resources\\app\\out\\main.js\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$dir\\FiddlerBackendSDK.dll\" \"$(scoop prefix fiddler-everywhere-3.4.1)\\resources\\app\\out\\WebServer\\FiddlerBackendSDK.dll\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$dir\\main.9c27a5768c5c6da2.js\" \"$(scoop prefix fiddler-everywhere-3.4.1)\\resources\\app\\out\\WebServer\\ClientApp\\dist\\main.9c27a5768c5c6da2.js\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        ]
+    }
+}
