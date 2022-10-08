@@ -1,15 +1,22 @@
 {
     "version": "22.9.5",
-    "description": "A tabbed file manager with Add-on support.",
-    "homepage": "https://tablacus.github.io/explorer_en.html",
+    "description": "Tablacus is an alternative of file explorer which provides simple tabbed view and plugin extensibility.",
+    "homepage": "https://tablacus.github.io/explorer.html",
     "license": {
-        "identifier": "MIT"
+        "identifier": "MIT",
+        "url": "https://github.com/tablacus/TablacusExplorer/raw/master/LICENSE.TXT"
     },
     "url": "https://github.com/tablacus/TablacusExplorer/releases/download/22.9.5/te220905.zip",
     "hash": "07e3e303b046a7a680c50a6cc2f74ee5af47a400a5ad59619db7b3fc7b9ad3ee",
     "architecture": {
         "64bit": {
-            "bin": "TE64.exe",
+            "bin": [
+                "TE64.exe",
+                [
+                    "TE64.exe",
+                    "TE"
+                ]
+            ],
             "shortcuts": [
                 [
                     "TE64.exe",
@@ -18,7 +25,13 @@
             ]
         },
         "32bit": {
-            "bin": "TE32.exe",
+            "bin": [
+                "TE32.exe",
+                [
+                    "TE32.exe",
+                    "TE"
+                ]
+            ],
             "shortcuts": [
                 [
                     "TE32.exe",
@@ -31,11 +44,8 @@
         "addons",
         "config"
     ],
-    "checkver": {
-        "url": "https://github.com/tablacus/TablacusExplorer/releases/latest",
-        "re": "<a href=\"/tablacus/TablacusExplorer/releases/download/(?<version>[\\d.]+)/te(?<file>[\\d]{6}).zip\""
-    },
+    "checkver": "releases/download/([\\d.]+)/te(?<date>\\d+).zip",
     "autoupdate": {
-        "url": "https://github.com/tablacus/TablacusExplorer/releases/download/$matchVersion/te$matchFile.zip"
+        "url": "https://github.com/tablacus/TablacusExplorer/releases/download/$version/te$matchDate.zip"
     }
 }

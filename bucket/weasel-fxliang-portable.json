@@ -20,6 +20,7 @@
         "    Copy-Item \"$env:AppData\\Rime\\*\" \"$persist_dir\\appdata\\\" -ErrorAction SilentlyContinue -Recurse -Force",
         "    Remove-Item \"$env:AppData\\Rime\" -ErrorAction SilentlyContinue -Recurse -Force",
         "}",
+        "ensure \"$persist_dir\\appdata\" | Out-Null",
         "New-Item \"$env:AppData\\Rime\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null",
         "@('weasel-install.bat', 'weasel-uninstall.bat', 'weasel-sync.bat', 'weasel-reinstall.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\weasel\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
         "Start-Process \"$dir\\weasel-install.bat\" -Verb runas -Wait -WorkingDirectory \"$dir\""
