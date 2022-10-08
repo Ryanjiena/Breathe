@@ -5,10 +5,16 @@
     "license": {
         "identifier": "Freeware"
     },
-    "suggest": {
-        "fiddler-everywhere": "fiddler-everywhere"
-    },
+    "depends": "fiddler-everywhere-3.3.0",
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/fiddler-everywhere/fiddler-everywhere-crack_v3.3.0.zip",
     "hash": "febfdaf180797962e812316576f648ff27dd2f627ec9c74139d2b3d8bb02ac4e",
-    "pre_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\fiddle-everywhere\\README-330.md\" \"$dir\\README.md\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+    "pre_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\fiddle-everywhere\\README-330.md\" \"$dir\\README.md\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "installer": {
+        "script": [
+            "Copy-Item \"$dir\\main.js\" \"$(scoop prefix fiddler-everywhere-3.3.0)\\resources\\app\\out\\main.js\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$dir\\FiddlerBackendSDK.dll\" \"$(scoop prefix fiddler-everywhere-3.3.0)\\resources\\app\\out\\WebServer\\FiddlerBackendSDK.dll\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$dir\\main.8068c81c92a7126e.js\" \"$(scoop prefix fiddler-everywhere-3.3.0)\\resources\\app\\out\\WebServer\\ClientApp\\dist\\main.8068c81c92a7126e.js\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$dir\\main.e5bf1b91c3997c53.js\" \"$(scoop prefix fiddler-everywhere-3.3.0)\\resources\\app\\out\\WebServer\\ClientApp\\dist\\main.e5bf1b91c3997c53.js\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        ]
+    }
 }

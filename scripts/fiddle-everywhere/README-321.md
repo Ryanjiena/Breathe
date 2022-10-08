@@ -1,7 +1,7 @@
-## Fiddle Everywhere 3.2.1 Crack
+# Fiddle Everywhere 3.2.1 Crack
 
--   `FiddlerBackendSDK.dll`: `resources\app\out\WebServer`
--   `main.304c864f4d0af6e9.js` / `main.157031b9c4f17398.js`: `resources\app\out\WebServer\ClientApp\dist`
+- `FiddlerBackendSDK.dll`: `resources\app\out\WebServer`
+- `main.304c864f4d0af6e9.js` / `main.157031b9c4f17398.js`: `resources\app\out\WebServer\ClientApp\dist`
 
 > 禁用更新
 >

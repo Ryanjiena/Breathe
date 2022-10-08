@@ -5,10 +5,16 @@
     "license": {
         "identifier": "Freeware"
     },
-    "suggest": {
-        "fiddler-everywhere": "fiddler-everywhere"
-    },
+    "depends": "fiddler-everywhere-3.2.1",
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/patch/fiddler-everywhere/fiddler-everywhere-crack_v3.2.1.zip",
     "hash": "afd7b9ef5e8b623e456cec6562a5a29c6101d37267683e5e186836b25d63b46c",
-    "pre_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\fiddle-everywhere\\README-321.md\" \"$dir\\README.md\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+    "pre_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\fiddle-everywhere\\README-321.md\" \"$dir\\README.md\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "installer": {
+        "script": [
+            "Copy-Item \"$dir\\FiddlerBackendSDK.dll\" \"$(scoop prefix fiddler-everywhere-3.2.1)\\resources\\app\\out\\WebServer\\FiddlerBackendSDK.dll\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$dir\\main.304c864f4d0af6e9.js\" \"$(scoop prefix fiddler-everywhere-3.2.1)\\resources\\app\\out\\WebServer\\ClientApp\\dist\\main.304c864f4d0af6e9.js\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$dir\\main.157031b9c4f17398.js\" \"$(scoop prefix fiddler-everywhere-3.2.1)\\resources\\app\\out\\WebServer\\ClientApp\\dist\\main.157031b9c4f17398.js\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "warn '禁用更新: 修改 `resources/app/out/main.js`，搜索 `e.settingsService.get().autoUpdateSettings.disabled` 替换为 `true||e.settingsService.get().autoUpdateSettings.disabled`.'"
+        ]
+    }
 }
