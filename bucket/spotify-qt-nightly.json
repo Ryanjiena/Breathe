@@ -1,11 +1,8 @@
 {
     "version": "3.9-221005",
-    "description": "An unofficial Spotify client using Qt as a simpler, lighter alternative to the official client, inspired by spotify-tui.",
+    "description": "Nightly builds for spotify-qt",
     "homepage": "https://github.com/kraxarn/spotify-qt-nightly",
-    "license": {
-        "identifier": "GPL-3.0-or-later"
-    },
-    "notes": "Unstable builds for testing. For stable builds, run `scoop install spotify-qt`.",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.9-221005-win64.zip",
@@ -19,12 +16,14 @@
     "shortcuts": [
         [
             "spotify-qt.exe",
-            "Spotify Qt Nightly"
+            "spotify-qt"
         ]
     ],
+    "bin": "spotify-qt.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/kraxarn/spotify-qt-nightly/releases",
-        "regex": "releases/download/latest/spotify-qt-v([\\w.-]+)-win64\\.zip"
+        "url": "https://api.github.com/repositories/458937795/releases/latest",
+        "jsonpath": "$.assets[0].name",
+        "regex": "spotify-qt-v([\\d.-]+)-win(?:64|32)\\.zip"
     },
     "autoupdate": {
         "architecture": {
