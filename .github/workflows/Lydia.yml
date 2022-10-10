@@ -1,4 +1,4 @@
-name: Excavator
+name: Lydia Excavator
 
 on:
   workflow_dispatch:
