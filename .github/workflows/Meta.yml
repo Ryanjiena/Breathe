@@ -1,4 +1,4 @@
-name: Excavator
+name: Meta Excavator
 
 on:
   workflow_dispatch:
