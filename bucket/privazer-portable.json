@@ -1,5 +1,5 @@
 {
-    "version": "4.0.54",
+    "version": "4.0.55",
     "description": "Free PC cleaner & Privacy tool that cleans unwanted traces. Secure cleanup with one click Irreversible cleanups by overwriting techniques. In-depth cleanup of your PC and storage devices Smart overwriting : PrivaZer automatically recognizes your storage device type and adapts its overwriting algorithms to the storage medium (magnetic disk, SSD, etc)",
     "homepage": "https://privazer.com",
     "license": {
@@ -7,7 +7,7 @@
     },
     "notes": "[support@privazer.com - 1151171121]",
     "url": "https://privazer.com/PrivaZer.exe",
-    "hash": "70c3760d878b02052819d54ce8e3c6f522f606d8e834f3632fb479fb63ff2eb4",
+    "hash": "16caa32c184e2901944f5edef1debf30754a00cfc748f15e3fec7690ab69f369",
     "pre_install": [
         "if (Test-Path \"$persist_dir\\PrivaZer.ini\") {",
         "    Copy-Item \"$persist_dir\\PrivaZer.ini\" \"$dir\\\" | Out-Null",
