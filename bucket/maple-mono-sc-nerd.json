@@ -1,13 +1,13 @@
 {
-    "version": "5.5",
+    "version": "5.6",
     "description": "Open source monospace/Nerd Font font with round corner and ligatures for IDE and command line. 带连字和圆角的等宽字体和控制台字体.",
     "homepage": "https://github.com/subframe7536/Maple-font",
     "license": {
         "identifier": "OFL-1.1",
         "url": "https://github.com/subframe7536/Maple-font/raw/v5/OFL.txt"
     },
-    "url": "https://gitee.com/subframe7536/Maple/releases/download/v5.5/MapleMono-SC-NF.zip",
-    "hash": "sha1:513170f994a94d5b10e96cce7a0b7b6d63ab943d",
+    "url": "https://gitee.com/subframe7536/Maple/releases/download/v5.6/MapleMono-SC-NF.zip",
+    "hash": "sha1:d7b64ad278477ebc4d53cb3d1f7d05d62cc5dd17",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
