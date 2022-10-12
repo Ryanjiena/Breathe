@@ -1,5 +1,5 @@
 {
-    "version": "2.5",
+    "version": "3.0",
     "description": "QQ screenshot standalone version.",
     "homepage": "https://im.qq.com/pcqq",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://ti.qq.com/agreement/index.html"
     },
     "notes": "Feedback: <https://bbs.pediy.com/thread-271225.htm>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/QQScreenShotV2.5.7z",
-    "hash": "3f918bbfff2d5b4b53672edc8152d8c15dca9f363cdfb41ecd8ecac223da259d",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/QQScreenShotV3.0.7z",
+    "hash": "6501f4eea41040c093defc7f6e152e55bc7696155ac71cc4dc6cbdf142400b49",
     "extract_dir": "QQScreenShot",
     "shortcuts": [
         [

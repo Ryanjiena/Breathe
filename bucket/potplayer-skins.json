@@ -1,5 +1,5 @@
 {
-    "version": "20220903",
+    "version": "20221012",
     "description": "PotPlayer skin",
     "homepage": "https://www.deviantart.com/mr-web/art/Modern-W10-Skin-for-PotPlayer-ITA-ENG-678381013",
     "license": {
@@ -13,8 +13,8 @@
             "potplayer64-dev-noad-portable"
         ]
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/potplayer-skin-20220903.zip",
-    "hash": "0eabf3a591a6dc4079a0eb22ffdaa089c3c0bfe0f69e2755c98730445d5a6a8e",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/wenlei/potplayer-skin-20221012.zip",
+    "hash": "959074805fa882096ba33d8be86a99583e64cfca4d188124520985b2cb7941ad",
     "installer": {
         "script": [
             "function CopyFile([String] $potplayer_file_dest) {",

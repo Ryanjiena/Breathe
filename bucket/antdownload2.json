@@ -1,13 +1,13 @@
 {
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A BaiduNetdisk download tool.",
     "homepage": "https://www.kelongwo.com/antdownload",
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/antdownload2_1.0.3.zip",
-    "hash": "b55f9e5d286d232e28f146855bff6c2f0c334c23d5f00d6a7037a95cb86a59a2",
-    "extract_dir": "antdownload 1.0.3",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/antdownload2_1.0.4.zip",
+    "hash": "b32226b6f15389031b31ae6190d3f6e23e3f57b6305126271455af7aa01e70d5",
+    "extract_dir": "antdownload 1.0.4",
     "shortcuts": [
         [
             "antdownload.exe",

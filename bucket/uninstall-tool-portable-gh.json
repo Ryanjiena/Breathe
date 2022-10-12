@@ -1,5 +1,5 @@
 {
-    "version": "3.6.1.5687",
+    "version": "3.7.0.5690",
     "description": "Uninstall Tool 3rd party modified version, maintained by ghxi.com.",
     "homepage": "https://crystalidea.com/uninstall-tool",
     "license": {
@@ -7,9 +7,9 @@
         "url": "https://crystalidea.com/eula"
     },
     "notes": "Features: <https://www.ghxi.com/uninstalltool.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/UninstallTool_3.6.1.5687_Portable.7z",
-    "hash": "d724981e180a47abc290d1c6943bf71ecd6c932b524a52349fb8dd6c4eafcbb7",
-    "extract_dir": "UninstallTool_3.6.1.5687_Portable\\UninstallToolPortable",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/UninstallTool_3.7.0.5690_Portable.7z",
+    "hash": "fbd8f2563a8f20e94dc618c512fdea02ff02e1984e53ec3d1f722413f1d52bfd",
+    "extract_dir": "UninstallTool_3.7.0.5690_Portable\\UninstallToolPortable",
     "shortcuts": [
         [
             "UninstallToolPortable.exe",
