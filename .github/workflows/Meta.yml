@@ -57,3 +57,62 @@ jobs:
           Write-Host ''
           & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
           Write-Host 'Scheduled finished'
+
+  git-sync:
+    name: Sync
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: excavate
+    steps:
+      - name: Import ssh private key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" | sed 's/\\n/\n/g' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          
+      - name: Build
+        env:
+          github_token: ${{ secrets.GH_TOKEN }}
+        run: |
+          #!/usr/bin/env bash
+          PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+          export PATH
+          # set -euxo pipefail
+
+          DATE="$(echo $(TZ=UTC date '+%Y-%m-%d %H:%M:%S'))"
+          USER=$(whoami)
+          TMP_DIR="${TMP_DIR:-$(mktemp -d /tmp/breathe.XXXX)}"
+          LOG_FILE="${LOG_FILE:-${TMP_DIR}/build.log}"
+          
+          git config --global user.email "43134606+Ryanjiena@users.noreply.github.com"
+          git config --global user.name "Ryanjiena"
+          git clone -q --depth=1 --branch="main" "https://Ryanjiena:${github_token}@github.com/$Ryanjiena/Meta.git" "${TMP_DIR}/meta"
+
+          git config --global user.name "Ryanjie"
+          git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
+          git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
+          # https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository/13364116#13364116
+          # ssh-keygen -R jihulab.com
+          ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
+          git clone -q --depth=1 git@jihulab.com:Ryanjie/Meta.git "${TMP_DIR}/meta-cn"
+
+          cd "${TMP_DIR}/meta-cn/"
+          if [ -d "bucket" ]; then
+              rm -rf bin bucket scripts
+          fi
+          mkdir bin bucket scripts
+
+          cp ${TMP_DIR}/meta/bin/* ${TMP_DIR}/meta-cn/bin/ -f
+          cp ${TMP_DIR}/meta/bucket/* ${TMP_DIR}/meta-cn/bucket/ -f
+          cp ${TMP_DIR}/meta/scripts/* ${TMP_DIR}/meta-cn/scripts/ -r -f
+          cp ${TMP_DIR}/meta/README.md ${TMP_DIR}/meta-cn/README.md -f
+
+          cd ${TMP_DIR}/meta-cn/
+          if [ "$(git status -sb)" == "## main...origin/main" ];then
+            echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
+          else
+            git status -s && git pull origin main && git add . && git commit -m "Sync by: ${USER}, at: ${DATE}" && git push origin main
+          fi
+
+      - name: Remove ssh private key
+        run: rm -f ~/.ssh/id_rsa
