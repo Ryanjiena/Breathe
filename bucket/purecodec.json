@@ -6,8 +6,18 @@
         "identifier": "Proprietary"
     },
     "notes": "完美解码中 PotPlayer 新版本 HEVC 软解设置: <http://qxys.3vfree.cn/ShowPost.asp?ThreadID=214>",
+    "suggest": {
+        "potplayer-skins": "potplayer-skins"
+    },
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/PureCodec20221001.exe",
     "hash": "sha1:e0a21b66e5d0fbd3c23c8be4a2ee0e6419cf89bb",
+    "pre_install": [
+        "$des_dir = 'x64'",
+        "if ($architecture -eq '32bit') { $des_dir = 'x86' }",
+        "@('Capture', 'Extension', 'Extention', 'IconPack', 'Logos', 'Module', 'Playlist', 'PxShader', 'Skins', 'UrlList') | ForEach-Object {",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\$des_dir\\\" -Recurse -Force | Out-Null }",
+        "}"
+    ],
     "installer": {
         "args": [
             "/S",
@@ -18,6 +28,16 @@
         "Remove-Item \"$([Environment]::GetFolderPath('Desktop'))\\完美解码设置.lnk\" -Force -ErrorAction SilentlyContinue",
         "Remove-Item \"$([Environment]::GetFolderPath('Desktop'))\\完美解码.lnk\" -Force -ErrorAction SilentlyContinue",
         "Remove-Item -Recurse \"$([Environment]::GetFolderPath('startmenu'))\\Programs\\完美解码\" -Force -ErrorAction SilentlyContinue"
+    ],
+    "pre_uninstall": [
+        "$des_dir = 'x64'",
+        "if ($architecture -eq '32bit') { $des_dir = 'x86' }",
+        "@('Capture', 'Extension', 'Extention', 'IconPack', 'Logos', 'Module', 'Playlist', 'PxShader', 'Skins', 'UrlList') | ForEach-Object {",
+        "    if (Test-Path \"$dir\\$des_dir\\$_\") {",
+        "        ensure \"$persist_dir\" | Out-Null",
+        "        Copy-Item \"$dir\\$des_dir\\$_\" \"$persist_dir\\\" -Recurse -Force | Out-Null",
+        "    }",
+        "}"
     ],
     "uninstaller": {
         "file": "uninst.exe",
