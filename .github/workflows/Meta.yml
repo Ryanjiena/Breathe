@@ -3,7 +3,7 @@ name: Meta Excavator
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "30 */4 * * *"
 
 jobs:
   excavate:
