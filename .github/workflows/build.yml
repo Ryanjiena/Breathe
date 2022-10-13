@@ -30,7 +30,7 @@ jobs:
           #!/usr/bin/env bash
           PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
           export PATH
-          # set -euxo pipefail
+          set -euxo pipefail
 
           DATE="$(echo $(TZ=UTC date '+%Y-%m-%d %H:%M:%S'))"
           USER=$(whoami)
@@ -53,16 +53,11 @@ jobs:
           # init
           function init() {
               git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/tian.git "${TMP_DIR}/tian"
-              # git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/fantastic-bucket.git "${TMP_DIR}/fantastic"
-              # bucket_arr=("tian" "fantastic")
-              bucket_arr=("tian")
-              for bucket in "${bucket_arr[@]}"; do
-                  cd "${TMP_DIR}/${bucket}/"
-                  if [ -d "bucket" ]; then
-                      rm -rf bin bucket scripts
-                  fi
-                  mkdir bin bucket scripts
-              done
+              cd "${TMP_DIR}/tian/"
+              if [ -d "bucket" ]; then
+                  rm -rf bin bucket scripts
+              fi
+              mkdir bin bucket scripts
           }
 
           # build
@@ -89,13 +84,13 @@ jobs:
 
                   # copy bucket/scripts folder
                   cd "${TMP_DIR}/${repo_name}"
-                  cp bucket/*.json ${TMP_DIR}/tian/bucket/ -n
-                  if [ -e "scripts" ]; then
-                      cp scripts/* ${TMP_DIR}/tian/scripts/ -r -n
+                  cp bucket ${TMP_DIR}/tian/ -r -n
+                  if [ -d "scripts" ]; then
+                    cp scripts ${TMP_DIR}/tian/ -r -n
                   fi
-              done
+                done
               # copy bin folder to tian
-              cp ${TMP_DIR}/main/bin/* ${TMP_DIR}/tian/bin/ -f
+              cp ${TMP_DIR}/main/bin ${TMP_DIR}/tian/ -r -n
               # replace head
               sed -i "/${head_start}/,/${head_end}/{//!d;}" "${TMP_DIR}/tian/README.md"
               echo -e "${manifest_badge}" >"${TMP_DIR}/head.md"
@@ -104,18 +99,12 @@ jobs:
 
           # commit and push
           function commit() {
-              # Copy tian to fantastic-bucket
-              # cp ${TMP_DIR}/tian/bucket/* ${TMP_DIR}/fantastic/bucket/
-              # cp ${TMP_DIR}/tian/scripts/* ${TMP_DIR}/fantastic/scripts/ -r
-              # cp ${TMP_DIR}/tian/bin/* ${TMP_DIR}/fantastic/bin/
-              # cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/fantastic/README.md -f
-
               # remove cracked
               cd "${TMP_DIR}/tian/bucket"
               # grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
 
               # push
-              cd "${TMP_DIR}/tian" 
+              cd "${TMP_DIR}/tian"
               if [ "$(git status -sb)" == "## main...origin/main" ];then
                 echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
               else
@@ -139,10 +128,10 @@ jobs:
               fi
               mkdir bin bucket scripts
 
-              cp ${TMP_DIR}/tian/bin/* ${TMP_DIR}/tian-cn/bin/ -f
-              cp ${TMP_DIR}/tian/bucket/* ${TMP_DIR}/tian-cn/bucket/ -f
-              cp ${TMP_DIR}/tian/scripts/* ${TMP_DIR}/tian-cn/scripts/ -r -f
-              cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/tian-cn/README.md -f
+              cp ${TMP_DIR}/tian/bin ${TMP_DIR}/tian-cn/ -r -n
+              cp ${TMP_DIR}/tian/bucket ${TMP_DIR}/tian-cn/ -r -n
+              cp ${TMP_DIR}/tian/scripts ${TMP_DIR}/tian-cn/ -r -n
+              cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/tian-cn -r -n
 
               if [ "$(git status -sb)" == "## main...origin/main" ];then
                 echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
