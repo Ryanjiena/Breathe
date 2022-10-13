@@ -52,13 +52,8 @@ jobs:
               'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
           }
           $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
-          Set-PSDebug -Trace 2
+          # Set-PSDebug -Trace 2
+          Write-Host ''
+          Write-Host ''
           & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
           Write-Host 'Scheduled finished'
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          repository: "Ryanjiena/Meta"
-          branch: "main"
-          github_token: ${{ secrets.GH_TOKEN }}
