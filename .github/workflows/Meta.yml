@@ -52,6 +52,7 @@ jobs:
               'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
           }
           $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
+          Set-PSDebug -Trace 2
           & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
           Write-Host 'Scheduled finished'
           
