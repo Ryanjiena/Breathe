@@ -115,8 +115,12 @@ jobs:
               # grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
 
               # push
-              cd "${TMP_DIR}/tian" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
-              # cd "${TMP_DIR}/fantastic" && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
+              cd "${TMP_DIR}/tian" 
+              if [ "$(git status -sb)" == "## main...origin/main" ];then
+                echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
+              else
+                git status -s && git pull origin main && git add . && git commit -m "Update by: ${USER}, at: ${DATE}" && git push origin main
+              fi
           }
 
           # sync to jihulab
@@ -154,4 +158,3 @@ jobs:
 
       - name: Remove ssh private key
         run: rm -f ~/.ssh/id_rsa
-        
