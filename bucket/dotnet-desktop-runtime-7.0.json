@@ -1,12 +1,15 @@
 {
     "version": "7.0.0-rc.2.22472.13",
-    "description": "Microsoft .NET 7 Desktop Runtime.",
+    "description": "Microsoft .NET 7 Windows Desktop Runtime. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
     "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
     },
-    "notes": "You can now remove this installer with 'scoop uninstall windowsdesktop-runtime-7'",
+    "notes": [
+        "You can now remove this installer with 'scoop uninstall dotnet-desktop-runtime-7.0'.",
+        "This package includes the .NET Runtime, you don't need to install it separately."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-rc.2.22472.13/windowsdesktop-runtime-7.0.0-rc.2.22472.13-win-x64.exe",

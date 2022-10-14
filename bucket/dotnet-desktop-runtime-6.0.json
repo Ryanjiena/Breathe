@@ -1,20 +1,23 @@
 {
-    "version": "5.0.17",
-    "description": "Microsoft .NET 5 Desktop Runtime.",
+    "version": "6.0.10",
+    "description": "Microsoft .NET 6 Windows Desktop Runtime. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
     "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
     },
-    "notes": "You can now remove this installer with 'scoop uninstall windowsdesktop-runtime-5'",
+    "notes": [
+        "You can now remove this installer with 'scoop uninstall dotnet-desktop-runtime-6.0'.",
+        "This package includes the .NET Runtime, you don't need to install it separately."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/5.0.17/windowsdesktop-runtime-5.0.17-win-x64.exe",
-            "hash": "sha512:f7eb69a953ff6346a180e5200075120b4b47cb89a75bc36c76a9e468c037bb2376f497dbf8e0bada152bc3ec35dceaad55d0a811586569575bf5b201d1e32baf"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.10/windowsdesktop-runtime-6.0.10-win-x64.exe",
+            "hash": "sha512:8fdcfc318fc0a90ad633813764d5a6ea48a6d0e4abc9c0584954b49cf0e1611b0904fd1cc066bfc55195f6424144c8020d9f00c6307cee516ec2072de728ee6e"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/5.0.17/windowsdesktop-runtime-5.0.17-win-x86.exe",
-            "hash": "sha512:74a379323e52172f563cd996880f58d58a19303ae59b3f55ff52625dfe8a4a602609785b1174b38f2da97282f90f1ade53194354f48773512943eae249926ee8"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.10/windowsdesktop-runtime-6.0.10-win-x86.exe",
+            "hash": "sha512:ac4a0b971a2829e0c16c18d37567397a89d56ce1c14b52414484982d467eb1f950a44047c27090dfd408a3783e2878777141ba7d3fbd97a7d52a5b899b030737"
         }
     },
     "pre_install": "if (!(is_admin)) { throw 'Admin privileges are required.' }",
@@ -23,7 +26,7 @@
     },
     "checkver": {
         "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
-        "jsonpath": "$.releases-index[?(@.channel-version == '5.0')].latest-release"
+        "jsonpath": "$.releases-index[?(@.channel-version == '6.0')].latest-release"
     },
     "autoupdate": {
         "architecture": {

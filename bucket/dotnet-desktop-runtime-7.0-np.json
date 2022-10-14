@@ -1,6 +1,6 @@
 {
     "version": "7.0.0-rc.2.22472.13",
-    "description": "Microsoft .NET 7 Desktop Runtime.",
+    "description": "Microsoft .NET 7 Windows Desktop Runtime. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
     "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
     "license": {
         "identifier": "Freeware",

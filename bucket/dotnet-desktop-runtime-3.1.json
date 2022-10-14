@@ -1,13 +1,15 @@
 {
     "version": "3.1.30",
-    "description": "Microsoft .NET Core 3.1 Desktop Runtime.",
+    "description": "Microsoft .NET Core 3.1 Windows Desktop Runtime. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
     "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
     },
-    "notes": "This package only contains the .NET Core 3.1 desktop runtime, install 'dotnet-sdk' instead if you need .NET Core SDK",
-    "depends": "dark",
+    "notes": [
+        "You can now remove this installer with 'scoop uninstall dotnet-desktop-runtime-3.1'.",
+        "This package includes the .NET Runtime, you don't need to install it separately."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://download.visualstudio.microsoft.com/download/pr/d8cdebe3-76ae-47a8-9461-e0b588f52fdd/58f4ac35bb7eff0192987ce902c9b051/windowsdesktop-runtime-3.1.30-win-x64.exe",
@@ -18,17 +20,9 @@
             "hash": "sha512:e8bd87b5c784f25f9596e517ba307533409478d68f6accb001f1fda3a00ec575581db1ecefded9f62336dbf7bf2f47d99c8abe7ab39bb9e7e8e82062f5c0f3f4"
         }
     },
+    "pre_install": "if (!(is_admin)) { throw 'Admin privileges are required.' }",
     "installer": {
-        "script": [
-            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
-            "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
-            "Move-Item \"$dir\\dotnet\\*\" \"$dir\" -Force",
-            "@('dotnet', 'extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
-        ]
-    },
-    "bin": "dotnet.exe",
-    "env_set": {
-        "DOTNET_ROOT": "$dir"
+        "script": "Invoke-ExternalCommand \"$dir\\$fname\" -ArgumentList '/install', '/passive', '/norestart' -RunAs | Out-Null"
     },
     "checkver": {
         "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/3.1/releases.json",
