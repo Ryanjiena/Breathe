@@ -18,7 +18,7 @@
     "extract_dir": "FSCapture97",
     "pre_install": [
         "7z x -p2022 \"$dir\\dl.7z_\" $('-o' + $dir) | Out-Null",
-        "Remove-Item \"$dir\\dl.7z_\", \"$dir\\FSIV-ASO.exe\" -ErrorAction SilentlyContinue -Force",
+        "Remove-Item \"$dir\\dl.7z_\", \"$dir\\FSIV-ASO.exe\" -Force -ErrorAction 'SilentlyContinue'",
         "if (Test-Path \"$persist_dir\\fsc.db\") {",
         "    Copy-Item \"$persist_dir\\fsc.db\" \"$dir\\\" | Out-Null",
         "}"

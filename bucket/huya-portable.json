@@ -15,7 +15,7 @@
         ]
     },
     "uninstaller": {
-        "script": "Remove-Item \"$env:AppData\\HuyaPCLive\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        "script": "Remove-Item \"$env:AppData\\HuyaPCLive\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     },
     "shortcuts": [
         [

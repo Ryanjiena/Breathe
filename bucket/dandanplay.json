@@ -13,24 +13,24 @@
     },
     "pre_install": [
         "@('DandanDb.db', 'library.json') | ForEach-Object {",
-        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
         "}"
     ],
     "installer": {
         "script": [
             "Start-Process  \"$dir\\$fname\" -ArgumentList \"/extract\" -Wait",
-            "Remove-Item \"$dir\\$fname\",\"$dir\\decoder.dll\" -ErrorAction 'SilentlyContinue' -Force",
-            "Remove-Item \"$dir\\.NET Framework 4.7.2\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+            "Remove-Item \"$dir\\$fname\",\"$dir\\decoder.dll\" -Force -ErrorAction 'SilentlyContinue'",
+            "Remove-Item \"$dir\\.NET Framework 4.7.2\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
             "$dandir = (Get-ChildItem \"$dir\" | Select-Object -First 1).FullName",
-            "Move-Item \"$dandir\\*\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force",
-            "Remove-Item \"$dandir\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+            "Move-Item \"$dandir\\*\" \"$dir\\\" -Force -ErrorAction 'SilentlyContinue'",
+            "Remove-Item \"$dandir\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
         ]
     },
     "uninstaller": {
         "script": [
             "@('DandanDb.db', 'library.json') | ForEach-Object {",
             "    ensure \"$persist_dir\" | Out-Null",
-            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
             "}"
         ]
     },

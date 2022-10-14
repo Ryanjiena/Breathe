@@ -10,7 +10,7 @@
             "url": "https://download.cnki.net/cnkiexpress/%E5%85%A8%E7%90%83%E5%AD%A6%E6%9C%AF%E5%BF%AB%E6%8A%A5%20Setup%200.2.27.exe#/dl.7z",
             "hash": "9db4a7b1340199737c68e1dc735044f13054603351533380a864be353ffb48bb",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-            "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\resources\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+            "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\resources\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
         }
     },
     "shortcuts": [

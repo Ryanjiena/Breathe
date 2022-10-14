@@ -9,7 +9,7 @@
     "notes": "Features: <https://www.423down.com/2943.html>",
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/CloudMusic-2.10.4.200380.7z",
     "hash": "49dfe0cb268ed9e0487acc538a880c8680a31be971d8ffc4b9eeb585311a0473",
-    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\cloudmusic\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\cloudmusic\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
     "extract_dir": "CloudMusic",
     "uninstaller": {
         "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait"

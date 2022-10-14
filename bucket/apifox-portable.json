@@ -19,7 +19,7 @@
         "    Copy-Item \"$persist_dir\\User Data\\*\" \"$env:AppData\\apifox\\\" -Recurse -Force | Out-Null",
         "}"
     ],
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
     "uninstaller": {
         "script": [
             "info '[Portable Mode]: Backing up user data...'",

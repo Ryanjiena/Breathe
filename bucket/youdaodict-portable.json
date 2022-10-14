@@ -9,7 +9,7 @@
     "url": "https://codown.youdao.com/cidian/static/9.1/20220913/YoudaoDictSetup.exe#/dl.7z",
     "hash": "aa1c3b9cc594cd9c53f92a22ae3a4419df6e17b50508d2de1e8102f2dddcc6c0",
     "pre_install": "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\dict.7z\" \"$dir\"",
-    "post_install": "@('$PLUGINSDIR', '[NSIS].nsi', 'uninst.exe', '$_67_') | ForEach-Object { Remove-Item \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force -Recurse }",
+    "post_install": "@('$PLUGINSDIR', '[NSIS].nsi', 'uninst.exe', '$_67_') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction 'SilentlyContinue' }",
     "bin": "YoudaoDict.exe",
     "shortcuts": [
         [

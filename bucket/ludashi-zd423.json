@@ -10,10 +10,10 @@
     "hash": "3a5904ec2569eebe6623195d90dc18c750370d635a296f22ae339881c78b60ce",
     "extract_dir": "LuDaShi",
     "installer": {
-        "script": "Copy-Item \"$bucketsdir\\tian\\scripts\\ludashi\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "script": "Copy-Item \"$bucketsdir\\tian\\scripts\\ludashi\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
     },
     "uninstaller": {
-        "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "script": "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait -Force -ErrorAction 'SilentlyContinue' | Out-Null"
     },
     "shortcuts": [
         [

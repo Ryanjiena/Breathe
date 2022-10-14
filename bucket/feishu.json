@@ -12,8 +12,8 @@
         "if (Test-Path \"$env:AppData\\LarkShell\") {",
         "    info '[Persistent data]: Copying user data...'",
         "    ensure \"$persist_dir\" | Out-Null",
-        "    Copy-Item \"$env:AppData\\LarkShell\\*\" \"$persist_dir\\\" -ErrorAction SilentlyContinue -Recurse -Force",
-        "    Remove-Item \"$env:AppData\\LarkShell\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Copy-Item \"$env:AppData\\LarkShell\\*\" \"$persist_dir\\\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+        "    Remove-Item \"$env:AppData\\LarkShell\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "}",
         "New-Item \"$env:AppData\\LarkShell\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
     ],
@@ -24,7 +24,7 @@
             "--target_dir=\"$dir\""
         ]
     },
-    "pre_uninstall": "Remove-Item \"$env:AppData\\LarkShell\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "pre_uninstall": "Remove-Item \"$env:AppData\\LarkShell\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
     "uninstaller": {
         "file": "Feishu\\uninstall.exe",
         "args": "/quiet"

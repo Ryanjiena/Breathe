@@ -17,8 +17,8 @@
         ]
     },
     "post_install": [
-        "Remove-Item \"$([Environment]::GetFolderPath('Desktop'))\\GestureSign.lnk\" -ErrorAction SilentlyContinue -Force",
-        "Remove-Item \"$([Environment]::GetFolderPath('startmenu'))\\Programs\\GestureSign\" -ErrorAction SilentlyContinue -Recurse -Force"
+        "Remove-Item \"$([Environment]::GetFolderPath('Desktop'))\\GestureSign.lnk\" -Force -ErrorAction 'SilentlyContinue'",
+        "Remove-Item \"$([Environment]::GetFolderPath('startmenu'))\\Programs\\GestureSign\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     ],
     "uninstaller": {
         "file": "uninst.exe",

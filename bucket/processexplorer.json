@@ -18,8 +18,8 @@
         "script": [
             "if ($purge) {",
             "    $sysInt = 'HKCU:\\SOFTWARE\\Sysinternals'",
-            "    Remove-Item \"$sysInt\\Process Explorer\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
-            "    if ((Get-ChildItem $sysInt).Count -eq 0) { Remove-Item $sysInt -ErrorAction 'SilentlyContinue' -Force -Recurse }",
+            "    Remove-Item \"$sysInt\\Process Explorer\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+            "    if ((Get-ChildItem $sysInt).Count -eq 0) { Remove-Item $sysInt -Recurse -Force -ErrorAction 'SilentlyContinue' }",
             "}"
         ]
     },

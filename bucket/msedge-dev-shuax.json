@@ -21,7 +21,7 @@
         "Expand-7zipArchive -Path \"$dir\\MSEDGE.7z\" -ExtractDir \"Chrome-bin\" -Removal",
         "@('msedge.exe', 'msedge_proxy.exe') | ForEach-Object { Move-Item \"$dir\\$version\\$_\" \"$dir\" -Force -ErrorAction SilentlyContinue }",
         "Get-ChildItem \"$(appdir msedge-plus $global)\\current\\\" -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$dir\" -Recurse -Force -ErrorAction SilentlyContinue }",
-        "@('说明.txt', '清理.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\msedge\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }"
+        "@('说明.txt', '清理.bat') | ForEach-Object { Copy-Item \"$bucketsdir\\tian\\scripts\\msedge\\$_\" \"$dir\\$_\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }"
     ],
     "pre_uninstall": "Start-Process \"$dir\\清理.bat\" -WorkingDirectory \"$dir\" -Wait",
     "bin": [

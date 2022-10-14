@@ -20,7 +20,7 @@
     "extract_dir": "FSViewer77",
     "pre_install": [
         "7z x -p2022 \"$dir\\dl.7z_\" $('-o' + $dir) | Out-Null",
-        "Remove-Item \"$dir\\dl.7z_\" -ErrorAction SilentlyContinue -Force",
+        "Remove-Item \"$dir\\dl.7z_\" -Force -ErrorAction 'SilentlyContinue'",
         "'FSSettings.db', 'HisFolderList.db' | ForEach-Object {",
         "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" | Out-Null }",
         "}"

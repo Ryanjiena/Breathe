@@ -12,8 +12,8 @@
     "hash": "10e033cf7e55d8ba13480b5cb3f53156b1374569fda4572489f49e84255e9f17",
     "extract_dir": "TIM",
     "pre_install": [
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\tim\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\tim\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\tim\\install.bat\" \"$dir\\install.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\tim\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
     ],
     "installer": {
         "script": [

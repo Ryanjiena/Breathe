@@ -25,7 +25,7 @@
         ]
     },
     "uninstaller": {
-        "script": "Remove-Item \"$env:LOCALAPPDATA\\Sandboxie-Plus\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        "script": "Remove-Item \"$env:LOCALAPPDATA\\Sandboxie-Plus\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     },
     "shortcuts": [
         [

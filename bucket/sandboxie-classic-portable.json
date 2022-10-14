@@ -17,7 +17,7 @@
             "hash": "3b65feaae3d64377ab7995d686175c452ce1f88b309e2aa6e2aac6d3081ac2f9"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$*\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$*\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
     "shortcuts": [
         [
             "Start.exe",

@@ -20,7 +20,7 @@
             "pre_install": "Get-ChildItem \"$dir\\*,1.*\" -Recurse | Rename-Item -NewName { $_.FullName -replace ',1\\.', '.' }"
         }
     },
-    "post_install": "Get-ChildItem \"$dir\\*,[0-9].*\" -Recurse | Remove-Item -ErrorAction SilentlyContinue -Force",
+    "post_install": "Get-ChildItem \"$dir\\*,[0-9].*\" -Recurse | Remove-Item -Force -ErrorAction 'SilentlyContinue'",
     "bin": "iMazing-CLI.exe",
     "shortcuts": [
         [

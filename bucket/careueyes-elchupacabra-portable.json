@@ -14,8 +14,8 @@
     ],
     "post_install": [
         "Move-Item \"$dir\\CareUEyes\\*\" \"$dir\\\" | Out-Null",
-        "Remove-Item \"$dir\\CareUEyes\\*\" -ErrorAction SilentlyContinue -Force -Recurse",
-        "Remove-Item \"$dir\\setup.exe\" -ErrorAction SilentlyContinue -Force"
+        "Remove-Item \"$dir\\CareUEyes\\*\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+        "Remove-Item \"$dir\\setup.exe\" -Force -ErrorAction 'SilentlyContinue'"
     ],
     "shortcuts": [
         [

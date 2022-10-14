@@ -20,17 +20,17 @@
     "installer": {
         "script": [
             "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\videoManager\")) {",
-            "    Copy-Item \"$env:APPDATA\\videoManager\" \"$persist_dir\\appdata\" -ErrorAction SilentlyContinue -Recurse -Force",
-            "    Remove-Item \"$env:APPDATA\\videoManager\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+            "    Copy-Item \"$env:APPDATA\\videoManager\" \"$persist_dir\\appdata\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+            "    Remove-Item \"$env:APPDATA\\videoManager\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
             "}",
             "ensure \"$persist_dir\\appdata\" | Out-Null",
             "New-Item \"$env:APPDATA\\videoManager\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null",
-            "Copy-Item \"$bucketsdir\\tian\\scripts\\wechat\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+            "Copy-Item \"$bucketsdir\\tian\\scripts\\wechat\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
         ]
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
     "uninstaller": {
-        "script": "Remove-Item \"$env:APPDATA\\videoManager\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        "script": "Remove-Item \"$env:APPDATA\\videoManager\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     },
     "shortcuts": [
         [

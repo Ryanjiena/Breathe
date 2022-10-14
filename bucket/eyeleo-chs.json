@@ -14,7 +14,7 @@
             "/D=$dir"
         ]
     },
-    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\eyeleo\\langpack.zhcn.xml\" \"$dir\\Langpacks\\langpack.en.xml\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\eyeleo\\langpack.zhcn.xml\" \"$dir\\Langpacks\\langpack.en.xml\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
     "uninstaller": {
         "file": "uninstall.exe",
         "args": "/S"

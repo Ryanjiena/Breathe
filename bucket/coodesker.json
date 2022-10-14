@@ -31,13 +31,13 @@
         "if (Test-Path \"$env:AppData\\Coodesker\") {",
         "    info '[Persistent data]: Copying user data...'",
         "    ensure \"$persist_dir\" | Out-Null",
-        "    Copy-Item \"$env:AppData\\Coodesker\\*\" \"$persist_dir\\\" -ErrorAction SilentlyContinue -Recurse -Force",
-        "    Remove-Item \"$env:AppData\\Coodesker\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Copy-Item \"$env:AppData\\Coodesker\\*\" \"$persist_dir\\\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+        "    Remove-Item \"$env:AppData\\Coodesker\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "}",
         "New-Item \"$env:AppData\\Coodesker\" -ItemType Junction -Target \"$persist_dir\" | Out-Null",
-        "Remove-Item \"$dir\\uninst.exe\" -ErrorAction SilentlyContinue -Force"
+        "Remove-Item \"$dir\\uninst.exe\" -Force -ErrorAction 'SilentlyContinue'"
     ],
-    "pre_uninstall": "Remove-Item \"$env:AppData\\Coodesker\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "pre_uninstall": "Remove-Item \"$env:AppData\\Coodesker\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
     "checkver": {
         "url": "https://api.github.com/repos/coodesker/coodesker-desktop/releases",
         "regex": "releases/download/v([\\d.]+)/Coodesker-x64_[\\d.]+.exe"

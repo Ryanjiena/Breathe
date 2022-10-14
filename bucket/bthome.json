@@ -7,7 +7,7 @@
     },
     "url": "http://btbtt12.com/attach-download-fid-2-aid-5310908.htm#/dl.zip",
     "hash": "84993884ca35f5de1a90216c0df2403b2dc598d89c76222308495420125f3d75",
-    "pre_install": "Rename-Item \"$dir\\*.exe\" \"bthome.exe\" -ErrorAction 'SilentlyContinue' -Force",
+    "pre_install": "Rename-Item \"$dir\\*.exe\" \"bthome.exe\" -Force -ErrorAction 'SilentlyContinue'",
     "shortcuts": [
         [
             "bthome.exe",

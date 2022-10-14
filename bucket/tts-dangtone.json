@@ -7,7 +7,7 @@
     },
     "url": "https://pan.jiemi.workers.dev/?file=/scoop/else/小七-文字转语音(TTS)-2.4.zip",
     "hash": "2365e7eee135cfef7ba897a39fcedecfb419846662f0af22de2bd0b9f03aec1b",
-    "pre_install": "Rename-Item -path \"$dir\\*.exe\" 'tts-dangtone.exe' -ErrorAction SilentlyContinue -Force",
+    "pre_install": "Rename-Item -path \"$dir\\*.exe\" 'tts-dangtone.exe' -Force -ErrorAction 'SilentlyContinue'",
     "shortcuts": [
         [
             "tts-dangtone.exe",

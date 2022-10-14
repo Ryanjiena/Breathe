@@ -20,16 +20,16 @@
             "sudo Start-Process \"$dir\\_绿化.bat\" -WorkingDirectory \"$dir\" -Wait",
             "$startmenu_folder = [System.IO.Path]::Combine([Environment]::GetFolderPath('startmenu'), 'Programs', 'Scoop Apps')",
             "ensure \"$startmenu_folder\\SogouInput\" | Out-Null",
-            "Copy-Item \"$dir\\*.lnk\" \"$startmenu_folder\\Sogou\" -ErrorAction 'SilentlyContinue' -Force"
+            "Copy-Item \"$dir\\*.lnk\" \"$startmenu_folder\\Sogou\" -Force -ErrorAction 'SilentlyContinue'"
         ]
     },
     "uninstaller": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
             "$startmenu_folder = [System.IO.Path]::Combine([Environment]::GetFolderPath('startmenu'), 'Programs', 'Scoop Apps')",
-            "Get-ChildItem \"$dir\\*.lnk\" | ForEach-Object { Remove-Item \"$startmenu_folder\\SogouInput\\$($_.Name)\" -ErrorAction 'SilentlyContinue' -Force }",
-            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
-            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY.users\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+            "Get-ChildItem \"$dir\\*.lnk\" | ForEach-Object { Remove-Item \"$startmenu_folder\\SogouInput\\$($_.Name)\" -Force -ErrorAction 'SilentlyContinue' }",
+            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY.users\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
             "sudo Start-Process \"$dir\\_卸载.bat\" -WorkingDirectory \"$dir\" -Wait",
             "$text = @(",
             "    'If you encounter \"file in use\" error during uninstallation, try the following steps:'",

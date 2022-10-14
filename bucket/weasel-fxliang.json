@@ -13,8 +13,8 @@
         "if (Test-Path \"$env:AppData\\Rime\") {",
         "    info '[Persistent data]: Copying user data...'",
         "    ensure \"$persist_dir\\appdata\" | Out-Null",
-        "    Copy-Item \"$env:AppData\\Rime\\*\" \"$persist_dir\\appdata\\\" -ErrorAction SilentlyContinue -Recurse -Force",
-        "    Remove-Item \"$env:AppData\\Rime\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Copy-Item \"$env:AppData\\Rime\\*\" \"$persist_dir\\appdata\\\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+        "    Remove-Item \"$env:AppData\\Rime\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "}",
         "ensure \"$persist_dir\\appdata\" | Out-Null",
         "New-Item \"$env:AppData\\Rime\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
@@ -24,17 +24,17 @@
             "Start-Process \"$dir\\installer.exe\" -ArgumentList \"/S /D=$dir\" -WorkingDirectory \"$dir\"",
             "Start-Sleep -s 8",
             "# https://github.com/chtof/chocolatey-packages/blob/master/automatic/weasel/tools/chocolateyinstall.ahk",
-            "Copy-Item \"$bucketsdir\\tian\\scripts\\weasel\\install.ahk\" \"$dir\\install.ahk\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$bucketsdir\\tian\\scripts\\weasel\\install.ahk\" \"$dir\\install.ahk\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
             "Start-Process \"autohotkey\" -Verb runas -ArgumentList \"`\"$dir\\install.ahk`\"\""
         ]
     },
     "post_install": [
-        "if (Test-Path \"$persist_dir\\data\") { Copy-Item \"$persist_dir\\data\\*\" \"$dir\\weasel-$version\\data\" -ErrorAction 'SilentlyContinue' -Force -Recurse }",
+        "if (Test-Path \"$persist_dir\\data\") { Copy-Item \"$persist_dir\\data\\*\" \"$dir\\weasel-$version\\data\" -Recurse -Force -ErrorAction 'SilentlyContinue' }",
         "Start-Sleep -s 8",
         "$weasel_startmenu_folder = [System.IO.Path]::Combine([Environment]::GetFolderPath('CommonStartMenu'), 'Programs', '小狼毫輸入法')",
         "if ($global) { $startmenu = 'CommonStartMenu' } else { $startmenu = 'StartMenu' }",
         "$scoop_startmenu_folder = [System.IO.Path]::Combine([Environment]::GetFolderPath($startmenu), 'Programs', 'Scoop Apps')",
-        "Move-Item \"$weasel_startmenu_folder\" \"$scoop_startmenu_folder\\\" -ErrorAction 'SilentlyContinue' -Force",
+        "Move-Item \"$weasel_startmenu_folder\" \"$scoop_startmenu_folder\\\" -Force -ErrorAction 'SilentlyContinue'",
         "Remove-Item \"$dir\\installer.exe\""
     ],
     "uninstaller": {
@@ -44,8 +44,8 @@
             "Start-Process \"$dir\\weasel-$version\\uninstall.exe\" -ArgumentList '/S' -Wait",
             "if ($global) { $startmenu = 'CommonStartMenu' } else { $startmenu = 'StartMenu' }",
             "$scoop_startmenu_folder = [System.IO.Path]::Combine([Environment]::GetFolderPath($startmenu), 'Programs', 'Scoop Apps')",
-            "Remove-Item \"$scoop_startmenu_folder\\小狼毫輸入法\" -ErrorAction SilentlyContinue -Force -Recurse",
-            "Remove-Item \"$env:APPDATA\\Rime\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+            "Remove-Item \"$scoop_startmenu_folder\\小狼毫輸入法\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+            "Remove-Item \"$env:APPDATA\\Rime\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
         ]
     },
     "checkver": {

@@ -11,8 +11,8 @@
     "extract_dir": "Thunder",
     "installer": {
         "script": [
-            "Copy-Item \"$bucketsdir\\tian\\scripts\\thunder11\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-            "Copy-Item \"$bucketsdir\\tian\\scripts\\thunder11\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "Copy-Item \"$bucketsdir\\tian\\scripts\\thunder11\\install.bat\" \"$dir\\install.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+            "Copy-Item \"$bucketsdir\\tian\\scripts\\thunder11\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
             "Start-Process \"$dir\\install.bat\" -WorkingDirectory \"$dir\" -Wait -ErrorAction 'SilentlyContinue' | Out-Null"
         ]
     },

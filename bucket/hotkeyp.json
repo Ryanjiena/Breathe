@@ -23,11 +23,11 @@
     },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\hotkeyp.htk\")) {",
-        "    Copy-Item \"$bucketsdir\\tian\\scripts\\hotkeyp\\hotkeyp.htk\" \"$dir\\hotkeyp.htk\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "    Copy-Item \"$bucketsdir\\tian\\scripts\\hotkeyp\\readme.md\" \"$persist_dir\\readme.md\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "    Copy-Item \"$bucketsdir\\tian\\scripts\\hotkeyp\\hotkeyp.htk\" \"$dir\\hotkeyp.htk\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "    Copy-Item \"$bucketsdir\\tian\\scripts\\hotkeyp\\readme.md\" \"$persist_dir\\readme.md\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
         "}"
     ],
-    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\hotkeyp\\start-hotkeyp.ps1\" \"$dir\\start-hotkeyp.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\hotkeyp\\start-hotkeyp.ps1\" \"$dir\\start-hotkeyp.ps1\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
     "shortcuts": [
         [
             "HotkeyP.exe",

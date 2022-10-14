@@ -19,7 +19,7 @@
         ]
     },
     "uninstaller": {
-        "script": "Remove-Item \"$env:AppData\\lanzouyun-disk\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        "script": "Remove-Item \"$env:AppData\\lanzouyun-disk\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     },
     "shortcuts": [
         [

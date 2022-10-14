@@ -11,8 +11,8 @@
     "hash": "70001405d22e05f9e0b1d997485fa2cf4aa59540f16c16c50f2130924a534898",
     "extract_dir": "QQMusic",
     "pre_install": [
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\qqmusic\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\qqmusic\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\qqmusic\\install.bat\" \"$dir\\install.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\qqmusic\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
     ],
     "installer": {
         "script": "Start-Process \"$dir\\install.bat\" -WorkingDirectory \"$dir\" -Wait -Verb RunAs"

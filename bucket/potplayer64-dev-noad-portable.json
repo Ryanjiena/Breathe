@@ -18,7 +18,7 @@
             "extract_dir": "PotPlayer64",
             "installer": {
                 "script": [
-                    "Copy-Item \"$bucketsdir\\tian\\scripts\\potplayer\\potplayer64-settings.reg\" \"$dir\\potplayer64-settings.reg\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+                    "Copy-Item \"$bucketsdir\\tian\\scripts\\potplayer\\potplayer64-settings.reg\" \"$dir\\potplayer64-settings.reg\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
                     "sudo regedit /s \"$dir\\potplayer64-settings.reg\""
                 ]
             },

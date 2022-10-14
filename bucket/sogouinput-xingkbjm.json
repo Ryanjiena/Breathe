@@ -16,13 +16,13 @@
             "ensure \"$persist_dir\\SogouPY.users\" | Out-Null",
             "New-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY.users\" -ItemType Junction -Target \"$persist_dir\\SogouPY.users\" | Out-Null",
             "Start-Process \"$dir\\$fname\" -WorkingDirectory \"$dir\" -ArgumentList \"/S /D=$dir\" -Wait",
-            "Remove-Item \"$dir\\$fname\" -ErrorAction SilentlyContinue -Force"
+            "Remove-Item \"$dir\\$fname\" -Force -ErrorAction 'SilentlyContinue'"
         ]
     },
     "uninstaller": {
         "script": [
-            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
-            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY.users\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+            "Remove-Item \"$env:USERPROFILE\\AppData\\LocalLow\\SogouPY.users\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
             "Start-Process \"$dir\\$version\\Uninstall.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/S\" -PassThru -NoNewWindow -Wait",
             "$text = @(",
             "    'If you encounter \"file in use\" error during uninstallation, try the following steps:'",

@@ -28,14 +28,14 @@
     },
     "pre_install": [
         "if (Test-Path \"$persist_dir\\WinContig.ini\") {",
-        "    Copy-Item \"$persist_dir\\WinContig.ini\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "    Copy-Item \"$persist_dir\\WinContig.ini\" \"$dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
         "}"
     ],
     "uninstaller": {
         "script": [
             "if (Test-Path \"$dir\\WinContig.ini\") {",
             "    ensure \"$persist_dir\" | Out-Null",
-            "    Copy-Item \"$dir\\WinContig.ini\" \"$persist_dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+            "    Copy-Item \"$dir\\WinContig.ini\" \"$persist_dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
             "}"
         ]
     },

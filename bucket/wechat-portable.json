@@ -15,7 +15,7 @@
         "    Copy-Item \"$persist_dir\\User Data\\*\" \"$env:AppData\\Tencent\\WeChat\\\" -Recurse -Force | Out-Null",
         "}"
     ],
-    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall.exe\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall.exe\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
     "uninstaller": {
         "script": [
             "info '[Portable Mode]: Backing up user data...'",

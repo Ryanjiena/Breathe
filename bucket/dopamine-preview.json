@@ -10,7 +10,7 @@
             "url": "https://github.com/digimezzo/dopamine/releases/download/v3.0.0-preview16/Dopamine-3.0.0-preview.16.exe#/dl.7z",
             "hash": "90e6c57e84d2bcbb131f92406719e9a53b356018a91367f9e50a7b4f88e51453",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-            "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -ErrorAction 'SilentlyContinue' -Recurse -Force"
+            "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
         }
     },
     "shortcuts": [

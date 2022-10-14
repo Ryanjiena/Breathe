@@ -54,7 +54,7 @@
         "python -E -s -m ensurepip -U --default-pip | Out-Null",
         "Write-Output \"`e[0m\" # Reset ansi to prevent color leak from installer",
         "sudo regedit /s \"$dir\\install-pep-514.reg\"",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\python\\pypi-mirror.ps1\" \"$dir\\pypi-mirror.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\python\\pypi-mirror.ps1\" \"$dir\\pypi-mirror.ps1\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
         "pwsh \"$dir\\pypi-mirror.ps1\" -m tuna | Out-Null"
     ],
     "uninstaller": {

@@ -13,8 +13,8 @@
             "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_2.10.5.200451.exe#/dl.7z",
             "hash": "e1fcf1ff0f40522f544ee5a9228ab89eef1b2c0ff7b090f59150e444c723dfb5",
             "pre_install": [
-                "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -ErrorAction 'SilentlyContinue' -Force",
-                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\redist_packages\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+                "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force -ErrorAction 'SilentlyContinue'",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\redist_packages\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
                 "Copy-Item \"$(scoop prefix unblockneteasemusic)\\unblockneteasemusic.exe\" \"$dir\" -Force | Out-Null",
                 "$cont = @(",
                 "    'Start-Process \"$(scoop prefix cloudmusic-unblock)\\unblockneteasemusic.exe\" -WorkingDirectory \"$(scoop prefix cloudmusic-unblock)\\\" -WindowStyle Hidden'",
@@ -25,15 +25,15 @@
             "installer": {
                 "script": [
                     "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:LOCALAPPDATA\\Netease\\CloudMusic\")) {",
-                    "    Copy-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" \"$persist_dir\\appdata\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
-                    "    Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+                    "    Copy-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" \"$persist_dir\\appdata\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+                    "    Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
                     "}",
                     "ensure \"$persist_dir\\appdata\" | Out-Null",
                     "New-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
                 ]
             },
             "uninstaller": {
-                "script": "Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+                "script": "Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
             }
         }
     },

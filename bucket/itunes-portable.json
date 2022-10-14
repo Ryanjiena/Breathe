@@ -15,8 +15,8 @@
     },
     "installer": {
         "script": [
-            "sudo Stop-Service -Name 'Apple Mobile Device Service','Bonjour Service' -ErrorAction SilentlyContinue -Force | Out-Null",
-            "Remove-Item \"$dir\\AppleSoftwareUpdate.msi\",\"$dir\\SetupAdmin.exe\" -ErrorAction SilentlyContinue -Force | Out-Null",
+            "sudo Stop-Service -Name 'Apple Mobile Device Service','Bonjour Service' -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+            "Remove-Item \"$dir\\AppleSoftwareUpdate.msi\",\"$dir\\SetupAdmin.exe\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
             "Expand-MsiArchive \"$dir\\iTunes64.msi\" \"$dir\" -ExtractDir 'iTunes' -Removal",
             "@('AppleMobileDeviceSupport64.msi', 'Bonjour64.msi') | ForEach-Object {",
             "    Start-Process msiexec -ArgumentList @('/i', \"$dir\\$_\", '/passive', '/norestart') -Wait | Out-Null",
@@ -26,7 +26,7 @@
     "uninstaller": {
         "script": [
             "Set-PSDebug -Trace 2",
-            "sudo Stop-Service -Name 'Apple Mobile Device Service','Bonjour Service' -ErrorAction SilentlyContinue -Force | Out-Null",
+            "sudo Stop-Service -Name 'Apple Mobile Device Service','Bonjour Service' -Force -ErrorAction 'SilentlyContinue' | Out-Null",
             "@('AppleMobileDev ceSupport64.msi', 'Bonjour64.msi') | ForEach-Object {",
             "    Start-Process msiexec -ArgumentList @('/x', \"$dir\\$_\", '/passive', '/norestart') -Wait | Out-Null",
             "}",

@@ -11,14 +11,14 @@
     "extract_dir": "WiseCare365_6.3.7.615",
     "pre_install": [
         "@('config.ini', 'DefragOptions.ini') | ForEach-Object {",
-        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
         "}"
     ],
     "uninstaller": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
             "@('config.ini', 'DefragOptions.ini') | ForEach-Object {",
-            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
             "}"
         ]
     },

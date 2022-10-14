@@ -12,13 +12,13 @@
         "if (Test-Path \"$env:AppData\\LarkInternational\") {",
         "    info '[Persistent data]: Copying user data...'",
         "    ensure \"$persist_dir\" | Out-Null",
-        "    Copy-Item \"$env:AppData\\LarkInternational\\*\" \"$persist_dir\\\" -ErrorAction SilentlyContinue -Recurse -Force",
-        "    Remove-Item \"$env:AppData\\LarkInternational\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "    Copy-Item \"$env:AppData\\LarkInternational\\*\" \"$persist_dir\\\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+        "    Remove-Item \"$env:AppData\\LarkInternational\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "}",
         "ensure \"$persist_dir\" | Out-Null",
         "New-Item \"$env:AppData\\LarkInternational\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
     ],
-    "pre_uninstall": "Remove-Item \"$env:AppData\\LarkInternational\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+    "pre_uninstall": "Remove-Item \"$env:AppData\\LarkInternational\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
     "shortcuts": [
         [
             "Lark.exe",

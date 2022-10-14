@@ -15,7 +15,7 @@
         ]
     },
     "uninstaller": {
-        "script": "Remove-Item \"$env:AppData\\AutoDarkMode\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        "script": "Remove-Item \"$env:AppData\\AutoDarkMode\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     },
     "innosetup": true,
     "bin": "AutoDarkModeShell.exe",

@@ -11,7 +11,7 @@
     "extract_to": "tmp",
     "pre_install": "Expand-7zipArchive \"$dir\\tmp\\app.7z\" \"$dir\" -Removal",
     "post_install": [
-        "Remove-Item \"$dir\\tmp\" -ErrorAction SilentlyContinue -Recurse -Force",
+        "Remove-Item \"$dir\\tmp\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:AppData\\kook\")) {",
         "    info '[Portable Mode]: Copying user data...'",
         "    ensure \"$dir\\User Data\" | Out-Null",

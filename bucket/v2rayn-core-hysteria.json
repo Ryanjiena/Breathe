@@ -15,11 +15,11 @@
     "hash": "8d57a38eb51bbe8cdea142bbf4083dc48bf0c480f601fbd6f86ada21d5b605db",
     "extract_dir": "v2rayN-Core",
     "pre_install": [
-        "Copy-Item \"$(scoop prefix hysteria)\\hysteria.exe\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$(scoop prefix geoip-country-mmdb)\\Country.mmdb\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\reject-list.txt\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\direct-list.txt\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\proxy-list.txt\" \"$dir\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "Copy-Item \"$(scoop prefix hysteria)\\hysteria.exe\" \"$dir\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$(scoop prefix geoip-country-mmdb)\\Country.mmdb\" \"$dir\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\reject-list.txt\" \"$dir\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\direct-list.txt\" \"$dir\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$(scoop prefix v2ray-rules-dat-git)\\proxy-list.txt\" \"$dir\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
         "if (!(Test-Path \"$persist_dir\\user-wininet.json\")) {",
         "    New-Item -Path \"$dir\\user-wininet.json\" | Out-Null",
         "}",
@@ -36,8 +36,8 @@
         "Add-Content \"$dir\\routes.acl\" -Value 'direct country cn' -Encoding UTF8",
         "Add-Content \"$dir\\routes.acl\" -Value 'proxy all' -Encoding UTF8",
         "New-Item -Path \"$dir\" -Name \"acl\" -ItemType \"directory\" | Out-Null",
-        "Move-Item \"$dir\\routes.acl\", \"$dir\\Country.mmdb\" \"$dir\\acl\\\" -ErrorAction 'SilentlyContinue' -Force",
-        "Remove-Item \"$dir\\reject-list*.txt\", \"$dir\\direct-list*.txt\", \"$dir\\proxy-list*.txt\", \"$dir\\hysteria_acl*.txt\" -ErrorAction 'SilentlyContinue' -Force"
+        "Move-Item \"$dir\\routes.acl\", \"$dir\\Country.mmdb\" \"$dir\\acl\\\" -Force -ErrorAction 'SilentlyContinue'",
+        "Remove-Item \"$dir\\reject-list*.txt\", \"$dir\\direct-list*.txt\", \"$dir\\proxy-list*.txt\", \"$dir\\hysteria_acl*.txt\" -Force -ErrorAction 'SilentlyContinue'"
     ],
     "uninstaller": {
         "script": [

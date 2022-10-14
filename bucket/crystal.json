@@ -9,7 +9,7 @@
     "depends": "vswhere",
     "url": "https://github.com/crystal-lang/crystal/releases/download/1.6.0/crystal-1.6.0-windows-x86_64-msvc-unsupported.zip",
     "hash": "8660801bbc296f71e3e434b0bb741de73ab0cdf333f8d74669cbacef22eab865",
-    "post_install": "If (Test-Path \"$env:LOCALAPPDATA\\crystal\\cache\") { Remove-Item \"$env:LOCALAPPDATA\\crystal\\cache\" -ErrorAction 'SilentlyContinue' -Recurse -Force }",
+    "post_install": "If (Test-Path \"$env:LOCALAPPDATA\\crystal\\cache\") { Remove-Item \"$env:LOCALAPPDATA\\crystal\\cache\" -Recurse -Force -ErrorAction 'SilentlyContinue' }",
     "bin": [
         "crystal.exe",
         "shards.exe"

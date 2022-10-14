@@ -13,10 +13,10 @@
     "hash": "7637d275af6c264cba833ceca29ce7d9a460150eb9917b3877012e648e29821f",
     "pre_install": [
         "7z x -p2022 $dir\\$fname $('-o' + $dir) | Out-Null",
-        "Remove-Item \"$dir\\$fname\" -ErrorAction SilentlyContinue -Force",
+        "Remove-Item \"$dir\\$fname\" -Force -ErrorAction 'SilentlyContinue'",
         "if (!(Test-Path \"$persist_dir\\release\\x96dbg.ini\")) { New-Item -ItemType File \"$dir\\release\\x96dbg.ini\" | Out-Null }",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\x64dbg\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\x64dbg\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\x64dbg\\install.bat\" \"$dir\\install.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\x64dbg\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
     ],
     "architecture": {
         "64bit": {

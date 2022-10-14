@@ -19,18 +19,18 @@
     "pre_install": [
         "Expand-7zipArchive \"$dir\\dl.7z_\" -Switches '-p2022' -Removal",
         "@('config.ini', 'DefragOptions.ini') | ForEach-Object {",
-        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
         "}"
     ],
     "installer": {
         "script": "Start-Process \"$dir\\WiseCare365Pro.v5.x.Patch.210326.exe\" -WorkingDirectory \"$dir\" -ArgumentList '/silent' -Wait | Out-Null"
     },
-    "post_install": "Remove-Item $dir\\*dl.7z_ -ErrorAction 'SilentlyContinue' -Force",
+    "post_install": "Remove-Item $dir\\*dl.7z_ -Force -ErrorAction 'SilentlyContinue'",
     "uninstaller": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",
             "@('config.ini', 'DefragOptions.ini') | ForEach-Object {",
-            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
             "}"
         ]
     },

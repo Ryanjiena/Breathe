@@ -14,7 +14,7 @@
     "installer": {
         "script": "Rename-Item \"$dir\\XYplorer*.exe\" 'XYplorer.Keygen.Activator.exe'"
     },
-    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\xyplorer\\xyplorer-activate.ps1\" \"$dir\\xyplorer-activate.ps1\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+    "post_install": "Copy-Item \"$bucketsdir\\tian\\scripts\\xyplorer\\xyplorer-activate.ps1\" \"$dir\\xyplorer-activate.ps1\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
     "bin": "xyplorer-activate.ps1",
     "checkver": {
         "url": "https://github.com/Ryanjiena/metaversion/raw/main/oneindex.txt",

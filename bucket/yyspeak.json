@@ -21,7 +21,7 @@
     },
     "post_install": "@('Uninstall.exe', 'yylauncher.exe') | ForEach-Object { Remove-Item \"$dir\\$_\" -Force -ErrorAction SilentlyContinue }",
     "uninstaller": {
-        "script": "Remove-Item \"$env:AppData\\duowan\\yy\" -ErrorAction 'SilentlyContinue' -Force -Recurse"
+        "script": "Remove-Item \"$env:AppData\\duowan\\yy\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     },
     "shortcuts": [
         [

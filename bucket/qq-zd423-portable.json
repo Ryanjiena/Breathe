@@ -29,8 +29,8 @@
     "hash": "3f82f12fc046ec14f3aac578404af7ed278e7c87a7847d994359941ee906d47e",
     "extract_dir": "QQ",
     "pre_install": [
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\qq\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\qq\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\qq\\install.bat\" \"$dir\\install.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\qq\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
     ],
     "installer": {
         "file": "install.bat",

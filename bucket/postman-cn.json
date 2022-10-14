@@ -21,7 +21,7 @@
     },
     "uninstaller": {
         "script": [
-            "Remove-Item -Path \"$(appdir postman $global)\\current\\resources\\app\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+            "Remove-Item -Path \"$(appdir postman $global)\\current\\resources\\app\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
             "Rename-Item -Path \"$(appdir postman $global)\\current\\resources\\app.bak\" 'app' -Force"
         ]
     },

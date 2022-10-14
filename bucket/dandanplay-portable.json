@@ -14,14 +14,14 @@
     },
     "pre_install": [
         "@('DandanDb.db', 'library.json') | ForEach-Object {",
-        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+        "    if (Test-Path \"$persist_dir\\$_\") { Copy-Item \"$persist_dir\\$_\" \"$dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
         "}"
     ],
     "uninstaller": {
         "script": [
             "@('DandanDb.db', 'library.json') | ForEach-Object {",
             "    ensure \"$persist_dir\" | Out-Null",
-            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -ErrorAction 'SilentlyContinue' -Force | Out-Null }",
+            "    if (Test-Path \"$dir\\$_\") { Copy-Item \"$dir\\$_\" \"$persist_dir\\\" -Force -ErrorAction 'SilentlyContinue' | Out-Null }",
             "}"
         ]
     },

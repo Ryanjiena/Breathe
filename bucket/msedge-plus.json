@@ -27,16 +27,16 @@
     "installer": {
         "script": [
             "if (Test-Path \"$(appdir msedge-stable-shuax $global)\") {",
-            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-stable-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-stable-shuax $global)\\current\" -Force -ErrorAction 'SilentlyContinue' }",
             "}",
             "if (Test-Path \"$(appdir msedge-beta-shuax $global)\") {",
-            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-beta-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-beta-shuax $global)\\current\" -Force -ErrorAction 'SilentlyContinue' }",
             "}",
             "if (Test-Path \"$(appdir msedge-dev-shuax $global)\") {",
-            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-dev-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-dev-shuax $global)\\current\" -Force -ErrorAction 'SilentlyContinue' }",
             "}",
             "if (Test-Path \"$(appdir msedge-canary-shuax $global)\") {",
-            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-canary-shuax $global)\\current\" -ErrorAction 'SilentlyContinue' -Force }",
+            "  Get-ChildItem $dir -Exclude *install.json, *manifest.json | ForEach-Object { Copy-Item $_.FullName \"$(appdir msedge-canary-shuax $global)\\current\" -Force -ErrorAction 'SilentlyContinue' }",
             "}"
         ]
     },

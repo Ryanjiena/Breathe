@@ -10,7 +10,7 @@
     "hash": "3ff144f631fc65128a5c470ee2c4a7be7dddb892cb046584b87184ec7bebc237",
     "pre_install": [
         "$nupkg=(Get-ChildItem $dir\\*full.nupkg).Name",
-        "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -ErrorAction 'SilentlyContinue' -Force -Recurse",
+        "Get-ChildItem \"$dir\" -Exclude \"$nupkg\" | Remove-Item -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "Expand-7zipArchive \"$dir\\$nupkg\" -ExtractDir 'lib\\net45' -Removal"
     ],
     "shortcuts": [

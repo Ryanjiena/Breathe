@@ -11,8 +11,8 @@
     "hash": "b9b221766f675a750ba92bff8895797cd623035c32e1a5813c4a0cb07000dc70",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\TypeEasyData\") -and (Test-Path \"$env:APPDATA\\TypeEasyData\")) {",
-        "    Copy-Item \"$env:APPDATA\\TypeEasyData\" \"$persist_dir\\TypeEasyData\" -ErrorAction SilentlyContinue -Recurse -Force",
-        "    Remove-Item \"$env:APPDATA\\TypeEasyData\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+        "    Copy-Item \"$env:APPDATA\\TypeEasyData\" \"$persist_dir\\TypeEasyData\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+        "    Remove-Item \"$env:APPDATA\\TypeEasyData\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "}"
     ],
     "installer": {
@@ -21,12 +21,12 @@
             "New-Item \"$env:APPDATA\\TypeEasyData\" -ItemType Junction -Target \"$persist_dir\\TypeEasyData\" | Out-Null",
             "Rename-Item \"$dir\\*.exe\" 'Installer.exe'",
             "Start-Process \"$dir\\Installer.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/DIR=$dir /SILENT /NORESTART\" -Wait",
-            "Remove-Item \"$dir\\Installer.exe\" -ErrorAction SilentlyContinue -Force"
+            "Remove-Item \"$dir\\Installer.exe\" -Force -ErrorAction 'SilentlyContinue'"
         ]
     },
     "uninstaller": {
         "script": [
-            "Remove-Item \"$env:APPDATA\\TypeEasyData\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+            "Remove-Item \"$env:APPDATA\\TypeEasyData\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
             "Start-Process \"$dir\\UninsFile\\unins000.exe\" -WorkingDirectory \"$dir\" -ArgumentList \"/VERYSILENT /NORESTART\" -Wait"
         ]
     },

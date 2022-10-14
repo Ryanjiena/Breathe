@@ -15,7 +15,7 @@
     "extract_dir": "MouseInc",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\MouseInc.json\")) {",
-        "    Copy-Item \"$bucketsdir\\tian\\scripts\\mouseinc\\MouseInc.json\" \"$dir\\MouseInc.json\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
+        "    Copy-Item \"$bucketsdir\\tian\\scripts\\mouseinc\\MouseInc.json\" \"$dir\\MouseInc.json\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
         "}"
     ],
     "shortcuts": [

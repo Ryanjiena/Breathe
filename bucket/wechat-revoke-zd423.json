@@ -12,20 +12,20 @@
     "extract_dir": "WeChat_3.3.0.115_Green\\WeChat",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\appdata\") -and (Test-Path \"$env:APPDATA\\Tencent\\WeChat\")) {",
-        "    Copy-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\appdata\" -ErrorAction SilentlyContinue -Recurse -Force",
-        "    Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -ErrorAction 'SilentlyContinue' -Recurse -Force",
+        "    Copy-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\appdata\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+        "    Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
         "}"
     ],
     "installer": {
         "script": [
             "ensure \"$persist_dir\\appdata\" | Out-Null",
             "New-Item \"$env:APPDATA\\Tencent\\WeChat\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null",
-            "Copy-Item \"$bucketsdir\\tian\\scripts\\wechat\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+            "Copy-Item \"$bucketsdir\\tian\\scripts\\wechat\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
         ]
     },
     "uninstaller": {
         "script": [
-            "Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -ErrorAction 'SilentlyContinue' -Force -Recurse",
+            "Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
             "Start-Process \"$dir\\uninstall.bat\" -WorkingDirectory \"$dir\" -Wait"
         ]
     },

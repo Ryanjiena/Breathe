@@ -12,9 +12,9 @@
     "hash": "ea3188a1fbc4d0c51f066799ba9422795605d9b5d35037797ed00fc777fecdd3",
     "extract_dir": "Internet Download Manager",
     "pre_install": [
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\idm\\idm-custom-settings.reg\" \"$dir\\idm-custom-settings.reg\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\idm\\install.bat\" \"$dir\\install.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\idm\\uninstall.bat\" \"$dir\\uninstall.bat\" -ErrorAction 'SilentlyContinue' -Force | Out-Null"
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\idm\\idm-custom-settings.reg\" \"$dir\\idm-custom-settings.reg\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\idm\\install.bat\" \"$dir\\install.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null",
+        "Copy-Item \"$bucketsdir\\tian\\scripts\\idm\\uninstall.bat\" \"$dir\\uninstall.bat\" -Force -ErrorAction 'SilentlyContinue' | Out-Null"
     ],
     "installer": {
         "script": [
