@@ -1,13 +1,13 @@
 {
-    "version": "4.0.18.6011",
+    "version": "4.0.19.6020",
     "description": "WeChat Work is an efficient enterprise-grade office management platform developed by Tencent Inc.",
     "homepage": "https://work.weixin.qq.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://work.weixin.qq.com/nl/eula"
     },
-    "url": "https://dldir1.qq.com/wework/work_weixin/WeCom_4.0.18.6011.exe#/dl.7z",
-    "hash": "76723b63202d048f87f6b47ec2ad38b1f406a0cc85b94b1e22469c529b3a532b",
+    "url": "https://dldir1.qq.com/wework/work_weixin/WeCom_4.0.19.6020.exe#/dl.7z",
+    "hash": "53254670390ae4e2c3721c897e817f00a66e2c98947f55f8822c81ead93e83f9",
     "pre_install": [
         "info '[Portable Mode]: Copying user data...'",
         "if (Test-Path \"$persist_dir\\User Data\\*\") {",
