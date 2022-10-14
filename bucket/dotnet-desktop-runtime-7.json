@@ -1,13 +1,15 @@
 {
     "version": "7.0.0-rc.2.22472.13",
-    "description": "Microsoft .NET 7 Windows Desktop Runtime. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
-    "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
+    "description": "Microsoft .NET 7 Windows Desktop Runtime. The .NET Desktop Runtime includes the .NET runtime and Windows desktop libraries, enabling running console, Windows Forms, and Windows Presentation Framework (WPF) applications. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
+    "homepage": "https://dotnet.microsoft.com",
     "license": {
-        "identifier": "Freeware",
-        "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
+        "identifier": "MIT",
+        "url": "https://github.com/dotnet/core/raw/main/LICENSE.TXT"
     },
-    "notes": "This package only contains the .NET 7 desktop runtime, install 'dotnet-sdk' instead if you need .NET Core SDK",
-    "depends": "dark",
+    "notes": [
+        "You can now remove this installer with 'scoop uninstall dotnet-desktop-runtime-7'.",
+        "This package includes the .NET Runtime, you don't need to install it separately."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/7.0.0-rc.2.22472.13/windowsdesktop-runtime-7.0.0-rc.2.22472.13-win-x64.exe",
@@ -18,17 +20,9 @@
             "hash": "sha512:4e691cd5d9c8ed5be0cbfbb73c12912e07abee849e1b5078c7b64cbf7cf60610062f48d81e4ac6816d261a445c02d76a4450d4e6c1cea0d9b66cf0d7e6e3219e"
         }
     },
+    "pre_install": "if (!(is_admin)) { throw 'Admin privileges are required.' }",
     "installer": {
-        "script": [
-            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
-            "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
-            "Move-Item \"$dir\\dotnet\\*\" \"$dir\" -Force",
-            "@('dotnet', 'extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
-        ]
-    },
-    "bin": "dotnet.exe",
-    "env_set": {
-        "DOTNET_ROOT": "$dir"
+        "script": "Invoke-ExternalCommand \"$dir\\$fname\" -ArgumentList '/install', '/passive', '/norestart' -RunAs | Out-Null"
     },
     "checkver": {
         "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/7.0/releases.json",

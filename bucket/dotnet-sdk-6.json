@@ -1,0 +1,43 @@
+{
+    "version": "6.0.402",
+    "description": "Microsoft .NET 6 SDK. The software development kit (SDK) includes everything you need to build and run .NET applications, using command-line tools and any editor (like Visual Studio).",
+    "homepage": "https://dotnet.microsoft.com",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/dotnet/core/raw/main/LICENSE.TXT"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.visualstudio.microsoft.com/download/pr/9f4d3331-ff2a-4415-ab5d-eafc9c4f09ee/1922162c9ed35d6c10160f46c26127d6/dotnet-sdk-6.0.402-win-x64.exe",
+            "hash": "sha512:6cf89974261e6a12cbd5531bc2b16231daf56e438325750b381dacfd5d09c80a9addf739c1a3e28f652a7adf13971e37acaf255cd8c61ac39e903ff8ba2655c0"
+        },
+        "32bit": {
+            "url": "https://download.visualstudio.microsoft.com/download/pr/12c673aa-5f3a-4183-9cbb-d42bf5b76a6d/2391e030a526f52f51d4d2bdb4cf9bef/dotnet-sdk-6.0.402-win-x86.exe",
+            "hash": "sha512:ff7a4145a7fe4540585c62e75e58eb104acdccb4d2ce2d905f355670a20c6c3f4878148911fccbe68da2608e8c8ac4f1df09f3cb9d5cba07d025ad6b57b83c82"
+        }
+    },
+    "pre_install": "if (!(is_admin)) { throw 'Admin privileges are required.' }",
+    "installer": {
+        "script": "Invoke-ExternalCommand \"$dir\\$fname\" -ArgumentList '/install', '/passive', '/norestart' -RunAs | Out-Null"
+    },
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/6.0/releases.json",
+        "jsonpath": "$.releases[0].sdk",
+        "regex": "(?sm)version.*?([\\d.]+).*?runtime-version\": \"(?<runtimever>[\\d.]+).+download/pr/(?<x64>.*?-win-x64.exe).+download/pr/(?<x86>.*?-win-x86.exe)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.visualstudio.microsoft.com/download/pr/$matchX64"
+            },
+            "32bit": {
+                "url": "https://download.visualstudio.microsoft.com/download/pr/$matchX86"
+            }
+        },
+        "hash": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$matchRuntimever-sha.txt",
+            "mode": "extract",
+            "regex": "(?sm)$sha512\\s+$basename"
+        }
+    }
+}

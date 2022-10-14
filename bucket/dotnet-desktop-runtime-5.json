@@ -1,13 +1,13 @@
 {
     "version": "5.0.17",
-    "description": "Microsoft .NET 5 Windows Desktop Runtime. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
-    "homepage": "https://dotnet.microsoft.com/download/dotnet-core",
+    "description": "Microsoft .NET 5 Windows Desktop Runtime. The .NET Desktop Runtime includes the .NET runtime and Windows desktop libraries, enabling running console, Windows Forms, and Windows Presentation Framework (WPF) applications. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
+    "homepage": "https://dotnet.microsoft.com",
     "license": {
-        "identifier": "Freeware",
-        "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
+        "identifier": "MIT",
+        "url": "https://github.com/dotnet/core/raw/main/LICENSE.TXT"
     },
     "notes": [
-        "You can now remove this installer with 'scoop uninstall dotnet-desktop-runtime-5.0'.",
+        "You can now remove this installer with 'scoop uninstall dotnet-desktop-runtime-5'.",
         "This package includes the .NET Runtime, you don't need to install it separately."
     ],
     "architecture": {

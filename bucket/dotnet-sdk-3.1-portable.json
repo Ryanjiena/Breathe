@@ -1,0 +1,45 @@
+{
+    "version": "3.1.424",
+    "description": "Microsoft .NET Core 3.1 SDK. The software development kit (SDK) includes everything you need to build and run .NET applications, using command-line tools and any editor (like Visual Studio).",
+    "homepage": "https://dotnet.microsoft.com",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/dotnet/core/raw/main/LICENSE.TXT"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.visualstudio.microsoft.com/download/pr/9b930aa2-b70d-4282-a6dd-e20977b734f5/8ef0e5bdc1c35df7f43a4eec16b5d916/dotnet-sdk-3.1.424-win-x64.zip",
+            "hash": "sha512:4cd515176fa6b0a737715fd4e50dec7ae18b44c6bee3dd4d498149a8846b9094031394886bfa634db0d4bfd2e239ce4392e01b9b270a59cce65df9422e982372"
+        },
+        "32bit": {
+            "url": "https://download.visualstudio.microsoft.com/download/pr/8a85b5d2-7bb4-4cfe-be6b-2379bb218d1f/f95ffa6165dc8a8aea0f2fe81c4d60ee/dotnet-sdk-3.1.424-win-x86.zip",
+            "hash": "sha512:6e39e6de6fa4539bd5cdcc31615ff38111affcd97db098789732f25c70ea6162572434e617443753092a4fc5dc395535c3fc492371cb507454f2c4cb5a7c6548"
+        }
+    },
+    "bin": "dotnet.exe",
+    "env_add_path": ".",
+    "env_set": {
+        "DOTNET_ROOT": "$dir",
+        "MSBuildSDKsPath": "$dir\\sdk\\$version\\Sdks"
+    },
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/3.1/releases.json",
+        "jsonpath": "$.releases[0].sdk",
+        "regex": "(?sm)version.*?([\\d.]+).*?runtime-version\": \"(?<runtimever>[\\d.]+).+download/pr/(?<x64>.*?-win-x64.zip).+download/pr/(?<x86>.*?-win-x86.zip)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.visualstudio.microsoft.com/download/pr/$matchX64"
+            },
+            "32bit": {
+                "url": "https://download.visualstudio.microsoft.com/download/pr/$matchX86"
+            }
+        },
+        "hash": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$matchRuntimever-sha.txt",
+            "mode": "extract",
+            "regex": "(?sm)$sha512\\s+$basename"
+        }
+    }
+}

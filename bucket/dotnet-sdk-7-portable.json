@@ -1,0 +1,48 @@
+{
+    "version": "7.0.100-rc.2.22477.23",
+    "description": "Microsoft .NET 7 SDK. The software development kit (SDK) includes everything you need to build and run .NET applications, using command-line tools and any editor (like Visual Studio).",
+    "homepage": "https://dotnet.microsoft.com",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/dotnet/core/raw/main/LICENSE.TXT"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.visualstudio.microsoft.com/download/pr/49b8a5b8-baca-4711-b24d-11c9b9840f95/e764347d9a2a1668db104034b01017e3/dotnet-sdk-7.0.100-rc.2.22477.23-win-x64.zip",
+            "hash": "sha512:c8ffb96bc127e394bbc6eacae5771976cb9c924db94534026c7f04a7bc7b322f8212d9789ccbf05893378be193d2bbc560050bdbb3335e6ab3e141eaf470a380"
+        },
+        "32bit": {
+            "url": "https://download.visualstudio.microsoft.com/download/pr/d0114a9c-5b5a-4af7-aa63-076f318ad181/e13facbfca6798141e1c67ae0c83f8d1/dotnet-sdk-7.0.100-rc.2.22477.23-win-x86.zip",
+            "hash": "sha512:cc02bd858ecbeb623fa3e8283d0ed081c5a835dd10405f33cfdbfee3643c1cd84dc77a3c67fa4a1dee76e70c851130de84064c44d5b35e5104f7ae39bc32c31c"
+        }
+    },
+    "bin": "dotnet.exe",
+    "env_add_path": ".",
+    "env_set": {
+        "DOTNET_ROOT": "$dir",
+        "MSBuildSDKsPath": "$dir\\sdk\\$version\\Sdks"
+    },
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/7.0/releases.json",
+        "jsonpath": "$.releases[0].sdk",
+        "regex": "(?sm)version.*?([\\w-.]+).+download/pr/(?<x64>.*?-win-x64.zip).+download/pr/(?<x86>.*?-win-x86.zip)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.visualstudio.microsoft.com/download/pr/$matchX64",
+                "hash": {
+                    "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/7.0/releases.json",
+                    "jsonpath": "$.releases[0].sdk.files[?(@.name == 'dotnet-sdk-win-x64.zip')].hash"
+                }
+            },
+            "32bit": {
+                "url": "https://download.visualstudio.microsoft.com/download/pr/$matchX86",
+                "hash": {
+                    "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/7.0/releases.json",
+                    "jsonpath": "$.releases[0].sdk.files[?(@.name == 'dotnet-sdk-win-x86.zip')].hash"
+                }
+            }
+        }
+    }
+}
