@@ -1,5 +1,5 @@
 {
-    "version": "10.8.2.703",
+    "version": "10.8.3.704",
     "description": "Wise Registry Cleaner 3rd party modified version, maintained by ghxi.com.",
     "homepage": "https://www.wisecleaner.com/wise-registry-cleaner.html",
     "license": {
@@ -7,9 +7,9 @@
         "url": "https://www.wisecleaner.com/eula.html"
     },
     "notes": "Features: <https://www.ghxi.com/wiseregcleaner.html>",
-    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/WiseRegistryCleaner_10.8.2.703_Green.7z",
-    "hash": "33ba30752b9e0e6821086cb308d3b986be69595917f1006bfd7ab52db6574455",
-    "extract_dir": "WiseRegistryCleaner_10.8.2.703_Green",
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/zd423/WiseRegistryCleaner_10.8.3.704_Green.7z",
+    "hash": "8ee289000110d18b209b4cdb3bc883d1846bb2464f5e7e1cadea47ef546386f4",
+    "extract_dir": "WiseRegistryCleaner_10.8.3.704_Green",
     "shortcuts": [
         [
             "WiseRegCleaner.exe",

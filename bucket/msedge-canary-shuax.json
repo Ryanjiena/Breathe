@@ -1,5 +1,5 @@
 {
-    "version": "108.0.1436.0",
+    "version": "108.0.1437.0",
     "description": "msedge-canary + msedge-plus.",
     "homepage": "https://www.microsoft.com/en-us/edge",
     "license": {
@@ -10,11 +10,11 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-apps.vercel.app/msedge-canary-win-X64#/dl.7z",
-            "hash": "19ab120f989e5f331a0b24145b02ca9b5bb232b4501cf5456695eab41648b53c"
+            "hash": "77444e55c11ded75b07cf6122a6ec7ade38f3d26f5602548c1fdb192304b8ea9"
         },
         "32bit": {
             "url": "https://scoop-apps.vercel.app/msedge-canary-win-X86#/dl.7z",
-            "hash": "4d6d7f696068f58c81b785d8f118dcea02cd53f04c8d070d8ee40b92671007cb"
+            "hash": "5f3597148d2ad97f446e43648d96d86115b3d7867d4e8728461acf5bb4ce722a"
         }
     },
     "pre_install": [
