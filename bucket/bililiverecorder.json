@@ -1,23 +1,17 @@
 {
+    "homepage": "https://github.com/Bililive/BililiveRecorder",
+    "description": "BiliBili Stream Recorder",
+    "license": "GPL-3.0-only",
     "version": "2.5.0",
-    "description": "BiliBili Stream Recorder.",
-    "homepage": "https://rec.danmuji.org",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/Bililive/BililiveRecorder/blob/dev/LICENSE"
-    },
     "url": "https://github.com/Bililive/BililiveRecorder/releases/download/v2.5.0/BililiveRecorder-WPF-Portable.zip",
     "hash": "20b02d4eb4fb93b37de1e2f5b54c8658a0771699b8aad749f52af6cb5c9b9df8",
-    "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" -ItemType \"file\" -Value \"{}\" | Out-Null }",
     "shortcuts": [
         [
             "BililiveRecorder.WPF.exe",
             "BililiveRecorder"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/Bililive/BililiveRecorder"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Bililive/BililiveRecorder/releases/download/v$version/BililiveRecorder-WPF-Portable.zip"
     }
