@@ -1,13 +1,13 @@
-name: Meta Excavator
+name: Excavator
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 */4 * * *"
+    - cron: "0 */3 * * *"
 
 jobs:
-  excavate:
-    name: Excavate
+  meta:
+    name: Meta Excavator
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -58,11 +58,63 @@ jobs:
           & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
           Write-Host 'Scheduled finished'
 
+  lydia:
+    name: Lydia Excavator
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: "Ryanjiena/Lydia"
+          ref: "main"
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Excavator
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # SKIP_UPDATED: '1'
+        run: |
+          $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
+          $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
+          $env:SCOOP_GLOBAL = Join-Path $env:SystemDrive 'SCOOP'
+          $env:SCOOP_DEBUG = 1
+          $REPOSITORY = 'Ryanjiena/Lydia'
+          $BUCKET_ROOT = $env:GITHUB_WORKSPACE
+          $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
+          $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
+          $_BRANCH = 'main'
+          $email = '78083448+JaimeZeng@users.noreply.github.com'
+          $user = 'JaimeZeng[bot]'
+          $rem = "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/Ryanjiena/Lydia.git"
+          Write-Host "Config git"
+          git config --global user.name $user
+          git config --global user.email $email
+          git remote 'set-url' --push origin $rem
+          Write-Host 'Installing scoop'
+          $f = Join-Path $env:USERPROFILE 'install.ps1'
+          Invoke-WebRequest 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' -UseBasicParsing -OutFile $f
+          & $f -RunAsAdmin
+          Write-Host 'Importing all modules'
+          # Load all scoop's modules.
+          # Dot sourcing needs to be done on highest scope possible to propagate into lower scopes
+          Get-ChildItem (Join-Path $env:SCOOP_HOME 'lib') '*.ps1' | ForEach-Object { . $_.FullName }
+          $params = @{
+              'Dir'          = $MANIFESTS_LOCATION
+              'Upstream'     = "${REPOSITORY}:${_BRANCH}"
+              'OriginBranch' = $_BRANCH
+              'Push'         = $true
+              'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
+          }
+          $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
+          # Set-PSDebug -Trace 2
+          Write-Host ''
+          Write-Host ''
+          & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
+          Write-Host 'Scheduled finished'
+
   git-sync:
     name: Sync
+    needs: [meta,lydia]
     runs-on: ubuntu-latest
     if: ${{ always() }}
-    needs: excavate
     steps:
       - name: Import ssh private key
         run: |
@@ -87,6 +139,7 @@ jobs:
           git config --global user.email "43134606+Ryanjiena@users.noreply.github.com"
           git config --global user.name "Ryanjiena"
           git clone -q --depth=1 --branch="main" "https://Ryanjiena:${github_token}@github.com/Ryanjiena/Meta.git" "${TMP_DIR}/meta"
+          git clone -q --depth=1 --branch="main" "https://Ryanjiena:${github_token}@github.com/Ryanjiena/Lydia.git" "${TMP_DIR}/lydia"
 
           git config --global user.name "Ryanjie"
           git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
@@ -95,24 +148,28 @@ jobs:
           # ssh-keygen -R jihulab.com
           ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
           git clone -q --depth=1 git@jihulab.com:Ryanjie/Meta.git "${TMP_DIR}/meta-cn"
+          git clone -q --depth=1 git@jihulab.com:Ryanjie/Lydia.git "${TMP_DIR}/lydia-cn"
 
-          cd "${TMP_DIR}/meta-cn/"
-          if [ -d "bucket" ]; then
-              rm -rf bin bucket scripts
-          fi
-          mkdir bin bucket scripts
+          bucket_arr=("meta" "lydia")
+          for bucket in "${bucket_arr[@]}"; do
+              cd "${TMP_DIR}/${bucket}-cn/"
+              if [ -d "bucket" ]; then
+                  rm -rf bin bucket scripts
+              fi
+              mkdir bin bucket scripts
 
-          cp ${TMP_DIR}/meta/bin/* ${TMP_DIR}/meta-cn/bin/ -f
-          cp ${TMP_DIR}/meta/bucket/* ${TMP_DIR}/meta-cn/bucket/ -f
-          cp ${TMP_DIR}/meta/scripts/* ${TMP_DIR}/meta-cn/scripts/ -r -f
-          cp ${TMP_DIR}/meta/README.md ${TMP_DIR}/meta-cn/README.md -f
-
-          cd ${TMP_DIR}/meta-cn/
-          if [ "$(git status -sb)" == "## main...origin/main" ];then
-            echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
-          else
-            git status -s && git pull origin main && git add . && git commit -m "Sync by: ${USER}, at: ${DATE}" && git push origin main
-          fi
+              cp ${TMP_DIR}/${bucket}/bin/* ${TMP_DIR}/${bucket}-cn/bin/ -f
+              cp ${TMP_DIR}/${bucket}/bucket/* ${TMP_DIR}/${bucket}-cn/bucket/ -f
+              cp ${TMP_DIR}/${bucket}/scripts/* ${TMP_DIR}/${bucket}-cn/scripts/ -r -f
+              cp ${TMP_DIR}/${bucket}/README.md ${TMP_DIR}/${bucket}-cn/README.md -f
+            
+              cd ${TMP_DIR}/${bucket}-cn/
+              if [ "$(git status -sb)" == "## main...origin/main" ];then
+                echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
+              else
+                git status -s && git pull origin main && git add . && git commit -m "Sync by: ${USER}, at: ${DATE}" && git push origin main
+              fi
+          done
 
       - name: Remove ssh private key
         run: rm -f ~/.ssh/id_rsa
