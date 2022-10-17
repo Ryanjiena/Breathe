@@ -20,7 +20,7 @@
         "if ($architecture -eq '32bit') { $bit = '32' }",
         "'install-pep-514.reg', 'uninstall-pep-514.reg' | ForEach-Object {",
         "    $py_version = ($version -split '\\.')[0..1] -join '.'",
-        "    $content = Get-Content \"$bucketsdir\\tian\\scripts\\python\\$_\"",
+        "    $content = Get-Content \"$bucketsdir\\breathe\\scripts\\python\\$_\"",
         "    $content = $content.Replace('$py_root', $py_root)",
         "    $content = $content.Replace('$py_version', $py_version)",
         "    $content = $content.Replace('$py_fullversion', $version)",

@@ -10,7 +10,7 @@
     "url": "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_15629-20208.exe#/dl.7z_",
     "hash": "6cd3cfa4135fb2c89aef874cbbed689d938317089b67dc4286154ef252d38fcf",
     "pre_install": [
-        "$scriptdir = \"$bucketsdir\\tian\\scripts\"",
+        "$scriptdir = \"$bucketsdir\\breathe\\scripts\"",
         "if ($architecture -eq '64bit') {",
         "     Copy-Item \"$scriptdir\\install-office-365-apps.xml\" \"$dir\\\"",
         "}",

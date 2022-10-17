@@ -32,8 +32,8 @@
     "post_install": [
         "$dir_escaped = \"$dir\".Replace('\\', '\\\\')",
         "\"install-context-$architecture\", \"uninstall-context\" | ForEach-Object {",
-        "  if (Test-Path \"$bucketsdir\\tian\\scripts\\beyondcompare\\$_.reg\") {",
-        "    $content = Get-Content \"$bucketsdir\\tian\\scripts\\beyondcompare\\$_.reg\"",
+        "  if (Test-Path \"$bucketsdir\\breathe\\scripts\\beyondcompare\\$_.reg\") {",
+        "    $content = Get-Content \"$bucketsdir\\breathe\\scripts\\beyondcompare\\$_.reg\"",
         "    $content = $content.Replace('$install_dir', $dir_escaped)",
         "    if ($global) {",
         "      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",

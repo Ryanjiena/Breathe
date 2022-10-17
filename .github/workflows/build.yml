@@ -34,7 +34,7 @@ jobs:
 
           DATE="$(echo $(TZ=UTC date '+%Y-%m-%d %H:%M:%S'))"
           USER=$(whoami)
-          TMP_DIR="${TMP_DIR:-$(mktemp -d /tmp/tian.XXXX)}"
+          TMP_DIR="${TMP_DIR:-$(mktemp -d /tmp/breathe.XXXX)}"
           LOG_FILE="${LOG_FILE:-${TMP_DIR}/build.log}"
           head_start="<\!--ts-->"
           head_end="<\!--te-->"
@@ -52,8 +52,8 @@ jobs:
 
           # init
           function init() {
-              git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/tian.git "${TMP_DIR}/tian"
-              cd "${TMP_DIR}/tian/"
+              git clone -q --depth=1 --branch="main" https://Ryanjiena:${github_token}@github.com/Ryanjiena/breathe.git "${TMP_DIR}/breathe"
+              cd "${TMP_DIR}/breathe/"
               if [ -d "bucket" ]; then
                   rm -rf bin bucket scripts
               fi
@@ -80,31 +80,31 @@ jobs:
                   # date; for filename in *.json; do mv "${filename}" "${filename%.json}_${repo_name}.json"; done; date
                   # rename "s/\.json$/_${repo_name}.json/" *json
                   rename 'y/A-Z/a-z/' *json
-                  sed -i "s|bucketsdir\\\\\\\\${repo_name}\\\\\\\\scripts|bucketsdir\\\\\\\\tian\\\\\\\\scripts|g" *json
+                  sed -i "s|bucketsdir\\\\\\\\${repo_name}\\\\\\\\scripts|bucketsdir\\\\\\\\breathe\\\\\\\\scripts|g" *json
 
                   # copy bucket/scripts folder
                   cd "${TMP_DIR}/${repo_name}"
-                  cp bucket ${TMP_DIR}/tian/ -r -n
+                  cp bucket ${TMP_DIR}/breathe/ -r -n
                   if [ -d "scripts" ]; then
-                    cp scripts ${TMP_DIR}/tian/ -r -n
+                    cp scripts ${TMP_DIR}/breathe/ -r -n
                   fi
                 done
-              # copy bin folder to tian
-              cp ${TMP_DIR}/main/bin ${TMP_DIR}/tian/ -r -n
+              # copy bin folder to breathe
+              cp ${TMP_DIR}/main/bin ${TMP_DIR}/breathe/ -r -n
               # replace head
-              sed -i "/${head_start}/,/${head_end}/{//!d;}" "${TMP_DIR}/tian/README.md"
+              sed -i "/${head_start}/,/${head_end}/{//!d;}" "${TMP_DIR}/breathe/README.md"
               echo -e "${manifest_badge}" >"${TMP_DIR}/head.md"
-              sed -i "/${head_start}/r ${TMP_DIR}/head.md" "${TMP_DIR}/tian/README.md"
+              sed -i "/${head_start}/r ${TMP_DIR}/head.md" "${TMP_DIR}/breathe/README.md"
           }
 
           # commit and push
           function commit() {
               # remove cracked
-              cd "${TMP_DIR}/tian/bucket"
+              cd "${TMP_DIR}/breathe/bucket"
               # grep -l "pan.jiemi.workers.dev" *.json | xargs -I {} rm {}
 
               # push
-              cd "${TMP_DIR}/tian"
+              cd "${TMP_DIR}/breathe"
               if [ "$(git status -sb)" == "## main...origin/main" ];then
                 echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
               else
@@ -117,21 +117,21 @@ jobs:
               git config --global user.name "Ryanjie"
               git config --global user.email "4646-Ryanjie@users.noreply.test50k.gitlab.cn"
               git config --global core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa"
-              git clone -q --depth=1 git@jihulab.com:Ryanjie/Tian.git "${TMP_DIR}/tian-cn"
+              git clone -q --depth=1 git@jihulab.com:Ryanjie/Breathe.git "${TMP_DIR}/breathe-cn"
 
-              cd ${TMP_DIR}/tian/bucket/
+              cd ${TMP_DIR}/breathe/bucket/
               # sed -i 's|\(https://github.com/.*/releases/download\)|https://ghproxy.com/\1|g;s|\(https://github.com/.*/archive\)|https://ghproxy.com/\1|g;s|\(https://raw.githubusercontent.com/\)|https://ghproxy.com/\1|g' *json
 
-              cd ${TMP_DIR}/tian-cn/
+              cd ${TMP_DIR}/breathe-cn/
               if [ -d "bucket" ]; then
                   rm -rf bin bucket scripts
               fi
               mkdir bin bucket scripts
 
-              cp ${TMP_DIR}/tian/bin ${TMP_DIR}/tian-cn/ -r -n
-              cp ${TMP_DIR}/tian/bucket ${TMP_DIR}/tian-cn/ -r -n
-              cp ${TMP_DIR}/tian/scripts ${TMP_DIR}/tian-cn/ -r -n
-              cp ${TMP_DIR}/tian/README.md ${TMP_DIR}/tian-cn -r -n
+              cp ${TMP_DIR}/breathe/bin ${TMP_DIR}/breathe-cn/ -r -n
+              cp ${TMP_DIR}/breathe/bucket ${TMP_DIR}/breathe-cn/ -r -n
+              cp ${TMP_DIR}/breathe/scripts ${TMP_DIR}/breathe-cn/ -r -n
+              cp ${TMP_DIR}/breathe/README.md ${TMP_DIR}/breathe-cn -r -n
 
               if [ "$(git status -sb)" == "## main...origin/main" ];then
                 echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"

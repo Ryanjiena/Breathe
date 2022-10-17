@@ -10,7 +10,7 @@
     "hash": "f83f457a257e45793c4eccfdadcb96148bc79655b51886481cb91e1fce8d3808",
     "extract_to": "IDE",
     "installer": {
-        "script": "& \"$bucketsdir\\tian\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
+        "script": "& \"$bucketsdir\\breathe\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
     },
     "architecture": {
         "64bit": {

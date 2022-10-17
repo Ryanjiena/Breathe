@@ -1,4 +1,4 @@
-# Breathe [![Build](https://github.com/Ryanjiena/Tian/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/Ryanjiena/Tian/actions/workflows/build.yml) [![Visitors](https://komarev.com/ghpvc/?username=ryanjiena&color=brightgreen&style=flat&label=Visitors)](https://github.com/Ryanjiena/Ryanjiena)
+# Breathe [![Build](https://github.com/Ryanjiena/Breathe/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/Ryanjiena/Breathe/actions/workflows/build.yml) [![Visitors](https://komarev.com/ghpvc/?username=ryanjiena&color=brightgreen&style=flat&label=Visitors)](https://github.com/Ryanjiena/Ryanjiena)
 
 <details>
 <summary>Personnal bucket for scoop.</summary>
@@ -22,6 +22,6 @@
 </details>
 
 ```bash
-scoop bucket add tian https://github.com/Ryanjiena/Tian.git
-scoop bucket add tian-cn https://jihulab.com/Ryanjie/Tian.git
+scoop bucket add breathe https://github.com/Ryanjiena/Breathe.git
+scoop bucket add breathe-cn https://jihulab.com/Ryanjie/Breathe.git
 ```

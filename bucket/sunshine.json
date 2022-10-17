@@ -25,8 +25,8 @@
         "}",
         "",
         "# https://github.com/LizardByte/Sunshine/issues/197",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\sunshine\\install-service.bat\" \"$dir\" | Out-Null",
-        "Copy-Item \"$bucketsdir\\tian\\scripts\\sunshine\\uninstall-service.bat\" \"$dir\" | Out-Null"
+        "Copy-Item \"$bucketsdir\\breathe\\scripts\\sunshine\\install-service.bat\" \"$dir\" | Out-Null",
+        "Copy-Item \"$bucketsdir\\breathe\\scripts\\sunshine\\uninstall-service.bat\" \"$dir\" | Out-Null"
     ],
     "bin": [
         "sunshine.bat",
