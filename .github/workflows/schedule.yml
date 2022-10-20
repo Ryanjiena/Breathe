@@ -9,6 +9,7 @@ jobs:
   meta:
     name: Meta Excavator
     runs-on: windows-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v3
         with:
