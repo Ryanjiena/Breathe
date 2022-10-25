@@ -19,7 +19,7 @@ jobs:
       - name: Excavator
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          # SKIP_UPDATED: '1'
+          SKIP_UPDATED: '1'
         run: |
           $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
           $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
@@ -53,7 +53,7 @@ jobs:
               'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
           }
           $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
-          # Set-PSDebug -Trace 2
+          Set-PSDebug -Trace 2
           Write-Host ''
           Write-Host ''
           & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
@@ -71,7 +71,7 @@ jobs:
       - name: Excavator
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          # SKIP_UPDATED: '1'
+          SKIP_UPDATED: '1'
         run: |
           $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
           $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
