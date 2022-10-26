@@ -16,6 +16,12 @@ jobs:
           repository: "Ryanjiena/Meta"
           ref: "main"
           token: ${{ secrets.GH_TOKEN }}
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY_SECRET }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
       - name: Excavator
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -53,7 +59,7 @@ jobs:
               'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
           }
           $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
-          Set-PSDebug -Trace 2
+          # Set-PSDebug -Trace 2
           Write-Host ''
           Write-Host ''
           & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
@@ -68,6 +74,12 @@ jobs:
           repository: "Ryanjiena/Lydia"
           ref: "main"
           token: ${{ secrets.GH_TOKEN }}
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY_SECRET }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
       - name: Excavator
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -136,7 +148,7 @@ jobs:
           USER=$(whoami)
           TMP_DIR="${TMP_DIR:-$(mktemp -d /tmp/breathe.XXXX)}"
           LOG_FILE="${LOG_FILE:-${TMP_DIR}/build.log}"
-          
+
           git config --global user.email "43134606+Ryanjiena@users.noreply.github.com"
           git config --global user.name "Ryanjiena"
           git clone -q --depth=1 --branch="main" "https://Ryanjiena:${github_token}@github.com/Ryanjiena/Meta.git" "${TMP_DIR}/meta"
@@ -163,7 +175,7 @@ jobs:
               cp ${TMP_DIR}/${bucket}/bucket/* ${TMP_DIR}/${bucket}-cn/bucket/ -f
               cp ${TMP_DIR}/${bucket}/scripts/* ${TMP_DIR}/${bucket}-cn/scripts/ -r -f
               cp ${TMP_DIR}/${bucket}/README.md ${TMP_DIR}/${bucket}-cn/README.md -f
-            
+
               cd ${TMP_DIR}/${bucket}-cn/
               if [ "$(git status -sb)" == "## main...origin/main" ];then
                 echo -e "\033[42;30m nothing to commit, working tree clean~ \033[0m"
@@ -174,4 +186,4 @@ jobs:
 
       - name: Remove ssh private key
         run: rm -f ~/.ssh/id_rsa
-        
+

@@ -23,6 +23,12 @@ jobs:
           # https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository/13364116#13364116
           # ssh-keygen -R jihulab.com
           ssh-keyscan -t rsa jihulab.com >> ~/.ssh/known_hosts
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
       - name: "Build"
         env:
           github_token: ${{ secrets.GH_TOKEN }}
