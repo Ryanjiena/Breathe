@@ -23,5 +23,5 @@
 
 ```bash
 scoop bucket add breathe https://github.com/Ryanjiena/Breathe.git
-scoop bucket add breathe-cn https://jihulab.com/Ryanjie/Breathe.git
+#scoop bucket add breathe https://jihulab.com/Ryanjie/Breathe.git
 ```
