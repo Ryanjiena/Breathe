@@ -64,7 +64,7 @@ jobs:
           git push origin main
 
       - name: Checkout Meta
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: "Ryanjiena/Meta"
           ref: "main"
