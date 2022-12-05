@@ -101,48 +101,74 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY_SECRET }}
           git_user_signingkey: true
           git_commit_gpgsign: true
-      - name: Excavator
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          SKIP_UPDATED: "1"
+      - name: Intstall Scoop
         run: |
           $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
           $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
           $env:SCOOP_GLOBAL = Join-Path $env:SystemDrive 'SCOOP'
           $env:SCOOP_DEBUG = 1
-          $REPOSITORY = 'Ryanjiena/Meta'
-          $BUCKET_ROOT = $env:GITHUB_WORKSPACE
-          $BINARIES_FOLDER = Join-Path $env:SCOOP_HOME 'bin'
-          $MANIFESTS_LOCATION = Join-Path $BUCKET_ROOT 'bucket'
-          $_BRANCH = 'main'
-          $email = '78083448+JaimeZeng@users.noreply.github.com'
-          $user = 'JaimeZeng[bot]'
-          $rem = "https://${env:GITHUB_ACTOR}:$env:GITHUB_TOKEN@github.com/Ryanjiena/Meta.git"
-          Write-Host "Config git"
-          git config --global user.name $user
-          git config --global user.email $email
-          git remote 'set-url' --push origin $rem
-          Write-Host 'Installing scoop'
+
           $f = Join-Path $env:USERPROFILE 'install.ps1'
           Invoke-WebRequest 'https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1' -UseBasicParsing -OutFile $f
           & $f -RunAsAdmin
-          Write-Host 'Importing all modules'
-          # Load all scoop's modules.
-          # Dot sourcing needs to be done on highest scope possible to propagate into lower scopes
+      - name: Import all modules
+        run: |
+          $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
+          $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
+
           Get-ChildItem (Join-Path $env:SCOOP_HOME 'lib') '*.ps1' | ForEach-Object { . $_.FullName }
-          $params = @{
-              'Dir'          = $MANIFESTS_LOCATION
-              'Upstream'     = "${REPOSITORY}:${_BRANCH}"
-              'OriginBranch' = $_BRANCH
-              'Push'         = $true
-              'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
-          }
+      - name: Checkver
+        env:
+          USER_EMAIL: 78083448+JaimeZeng@users.noreply.github.com
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
           $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
-          # Set-PSDebug -Trace 2
-          Write-Host ''
-          Write-Host ''
-          & (Join-Path $BINARIES_FOLDER 'auto-pr.ps1') @params
-          Write-Host 'Scheduled finished'
+          $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
+          $env:SCOOP_HOME = Join-Path $env:SCOOP 'apps\scoop\current'
+          $MANIFESTS_LOCATION = Join-Path $env:GITHUB_WORKSPACE 'bucket'
+
+          New-Item -Name "temp" -ItemType "directory"
+          (Get-ChildItem -Path bucket | Where-Object { $_.Name -match "\s*-(aliyun|huawei|nju|sdu|sjtug|tencent|tuna).json" }).Name | ForEach-Object { Move-Item .\bucket\$_ .\temp }
+          Move-Item ./bucket/flutter-cn.json ./temp
+          & "$env:SCOOP_HOME/bin/checkver.ps1" -Dir "$MANIFESTS_LOCATION" -Update -SkipUpdated
+      - name: Commit
+        run: |
+          function parse_json($path) {
+              if ($null -eq $path -or !(Test-Path $path)) { return $null }
+              try {
+                  Get-Content $path -Raw -Encoding UTF8 | ConvertFrom-Json -ErrorAction Stop
+              } catch {
+                  warn "Error parsing JSON at $path."
+              }
+          }
+
+          git pull origin main
+          git diff --name-only | ForEach-Object {
+              $manifest = $_
+              if (!$manifest.EndsWith('.json')) {
+                  return
+              }
+
+              $app = ([System.IO.Path]::GetFileNameWithoutExtension($manifest))
+              $json = parse_json $manifest
+              if (!$json.version) {
+                  Get-Error "Invalid manifest: $manifest ..."
+                  return
+              }
+              $version = $json.version
+
+              git add $manifest
+              $status = (git status --porcelain -uno)
+              $status = $status | Where-Object { $_ -match "M\s{2}.*$app.json" }
+              if ($status -and $status.StartsWith('M  ') -and $status.EndsWith("$app.json")) {
+                  git commit -m "${app}: Update version to ${version}"
+              } else {
+                  Write-Host "Skipping $app because only LF/CRLF changes were detected ..."
+              }
+          }
+          Move-Item ./temp/*.json ./bucket/
+          Remove-Item ./temp -Recurse -Force
+          git push origin main
 
   # lydia:
   #   name: Lydia Excavator
