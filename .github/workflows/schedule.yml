@@ -276,7 +276,7 @@ jobs:
               fi
               mkdir bin bucket scripts
 
-              cp ${TMP_DIR}/${bucket}/bin/* ${TMP_DIR}/${bucket}-cn/bin/ -f
+              cp ${TMP_DIR}/${bucket}/bin/* ${TMP_DIR}/${bucket}-cn/bin/ -r -f
               cp ${TMP_DIR}/${bucket}/bucket/* ${TMP_DIR}/${bucket}-cn/bucket/ -f
               cp ${TMP_DIR}/${bucket}/scripts/* ${TMP_DIR}/${bucket}-cn/scripts/ -r -f
               cp ${TMP_DIR}/${bucket}/README.md ${TMP_DIR}/${bucket}-cn/README.md -f
