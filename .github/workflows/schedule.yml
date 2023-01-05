@@ -23,6 +23,8 @@ jobs:
         run: |
           git config --global user.email "43134606+Ryanjiena@users.noreply.github.com"
           git config --global user.name "Ryanjiena"
+          git config --global core.autocrlf input
+          git config --global safecrlf false
       - name: Import GPG key
         uses: crazy-max/ghaction-import-gpg@v5
         with:
@@ -84,6 +86,8 @@ jobs:
           git commit -S -am "build: update packages [$(date "+%Y%m%d %H%M%S")]"
           cd ./bin/ || exit
           sed -i 's/\r$//' generate-manifests.sh && bash generate-manifests.sh
+          git pull origin main
+          git push origin main
 
   meta:
     name: Meta Excavator
