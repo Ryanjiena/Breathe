@@ -74,14 +74,16 @@ jobs:
       - name: Commit Meta
         run: |
           cd ./meta/
-          fileArr=("alibaba.json" "chrome.json" "header.json" "msedge-beta.json" "msedge-canary.json" "msedge-dev.json" "msedge-stable.json" "oneindex.txt" "release.txt")
+          fileArr=("alibaba.json" "header.json" "oneindex.txt")
           for file in ${fileArr[@]}
           do
             cp ../metaversion/$file ./versions/$file
           done
 
-          git commit -S -am "🐳(chore): update versions"
-          git push origin main
+          cp ../metaversion/packages/* ./versions/ -f
+          git commit -S -am "build: update packages [$(date "+%Y%m%d %H%M%S")]"
+          cd ./bin/ || exit
+          sed -i 's/\r$//' generate-manifests.sh && bash generate-manifests.sh
 
   meta:
     name: Meta Excavator
