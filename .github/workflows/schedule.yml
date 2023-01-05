@@ -84,10 +84,10 @@ jobs:
 
           cp ../metaversion/packages/* ./versions/ -f
           git commit -S -am "build: update packages [$(date "+%Y%m%d %H%M%S")]"
+          git push origin main
+
           cd ./bin/ || exit
           sed -i 's/\r$//' generate-manifests.sh && bash generate-manifests.sh
-          git pull origin main
-          git push origin main
 
   meta:
     name: Meta Excavator
