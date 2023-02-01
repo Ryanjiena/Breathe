@@ -1,10 +1,10 @@
 {
     "version": "3.2.20220510",
-    "description": "dotMemory Unit. Unit Testing Framework for Monitoring .NET Memory Usage by JetBrains",
-    "homepage": "https://www.jetbrains.com/dotmemory/unit/",
+    "description": "JetBrains dotMemory unit testing framework for testing .NET memory issues.",
+    "homepage": "https://www.jetbrains.com/dotmemory/unit",
     "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.jetbrains.com/legal/agreements/user.html"
+        "identifier": "Freeware",
+        "url": "https://www.jetbrains.com/legal/docs/toolbox/user/"
     },
     "suggest": {
         "NUnit Console runner": "nunit-console"
