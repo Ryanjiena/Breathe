@@ -1,38 +1,37 @@
 {
     "version": "2022.3.2-223.8617.54",
-    "description": "CLion. Cross-Platform IDE for C and C++ by JetBrains.",
+    "description": "Cross-Platform IDE for C and C++ by JetBrains.",
     "homepage": "https://www.jetbrains.com/cpp/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "changelog": "https://www.jetbrains.com/clion/whatsnew/",
     "architecture": {
         "64bit": {
-            "url": "https://download.jetbrains.com/cpp/CLion-2022.3.2.exe#/cosi.7z",
-            "hash": "93ba3075646213804e065b0a88f90b9b27f0853a755248a4ae6e96328e6b4da0"
-        },
-        "arm64": {
-            "url": "https://download.jetbrains.com/cpp/CLion-2022.3.2-aarch64.exe#/cosi.7z",
-            "hash": "e8442e2f81e9bcdd056e7057a0bcd22185995c2aeee608f4491073fc4ddbaff9"
+            "url": "https://download.jetbrains.com/cpp/CLion-2022.3.2.win.zip",
+            "hash": "bc99e5a2753216f9cf136b660cfc1c11a3aa6b944c3617ad47ffdd9cbde1142a",
+            "bin": [
+                [
+                    "IDE\\bin\\clion64.exe",
+                    "clion"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "IDE\\bin\\clion64.exe",
+                    "JetBrains\\CLion"
+                ]
+            ]
         }
     },
     "extract_to": "IDE",
-    "pre_install": "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse",
-    "bin": [
-        "IDE\\bin\\clion64.exe",
-        [
-            "IDE\\bin\\clion64.exe",
-            "clion"
-        ]
+    "installer": {
+        "script": "& \"$bucketsdir\\breathe\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"
+    },
+    "persist": [
+        "IDE\\bin\\idea.properties",
+        "profile"
     ],
-    "shortcuts": [
-        [
-            "IDE\\bin\\clion64.exe",
-            "JetBrains\\CLion"
-        ]
-    ],
-    "persist": "IDE\\bin\\idea.properties",
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&platform=zip&type=release",
         "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
@@ -41,10 +40,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.jetbrains.com/cpp/CLion-${matchHead}.exe#/cosi.7z"
-            },
-            "arm64": {
-                "url": "https://download.jetbrains.com/cpp/CLion-${matchHead}-aarch64.exe#/cosi.7z"
+                "url": "https://download.jetbrains.com/cpp/CLion-$matchHead.win.zip"
             }
         },
         "hash": {
