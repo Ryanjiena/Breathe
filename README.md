@@ -6,7 +6,7 @@
 <!--ts-->
 | Bucket | Manifest |
 | :--- | :--- |
- | [Ash258/Scoop-JetBrains](https://github.com/Ash258/Scoop-JetBrains.git) | [![Ash258/Scoop-JetBrains badge](https://img.shields.io/static/v1?label=Ash258/Scoop-JetBrains&message=63&color=green)](https://github.com/Ash258/Scoop-JetBrains.git) |
+ | [Ash258/Scoop-JetBrains](https://github.com/Ash258/Scoop-JetBrains.git) | [![Ash258/Scoop-JetBrains badge](https://img.shields.io/static/v1?label=Ash258/Scoop-JetBrains&message=49&color=green)](https://github.com/Ash258/Scoop-JetBrains.git) |
  | [jonz94/scoop-sarasa-nerd-fonts](https://github.com/jonz94/scoop-sarasa-nerd-fonts.git) | [![jonz94/scoop-sarasa-nerd-fonts badge](https://img.shields.io/static/v1?label=jonz94/scoop-sarasa-nerd-fonts&message=49&color=green)](https://github.com/jonz94/scoop-sarasa-nerd-fonts.git) |
  | [kodybrown/scoop-nirsoft](https://github.com/kodybrown/scoop-nirsoft.git) | [![kodybrown/scoop-nirsoft badge](https://img.shields.io/static/v1?label=kodybrown/scoop-nirsoft&message=271&color=green)](https://github.com/kodybrown/scoop-nirsoft.git) |
  | [matthewjberger/scoop-nerd-fonts](https://github.com/matthewjberger/scoop-nerd-fonts.git) | [![matthewjberger/scoop-nerd-fonts badge](https://img.shields.io/static/v1?label=matthewjberger/scoop-nerd-fonts&message=214&color=green)](https://github.com/matthewjberger/scoop-nerd-fonts.git) |

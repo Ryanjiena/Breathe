@@ -1,6 +1,6 @@
 {
     "version": "2022.3-223.7571.17",
-    "description": "DataSpell Early Access Program. Cross-Platform IDE for Data Scientists by JetBrains.",
+    "description": "Cross-Platform IDE for Data Scientists by JetBrains. (Early Access Program)",
     "homepage": "https://www.jetbrains.com/dataspell/",
     "license": {
         "identifier": "Proprietary",
@@ -8,20 +8,26 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.jetbrains.com/python/dataspell-223.7571.17.exe#/cosi.7z",
-            "hash": "e61c4348f70d9791fb0a68cd44fd7cdf735ce8432cc68043859f9777de4b583c"
-        },
-        "arm64": {
-            "url": "https://download.jetbrains.com/python/dataspell-223.7571.17-aarch64.exe#/cosi.7z",
-            "hash": "e809687ae26b7542ee1ec94668f4460f9bce1a35dd138e2c5672a2cb00f7011e"
+            "url": "https://download.jetbrains.com/python/dataspell-223.7571.17.exe#/dl.7z",
+            "hash": "e61c4348f70d9791fb0a68cd44fd7cdf735ce8432cc68043859f9777de4b583c",
+            "shortcuts": [
+                [
+                    "IDE\\bin\\dataspell64.exe",
+                    "JetBrains\\DataSpell (Early Access Program)"
+                ]
+            ]
         }
     },
     "extract_to": "IDE",
-    "shortcuts": [
-        [
-            "IDE\\bin\\dataspell64.exe",
-            "JetBrains\\DataSpell (Early Access Program)"
+    "installer": {
+        "script": [
+            "& \"$bucketsdir\\breathe\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
+            "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
         ]
+    },
+    "persist": [
+        "IDE\\bin\\idea.properties",
+        "profile"
     ],
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=DS&latest=true&platform=zip&type=eap",
@@ -31,10 +37,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.jetbrains.com/python/dataspell-${preReleaseVersion}.exe#/cosi.7z"
-            },
-            "arm64": {
-                "url": "https://download.jetbrains.com/python/dataspell-${preReleaseVersion}-aarch64.exe#/cosi.7z"
+                "url": "https://download.jetbrains.com/python/dataspell-$preReleaseVersion.exe#/dl.7z"
             }
         },
         "hash": {
