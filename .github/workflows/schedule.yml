@@ -136,7 +136,12 @@ jobs:
           New-Item -Name "temp" -ItemType "directory"
           (Get-ChildItem -Path bucket | Where-Object { $_.Name -match "\s*-(aliyun|huawei|nju|sdu|sjtug|tencent|tuna).json" }).Name | ForEach-Object { Move-Item .\bucket\$_ .\temp }
           Move-Item ./bucket/flutter-cn.json ./temp
-          & "$env:SCOOP_HOME/bin/checkver.ps1" -Dir "$MANIFESTS_LOCATION" -Update -SkipUpdated
+          # & "$env:SCOOP_HOME/bin/checkver.ps1" -Dir "$MANIFESTS_LOCATION" -Update -SkipUpdated
+          Get-ChildItem "$MANIFESTS_LOCATION" '*.json' | ForEach-Object {
+              $basename = $_.BaseName
+              Write-Host "Checking $basename ..."
+              & "$env:SCOOP_HOME/bin/checkver.ps1" $basename "$MANIFESTS_LOCATION" -Update -SkipUpdated
+          }
       - name: Commit
         run: |
           function parse_json($path) {
