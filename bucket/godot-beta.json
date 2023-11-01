@@ -1,16 +1,16 @@
 {
-    "version": "4.2-beta2",
+    "version": "4.2-beta4",
     "description": "A feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface.",
     "homepage": "https://godotengine.org/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.tuxfamily.org/godotengine/4.2/beta2/Godot_v4.2-beta2_win64.exe.zip",
-            "hash": "sha512:bae4971ad7938684c786feae1a01a312ed780bfaaf36e8630c35637e6fc84a292579a6f1625eb5cb1769cc56aa8be2311a047b7fb34efddd81e9ea907a4c29c3"
+            "url": "https://downloads.tuxfamily.org/godotengine/4.2/beta4/Godot_v4.2-beta4_win64.exe.zip",
+            "hash": "sha512:3e18a9705adda187cc37ffcb3e3b89c12daabe5dd00f75c8855ed871be311bc777b799ddf23aef59cf4ae84e49814dfc7d10dc650dd9a28fc5c3721bb3334cff"
         },
         "32bit": {
-            "url": "https://downloads.tuxfamily.org/godotengine/4.2/beta2/Godot_v4.2-beta2_win32.exe.zip",
-            "hash": "sha512:5893f84c2e232cb2a5c44add547a70e70710524b5fb02f9870126e7ad45b1e7cb35a15e9f0474d23814d0d2c5bd6177dddecadecc08687f1a01bb341462ae13c"
+            "url": "https://downloads.tuxfamily.org/godotengine/4.2/beta4/Godot_v4.2-beta4_win32.exe.zip",
+            "hash": "sha512:03899aa48d3af49bfbaa3166ea2d59e14780b7d7dd7cbf14f7d9fc6b6346d87ff18e512758f0c56d253d5308dcd422ceb703041905ba95ff36ff1e361ecee4bb"
         }
     },
     "pre_install": [
