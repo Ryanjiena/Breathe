@@ -1,5 +1,5 @@
 {
-    "version": "1.0.96",
+    "version": "1.0.103",
     "homepage": "https://www.10xeditor.com/index.htm",
     "description": "A fast performing, feature packed C++ editor/IDE.",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://www.puredevsoftware.com/download.php?file=10xInstaller.exe#/setup.exe",
-            "hash": "dbb51a8ee821f243e4e203d01cce73e97ae7ccdbf374e10302eeb8bab9ba48d4"
+            "hash": "a536f26c61565a1132b715430cb0340488885287084c3c356e2ac460ee4b4337"
         }
     },
     "pre_install": [

@@ -1,13 +1,13 @@
 {
-    "version": "2.1.36",
+    "version": "2.1.40",
     "description": "Electronics Design Automation (EDA) tool by jlc.com",
     "homepage": "https://pro.lceda.cn/",
     "license": "Proprietary",
     "innosetup": true,
     "architecture": {
         "64bit": {
-            "url": "https://image.lceda.cn/files/lceda-pro-windows-x64-2.1.36.exe",
-            "hash": "657e9a85b3279f098fcbdce53a51e3e1a4657ade827b1b2799f98ca766e8dfa7"
+            "url": "https://image.lceda.cn/files/lceda-pro-windows-x64-2.1.40.exe",
+            "hash": "1043545ddd72665121d88899b9025a8515c6d1069b98d39976d60b1589f2ed16"
         }
     },
     "shortcuts": [

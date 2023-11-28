@@ -1,13 +1,13 @@
 {
-    "version": "2.7.0-rc1",
+    "version": "2.7.0",
     "description": "G-code generator for 3D printers (RepRap, Makerbot, Ultimaker etc.)",
     "homepage": "https://www.prusa3d.com/prusaslicer/",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.7.0-rc1/PrusaSlicer-2.7.0-rc1+win64-202311161433_signed.zip",
-            "hash": "7aaac6a6c8abb560735b8980bfbaf58fa5d834524b705eefd8fa3fa377f02b53",
-            "extract_dir": "PrusaSlicer-2.7.0-rc1+win64-202311161433_signed"
+            "url": "https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.7.0/PrusaSlicer-2.7.0+win64-202311231457_signed.zip",
+            "hash": "8c5268903240db6b2d49136f9c4b97d0cb42345098ad13d8bb777c0f7b203125",
+            "extract_dir": "PrusaSlicer-2.7.0+win64-202311231457_signed"
         }
     },
     "bin": "prusa-slicer-console.exe",
