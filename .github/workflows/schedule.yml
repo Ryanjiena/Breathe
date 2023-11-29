@@ -101,12 +101,12 @@ jobs:
           repository: "Ryanjiena/Meta"
           ref: "main"
           token: ${{ secrets.GH_TOKEN }}
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY_SECRET }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
+      # - name: Import GPG key
+      #   uses: crazy-max/ghaction-import-gpg@v6
+      #   with:
+      #     gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY_SECRET }}
+      #     git_user_signingkey: true
+      #     git_commit_gpgsign: true
       - name: Intstall Scoop
         run: |
           $env:SCOOP = Join-Path $env:USERPROFILE 'SCOOP'
