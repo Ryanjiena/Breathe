@@ -1,11 +1,20 @@
 {
-    "version": "004.01",
-    "description": "Free CJK font maintained by Japanese government agency. It covers a large set of characters.",
-    "homepage": "https://moji.or.jp/ipafont/",
+    "version": "8.10",
+    "description": "Traditional printing orthography Traditional Chinese font 傳承印刷字形的正體（繁體）中文字型",
+    "homepage": "https://github.com/ichitenfont/I.Ming",
     "license": "IPA",
-    "url": "https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexg00401.zip",
-    "hash": "4ab6fee94bf6f94b3eeb31be2b73c559f738dc6b336d722d5301b1f3f592f850",
-    "extract_dir": "ipaexg00401",
+    "url": [
+        "https://github.com/ichitenfont/I.Ming/releases/download/8.10/I.Ming-8.10.ttf",
+        "https://github.com/ichitenfont/I.Ming/releases/download/8.10/I.MingCP-8.10.ttf",
+        "https://github.com/ichitenfont/I.Ming/releases/download/8.10/I.MingVar-8.10.ttf",
+        "https://github.com/ichitenfont/I.Ming/releases/download/8.10/I.MingVarCP-8.10.ttf"
+    ],
+    "hash": [
+        "cba13b75b050d671b611d0063147262e421e14359ad4530948b070f56111f0f3",
+        "1c411a2e97b65c26aaa01707bbe06919569fcd7683c8bb5db114a96264710458",
+        "ba877ed20835c5622e4cbe83b4107e78f11ad919d0268491efd00d4141a2fd78",
+        "9d342893b0eddc5baa46398eb9e83741cad86143ddd493bdb8d04268d78ad527"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -82,15 +91,17 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'IPAex Gothic' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font '$app' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     },
-    "checkver": {
-        "regex": "Ver\\.(\\d{3}\\.\\d{2}).*</span>"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexg$cleanVersion.zip",
-        "extract_dir": "ipaexg$cleanVersion"
+        "url": [
+            "https://github.com/ichitenfont/I.Ming/releases/download/$version/I.Ming-$version.ttf",
+            "https://github.com/ichitenfont/I.Ming/releases/download/$version/I.MingCP-$version.ttf",
+            "https://github.com/ichitenfont/I.Ming/releases/download/$version/I.MingVar-$version.ttf",
+            "https://github.com/ichitenfont/I.Ming/releases/download/$version/I.MingVarCP-$version.ttf"
+        ]
     }
 }
