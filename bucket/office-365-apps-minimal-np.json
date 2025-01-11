@@ -1,5 +1,5 @@
 {
-    "version": "0.0.1.4",
+    "version": "2.4.7",
     "description": "Family of client software, server software and services developed by Microsoft. This package only includes Excel, PowerPoint and Word.",
     "homepage": "https://www.office.com/",
     "license": {
@@ -8,7 +8,7 @@
     },
     "depends": "7zip19.00-helper",
     "url": "https://download.microsoft.com/download/#/dl.7z_",
-    "hash": "87257f05017159e965d331ced2a5401a56860d266f484f1f21015779e70ed736",
+    "hash": "48f00bfe4a9a3eaa09682fd93882091300b311ed3021b53ada0c1164cd875f86",
     "pre_install": [
         "$scriptdir = \"$bucketsdir\\breathe\\scripts\"",
         "if ($architecture -eq '64bit') {",
