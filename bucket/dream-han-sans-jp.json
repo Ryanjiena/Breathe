@@ -1,10 +1,10 @@
 {
-    "version": "2.004",
-    "description": "Noto Sans CJK font family in Super OTC format: a single OpenType Collection (OTC) file that efficiently compacts multiple font styles, weights, and language variants for optimized storage and usage.",
-    "homepage": "https://github.com/notofonts/noto-cjk",
+    "version": "3.02",
+    "description": "Open-source pan-CJK font families with enormous range of weights, the CJK sans you have dreamed of. (Japanese version)",
+    "homepage": "https://github.com/Pal3love/dream-han-cjk",
     "license": "OFL-1.1",
-    "url": "https://github.com/notofonts/noto-cjk/releases/download/Sans2.004/00_NotoSansCJK.ttc.zip",
-    "hash": "a56077736038875f3a5b1e6715b2713a2bd049cc0bf0dfdf645927b070d38bfc",
+    "url": "https://github.com/Pal3love/dream-han-cjk/releases/download/dream-3.02-sans-2.004-serif-2.003/DreamHanSansJP.zip",
+    "hash": "0dc835bff467e3c8a26be702c7fcbae011ba17cd9e76274bdf116f26ea487ddc",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -37,7 +37,7 @@
             "}",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
             "    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir",
@@ -46,7 +46,7 @@
     },
     "pre_uninstall": [
         "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
-        "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
+        "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
         "    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {",
         "        try {",
         "            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop",
@@ -76,7 +76,7 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
             "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
@@ -86,10 +86,10 @@
         ]
     },
     "checkver": {
-        "url": "https://github.com/notofonts/noto-cjk/releases",
-        "regex": "tag/Sans([\\w.-]+)"
+        "github": "https://github.com/Pal3love/dream-han-cjk",
+        "regex": "dream-([\\d.]+)-sans-(?<sans>[\\d.]+)-serif-(?<serif>[\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/notofonts/noto-cjk/releases/download/Sans$version/00_NotoSansCJK.ttc.zip"
+        "url": "https://github.com/Pal3love/dream-han-cjk/releases/download/dream-$version-sans-$matchSans-serif-$matchSerif/DreamHanSansJP.zip"
     }
 }
