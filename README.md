@@ -14,7 +14,7 @@
  | [ScoopInstaller/Nonportable](https://github.com/ScoopInstaller/Nonportable.git) | [![ScoopInstaller/Nonportable badge](https://img.shields.io/static/v1?label=ScoopInstaller/Nonportable&message=128&color=green)](https://github.com/ScoopInstaller/Nonportable.git) |
  | [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions.git) | [![ScoopInstaller/Versions badge](https://img.shields.io/static/v1?label=ScoopInstaller/Versions&message=500&color=green)](https://github.com/ScoopInstaller/Versions.git) |
  | [ScoopInstaller/Extras](https://github.com/ScoopInstaller/Extras.git) | [![ScoopInstaller/Extras badge](https://img.shields.io/static/v1?label=ScoopInstaller/Extras&message=2167&color=green)](https://github.com/ScoopInstaller/Extras.git) |
- | [chawyehsu/dorado](https://github.com/chawyehsu/dorado.git) | [![chawyehsu/dorado badge](https://img.shields.io/static/v1?label=chawyehsu/dorado&message=265&color=green)](https://github.com/chawyehsu/dorado.git) |
+ | [chawyehsu/dorado](https://github.com/chawyehsu/dorado.git) | [![chawyehsu/dorado badge](https://img.shields.io/static/v1?label=chawyehsu/dorado&message=266&color=green)](https://github.com/chawyehsu/dorado.git) |
 
 <!--te-->
 
