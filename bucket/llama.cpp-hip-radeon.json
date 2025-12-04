@@ -1,16 +1,12 @@
 {
-    "version": "b7270",
-    "description": "Inference of LLaMA model in pure C/C++ (CPU version)",
+    "version": "b7268",
+    "description": "Inference of LLaMA model in pure C/C++ (HIP version for AMD GPUs)",
     "homepage": "https://github.com/ggml-org/llama.cpp",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b7270/llama-b7270-bin-win-cpu-x64.zip",
-            "hash": "ec780aceb13f500c1dd44a8011c3af4fd6aaa5ec5ac6f41a57ffdf39b262608c"
-        },
-        "arm64": {
-            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b7270/llama-b7270-bin-win-cpu-arm64.zip",
-            "hash": "ad0e82417d0866481e680cbc685e08899040d56b78b5e4be310bc72c7dcc0b1c"
+            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b7268/llama-b7268-bin-win-hip-radeon-x64.zip",
+            "hash": "ff0043db062d760f8785053772602d8c28334a3f2bdfdce5a736e9725d304549"
         }
     },
     "bin": [
@@ -39,10 +35,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-cpu-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-cpu-arm64.zip"
+                "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-hip-radeon-x64.zip"
             }
         }
     }
