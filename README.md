@@ -12,7 +12,7 @@
  | [ScoopInstaller/Java](https://github.com/ScoopInstaller/Java.git) | [![ScoopInstaller/Java badge](https://img.shields.io/static/v1?label=ScoopInstaller/Java&message=324&color=green)](https://github.com/ScoopInstaller/Java.git) |
  | [ScoopInstaller/Main](https://github.com/ScoopInstaller/Main.git) | [![ScoopInstaller/Main badge](https://img.shields.io/static/v1?label=ScoopInstaller/Main&message=1412&color=green)](https://github.com/ScoopInstaller/Main.git) |
  | [ScoopInstaller/Nonportable](https://github.com/ScoopInstaller/Nonportable.git) | [![ScoopInstaller/Nonportable badge](https://img.shields.io/static/v1?label=ScoopInstaller/Nonportable&message=128&color=green)](https://github.com/ScoopInstaller/Nonportable.git) |
- | [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions.git) | [![ScoopInstaller/Versions badge](https://img.shields.io/static/v1?label=ScoopInstaller/Versions&message=542&color=green)](https://github.com/ScoopInstaller/Versions.git) |
+ | [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions.git) | [![ScoopInstaller/Versions badge](https://img.shields.io/static/v1?label=ScoopInstaller/Versions&message=544&color=green)](https://github.com/ScoopInstaller/Versions.git) |
  | [ScoopInstaller/Extras](https://github.com/ScoopInstaller/Extras.git) | [![ScoopInstaller/Extras badge](https://img.shields.io/static/v1?label=ScoopInstaller/Extras&message=2229&color=green)](https://github.com/ScoopInstaller/Extras.git) |
  | [chawyehsu/dorado](https://github.com/chawyehsu/dorado.git) | [![chawyehsu/dorado badge](https://img.shields.io/static/v1?label=chawyehsu/dorado&message=265&color=green)](https://github.com/chawyehsu/dorado.git) |
 
