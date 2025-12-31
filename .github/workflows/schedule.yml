@@ -34,7 +34,7 @@ jobs:
       #     git_commit_gpgsign: true
 
       - name: Checkout MetaVersion
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: "Ryanjiena/MetaVersion"
           ref: "main"
@@ -50,7 +50,7 @@ jobs:
           git push origin main
 
       - name: Checkout deno-deploy
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: "Ryanjiena/deno-deploy"
           ref: "main"
@@ -66,7 +66,7 @@ jobs:
           git push origin main
 
       - name: Checkout Meta
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: "Ryanjiena/Meta"
           ref: "main"
@@ -96,7 +96,7 @@ jobs:
     if: ${{ always() }}
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           repository: "Ryanjiena/Meta"
           ref: "main"
