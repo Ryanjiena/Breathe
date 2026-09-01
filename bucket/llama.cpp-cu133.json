@@ -1,12 +1,12 @@
 {
-    "version": "b10723",
+    "version": "b10729",
     "description": "Inference of LLaMA model in pure C/C++ (CUDA 13.3 version)",
     "homepage": "https://github.com/ggml-org/llama.cpp",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b10723/llama-b10723-bin-win-cuda-13.3-x64.zip",
-            "hash": "bf78f6a25292063351b3b16c176d3ec1ddd8b0bdb347372dec47afa682a09cd6"
+            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b10729/llama-b10729-bin-win-cuda-13.3-x64.zip",
+            "hash": "32d3d52795da2f001ceb74cd0d27ae4bb42d403bd9a5e53ee482ab65affcc571"
         }
     },
     "bin": [
@@ -26,7 +26,8 @@
         "llama-qwen2vl-cli.exe",
         "llama-server.exe",
         "llama-tokenize.exe",
-        "llama-tts.exe"
+        "llama-tts.exe",
+        "llama.exe"
     ],
     "persist": "models",
     "checkver": {

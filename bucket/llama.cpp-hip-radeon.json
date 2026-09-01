@@ -1,5 +1,5 @@
 {
-    "version": "b10723",
+    "version": "b10729",
     "description": "Inference of LLaMA model in pure C/C++ (HIP/ROCm version for AMD GPUs)",
     "homepage": "https://github.com/ggml-org/llama.cpp",
     "license": "MIT",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b10723/llama-b10723-bin-win-rocm-7.14-x64.zip",
-            "hash": "757e352300e3b6803f44385e0a773ed97720bdad30b5abc92e991c8e219f1d4f"
+            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b10729/llama-b10729-bin-win-rocm-7.14-x64.zip",
+            "hash": "a7ae481c7db0510739ca9f86c5daef17bacfe13bbca1ebb0e42c4457bc65ed80"
         }
     },
     "bin": [
@@ -30,7 +30,8 @@
         "llama-qwen2vl-cli.exe",
         "llama-server.exe",
         "llama-tokenize.exe",
-        "llama-tts.exe"
+        "llama-tts.exe",
+        "llama.exe"
     ],
     "persist": "models",
     "checkver": {
